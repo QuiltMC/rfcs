@@ -34,7 +34,7 @@ voice their opinions.
 (This is the section of this RFC which &ndash; if accepted &ndash; would become
 our "RFC guidelines" document.)
 
-Most smaller changes to Quilt like bugfixes can be submitted via the normal
+Most smaller changes to Quilt projects like bugfixes can be submitted via the normal
 GitHub pull request system, however some are substantial enough that we would
 prefer that members of the community are given some time to discuss the
 potential change and give their feedback. In other projects, this feedback has
@@ -43,7 +43,7 @@ different solutions and never come to any agreement.
 
 To help resolve this problem, the Quilt project follows an RFC (Request For
 Comments) process for any major changes to the Quilt project, including changes
-to the loader, the API, the governance structure, community guidelines, or even
+to the loader, the standard library, the governance structure, community guidelines, or even
 the RFC process itself. This document gives an outline of how that RFC process
 works and explains how contributors should submit their RFCs to the project.
 
@@ -58,8 +58,8 @@ implemented.
 
 Here are some examples of changes that would require an RFC:
 
-- Any breaking change to the loader, API, or any other Quilt project
-- Addition of a new major part of the API
+- Any breaking change to the APIs (code or not) of any Quilt project
+- Any major API addition to any Quilt project
 - Any change to the RFC process itself, project governance rules, or community
   guidelines
 
@@ -179,4 +179,3 @@ experienced.
   RFCs?
 - How do we determine when enough discussion has happened for the final comment
   period to begin?
-
