@@ -76,6 +76,10 @@ Here are some examples of changes that would *not* require an RFC:
 If you submit a pull request for some change without going through the RFC
 process, it may be closed with a polite request to submit an RFC first.
 
+Due to the nature of the Quilt project as a mod loader, sometimes breaking
+changes may be forced on us by a 3rd party such as Mojang. In these cases, we
+do not require an RFC for those breaking changes.
+
 
 ## Creating an RFC
 
