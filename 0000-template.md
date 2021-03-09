@@ -36,6 +36,15 @@ understanding of this suggestion.
 Why should we not do this?
 
 
+# Rationale and Alternatives
+
+- Why is this the best possible design?
+- What other designs are possible and why should we choose this one instead?
+- What other designs have benefits over this one? Why should we choose an
+  alternative instead?
+- What is the impact of not doing this?
+
+
 # Prior Art
 
 If this has been done before by some other project, explain it here. This could
