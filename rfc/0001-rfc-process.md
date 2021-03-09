@@ -9,12 +9,16 @@ decision at some point.
 
 # Motivation
 
-The RFC process aims to resolve the major bikeshedding issue in Fabric, which
-has led to gridlock in many cases where the community cannot agree on certain
-major changes. The most well known example of this is the fluid API, where
-community members have failed to come to a consensus for over a year now. Quilt
-should aim to resolve this problem by implementing an RFC process inspired by
-other popular open source projects such as Rust.
+The RFC process aims to help ease the problem of "bikeshedding" or endless,
+often petty, arguments over the specifics of an API proposal. This
+Rust-inspired RFC process aims to solve this problem by allowing contributors
+to get implementations approved by submitting a detailed RFC proposal, which
+will accept criticism until the team in charge of the project (the team will
+vary based on which project the RFC is targeting, such as Quilt Loader, the
+standard libraries, the Gradle plugin, etc.) motions for a FCP (final comment
+period), where the team states its intent to merge, close, or postpone the RFC
+in a fixed amount of time, allowing for resolution of the RFC unless a
+substantial argument arises.
 
 The RFC process requires that any "substantial" change should be preceded by a
 "Request For Comments" document just like this one, which explains the proposed
