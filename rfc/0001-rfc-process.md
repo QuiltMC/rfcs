@@ -64,8 +64,8 @@ Here are some examples of changes that would require an RFC:
 
 - Any breaking change to the APIs (code or not) of any Quilt project
 - Any major API addition to any Quilt project
-- Any change to the RFC process itself, project governance rules, or community
-  guidelines
+- Any change to the RFC process itself, project governance rules, community
+  guidelines, or code style guidelines
 
 Here are some examples of changes that would *not* require an RFC:
 
