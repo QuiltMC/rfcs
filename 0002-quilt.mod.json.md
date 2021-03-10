@@ -221,11 +221,22 @@ A collection of `"key": value` pairs denoting various contact information for th
 * sources — Valid HTTP/HTTPS address for a source code repository
 
 ### The `license` field
-| Type         | Required |
-|--------------|----------|
-| Array/String | False    |
+| Type                | Required |
+|---------------------|----------|
+| Array/String/Object | False    |
 
 The license or array of licenses this project operates under.
+
+A license is defined as either an SPDX identifier string or an object in the following form:
+```json5
+{
+    "name": "Perfectly Awesome License v1.0",
+    "id": "PAL-1.0",
+    "url": "https://theperfectlyawesomelicense.com/",
+    "description": "This license does things and stuff and says that you can do things and stuff too!"
+}
+```
+The `"description"` field is optional.
 
 ### The `icon` field
 | Type          | Required |
