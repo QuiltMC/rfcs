@@ -21,17 +21,17 @@ Below is an outline of all defined keys and values.
     * [depends](#the-depends-field) — Collection of mod dependencies
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
     * [repositories](#the-repositories-field) — Array of maven repositories
+    * [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
+        * [name](#the-name-field) — Human-readable name of this mod
+        * [description](#the-description-field) — Human-readable description of this mod
+        * [authors](#the-authors-field) — Array of authors/owners of this mod
+        * [contributors](#the-contributors-field) — Array of contributors to this mod
+        * [contact](#the-contact-field) — Collection of contact information
+        * [license](#the-license-field) — One or more licenses this project is under
+        * [icon](#the-icon-field) — The icon or icons associated with this project
+
 * [minecraft](#the-minecraft-field) - Minecraft related options
     * [environment](#the-environment-field) — What game environments this mod applies to
-* [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
-    * [name](#the-name-field) — Human-readable name of this mod
-    * [description](#the-description-field) — Human-readable description of this mod
-    * [authors](#the-authors-field) — Array of authors/owners of this mod
-    * [contributors](#the-contributors-field) — Array of contributors to this mod
-    * [contact](#the-contact-field) — Collection of contact information
-    * [license](#the-license-field) — One or more licenses this project is under
-    * [icon](#the-icon-field) — The icon or icons associated with this project
-
 ## The `schema_version` field
 | Type   | Required |
 |--------|----------|
@@ -157,59 +157,42 @@ A collection of `"key": value` pairs, where each key is in the form of either `m
 
 A list of repositories where dependencies can be looked for in addition to Quilt's central maven repository.
 
-## The `minecraft` field
-| Type   | Required |
-|--------|----------|
-| Object | False    |
-
-Contains flags and options related to Minecraft specifically.
-
-### The `environment` field
-| Type   | Required |
-|--------|----------|
-| String | False    |
-
-Defines the environment(s) that this mod should be loaded on. Valid values are:
-* `"*"` — All environments (default)
-* `"client"` — The physical client
-* `"server"` — The dedicated server
-
-## The `metadata` field 
+### The `metadata` field 
 | Type   | Required |
 |--------|----------|
 | Object | False    |
 
 Optional metadata that can be used by mods to display information about the mods installed.
 
-### The `name` field
+#### The `name` field
 | Type   | Required |
 |--------|----------|
 | String | False    |
 
 A human-readable name for this mod.
 
-### The `description` field
+#### The `description` field
 | Type   | Required |
 |--------|----------|
 | Object | False    |
 
 A human-readable description of this mod.
 
-### The `authors` field
+#### The `authors` field
 | Type   | Required |
 |--------|----------|
 | Array  | False    |
 
 An array of strings, each one the name of an author/owner or organization in charge of this project.
 
-### The `contributors` field
+#### The `contributors` field
 | Type   | Required |
 |--------|----------|
 | Array  | False    |
 
 An array of strings, each one the name of a contributor to this project.
 
-### The `contact` field
+#### The `contact` field
 | Type   | Required |
 |--------|----------|
 | Object | False    |
@@ -220,7 +203,7 @@ A collection of `"key": value` pairs denoting various contact information for th
 * issues — Valid HTTP/HTTPS address for the project issue tracker
 * sources — Valid HTTP/HTTPS address for a source code repository
 
-### The `license` field
+#### The `license` field
 | Type                | Required |
 |---------------------|----------|
 | Array/String/Object | False    |
@@ -238,7 +221,7 @@ A license is defined as either an SPDX identifier string or an object in the fol
 ```
 The `"description"` field is optional.
 
-### The `icon` field
+#### The `icon` field
 | Type          | Required |
 |---------------|----------|
 | Object/String | False    |
@@ -251,6 +234,23 @@ One or more paths to a square .PNG file. If an object is provided, the keys must
     "4096": "/path/to/icon4096.png"
 }
 ```
+
+## The `minecraft` field
+| Type   | Required |
+|--------|----------|
+| Object | False    |
+
+Contains flags and options related to Minecraft specifically.
+
+### The `environment` field
+| Type   | Required |
+|--------|----------|
+| String | False    |
+
+Defines the environment(s) that this mod should be loaded on. Valid values are:
+* `"*"` — All environments (default)
+* `"client"` — The physical client
+* `"server"` — The dedicated server
 
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will have direct access to the quilt.mod.json file as a json object. Mods can thus access any top-level defined custom values. Naming conventions aren't enforced. It is suggested that you use your mod id as the key for your custom value, prefixed with your maven group if the mod id itself is at risk of overlap. The custom value can also be any type you'd like, though it's recommended to group large numbers of keys together under a single object.
