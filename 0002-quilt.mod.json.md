@@ -243,7 +243,14 @@ The `"description"` field is optional.
 |---------------|----------|
 | Object/String | False    |
 
-One or more paths to a square .PNG file. If an object is provided, the keys must be the resolution of the corresponding value.
+One or more paths to a square .PNG file. If an object is provided, the keys must be the resolution of the corresponding file. For example:
+```
+"icon": {
+    "32": "/path/to/icon32.png",
+    "64": "/path/to/icon64.png",
+    "4096": "/path/to/icon4096.png"
+}
+```
 
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will have direct access to the quilt.mod.json file as a json object. Mods can thus access any top-level defined custom values. Naming conventions aren't enforced. It is suggested that you use your mod id as the key for your custom value, prefixed with your maven group if the mod id itself is at risk of overlap. The custom value can also be any type you'd like, though it's recommended to group large numbers of keys together under a single object.
