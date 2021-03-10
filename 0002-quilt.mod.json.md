@@ -7,17 +7,17 @@ Since the toolchain is being forked, now is the opportune moment to make large s
 # Explanation
 Below is an outline of all defined keys and values.
 
-* [schemaVersion](#the-schemaVersion-field) — The schemaVersion to be used for reading this file
-* [quiltLoader](#the-quiltLoader-field) — Information related to loading the mod
-    * [groupId](#the-groupId-field) — The Maven group id
-    * [modId](#the-modId-field) — The mod id
+* [schema_version](#the-schema_version-field) — The schemaVersion to be used for reading this file
+* [quilt_loader](#the-quilt_loader-field) — Information related to loading the mod
+    * [group_id](#the-group_id-field) — The Maven group id
+    * [mod_id](#the-modId-field) — The mod id
     * [version](#the-version-field) — The mods version
     * [entrypoints](#the-entrypoints-field) — Collection of entrypoints
     * [plugins](#the-plugins-field) — Collection of plugins
     * [jars](#the-jars-field) — Array of nested JARs to be loaded
-    * [languageAdapters](#the-languageAdapters-field) — Array of language adapters
+    * [language_adapters](#the-language_adapters-field) — Array of language adapters
     * [mixins](#the-mixins-field) — Array of mixin config files
-    * [accessWidener](#the-accessWidener-field) — Path to an accessWidener file
+    * [access_wideners](#the-access_wideners-field) — Path to an accessWidener file
     * [depends](#the-depends-field) — Collection of mod dependencies
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
     * [repositories](#the-repositories-field) — Array of maven repositories
@@ -32,33 +32,33 @@ Below is an outline of all defined keys and values.
     * [license](#the-license-field) — One or more licenses this project is under
     * [icon](#the-icon-field) — The icon or icons associated with this project
 
-## The `schemaVersion` field
+## The `schema_version` field
 | Type   | Required |
 |--------|----------|
 | Number | True     |
 
 The quilt.mod.json schema version to be used for parsing this file. Currently, the only valid version is 1.
 
-## The `quiltLoader` field
+## The `quilt_loader` field
 | Type   | Required |
 |--------|----------|
 | Object | True     |
 
 Information necessary for the mod loading process.
 
-### The `groupId` field
+### The `group_id` field
 | Type   | Required |
 |--------|----------|
 | String | True     |
 
 A unique identifier for the organization behind or developers of the mod. See Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
-### The `modId` field
+### The `mod_id` field
 | Type   | Required |
 |--------|----------|
 | String | True     |
 
-A unique identifier or the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression.
+A unique identifier or the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
 
 ### The `version` field
 | Type   | Required |
@@ -101,7 +101,7 @@ If a plugin does not need to specify a language adapter other than the default l
 
 A list of paths to nested JAR files to load, relative to the root directory inside of the mods JAR.
 
-### The `languageAdapters` field
+### The `language_adapters` field
 | Type   | Required |
 |--------|----------|
 | Object | False    |
@@ -115,7 +115,7 @@ A collection of `"key": value` pairs, where each key is the namespace of a langu
 
 An array of paths to mixin configuration files relative to the root of the mod JAR.
 
-### The `accessWidener` field
+### The `access_wideners` field
 | Type   | Required |
 |--------|----------|
 | Array  | False    |
