@@ -78,7 +78,7 @@ A collection of `"key": value` pairs, where each key is the type of the entrypoi
     * `my.package.MyClass` — A class to be instantiated and used
     * `my.package.MyClass::thing` — A static field containing an instance of the entrypoint or a method handle for entrypoints that are functional interfaces
 
-If an entrypoint does not need to specify a language adapter other than the default language adapter, the entrypoint can bre represented simply as the value string instead.
+If an entrypoint does not need to specify a language adapter other than the default language adapter, the entrypoint can be represented simply as the value string instead.
 
 
 ### The `plugins` field
@@ -92,7 +92,7 @@ An array of loader plugins. A plugin is an object with the following keys:
     * `my.package.MyClass` — A class to be instantiated and used
     * `my.package.MyClass::thing` — A static field containing an instance of a `LoaderPlugin`
 
-If a plugin does not need to specify a language adapter other than the default language adapter, the plugin can bre represented simply as the value string instead.
+If a plugin does not need to specify a language adapter other than the default language adapter, the plugin can be represented simply as the value string instead.
 
 ### The `jars` field
 | Type   | Required |
