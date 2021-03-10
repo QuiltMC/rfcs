@@ -65,7 +65,7 @@ A unique identifier or the mod or library defined by this file, matching the `^[
 |--------|----------|
 | String | True     |
 
-Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/)
+Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/). In a development environment, the value `${version}` will be allowed as a placeholder to be replaced on building the resulting JAR.
 
 ### The `entrypoints` field
 | Type   | Required |
@@ -131,6 +131,7 @@ Defines mods that this mod will not function without.
 
 A collection of `"key": value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. A version range specifier can make use of any of the following patterns:
 * `*` — Matches any version. Will fetch the latest version available if needed
+* `1.0.0` — Matches exactly version 1.0.0 and no other versions
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
 * `>=1.0.0` — Matches any version greater than or equal to 1.0.0
 * `>1.0.0` — Matches any version greater than version 1.0.0
