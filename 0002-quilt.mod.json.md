@@ -1,8 +1,8 @@
 # Summary
-This document acts as a Request for Comments (RFC) on the topic of how a quilt.mod.json should be formatted. Such changes are intended to provide added value for mod developers, library developers, and users alike.
+This document acts as a Request for Comments (RFC) on the topic of how a quilt mod file should be formatted. Such changes are intended to provide added value for mod developers, library developers, and users alike.
 
 # Motivation
-Since the toolchain is being forked, now is the opportune moment to make large scale changes to many of the systems mod developers use. This RFC describes a more flexible and powerful format for the mod.json file that defines what a mods definition should look like.
+Since the toolchain is being forked, now is the opportune moment to make large scale changes to many of the systems mod developers use. This RFC describes a more flexible and powerful format for the mod file that defines what a mods definition should look like.
 
 # Explanation
 Below is an outline of all defined keys and values.
@@ -32,12 +32,13 @@ Below is an outline of all defined keys and values.
 * [access_wideners](#the-access_wideners-field) — Path(s) to an accesswidener file
 * [minecraft](#the-minecraft-field) - Minecraft related options
     * [environment](#the-environment-field) — What game environments this mod applies to
+    
 ## The `schema_version` field
 | Type   | Required |
 |--------|----------|
 | Number | True     |
 
-The quilt.mod.json schema version to be used for parsing this file. Currently, the only valid version is 1.
+The quilt mod file schema version to be used for parsing this file. Currently, the only valid version is 1.
 
 ## The `quilt_loader` field
 | Type   | Required |
@@ -203,7 +204,7 @@ A collection of `"key": value` pairs denoting various contact information for th
 
 The license or array of licenses this project operates under.
 
-A license is defined as either an SPDX identifier string or an object in the following form:
+A license is defined as either an [SPDX identifier](https://spdx.org/licenses/) string or an object in the following form:
 ```json5
 {
     "name": "Perfectly Awesome License v1.0",
@@ -260,15 +261,54 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 * `"server"` — The dedicated server
 
 ## Custom Elements
-In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt.mod.json. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
+In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt mod file. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
+
+## File Format
+To allow for better clarity, the new mod file format will use the [JSON5 schema](https://json5.org/). This will allow for informative comments to be included in the default quilt.mod.json5 file as well as to allow mod/library developers to provide clarity for other developers.
+
+An example quilt.mod.json5:
+```json5
+{
+    schema_version: 1,
+    quilt_loader: {
+        group_id: "org.quiltmc",
+        mod_id: "example_mod",
+        version: "1.0.0",
+        entrypoints: {
+            main: [
+                "org.quiltmc.example_mod.impl.ExampleMod",
+                "org.quiltmc.example_mod.impl.ExampleModNetworking"
+            ],
+            // Since we only have a single client endpoint, no array is needed.
+            client: "org.quiltmc.example_mod.impl.client.ExampleModClient",
+        },
+        depends: {
+                "quilt-networking-api-v1": "*"
+        },
+        metadata: {
+            name: "Quilt Example Mod",
+            description: "An example mod for the Quilt ecosystem.",
+            authors: [
+                "Haven King"
+            ],
+            contact: {
+                homepage: "https://quiltmc.org/"
+            },
+            license: "CC0-1.0",
+            icon: "assets/modid/icon.png"
+        }
+    },
+    mixins: [
+        "modid.mixins.json"
+    ]
+}
+```
 
 # Drawbacks
-The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod.json files.
+The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
 
 # Rationale and Alternatives
 It makes sense to take advantage of the breaking divergence of the toolchain to make changes that are better for Quilt's future. We could stick more strictly to the fabric.mod.json specification, but we would lose a lot of the advantages that this iteration has.
-
-We've discussed moving away from JSON for the mod definition file, but decided that a lenient JSON parser in dev will work, with quilt-gradle stripping comments when building jars.
 
 # Prior Art
 This specification builds upon the Fabric projects existing [fabric.mod.json v1 specification](https://fabricmc.net/wiki/documentation:fabric_mod_json_spec).
