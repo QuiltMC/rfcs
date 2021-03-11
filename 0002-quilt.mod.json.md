@@ -23,8 +23,7 @@ Below is an outline of all defined keys and values.
     * [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
         * [name](#the-name-field) — Human-readable name of this mod
         * [description](#the-description-field) — Human-readable description of this mod
-        * [authors](#the-authors-field) — Array of authors/owners of this mod
-        * [contributors](#the-contributors-field) — Array of contributors to this mod
+        * [contributors](#the-contributors-field) — Collection of contributors to this mod
         * [contact](#the-contact-field) — Collection of contact information
         * [license](#the-license-field) — One or more licenses this project is under
         * [icon](#the-icon-field) — The icon or icons associated with this project
@@ -80,7 +79,7 @@ Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org
 |--------|----------|
 | Object | False    |
 
-A collection of `"key": value` pairs, where each key is the type of the entrypoints specified and each values is either a single entrypoint or an array of entrypoints. An entrypoint is an object with the following keys:
+A collection of `key: value` pairs, where each key is the type of the entrypoints specified and each values is either a single entrypoint or an array of entrypoints. An entrypoint is an object with the following keys:
 * adapter — Language adapter to use for this entrypoint
 * value — Points to an implementation of the entrypoint. Can be in either of the following forms:
     * `my.package.MyClass` — A class to be instantiated and used
@@ -114,7 +113,7 @@ A list of paths to nested JAR files to load, relative to the root directory insi
 |--------|----------|
 | Object | False    |
 
-A collection of `"key": value` pairs, where each key is the namespace of a language adapter and the value is an implementation of the `LanguageAdapter` interface.
+A collection of `key: value` pairs, where each key is the namespace of a language adapter and the value is an implementation of the `LanguageAdapter` interface.
 
 ### The `depends` field
 | Type   | Required |
@@ -123,7 +122,7 @@ A collection of `"key": value` pairs, where each key is the namespace of a langu
 
 Defines mods that this mod will not function without.
 
-A collection of `"key": value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. A version range specifier can make use of any of the following patterns:
+A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. A version range specifier can make use of any of the following patterns:
 * `*` — Matches any version. Will fetch the latest version available if needed
 * `1.0.0` — Matches exactly version 1.0.0 and no other versions
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
@@ -142,7 +141,7 @@ A collection of `"key": value` pairs, where each key is in the form of either `m
 
 Defines mods that this mod either breaks or is broken by.
 
-A collection of `"key": value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. See [above](#the-depends-field) for the version range specifier format.
+A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. See [above](#the-depends-field) for the version range specifier format.
 
 ### The `repositories` field
 | Type   | Required |
@@ -172,26 +171,21 @@ A human-readable name for this mod.
 
 A human-readable description of this mod.
 
-#### The `authors` field
-| Type   | Required |
-|--------|----------|
-| Array  | False    |
-
-An array of strings, each one the name of an author/owner or organization in charge of this project.
-
 #### The `contributors` field
 | Type   | Required |
 |--------|----------|
-| Array  | False    |
+| Object | False    |
 
-An array of strings, each one the name of a contributor to this project.
+A collection of `key: value` pairs denoting the persons or organizations that contributed to this project. The key should be the name of the person or organization, while the value can be either a string representing a single role or an array of stringsm each one representing a single role.
+
+A role can be any valid string. The "Owner" role is defined as being the person(s) or organization in charge of the project.
 
 #### The `contact` field
 | Type   | Required |
 |--------|----------|
 | Object | False    |
 
-A collection of `"key": value` pairs denoting various contact information for the people behind this mod. The following keys are officially defined, though mods can provide as many additional values as they wish:
+A collection of `key: value` pairs denoting various contact information for the people behind this mod. The following keys are officially defined, though mods can provide as many additional values as they wish:
 * email — Valid e-mail address for the organization/developers
 * homepage — Valid HTTP/HTTPS address for the project or the organization/developers behind it
 * issues — Valid HTTP/HTTPS address for the project issue tracker
@@ -288,9 +282,9 @@ An example quilt.mod.json5:
         metadata: {
             name: "Quilt Example Mod",
             description: "An example mod for the Quilt ecosystem.",
-            authors: [
-                "Haven King"
-            ],
+            contributors: {
+                "Haven King": "Developer"
+            },
             contact: {
                 homepage: "https://quiltmc.org/"
             },
