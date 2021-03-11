@@ -176,7 +176,7 @@ A human-readable description of this mod.
 |--------|----------|
 | Object | False    |
 
-A collection of `key: value` pairs denoting the persons or organizations that contributed to this project. The key should be the name of the person or organization, while the value can be either a string representing a single role or an array of stringsm each one representing a single role.
+A collection of `key: value` pairs denoting the persons or organizations that contributed to this project. The key should be the name of the person or organization, while the value can be either a string representing a single role or an array of strings each one representing a single role.
 
 A role can be any valid string. The "Owner" role is defined as being the person(s) or organization in charge of the project.
 
