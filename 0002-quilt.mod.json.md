@@ -201,10 +201,10 @@ The license or array of licenses this project operates under.
 A license is defined as either an [SPDX identifier](https://spdx.org/licenses/) string or an object in the following form:
 ```json5
 {
-    "name": "Perfectly Awesome License v1.0",
-    "id": "PAL-1.0",
-    "url": "https://theperfectlyawesomelicense.com/",
-    "description": "This license does things and stuff and says that you can do things and stuff too!"
+    name: "Perfectly Awesome License v1.0",
+    id: "PAL-1.0",
+    url: "https://theperfectlyawesomelicense.com/",
+    description: "This license does things and stuff and says that you can do things and stuff too!"
 }
 ```
 The `"description"` field is optional.
@@ -216,7 +216,7 @@ The `"description"` field is optional.
 
 One or more paths to a square .PNG file. If an object is provided, the keys must be the resolution of the corresponding file. For example:
 ```
-"icon": {
+icon: {
     "32": "/path/to/icon32.png",
     "64": "/path/to/icon64.png",
     "4096": "/path/to/icon4096.png"
