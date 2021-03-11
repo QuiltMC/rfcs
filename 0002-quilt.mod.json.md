@@ -260,7 +260,7 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 * `"server"` — The dedicated server
 
 ## Custom Elements
-In addition to the defined elements above, mods and libraries will have direct access to the quilt.mod.json file as a json object. Mods can thus access any top-level defined custom values. Naming conventions aren't enforced. It is suggested that you use your mod id as the key for your custom value, prefixed with your maven group if the mod id itself is at risk of overlap. The custom value can also be any type you'd like, though it's recommended to group large numbers of keys together under a single object.
+In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt.mod.json. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod.json files.
