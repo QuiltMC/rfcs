@@ -207,10 +207,10 @@ The license or array of licenses this project operates under.
 A license is defined as either an [SPDX identifier](https://spdx.org/licenses/) string or an object in the following form:
 ```json5
 {
-    "name": "Perfectly Awesome License v1.0",
-    "id": "PAL-1.0",
-    "url": "https://theperfectlyawesomelicense.com/",
-    "description": "This license does things and stuff and says that you can do things and stuff too!"
+    name: "Perfectly Awesome License v1.0",
+    id: "PAL-1.0",
+    url: "https://theperfectlyawesomelicense.com/",
+    description: "This license does things and stuff and says that you can do things and stuff too!"
 }
 ```
 The `"description"` field is optional.
