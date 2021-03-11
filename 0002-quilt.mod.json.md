@@ -10,7 +10,8 @@ Below is an outline of all defined keys and values.
 * [schema_version](#the-schema_version-field) — The schemaVersion to be used for reading this file
 * [quilt_loader](#the-quilt_loader-field) — Information related to loading the mod
     * [group_id](#the-group_id-field) — The Maven group id
-    * [mod_id](#the-modId-field) — The mod id
+    * [mod_id](#the-mod_id-field) — The mod id
+    * [provides](#the-provides-field) — Alternative mod ids provided by this mod
     * [version](#the-version-field) — The mods version
     * [entrypoints](#the-entrypoints-field) — Collection of entrypoints
     * [plugins](#the-plugins-field) — Collection of plugins
@@ -58,6 +59,13 @@ A unique identifier for the organization behind or developers of the mod. See Ma
 | String | True     |
 
 A unique identifier or the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
+
+### The `provides` field
+| Type         | Required |
+|--------------|----------|
+| Array/String | True     |
+
+Either a single identifier or an array of identifiers that this mod also contains. These could be old or alternative mod ids. They should follow [the convention established for mod ids](#the-mod_id-field).
 
 ### The `version` field
 | Type   | Required |
