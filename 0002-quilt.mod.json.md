@@ -16,8 +16,6 @@ Below is an outline of all defined keys and values.
     * [plugins](#the-plugins-field) — Collection of plugins
     * [jars](#the-jars-field) — Array of nested JARs to be loaded
     * [language_adapters](#the-language_adapters-field) — Array of language adapters
-    * [mixins](#the-mixins-field) — Array of mixin config files
-    * [access_wideners](#the-access_wideners-field) — Path to an accessWidener file
     * [depends](#the-depends-field) — Collection of mod dependencies
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
     * [repositories](#the-repositories-field) — Array of maven repositories
@@ -29,7 +27,8 @@ Below is an outline of all defined keys and values.
         * [contact](#the-contact-field) — Collection of contact information
         * [license](#the-license-field) — One or more licenses this project is under
         * [icon](#the-icon-field) — The icon or icons associated with this project
-
+* [mixins](#the-mixins-field) — Array of mixin config files
+* [access_wideners](#the-access_wideners-field) — Path(s) to an accesswidener file
 * [minecraft](#the-minecraft-field) - Minecraft related options
     * [environment](#the-environment-field) — What game environments this mod applies to
 ## The `schema_version` field
@@ -107,20 +106,6 @@ A list of paths to nested JAR files to load, relative to the root directory insi
 | Object | False    |
 
 A collection of `"key": value` pairs, where each key is the namespace of a language adapter and the value is an implementation of the `LanguageAdapter` interface.
-
-### The `mixins` field
-| Type   | Required |
-|--------|----------|
-| Array  | False    |
-
-An array of paths to mixin configuration files relative to the root of the mod JAR.
-
-### The `access_wideners` field
-| Type   | Required |
-|--------|----------|
-| Array  | False    |
-
-An array of paths to accesswidener files relative to the root of the mod JAR.
 
 ### The `depends` field
 | Type   | Required |
@@ -234,6 +219,20 @@ One or more paths to a square .PNG file. If an object is provided, the keys must
     "4096": "/path/to/icon4096.png"
 }
 ```
+
+## The `mixins` field
+| Type   | Required |
+|--------|----------|
+| Array  | False    |
+
+An array of paths to mixin configuration files relative to the root of the mod JAR.
+
+## The `access_wideners` field
+| Type   | Required |
+|--------|----------|
+| Array  | False    |
+
+An array of paths to accesswidener files relative to the root of the mod JAR.
 
 ## The `minecraft` field
 | Type   | Required |
