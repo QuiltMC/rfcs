@@ -350,6 +350,8 @@ It makes sense to take advantage of the breaking divergence of the toolchain to 
 # Prior Art
 This specification builds upon the Fabric projects existing [fabric.mod.json v1 specification](https://fabricmc.net/wiki/documentation:fabric_mod_json_spec).
 
+The [contributors section](#the-contributors-field) is loosely based on that of [the Sponge project](https://www.spongepowered.org/)s plugin metadata specification.
+
 The structure for this specification is loosely based on the Rust project's [manifest format specification](https://doc.rust-lang.org/cargo/reference/manifest.html).
 
 # Unresolved Questions
