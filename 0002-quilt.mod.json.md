@@ -126,7 +126,7 @@ A collection of `key: value` pairs, where each key is in the form of either `mav
 
 #### Dependency Object
 A dependency object is made up of a version specifier and a reason for that dependency. It may be represented in any of the following ways:
-```json
+```json5
 // As a JSON object, with both available fields
 {
     version: "*",
@@ -134,14 +134,14 @@ A dependency object is made up of a version specifier and a reason for that depe
 }
 ```
 
-```json
+```json5
 // As a JSON object, omitting the optional "reason" field
 {
     version: "*"
 }
 ```
 
-```json
+```json5
 // As a single JSON string, containing only the version specifier
 "*"
 ```
