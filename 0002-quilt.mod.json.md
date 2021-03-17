@@ -1,5 +1,5 @@
 # Summary
-This document acts as a Request for Comments (RFC) on the topic of how a quilt mod file should be formatted. Such changes are intended to provide added value for mod developers, library developers, and users alike.
+This document acts as a Request for Comments (RFC) on the topic of how a Quilt mod's metadata should be formatted. Such changes are intended to provide added value for mod developers, library developers, and users alike.
 
 # Motivation
 Since the toolchain is being forked, now is the opportune moment to make large scale changes to many of the systems mod developers use. This RFC describes a more flexible and powerful format for the mod file that defines what a mods definition should look like.
