@@ -122,7 +122,32 @@ A collection of `key: value` pairs, where each key is the namespace of a languag
 
 Defines mods that this mod will not function without.
 
-A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. A version range specifier can make use of any of the following patterns:
+A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a [dependency object]() or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
+
+#### Dependency Object
+A dependency object is made up of a version specifier and a reason for that dependency. It may be represented in any of the following ways:
+```json
+// As a JSON object, with both available fields
+{
+    version: "*",
+    reason: "Implements the same behavior as this mod."
+}
+```
+
+```json
+// As a JSON object, omitting the optional "reason" field
+{
+    version: "*"
+}
+```
+
+```json
+// As a single JSON string, containing only the version specifier
+"*"
+```
+
+#### Version Specifier
+A version range specifier can make use of any of the following patterns:
 * `*` — Matches any version. Will fetch the latest version available if needed
 * `1.0.0` — Matches exactly version 1.0.0 and no other versions
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
@@ -141,7 +166,7 @@ A collection of `key: value` pairs, where each key is in the form of either `mav
 
 Defines mods that this mod either breaks or is broken by.
 
-A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a version range specifier or array of version range specifiers. If an array of range specifiers is provided, the version matches if it matches ANY of the listed specifiers. See [above](#the-depends-field) for the version range specifier format.
+A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a [dependency object]() or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
 
 ### The `repositories` field
 | Type   | Required |
@@ -277,7 +302,25 @@ An example quilt.mod.json5:
             client: "org.quiltmc.example_mod.impl.client.ExampleModClient",
         },
         depends: {
-                "quilt-networking-api-v1": "*"
+            "quilt_networking_api": "*",
+            "quilt_rendering_api": "*"
+        },
+        breaks: {
+            sodium: {
+                versions: "*",
+                reason: "Sodium does not implement the Quilt Rendering API."
+            },
+            some_random_library: [
+                "1.23.456", // A reason is not required
+                {
+                    versions: "<1.0.0",
+                    reason: "Stable API required"
+                },
+                {
+                    versions: "1.5.3",
+                    reason: "Contains a game-breaking bug"
+                }
+            ]
         },
         metadata: {
             name: "Quilt Example Mod",
