@@ -14,7 +14,7 @@ This document defines the four major sections of ASM Regex, Quilt's own bytecode
 
 API visibility has been a struggle for Fabric modders since its inception. Since no way is available for an API to make changes to Minecraft code that are visible at compile-time, modders are expected to [just know](https://github.com/FabricMC/fabric/blob/1.16/fabric-object-builder-api-v1/src/main/java/net/fabricmc/fabric/api/object/builder/v1/entity/FabricEntityTypeBuilder.java) that a specific extension exists. In extreme cases (such as the Fabric Rendering API), there may be an API to allow a mod to  [*completely replace*](https://github.com/FabricMC/fabric/pull/1182) an existing Minecraft construct, with no indication to the modder that this could happen!
 
-Additionally, there is no way in existing bytecode manipulation libraries (besides raw ASM) for pattern-matching--Mixins are difficult to use for even targetting the same pattern where all usages are known
+This RFC intends to introduce a new general-purpose bytecode manipulation library that is able to modify Minecraft and mod jars both at runtime, and at import-time in the same manner as Jar Processors.
 
 # Explanation
 ASMR comes in four major parts: the [Frontend](#the-compiler), the [Compiler](#the-compiler), the [Backend](#the-backend), and the [Processor](#the-processor).
@@ -73,7 +73,7 @@ N/A at this time, see the [Frontend](#frontend-example) and [Backend](#backend-e
 ## The Backend
 ### Scope
 Backend files are put in the compiled jar of each mod. All mods have their backends processed at runtime, but at import-time (i.e. the time jar processors run) each mod defines in their `build.gradle` which dependencies they want to have applied.
-### Capabilities
+### Format
 Generally, the Backend format is very similar to the Frontend. It is a map of `transformer id` -> (`transformer-specific metadata` + `globally-defined metadata`). The main difference is that the Backend has significantly more globally defined flags, to allow transformation to be as deterministic as possible.
 
 Globally defined flags on transformers may include:
@@ -142,19 +142,29 @@ Since this is not prototyped, but just an idea, it may be discovered that this s
 
 # Rationale and Alternatives
 
-TODO
+ASM-Regex is designed to enable creative modders to create their own APIs and modifications that would not be possible under other mod loaders. However, this is a massive undertaking and will take a long time to refine, and QSL will most likely have to be migrated to ASMR after it has already begun development.
+
+
+We could attempt a Mixin fork, but I believe that because Mixin is designed to do one thing well, in the long run it will be more fragile and difficult to try and force Mixin to submit to ideas other than what Mumfrey wants.
+
+
+We could also do nothing, but then we are left with the same problems we started with.
 
 # Prior Art
 
 Prior art is mostly asie's [Ponderings on a post-Mixin world](https://github.com/FabricMC/fabric-loader/issues/244) thread, with additional inspiration from [Mixin](https://github.com/spongepowered/mixin) and [CoreMods](https://github.com/MinecraftForge/CoreMods).
 
 # Unresolved Questions
-## Pre-Merge
 
+## Pre-Merge
 ### Backend Format
 If the Processor is sandboxed from other classes besides the one it is processing, do we use JSON for the backend and write our own bytecode serialization (sounds really slow), or use our own format (still slow).
 
 On the other hand, having a system for reading classes without loading them would be restrictive and potentially error-prone, and would encourage the anti-pattern of extensive processing of the input classes in the Processor instead of the Compiler
+
+One idea is to make the Backend into a JAR file, and Compiler plugins can request certain class files to be included in that jar. Processor plugins would be able to read them later.
+
+
 ### Assorted questions:
 - **Annotation Processors**. Is it even needed? How would that work?
 - **The Processor name**. I'm not sure I like this name. Better ideas are welcome
