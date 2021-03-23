@@ -173,7 +173,7 @@ A collection of `key: value` pairs, where each key is in the form of either `mav
 |--------|----------|
 | Array  | False    |
 
-A list of repositories where dependencies can be looked for in addition to Quilt's central maven repository.
+A list of repository url strings where dependencies can be looked for in addition to Quilt's central maven repository.
 
 ### The `metadata` field 
 | Type   | Required |
@@ -210,7 +210,7 @@ A role can be any valid string. The "Owner" role is defined as being the person(
 |--------|----------|
 | Object | False    |
 
-A collection of `key: value` pairs denoting various contact information for the people behind this mod. The following keys are officially defined, though mods can provide as many additional values as they wish:
+A collection of `key: value` pairs denoting various contact information for the people behind this mod, with all values being strings. The following keys are officially defined, though mods can provide as many additional values as they wish:
 * email — Valid e-mail address for the organization/developers
 * homepage — Valid HTTP/HTTPS address for the project or the organization/developers behind it
 * issues — Valid HTTP/HTTPS address for the project issue tracker
