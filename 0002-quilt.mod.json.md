@@ -72,7 +72,7 @@ Either a single identifier or an array of identifiers that this mod also contain
 |--------|----------|
 | String | True     |
 
-Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/). In a development environment, the value `${version}` will be allowed as a placeholder to be replaced on building the resulting JAR.
+Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/). In a development environment, the value `${version}` can be used as a placeholder by quilt-gradle to be replaced on building the resulting JAR.
 
 ### The `entrypoints` field
 | Type   | Required |
@@ -340,6 +340,9 @@ An example quilt.mod.json5:
     ]
 }
 ```
+
+## Placeholders
+Strings with defined formats such as [the version field](#the-version-field) can instead supply a string matching the regex `^\$\{[a-zA-Z_$][a-zA-Z\d_$]*\}$` in a development environment to be replaced on build. The quilt-gradle plugin defines usage of the value `${version}` as a placeholder for the version declared in gradle.properties.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
