@@ -6,7 +6,9 @@ paragraph from your actual RFC.)
 
 # Summary
 
-One paragraph explanation of this suggestion.
+One paragraph explanation of this suggestion. Don't go into too much detail
+here; that goes in the explanation section. This should just give readers a
+general idea of what this RFC does.
 
 
 # Motivation
