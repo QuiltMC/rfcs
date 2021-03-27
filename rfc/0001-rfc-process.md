@@ -127,10 +127,11 @@ When you are ready to submit an RFC, the process will work as follows:
   + This step is taken when enough discussion has happened to make a final
     decision on the issue. It is designed to prevent RFCs from being bikeshed
     endlessly without progress.
-  + A consensus among community members *is not necessary* for an RFC to enter
-    the final comment period. Some may be controversial, but whether it will be
-    accepted or not is ultimately up to the team of maintainers assigned to the
-    RFC.
+  + A consensus among all community members *is not necessary* for an RFC to
+    enter the final comment period. However, there should not be a strong
+    consensus *against* the disposition given for the final comment period, and
+    some argument supporting the decision should be clearly presented somewhere
+    in prior discussion.
   + If discussion has gone on for a long time, the team member who motions for
     final comments should post a summary comment outlining all of the
     discussion that has occurred.
