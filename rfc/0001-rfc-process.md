@@ -100,10 +100,10 @@ feels about it, you can begin writing your RFC.
 When you are ready to submit an RFC, the process will work as follows:
 
 - Fork the RFC git repository
-- Copy `0000-template.md` to `0000-my-suggestion.md` (change `my-feature` to a
-  descriptive name for your RFC). Don't change the number yet; you will replace
-  the `0000` with your pull request number from GitHub once you have submitted
-  the PR.
+- Copy `0000-template.md` to `0000-my-suggestion.md` (replace `my-suggestion`
+  with a descriptive name for your RFC). Don't change the number yet; you will
+  replace the `0000` with your pull request number from GitHub once you have
+  submitted the PR.
 - Fill in the template. This should be done with care and effort. You are
   making a major suggestion for a change to the project &ndash; take it
   seriously.
