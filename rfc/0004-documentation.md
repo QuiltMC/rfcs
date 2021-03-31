@@ -76,10 +76,3 @@ Do we need to change the template document in the RFC repo to make all RFCs rega
 latest documentation for a specification in the documentation repository?
 
 Existing RFCs such as the `quilt.mod.json` specification will need comply with this RFC if merged.
-
-# Expected Response
-
-How do might the wider community respond to this change? Who will be affected
-by it and how? Who has advocated for this change? Who has advocated against it?
-
-
