@@ -1,4 +1,3 @@
-RFC 5: Quilt Community Guidelines
 # Summary
 This document exists as a minimum set of general guidelines that dictate how community members, moderators, and administrators should behave on all Quilt platforms. It is deliberately written with the intent of being expanded on.
 
