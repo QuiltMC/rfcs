@@ -9,7 +9,7 @@ This will allow us to put a time limit on unproductive discussion where necessar
 # Quilt RFC Process
 (This is the section of this RFC which &ndash; if accepted &ndash; would become our "RFC guidelines" document.)
 
-This document gives an outline of how that RFC process works and explains how contributors should submit their RFCs to the project. 
+This document gives an outline of how the RFC process works and explains how contributors should submit their RFCs to the project. 
 
 ## When you must submit an RFC
 The RFC process requires that any large top-level organizational changes should be preceded by a "Request For Comments" document just like this one, explaining the proposed change, the motivation behind it, potential drawbacks, and other considerations. These documents are then discussed and revised by the community for some period of time until a maintainer decides that enough discussion has happened and begins a final comment period, after which a final decision is made.
