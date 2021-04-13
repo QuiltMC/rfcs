@@ -81,7 +81,7 @@ Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org
 
 A collection of `key: value` pairs, where each key is the type of the entrypoints specified and each values is either a single entrypoint or an array of entrypoints. An entrypoint is an object with the following keys:
 * adapter — Language adapter to use for this entrypoint
-* value — Points to an implementation of the entrypoint. Can be in either of the following forms:
+* value — Points to an implementation of the entrypoint. For the default JVM language adapter, this can be in either of the following forms:
     * `my.package.MyClass` — A class to be instantiated and used
     * `my.package.MyClass::thing` — A static field containing an instance of the entrypoint or a method handle for entrypoints that are functional interfaces
 
