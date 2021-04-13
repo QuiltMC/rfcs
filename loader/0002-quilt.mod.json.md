@@ -194,7 +194,7 @@ A human-readable name for this mod.
 |--------|----------|
 | Object | False    |
 
-A human-readable description of this mod.
+A human-readable description of this mod. This description should be plain text, with the exception of line breaks, which can be represented with the newline character `\n`.
 
 #### The `contributors` field
 | Type   | Required |
