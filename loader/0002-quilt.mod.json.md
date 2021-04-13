@@ -63,7 +63,7 @@ A unique identifier or the mod or library defined by this file, matching the `^[
 ### The `provides` field
 | Type         | Required |
 |--------------|----------|
-| Array/String | True     |
+| Array/String | False     |
 
 Either a single identifier or an array of identifiers that this mod also contains. These could be old or alternative mod ids. They should follow [the convention established for mod ids](#the-mod_id-field).
 
