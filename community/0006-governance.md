@@ -24,7 +24,7 @@ Any team member (up to and including administrative board members) may be remove
  * For technical leads, this would be all technical staff members, as well as all members of the administrative board
  * For the QSL Module A lead, this would be all team members of QSL Module A, all technical leads, and all members of the administrative board
  * For a community moderator, this would be all community moderators and all members of the administrative board
- 
+
 The vote must be initiated with a detailed call to action, describing why the staff member feels that the person should be removed from power. The accused will have one week to submit a detailed counterargument, at which point the vote will be called.
 
 ### The Administrative Board
@@ -32,9 +32,29 @@ The administrative board is the group of staff that holds ultimate power over th
 
 If there is an absence on the administrative board, each remaining board member may nominate a community member (potentially a non-staff member) for the position. Existing staff members may nominate themselves. The remaining staff members may then vote on the nominees, with administrative board member votes being worth three votes only in the event of a tie.
 
+### Proposing a Team
+When proposing a new team, an RFC specifying several things needs to be written. Such a proposal should generally follow this structure:
+
+#### Motivation
+Why is this team needed? What current problems will this team solve? What existing projects or systems will this team be responsible for?
+
+#### Explanation
+What will this team *do*? What new projects will be created that this team will be responsible for and how will each of these projects benefit the QuiltMC organization/community? What processes will this team follow for each of the different kinds of changes their projects may undergo?
+
+#### Drawbacks
+Can usually be omitted. Is only necessary if there are clear drawbacks to such a teams existence. Drawbacks may include overlap of responsibilities, excessive granularity, etc.
+
+#### Rationale and Alternatives
+Can be omitted. Who is currently responsible for existing projects this team will takeover? What teams might become responsible for new projects proposed in this document if the team itself is deemed unnecessary?
+
+#### Prior Art
+Can usually be omitted. Is only necessary if there are prior organizations/projects with very similar goals.
+
 # Drawbacks
+In the present day with most accounts and digital spaces being controlled primarily by one person, the idea of an "administrative board" has some downsides. A member of the board who is asked to step down may simply refuse to relinquish any resources they control. For this reason, personal character needs to be a high priority when electing members to the board so that such a situation can be avoided.
 
 # Rationale and Alternatives
+
 
 # Prior Art
 
