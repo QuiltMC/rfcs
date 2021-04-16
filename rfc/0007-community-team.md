@@ -107,6 +107,54 @@ the process:
    possible to move ahead
 1. Once the team has finished discussing, implement the change and, if multiple approaches were suggested by the
    community members, inform the community on why this approach was ultimately decided upon 
+   
+## Process: Electing Team Members
+
+As our primary communication space is the official Discord server, community team member appointments should be 
+processed on Discord. Quilt's community team members are elected using a democratic internal process:
+
+1. Candidates may be put forward by members of the community team, after some internal discussion - this may be a 
+   result of the candidate asking to join the community team, observations made by the community team's members, 
+   suggestions from other community members, or otherwise
+1. A simple poll is posted in an internal channel designated for that purpose - it should detail the user's history in 
+   the community, their reputation in the wider modding community (if known) and why they're being considered as an
+   addition to the community team
+1. Members of the community team (and the administrative board) may vote on the poll using "yes" or "no" reactions and
+   discuss the advantages and disadvantages that appointing the candidate to the team may bring
+1. If someone submits a "no" vote, they must explain why they're doing so - this will help to inform the rest of the
+   voters and aid in the decision-making process
+1. When 75% of the community team and administrative board (combined) have voted, or a week has passed, a decision may
+   be made - if anyone eligible to vote still has serious concerns about the candidate (or an agreement cannot be
+   reached), the candidate **will not be elected**
+1. When an election passes, the candidate is contacted directly by a senior member of the community team - the 
+   candidate is not actually elected until they have been informed on the workings of the community team and the 
+   policies and processes that need to be followed, and they've confirmed that they understand the information they've
+   been presented, what they'll be responsible for, and that they're ready to join the team
+   
+Voters (and those that are considering putting forward a candidate) should consider the following points when forming
+their opinion:
+
+* Does the candidate actually want to join the community team?
+* Does the candidate have a good understanding of the Quilt community policies?
+* Does the candidate have any known problematic behaviour outside the Quilt community?
+* How active is the candidate in the Quilt community?
+* How does the candidate choose to interact with other community members? How do they interact with the community team
+  in comparison?
+* How does the community perceive the candidate? Do they mesh well with the rest of the community? 
+* How has the candidate contributed to the Quilt community and project so far?
+* How well does the candidate fit into the Quilt community's culture?
+* What is the candidate's infraction history? Have they been infracted for anything serious?
+* Would any community members be uncomfortable if the candidate were to be elected? If so, why?
+   
+Of course, there are likely to be additional considerations to keep in mind - voters should always bring up anything
+that concerns them about an applicant, and criticisms are not limited to the above list.
+
+## Process: Removing Team Members
+
+<!-- TODO: Update the link when RFC 6 is merged -->
+
+Removal of members from the community team follows the process outlined in 
+[RFC 6: Governmental Structure](https://github.com/QuiltMC/rfcs/blob/0006-governance/community/0006-governance.md#removal-of-staff).
 
 ---
 
