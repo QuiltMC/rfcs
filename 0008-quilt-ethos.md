@@ -1,6 +1,6 @@
 # Summary
 
-Quilt has a set of Community Guidelines and Governance RFCs. These provide a set of rules, expectations and guideance on what and how certain aspects of the project should be managed. After some reflection, it seems that a set of "Values" had not been define; the aim of this document is to set these values.
+Quilt has a set of Community Guidelines and Governance RFCs. These provide a set of rules, expectations and guidance on what and how certain aspects of the project should be managed. After some reflection, it seems that a set of "Values" had not been define; the aim of this document is to set these values.
 
 # Motivation
 
