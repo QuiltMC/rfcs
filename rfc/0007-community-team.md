@@ -40,14 +40,68 @@ fairly observable from an active, healthy community:
 * More opportunities to improve the modding ecosystem as a whole
 * More opportunities to support the members of our community in ways that are meaningful to them
 
-
 # Explanation
 
 The community team will be in charge of maintaining the Quilt community spaces, as detailed in the summary. It will
 be responsible for drafting up, accepting comments on and implementing community policies, interacting with and
 protecting the community and its members, and resolving conflicts and enforcing the community policies.
 
-## Process: Keyholding
+## Team Roles
+
+Community team members have specific roles, which define what each member is responsible for and what level of access
+they need to the community spaces they watch over. While the roles are intended to be fairly balanced regarding their
+responsibilities, there is still likely to be some overlap - all community team members have the *ability* to moderate,
+if they're required to.
+
+The role structure is intended to be flat, rather than an explicit hierarchy. Roles represent tasks and 
+responsibilities, rather than seniority. Roles may be assigned based on a number of criteria, including:
+
+* Previous experience
+* Staffing shortfalls or situational needs
+* Suitability for the role
+* Types of work the team member is offering to handle
+
+### Community Managers
+
+Community managers are responsible for day-to-day administrative tasks in Quilt community spaces, and take an active
+role in the community team candidacy process. They're in charge of mobilizing and supporting the rest of the community
+team, maintaining community spaces, and keeping everything running smoothly. Responsibilities include:
+
+* Actioning changes to the structure of community spaces, or to community policies
+* Aiding in conflict resolution and decision-making, especially when it comes to difficult moderation decisions
+* Engaging with the community when they have questions, reports or issues, and working with them to address their 
+  concerns
+* Facilitating the community team candidacy process by helping other team members to set up polls, and conducting 
+  interviews
+* Maintaining informational channels, and writing and posting community-oriented announcements
+* Managing any bots or other community-relevant automation tools
+* Organising, training and supporting the moderation team, and acting as supplemental moderators as required
+
+Community managers must be appointed democratically, following the process outlined later in this document. If 
+required, the keyholders will handle handing out the permissions required for community managers to work in Quilt
+community spaces.
+
+### Community Moderators
+
+Community moderators are responsible for maintaining the safety and welfare of the members of the Quilt community by
+enforcing the community policies, aiding in conflict resolution and dealing with problematic users and behaviours.
+Responsibilities include:
+
+* Aiding in conflict resolution between community members, and de-escalating heated situations
+* Applying infractions for problematic behaviour or removing problematic users - in accordance with the community 
+  policies 
+* Collaborating with other community team members to ensure the smooth running of the community, and to ensure that due 
+  process is followed - in accordance with the community policies
+* Engaging in active, honest participation in the Quilt community
+* Engaging in the community team's democratic processes
+* Helping members to find the correct community space for their query, and ensuring that other members don't prevent 
+  them from getting the support they need
+* Keeping up to date on social issues (especially those that affect minority groups), and applying that knowledge to 
+  keep community members safe
+  
+Community moderators must be appointed democratically, following the process outlined later on in this document.
+  
+### Keyholders
 
 While Quilt is a community project with concerns split across different teams, Discord (and some other platforms) is
 designed with the core idea of a single community leader or owner in mind. For that reason, platforms that cannot be
@@ -155,9 +209,9 @@ processed on Discord. Quilt's community team members are elected using a democra
 1. When 75% of the community team and administrative board (combined) have voted, or a week has passed, a decision may
    be made - if anyone eligible to vote still has serious concerns about the candidate (or an agreement cannot be
    reached), the candidate **will not be elected**
-1. Once an election has passed, the candidate is contacted directly by a senior member of the community team, and may
-   be invited to attend an interview with the rest of the community team. Interviews should only be conducted in order
-   to assess whether the candidate should ultimately be appointed as a member of the community team
+1. Once an election has passed, the candidate is contacted directly by a community manager, and may be invited to 
+   attend an interview with the rest of the community team. Interviews should only be conducted in order to assess 
+   whether the candidate should ultimately be appointed as a member of the community team
 1. After a successful interview, the candidate is not actually appointed until they have been informed on the workings 
    of the community team and the policies and processes that need to be followed, and they've confirmed that they 
    understand the information they've been presented, what they'll be responsible for, and that they're ready to join 
