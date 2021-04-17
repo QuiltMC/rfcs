@@ -47,6 +47,35 @@ The community team will be in charge of maintaining the Quilt community spaces, 
 be responsible for drafting up, accepting comments on and implementing community policies, interacting with and
 protecting the community and its members, and resolving conflicts and enforcing the community policies.
 
+## Process: Keyholding
+
+While Quilt is a community project with concerns split across different teams, Discord (and some other platforms) is
+designed with the core idea of a single community leader or owner in mind. For that reason, platforms that cannot be
+run explicitly under team leadership alone must be "owned" by a keyholder.
+
+A keyholder is a democratically elected member of the community team that otherwise has no direct involvement or stake
+in the management of the community. By electing an otherwise unrelated party to be a keyholder, it's hoped that the
+Quilt community spaces can avoid the issue of a community leader gone rogue - it should prevent an abuse of power from
+giving someone total control over any community space, at least as far as is possible.
+
+After they've been elected, a keyholder does not need to be otherwise active in the community. All that's required of
+them is that they're easily contactable (within reason), and that they're prepared to act in the event that something
+happens that they will need to take care of.
+
+Keyholder candidates should:
+
+* Be able to show that they have no conflicting interests or personal wish to be in power
+* Be known to a majority of the community team
+* Have a clean, positive reputation in the Quilt community and wider modding community
+* Have some accreditation or other guarantee of reputation in the wider modding community
+* Regarding Discord specifically, they should be prepared to act as a liaison with the Discord team and to represent 
+  the Quilt community officially when interacting with them, including in the event of a partnership or working 
+  relationship with Discord
+* Understand what's involved with keyholding, and be ready to step in when needed
+
+Keyholders are not moderators or community managers, and they are not required to be obvious in the communities they
+keyhold for - but they are free to make themselves known if they wish.
+
 ## Process: Changing Community Policies
 
 While the policies themselves are out of scope for an RFC of this type, it's worth detailing the process the team
@@ -126,10 +155,15 @@ processed on Discord. Quilt's community team members are elected using a democra
 1. When 75% of the community team and administrative board (combined) have voted, or a week has passed, a decision may
    be made - if anyone eligible to vote still has serious concerns about the candidate (or an agreement cannot be
    reached), the candidate **will not be elected**
-1. When an election passes, the candidate is contacted directly by a senior member of the community team - the 
-   candidate is not actually elected until they have been informed on the workings of the community team and the 
-   policies and processes that need to be followed, and they've confirmed that they understand the information they've
-   been presented, what they'll be responsible for, and that they're ready to join the team
+1. Once an election has passed, the candidate is contacted directly by a senior member of the community team, and may
+   be invited to attend an interview with the rest of the community team. Interviews should only be conducted in order
+   to assess whether the candidate should ultimately be appointed as a member of the community team
+1. After a successful interview, the candidate is not actually appointed until they have been informed on the workings 
+   of the community team and the policies and processes that need to be followed, and they've confirmed that they 
+   understand the information they've been presented, what they'll be responsible for, and that they're ready to join 
+   the team
+1. Once the candidate has been appointed to the community team, their roles, permissions or access should be modified
+   in the Quilt community spaces to ensure that they're able to act properly as part of the community team
    
 Voters (and those that are considering putting forward a candidate) should consider the following points when forming
 their opinion:
