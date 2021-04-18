@@ -147,7 +147,7 @@ amending) the community policies:
    community members may have - this should be an active process that allows the community members to provide ideas
    and feedback for the community team to consider and utilize to update the publicised draft
 1. After enough time has passed (usually a week) and enough feedback has been collected, finish implementing the 
-   changes proposed by the community as appropriate, and officiate the changes - thus amending the working copy of
+   changes proposed by the community as appropriate, and integrate the changes - thus amending the working copy of
    the community policies and applying the policy changes to the Quilt community going forward
    
 In some situations, smaller or more urgent changes to community policies must be made. Generally, this happens when a
@@ -203,12 +203,10 @@ processed on Discord. Quilt's community team members are elected using a democra
    the community, their reputation in the wider modding community (if known) and why they're being considered as an
    addition to the community team
 1. Members of the community team (and the administrative board) may vote on the poll using "yes" or "no" reactions and
-   discuss the advantages and disadvantages that appointing the candidate to the team may bring
+   discuss the advantages and disadvantages that appointing the candidate to the team may bring - see the 
+   "Interpreting the Vote" section for information on how to treat the results
 1. If someone submits a "no" vote, they must explain why they're doing so - this will help to inform the rest of the
    voters and aid in the decision-making process
-1. When 75% of the community team and administrative board (combined) have voted, or a week has passed, a decision may
-   be made - if anyone eligible to vote still has serious concerns about the candidate (or an agreement cannot be
-   reached), the candidate **will not be elected**
 1. Once an election has passed, the candidate is contacted directly by a community manager, and may be invited to 
    attend an interview with the rest of the community team. Interviews should only be conducted in order to assess 
    whether the candidate should ultimately be appointed as a member of the community team
@@ -219,6 +217,29 @@ processed on Discord. Quilt's community team members are elected using a democra
 1. Once the candidate has been appointed to the community team, their roles, permissions or access should be modified
    in the Quilt community spaces to ensure that they're able to act properly as part of the community team
    
+### Interpreting the Vote
+
+During an election, voting continues until either the election has passed or failed, based on specific criteria.
+
+The election has **passed** when one of the following is true:
+
+* The entire community team and administrative board have voted in favour of the candidate
+* A week has passed, at least 75% of the community team and administrative board has voted, and those that have
+  voted have reached a consensus in favour of the candidate
+
+The election has **failed** when one of the following is true:
+
+* The entire community team and administrative board have voted, but consensus cannot be reached
+* A week has passed and less than 75% of the community team and administrative board has voted
+* A week has passed, at least 75% of the community team and administrative board has voted, and those that have
+  voted have reached a consensus in opposition of the candidate - or a consensus cannot be reached
+* The candidate receives more negative votes than positive votes
+
+If a situation occurs that this section is unable to cover, it will be amended. In those situations, the election will
+fail and need to be restarted after the relevant changes have been made to address the issue.
+
+### Points to Consider
+
 Voters (and those that are considering putting forward a candidate) should consider the following points when forming
 their opinion:
 
