@@ -1,7 +1,7 @@
 # Summary
 
 This document exists to describe the formation of a team that handles Quilt's community management tasks. It makes 
-reference to **the Quilt community**, which may be defined as all official Quilt community spaces, including(but not 
+reference to **the Quilt community**, which may be defined as all official Quilt community spaces, including (but not 
 limited to):
 
 * The QuiltMC GitHub organisation and repositories
