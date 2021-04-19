@@ -90,19 +90,19 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - Loot Tables
     - Object Builder API (Criterion)
 - `world` // Needs better name to avoid confusion with Worldgen
-	- `blocks` // these groups are 100% internal; they are in the same repo and all managed by the `world` team
+	- `block` // these groups are 100% internal; they are in the same repo and all managed by the `world` team
 		- BlockEntity Networking (merged in)
     	- Object Builder API (FabricBlockSettings, FabricBlockEntityBuilder and FabricMaterialBuilder)
     	- (future) Block Extensions (think IForgeBlock)
     	- Content Registries (Flammable Block Registry)
-	- `items`
+	- `item`
     	- Item API
     	- Content Registries (Fuel Registry, Composting Registry)
     	- Tool Attribute API
     	- (future) Item Extensions (think IForgeItem)
-	- `entities`
-    	- Object Builder API (EntityType Builder, Trades, Villager Professions and Types)
-    	- Entity Events
+	- `entity`
+    	    	- Object Builder API (EntityType Builder, Trades, Villager Professions and Types)
+    	    	- Entity Events
     - `other`
     	- Particles
     	- Object Builder API (Point of interest)
