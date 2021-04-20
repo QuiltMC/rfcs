@@ -11,15 +11,17 @@ The can be refered back to as more of a "Why" a decision was made - instead of t
 
 # Explanation
 
-The proposed to aphorisms are:
+We will sometimes get things wrong, but:
+Do not let perfect be the enemy of actually shipping an idea.
+Modular, Simple and Flexible.
+Made by Anyone;
+Made for Anyone.
+This project breaths on collaboration.
+Not sure whether something will work? Try it. 
+Other will help shape it to something amazing.
+Spread out power and responsibilty; it is a heavy burden to walk alone.
+Tiny Potato got old; find an new hill to march apon. I here a pinapple is good?
 
-1. Do not let perfect be the enemy of actually shipping an idea to usage.
-2. Modular, Simple and Flexible should be the goal of all design.
-3. Collaborate to Innovate
-4. Keep disagreements internal -- always.
-5. Consulting with many voices is good, but at some point you have to make a decision.  
-6. All players deserve a chance to explain themselves and have actions against them be reviewed by someone not involved originally.
-7. Tiny Potato got old -- time to find something new
 
 
 # Drawbacks
