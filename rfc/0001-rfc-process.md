@@ -6,9 +6,7 @@ The RFC process aims to facilitate thoughtful discussion in the decision-making 
 
 This will allow us to put a time limit on unproductive discussion where necessary, so actual progress can still be made while giving the community a place to voice their opinions.
 
-# Quilt RFC Process
-(This is the section of this RFC which &ndash; if accepted &ndash; would become our "RFC guidelines" document.)
-
+# The Quilt RFC Process
 This document gives an outline of how the RFC process works and explains how contributors should submit their RFCs to the project. 
 
 ## When you must submit an RFC
