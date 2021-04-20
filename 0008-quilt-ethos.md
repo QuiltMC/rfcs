@@ -20,7 +20,7 @@ This project breaths on collaboration.
 Not sure whether something will work? Try it. 
 Other will help shape it to something amazing.
 Spread out power and responsibilty; it is a heavy burden to walk alone.
-Tiny Potato got old; find an new hill to march apon. I here a pinapple is good?
+Tiny Potato got old; find an new hill to march apon. I hear a pinapple is good?
 
 
 
