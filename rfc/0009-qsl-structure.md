@@ -121,10 +121,13 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
         - this could also go in `world`
     - (potentially in the future) Screen Extensions
 ## Experimental features
-In order to make the process of adding new front-facing APIs or new modules as seamless as possible, this RFC proposes to add a new lifetime status for a feature, called the `experimental phase`. It's objective is to make sure that features that are not well tested does get to modders directly, but still get a potential audiance for testing.
-This phase will be necessary for all new APIs / modules, and has an unknown duration, until all issues about the modifications are resolved, and the team responsible for the modifications considers the changes "well tested and ready to use" *(Note before merging: find a better wording for the stabilization condition)*.
+To make the process of adding new front-facing APIs or new modules as seamless as possible, this RFC proposes to add a new lifetime status for a feature, called the `experimental phase`. Its objective is to make sure that features that are not well tested do get to modders directly, but still, get a potential audience for testing.
 
-The expeimental APIs / Modules shall not be usable without a specific opt-in in either the top of the file, or in project settings (The specifics of that implementation is not in the scope of this RFC).
+This phase will be necessary for all new APIs / modules and has an unknown duration.
+
+Once all issues about the modifications are resolved, and the team responsible for the modifications considers the changes "well tested and ready to use" *(Note before merging: find a better wording for the stabilization condition)*.
+
+The experimental APIs / Modules shall not be used without a specific opt-in at either the top of the file or in project settings (The specifics of that implementation are not in the scope of this RFC).
 ## Drawbacks
 Yet another change in structure and interaction with the API may make it more difficult to contribute to QSL.
 
