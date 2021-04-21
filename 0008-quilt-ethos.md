@@ -15,13 +15,13 @@ We will sometimes get things wrong, but:
 Do not let perfect be the enemy of actually shipping an idea.
 Modular, Simple and Flexible.
 Made by Anyone;
-Made for Anyone.
+Made for Everyone.
 This project breaths on collaboration.
+And colloboration will shape this into something amazing.
 Not sure whether something will work? Try it. 
-Other will help shape it to something amazing.
 Spread out power and responsibilty; it is a heavy burden to walk alone.
-Tiny Potato got old; find an new hill to march apon. I hear a pinapple is good?
-
+Tiny Potato got old; find an new hill to march apon.
+I hear a pineapple is good?
 
 
 # Drawbacks
