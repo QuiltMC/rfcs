@@ -1,22 +1,23 @@
+# Template RFC
+
 This template is intended to serve as a guideline for what should be included
 in the typical RFC. Some of this may not be relevant to all RFCs, and that's
 fine, but it's best to follow this template where possible. (Delete this
 paragraph from your actual RFC.)
 
-
-# Summary
+## Summary
 
 One paragraph explanation of this suggestion. Don't go into too much detail
 here; that goes in the explanation section. This should just give readers a
 general idea of what this RFC does.
 
 
-# Motivation
+## Motivation
 
 Why should we do this? What are the benefits?
 
 
-# Explanation
+## Explanation
 
 Explain this change in detail. This section will be different depending on what
 sort of change it is.
@@ -33,12 +34,12 @@ will work. Be thorough and clear here, so that everyone can have the same
 understanding of this suggestion.
 
 
-# Drawbacks
+## Drawbacks
 
 Why should we not do this?
 
 
-# Rationale and Alternatives
+## Rationale and Alternatives
 
 - Why is this the best possible design?
 - What other designs are possible and why should we choose this one instead?
@@ -47,7 +48,7 @@ Why should we not do this?
 - What is the impact of not doing this?
 
 
-# Prior Art
+## Prior Art
 
 If this has been done before by some other project, explain it here. This could
 be positive or negative. Discuss what worked well for them and what didn't.
@@ -55,7 +56,7 @@ be positive or negative. Discuss what worked well for them and what didn't.
 There may not always be prior art, and that's fine.
 
 
-# Unresolved Questions
+## Unresolved Questions
 
 - What should be resolved before this RFC gets merged?
 - What should be resolved while implementing this RFC?
@@ -63,7 +64,7 @@ There may not always be prior art, and that's fine.
   could be addressed in the future?
 
 
-# Expected Response
+## Expected Response
 
 How do might the wider community respond to this change? Who will be affected
 by it and how? Who has advocated for this change? Who has advocated against it?
