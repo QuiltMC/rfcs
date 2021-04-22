@@ -52,12 +52,3 @@ Can usually be omitted. Is only necessary if there are prior organizations/proje
 
 # Drawbacks
 In the present day with most accounts and digital spaces being controlled primarily by one person, the idea of an "administrative board" has some downsides. A member of the board who is asked to step down may simply refuse to relinquish any resources they control. For this reason, personal character needs to be a high priority when electing members to the board so that such a situation can be avoided.
-
-# Rationale and Alternatives
-
-
-# Prior Art
-
-# Unresolved Questions
-
-# Expected Response
