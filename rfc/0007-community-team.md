@@ -233,7 +233,7 @@ The election has **failed** when one of the following is true:
 * A week has passed and less than 75% of the community team and administrative board has voted
 * A week has passed, at least 75% of the community team and administrative board has voted, and those that have
   voted have reached a consensus in opposition of the candidate - or a consensus cannot be reached
-* The candidate receives more negative votes than positive votes
+* The candidate recieves more negative votes than the total amount of positive votes and votes not yet submitted
 
 If a situation occurs that this section is unable to cover, it will be amended. In those situations, the election will
 fail and need to be restarted after the relevant changes have been made to address the issue.
