@@ -28,13 +28,13 @@ ASM-Regex would be based on two key kinds of components:
 
 #### Class representation
 
-![Class diagram of the tree API](0000-assets/asmr_class_diagram.png)
+![Class diagram of the tree API](0014-assets/asmr_class_diagram.png)
 
 Many nodes in the tree representation of a class (`org.objectweb.asm.tree`) count as "symbols" that can be matched against and replaced. Mixin has the concept of matching an `AbstractInsnNode` using custom injection points, here we generalize this concept to be able to match against and transform everything from whole `MethodNode`s, all the way down to individual fields of an instruction, such as the operand to an `ALOAD` instruction.
 
 The granularity of the tree structure is a key point of this design. Individual operands to instructions are treated the same conceptually to a whole instruction node, which is treated the same as a whole method node in a class.
 
-![Hello World Example Diagram](0000-assets/asmr_hello_world.png)
+![Hello World Example Diagram](0014-assets/asmr_hello_world.png)
 
 A "slice" is a pointer to one or more sequential nodes. It can be one of two types:
 
