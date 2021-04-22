@@ -16,7 +16,7 @@ A team is a group of staff members dedicated to solving a specific issue, mainta
 Each team will be initially constructed by the parent team responsible for that team. Further appointments will be voted upon by team members.
 
 #### Voting
-When a vote is called within a team, the majority wins. Members of supervising teams may choose to participate in votes. In the event of a tie, members of the parent team may choose to vote if they haven't already, with each of their votes being worth three votes.
+When a vote is called within a team, each member of that team may choose to vote for any of the available options or abstain. The option with the plurality of votes wins. Members of supervising teams may choose to participate in votes. In the event of a tie, members of the parent team may choose to vote if they haven't already, with each of their votes being worth three votes.
 
 ### Removal of Staff
 Any team member (up to and including administrative board members) may be removed by a majority vote of all staff members above and below.
