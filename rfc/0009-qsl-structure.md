@@ -70,7 +70,7 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - Command API
     - Game Rule API
     - (future) Permissions API
-- `rendering`
+- `rendering` // This entire library should be client-side only
 	- BlockRenderLayer Registration
 	- Indigo
 	    - need an easy way to exclude this
