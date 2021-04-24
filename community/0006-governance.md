@@ -7,7 +7,7 @@ This document has been written with the explicit purpose of defining guidelines 
 # Explanation
 
 ## Governmental Structure
-![Governmental Structure](../figures/administrative-layout-diagram.png)
+![Governmental Structure](../figures/quilt-goverance-diagram.png)
 \* For illustration purposes only, technical teams may vary
 
 ### Teams
