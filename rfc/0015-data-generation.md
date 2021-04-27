@@ -5,7 +5,6 @@ generation, so that modders can spend less time writing JSONs while still
 keeping the advantages of statically-defined data when dynamic generation
 is unnecessary.
 
-
 ## Motivation
 
 Since the beginning of The Datapack Era, modders have consistently expressed
@@ -47,35 +46,23 @@ statically with no issue.
 Data generation can easily be separated into *static* and *dynamic* generation.
 Static generation is not expected to change between launches or reloads; only
 between separate releases of a mod. Dynamic generation can change arbitrarily
-based on configuration, data, or other sources. To reflect these very disparate
-needs, this RFC defines separate methods for generating static and dynamic
-data.
+based on configuration, data, or other sources.
+
+Both static and dynamic generators will write to a `PackWriter` passed to the
+datagen method, which will manage loading of data and conversion to hard files.
+`PackWriter` contains methods to accept JSON objects, strings, or byte arrays
+to write to packs.
 
 ### Static Generation
 
-Compile-time data generation will be integrated with Quilt's Gradle plugin,
-defining a datagen block as such:
-
-```groovy
-datagen {
-    package "com.example.mymod.registry"
-    namespace "mymod" //optional, inferred from archivesBaseName if not specified
-    generator { consumer -> //optional
-        <...> 
-    }
-}
-```
-
-This flags the `com.example.mymod.registry` package to be scanned by an
-annotation processor for fields annotated to generate common templates, such as
-common blockstate JSONs, basic block/item models, recipes, recipe advancements,
-tags, and any other necessary data.
-
-For data generation that's too complicated for annotations to define, the
-`generator` closure allows programmatic definition of JSON objects which can
-then be passed to `consumer` to be added as a JSON file in the mod's
-resources.
-
+Static data generation is performed in the `datagen` source set. `datagen` has
+access to `main`, as well as all dependencies accessible by `main`. Any methods
+with no return and accepting one `PackWriter` annotated by a `@DataGen`
+annotation will be invoked during build, with results written to hard viles.
+The `@DataGen` annotation requires an argument of `DataType.CLIENT_ASSETS` or
+`DataType.SERVER_DATA` to specify whether to write to `assets` or `data`. Any
+files added via datagen will be ignored if a file with that namespace and path
+in that type of data exists as a hard file in `src/main/resources`.
 
 ### Dynamic Generation
 
@@ -84,7 +71,7 @@ Dynamic data generation is performed through implementors of
 resource packs and `ServerDataGenManager` for data packs. A 
 `DynamicDataGenerator` defines both a method invoked during resource reload and
 a method that returns a state object as JSON. The `onReload` method will pass
-path and content strings to a file writer, which will place those files in a
+path and content strings to a `PackWriter`, which will place those files in a
 `quilt_generated` folder in the base game directory. The state object will
 be written as well, and compared to whenever a resource reload is triggered.
 If the current state and the saved state are different, the resources will be
@@ -92,21 +79,25 @@ regenerated, allowing for reliable caching.
 
 ## Drawbacks
 
-While the package structure for storing registration classes in a single
-directory is a loose standard, it goes directly against the package format that
-Minecraft has used in effectively every set of mappings, and I'm not sure of
-a better way to specify.
+- Getting multiple source sets, especially arbitrary source sets, to play nice
+with IDEs can be challenging. This would require work in Quilt Gradle to ensure
+that source sets are executed on any build, whether it's to test or to release.
+- In order to properly bootstrap the registries necessary for datagen, it may
+be necessary to launch the Minecraft client during build tasks in order to fire
+entrrypoints properly. I am not currently aware of a workaround.
+- The "datagen" name on the source set may be confusing to end users, implying
+that *all* data generation must be done in that source set. I cannot currently
+think of another succinct alternative.
 
 ## Rationale and Alternatives
 
-Java, sadly, has very little capacity for compile-time metaprogramming;
-statically-defined annotations are the only method of generating files based
-on Java source while compiling without messing around with classpaths. As
-Minecraft modding already uses Gradle for its build system, processing
-annotations with Gradle for easily-defined data like basic models or block
-drops removes a significant amount of data generation work. A gradle task for
-additional complex generation is the best compile-time option unless we want
-to significantly complicate the build process.
+Java, sadly, has very little capacity for compile-time metaprogramming,
+making the task of generating files based on Java code difficult. Using a
+separate source set ensures that Java-written data generators can be used in
+both compile time and runtime, reducing code duplication.
+
+A previous version of this RFC proposed a system using annotations and Groovy
+closures to generate data.
 
 ## Prior Art
 
@@ -130,11 +121,12 @@ programs for static data generation:
 
 ## Unresolved Questions
 
-- Are there alternatives to annotations and Gradle scripts that can be better
-integrated with mod code?
+- Is there a better name for the `datagen` source set?
+- Should any validation be done to ensure that generated data is usable?
 
 
 ## Expected Response
 
 This will likely obsolete other dynamic data generation tools, so it needs to
-be a concrete improvement over them. Allowing existing solutions to use the cache system may also help.
+be a concrete improvement over them. Allowing existing solutions to use the
+cache system may also help.
