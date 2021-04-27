@@ -20,7 +20,7 @@ block will require:
 - A JSON for unlocking the block's recipe through an advancement
 - A JSON for defining the block drop loot table, even if it just drops itself
 
-While there are multiple programns that will help generate various forms of
+While there are multiple programs that will help generate various forms of
 data (see Prior Art), none of them are integrated with the standard Gradle
 build system or mod code. This means that if you decide to generate data after
 you've already defined a dozen blocks and items, you need to copy out that list
@@ -30,9 +30,9 @@ you add new content.
 There are also scenarios in which data statically defined at compile time
 is insufficient for the purposes a mod is trying to fulfill. Take, for example,
 the mod [Artis](https://www.curseforge.com/minecraft/mc-mods/artis), which
-lets pack developers define custonm workbenches of arbitrary size without
+lets pack developers define custom workbenches of arbitrary size without
 needing to write a mod. There is no way of knowing what tables will be defined
-at compile time, so we can't possibly provide data satisfactorally. However,
+at compile time, so we can't possibly provide data satisfactorily. However,
 current runtime data generation tools do not cache their outputs, and therefore
 run every time the game is launched or resources are reloaded. For a mod with
 very few things to generate, this is not a problem, but when sizable mods like
@@ -58,7 +58,7 @@ to write to packs.
 Static data generation is performed in the `datagen` source set. `datagen` has
 access to `main`, as well as all dependencies accessible by `main`. Any methods
 with no return and accepting one `PackWriter` annotated by a `@DataGen`
-annotation will be invoked during build, with results written to hard viles.
+annotation will be invoked during build, with results written to hard fileses.
 The `@DataGen` annotation requires an argument of `DataType.CLIENT_ASSETS` or
 `DataType.SERVER_DATA` to specify whether to write to `assets` or `data`. Any
 files added via datagen will be ignored if a file with that namespace and path
@@ -82,6 +82,9 @@ regenerated, allowing for reliable caching.
 - Getting multiple source sets, especially arbitrary source sets, to play nice
 with IDEs can be challenging. This would require work in Quilt Gradle to ensure
 that source sets are executed on any build, whether it's to test or to release.
+  - Idea in specific does *not* like extra modules annd annotation processors
+  with Gradle, which is a 
+  [major issue](https://github.com/QuiltMC/rfcs/pull/15#discussion_r621024608)
 - In order to properly bootstrap the registries necessary for datagen, it may
 be necessary to launch the Minecraft client during build tasks in order to fire
 entrrypoints properly. I am not currently aware of a workaround.
@@ -123,7 +126,7 @@ programs for static data generation:
 
 - Is there a better name for the `datagen` source set?
 - Should any validation be done to ensure that generated data is usable?
-
+- Will this even work with Idea?
 
 ## Expected Response
 
