@@ -46,7 +46,7 @@ Modules follow the following general rules:
 - Maven group of `org.quiltmc.qsl.$library`
 - Artifact id of `mod-id`
 - Semantic Versioning. Hashes are *not* used to identify modules. 
-- Can only depend on modules from `core`, `common`, or within their own library.
+- Can only depend on modules from `core` or within their own library.
 
 To modders, most mods would not explicitly depend on libraries or their modules, but Loom would automatically determine the modules to depend on by scanning at compile time, and those modules will be downloaded at runtime by Loader.
 ### Top-level Structure
