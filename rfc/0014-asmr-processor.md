@@ -76,6 +76,32 @@ In addition, what is the *real* problem with people doing what they're not suppo
 
 The problem could also be mitigated by putting illegal Java identifier characters in the interface method(s) that need to be implemented.
 
+#### Transformer Verifier
+
+To ensure determinism in bytecode modifications, transformers' own bytecode is scanned and verified. An exception is thrown if a transformer does not respect the following criteria:
+
+- All references to non-whitelisted or blacklisted classes are disallowed.
+   - All classes are blacklisted by default
+   - The transformer class itself (the one that's currently being verified) is whitelisted.
+   - All classes that ship with the ASMR processor are whitelisted by default.
+     - This check is *not* the same as checking the package prefix, as this restriction may be circumvented by putting a mod's own classes in the same package.
+   - Certain JDK classes are whitelisted, such as `String`, the full list of them may be added to over time.
+   - All classes, methods, etc. annotated with `@ApiStatus.Internal` or `@HideFromTransformers` are blacklisted.
+   - Some JDK methods inside blacklisted classes may be whitelisted, such as `System.arraycopy`, the full list of them may be added to over time.
+   - Some JDK methods inside whitelisted classes may be blacklisted, such as `Math.random`, the full list of them may be added to over time.
+- Certain bytecode instructions are disallowed, such as `MONITORENTER` and `MONITOREXIT`.
+- Certain method modifiers are disallowed, such as `ACC_SYNCHRONIZED` and `ACC_NATIVE`.
+- All usages of the `INVOKEDYNAMIC` instruction will be disallowed except:
+   - If the bootstrap method is a member of `java/lang/invoke/StringConcatFactory`.
+   - If the bootstrap method is `java/lang/invoke/LambdaMetafactory.metafactory`, and:
+      - The return type additionally is not annotated as `@ApiStatus.NotExtendable`.
+      - The lambda captures are either primitive types, from a short list of acceptable JDK classes (e.g. `String`), or annotated with `@AllowLambdaCapture`.
+   - More allowable `INVOKEDYNAMIC` calls may be added in the future.
+- All verified classes shall extend `java/lang/Object`.
+- Verified classes may only have fields with the `ACC_FINAL` modifier. In addition, these fields shall only be from a short list of allowable types, such as primitive types and `String`.
+   - If the class file version is 52 (Java 8) or lower, then all `PUTFIELD` and `PUTSTATIC` instructions whose owner is the current transformer class will be disallowed, unless they are respectively in a `<init>` or `<clinit>` method.
+      - This explicit check is needed in addition to the `ACC_FINAL` rule because Java 8 JVMs do not throw a `VerifyError` when final field is modified outside the appropriate initialization method.
+
 <!--For technical changes, such as changes to APIs, first give an overview of how
 this proposed change would work. Explain how it would be used, with code
 examples. Then, give a more in depth explanation of how it would be implemented
