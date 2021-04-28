@@ -60,13 +60,11 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
         - (future) Proper Handshake API
     - Crash Reports
     - Resource Loader
-- `common` - "Dumping ground" of shared code needed across modules. This is a little more complex, and uses github's code owners to define ownership of individual modules instead of the library as a whole. Modules should only be here if 100% needed, and if enough similar code goes here it can be split to its own library.
-	- None currently
 - `transfer`
     - API Lookup API
     - fluid api
     - item transfer api
-- `config_and_admin` // better name needed
+- `command` // This really is anything server-side only related to administration, but "command" is a nice word to describe the primary use-case.
     - Command API
     - Game Rule API
     - (future) Permissions API
@@ -89,27 +87,25 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - Tag Extensions
     - Loot Tables
     - Object Builder API (Criterion)
-- `world` // Needs better name to avoid confusion with Worldgen
-	- `block` // these groups are 100% internal; they are in the same repo and all managed by the `world` team
-		- BlockEntity Networking (merged in)
-    	- Object Builder API (FabricBlockSettings, FabricBlockEntityBuilder and FabricMaterialBuilder)
-    	- (future) Block Extensions (think IForgeBlock)
-    	- Content Registries (Flammable Block Registry)
-	- `item`
-    	- Item API
-    	- Content Registries (Fuel Registry, Composting Registry)
-    	- Tool Attribute API
-    	- (future) Item Extensions (think IForgeItem)
-	- `entity`
-    	    	- Object Builder API (EntityType Builder, Trades, Villager Professions and Types)
-    	    	- Entity Events
-    - `other`
+- `block` 
+	- BlockEntity Networking (merged in)
+    - Object Builder API (FabricBlockSettings, FabricBlockEntityBuilder and FabricMaterialBuilder)
+    - (future) Block Extensions (think IForgeBlock)
+    - Content Registries (Flammable Block Registry)
+- `item`
+    - Item API
+    - Content Registries (Fuel Registry, Composting Registry)
+    - Tool Attribute API
+    - (future) Item Extensions (think IForgeItem)
+    - Item Groups
+- `entity`
+    - Object Builder API (EntityType Builder, Trades, Villager Professions and Types)
+    - Entity Events
+- `content_other`
     	- Particles
     	- Object Builder API (Point of interest)
     	- Interaction Events
-        - Could probably use refactoring, but as it stands this absolutely deals with events happening in the world
-    	- Key Binding API
-        	- I'm not even confident these can be used outside of worlds, and either way all of the Vanilla examples point to being world-ly
+        	- Could probably use refactoring, but as it stands this absolutely deals with events happening in the world
 - `worldgen`
     - Dimension API
     - Biome API
@@ -120,6 +116,7 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - ScreenHandler API
         - this could also go in `world`
     - (potentially in the future) Screen Extensions
+    - Key Bindings API
 ## Drawbacks
 Yet another change in structure and interaction with the API may make it more difficult to contribute to QSL.
 
@@ -127,7 +124,9 @@ It may be difficult to find the right level of granularity for libraries, and th
 
 The compile-time scanning of used features adds additional complexity to our build process, and might be buggy.
 ## Unresolved Questions
-Most things not defined here are left to the discretion of the QSL Technical Lead and their teams, as defined in the (future) Technical Teams RFC
+Most things not defined here are left to the discretion of the QSL Technical Lead and their teams, as defined in the (future) Technical Teams RFC.
+
+In the future, there may be a "library group"--a group of modules that is allowed to bypass the library sandboxing restriction within that group. This will be defined in a later RFC if we find it is actually needed.
 ## Expected Response
 Because Fabric API is almost always used in a monolithic structure anyway, this new structure is expected to have little impact on the average modder.
 
