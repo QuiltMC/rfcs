@@ -36,13 +36,13 @@ The granularity of the tree structure is a key point of this design. Individual 
 
 ![Hello World Example Diagram](0014-assets/asmr_hello_world.png)
 
-A "slice" is a pointer to one or more sequential nodes. It can be one of two types:
+A "capture" is a pointer to one or more sequential nodes. It can be one of two types:
 
-- `AsmrSlice`: references a single node
-- `AsmrListSlice`: references a parent list, a start node within the list, and an end node within the list.
-  - To better account for changes to the node list made by other transformers, list slices can choose whether they include the start and end nodes. For example here, pointing right after the field instruction node is not the same thing as pointing right before the load constant instruction node because, if another transformer injects between those two nodes, the new nodes will be included in the former case but not in the latter case. 
+- `AsmrCapture`: references a single node
+- `AsmrListCapture`: references a parent list, a start node within the list, and an end node within the list.
+  - To better account for changes to the node list made by other transformers, list captures can choose whether they include the start and end nodes. For example here, pointing right after the field instruction node is not the same thing as pointing right before the load constant instruction node because, if another transformer injects between those two nodes, the new nodes will be captured in the former case but not in the latter case. 
 
-For a slice of instructions in a method (similar to what mixin has), the parent is the method instruction list ("body"), and the start and end indexes are into that instruction list. There can also be a slice of fields or methods in a class, and a slice of operands in a single instruction. If a single symbol needs to be targeted, it is represented as a slice of length 1. You can also have a slice of length 0, where the start index equals the end index.
+For a capture of instructions in a method (similar to what Mixin has), the parent is the method instruction list ("body"), and the start and end indexes are into that instruction list. There can also be a capture of fields or methods in a class, and a capture of operands in a single instruction. If a single symbol needs to be targeted, it can be either represented as a basic capture, or as a list capture of length 1. There can also be a list capture of length 0, where the start index equals the end index.
 
 #### Processor phases
 
@@ -50,7 +50,7 @@ For a slice of instructions in a method (similar to what mixin has), the parent 
 
 The processor phases are split into two phases (actually it's more complicated than this, more on that later). We first have the read phase and then we have the write phase.
 
-When a class is transformed, the read phase is first invoked for all transformers. This is when all transformers inspect the tree of the class and collect a set of slices they are interested in. Also in this phase, the transformers are allowed to tell the processor certain things about the slices they identify. For example, a transformer could tell the processor that a certain slice must not be modified by any other transformer during the write phase. No modification to the class tree happens in this phase.
+When a class is transformed, the read phase is first invoked for all transformers. This is when all transformers inspect the tree of the class and collect a set of captures they are interested in. Also in this phase, the transformers are allowed to tell the processor certain things about the slices they identify. For example, a transformer could tell the processor that a certain slice must not be modified by any other transformer during the write phase. No modification to the class tree happens in this phase.
 
 In the read phase, each transformer also tells the processor about the writes it plans to do during the write phase (along with which write function to use in each case, see below). Note that this means that between the read phase and the write phase, the processor can detect inter-mod conflicts, which are defined as one processor marking a slice for write which overlaps a slice that another processor marked as cannot-be-modified.
 
@@ -78,7 +78,7 @@ The problem could also be mitigated by putting illegal Java identifier character
 
 #### Transformer Verifier
 
-To ensure determinism in bytecode modifications, transformers' own bytecode is scanned and verified. An exception is thrown if a transformer does not respect the following criteria:
+To ensure bytecode modifications that are functionally pure, transformers' own bytecode is scanned and verified. An exception is thrown if a transformer does not respect the following criteria:
 
 - All references to non-whitelisted or blacklisted classes are disallowed.
    - All classes are blacklisted by default
