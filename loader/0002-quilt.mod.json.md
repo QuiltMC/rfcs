@@ -242,9 +242,9 @@ The `"description"` field is optional.
 One or more paths to a square .PNG file. If an object is provided, the keys must be the resolution of the corresponding file. For example:
 ```json
 "icon": {
-    "32": "/path/to/icon32.png",
-    "64": "/path/to/icon64.png",
-    "4096": "/path/to/icon4096.png"
+    "32": "path/to/icon32.png",
+    "64": "path/to/icon64.png",
+    "4096": "path/to/icon4096.png"
 }
 ```
 
