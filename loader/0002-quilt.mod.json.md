@@ -224,12 +224,12 @@ A collection of `key: value` pairs denoting various contact information for the 
 The license or array of licenses this project operates under.
 
 A license is defined as either an [SPDX identifier](https://spdx.org/licenses/) string or an object in the following form:
-```json5
+```json
 {
-    name: "Perfectly Awesome License v1.0",
-    id: "PAL-1.0",
-    url: "https://theperfectlyawesomelicense.com/",
-    description: "This license does things and stuff and says that you can do things and stuff too!"
+    "name": "Perfectly Awesome License v1.0",
+    "id": "PAL-1.0",
+    "url": "https://theperfectlyawesomelicense.com/",
+    "description": "This license does things and stuff and says that you can do things and stuff too!"
 }
 ```
 The `"description"` field is optional.
@@ -240,8 +240,8 @@ The `"description"` field is optional.
 | Object/String | False    |
 
 One or more paths to a square .PNG file. If an object is provided, the keys must be the resolution of the corresponding file. For example:
-```
-icon: {
+```json
+"icon": {
     "32": "/path/to/icon32.png",
     "64": "/path/to/icon64.png",
     "4096": "/path/to/icon4096.png"
@@ -282,60 +282,58 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt mod file. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
 
-## File Format
-To allow for better clarity, the new mod file format will use the [JSON5 schema](https://json5.org/). This will allow for informative comments to be included in the default quilt.mod.json5 file as well as to allow mod/library developers to provide clarity for other developers.
-
-An example quilt.mod.json5:
-```json5
+## Example
+An example quilt.mod.json:
+```json
 {
-    schema_version: 1,
-    quilt_loader: {
-        group_id: "org.quiltmc",
-        mod_id: "example_mod",
-        version: "1.0.0",
-        entrypoints: {
-            main: [
+    "schema_version": 1,
+    "quilt_loader": {
+        "group_id": "org.quiltmc",
+        "mod_id": "example_mod",
+        "version": "1.0.0",
+        "entrypoints": {
+            "main": [
                 "org.quiltmc.example_mod.impl.ExampleMod",
                 "org.quiltmc.example_mod.impl.ExampleModNetworking"
             ],
             // Since we only have a single client endpoint, no array is needed.
-            client: "org.quiltmc.example_mod.impl.client.ExampleModClient",
+            "client": "org.quiltmc.example_mod.impl.client.ExampleModClient",
         },
-        depends: {
+        "depends": {
             "quilt_networking_api": "*",
             "quilt_rendering_api": "*"
         },
-        breaks: {
-            sodium: {
-                versions: "*",
-                reason: "Sodium does not implement the Quilt Rendering API."
+        "breaks": {
+            "sodium": {
+                "versions": "*",
+                "reason": "Sodium does not implement the Quilt Rendering API."
             },
-            some_random_library: [
+            "some_random_library": [
                 "1.23.456", // A reason is not required
                 {
-                    versions: "<1.0.0",
-                    reason: "Stable API required"
+                    "versions": "<1.0.0",
+                    "reason": "Stable API required"
                 },
                 {
-                    versions: "1.5.3",
-                    reason: "Contains a game-breaking bug"
+                    "versions": "1.5.3",
+                    "reason": "Contains a game-breaking bug"
                 }
             ]
         },
-        metadata: {
-            name: "Quilt Example Mod",
-            description: "An example mod for the Quilt ecosystem.",
-            contributors: {
+        "metadata": {
+            "name": "Quilt Example Mod",
+            "description": "An example mod for the Quilt ecosystem.",
+            "contributors": {
                 "Haven King": "Developer"
             },
-            contact: {
+            "contact": {
                 homepage: "https://quiltmc.org/"
             },
-            license: "CC0-1.0",
-            icon: "assets/modid/icon.png"
+            "license": "CC0-1.0",
+            "icon": "assets/modid/icon.png"
         }
     },
-    mixins: [
+    "mixins": [
         "modid.mixins.json"
     ]
 }
