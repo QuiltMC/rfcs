@@ -58,7 +58,7 @@ A unique identifier for the organization behind or developers of the mod. See Ma
 |--------|----------|
 | String | True     |
 
-A unique identifier or the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
+A unique identifier for the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
 
 ### The `provides` field
 | Type         | Required |
