@@ -10,7 +10,7 @@ Below is an outline of all defined keys and values.
 * [schema_version](#the-schema_version-field) — The schemaVersion to be used for reading this file
 * [quilt_loader](#the-quilt_loader-field) — Information related to loading the mod
     * [group_id](#the-group_id-field) — The Maven group id
-    * [mod_id](#the-mod_id-field) — The mod id
+    * [id](#the-id-field) — The mod id
     * [provides](#the-provides-field) — Alternative mod ids provided by this mod
     * [version](#the-version-field) — The mods version
     * [entrypoints](#the-entrypoints-field) — Collection of entrypoints
@@ -53,7 +53,7 @@ Information necessary for the mod loading process.
 
 A unique identifier for the organization behind or developers of the mod. See Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
-### The `mod_id` field
+### The `id` field
 | Type   | Required |
 |--------|----------|
 | String | True     |
@@ -118,64 +118,16 @@ A collection of `key: value` pairs, where each key is the namespace of a languag
 ### The `depends` field
 | Type   | Required |
 |--------|----------|
-| Object | False    |
+| Array  | False    |
 
-Defines mods that this mod will not function without.
-
-A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a [dependency object]() or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
-
-#### Dependency Object
-A dependency object is made up of a version specifier and a reason for that dependency. It may be represented in any of the following ways:
-
-As a JSON object, with both available fields
-```json
-{
-    "version": "*",
-    "reason": "Implements the same behavior as this mod."
-}
-```
-
-As a JSON object, omitting the optional "reason" field
-```json
-{
-    "version": "*"
-}
-```
-
-As a single JSON string, containing only the version specifier
-```json 
-"*"
-```
-
-Game providers and loader plugins can also add their own optional fields to the dependency object for extra context when resolving dependencies. The Minecraft game provider, for instance, might define an "environment" field like so:
-```json
-{
-    "version": "*",
-    "environment": "client"
-}
-```
-
-#### Version Specifier
-A version range specifier can make use of any of the following patterns:
-* `*` — Matches any version. Will fetch the latest version available if needed
-* `1.0.0` — Matches exactly version 1.0.0 and no other versions
-* `=1.0.0` — Matches exactly version 1.0.0 and no other versions
-* `>=1.0.0` — Matches any version greater than or equal to 1.0.0
-* `>1.0.0` — Matches any version greater than version 1.0.0
-* `<=1.0.0` — Matches any version less than or equal to version 1.0.0
-* `<1.0.0` — Matches any version less than version 1.0.0
-* `1.0.x` — Matches any version with major version 1 and minor version 0.
-* `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
-* `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
+An array of [dependency object](#dependency-objects)s. Defines mods that this mod will not function without.
 
 ### The `breaks` field
 | Type   | Required |
 |--------|----------|
-| Object | False    |
+| Array  | False    |
 
-Defines mods that this mod either breaks or is broken by.
-
-A collection of `key: value` pairs, where each key is in the form of either `mavenGroup:modId` or `modId` and each value is either a [dependency object]() or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
+An array of [dependency object](#dependency-objects)s. Defines mods that this mod either breaks or is broken by.
 
 ### The `repositories` field
 | Type   | Required |
@@ -308,27 +260,35 @@ An example quilt.mod.json:
             // Since we only have a single client endpoint, no array is needed.
             "client": "org.quiltmc.example_mod.impl.client.ExampleModClient",
         },
-        "depends": {
-            "quilt_networking_api": "*",
-            "quilt_rendering_api": "*"
-        },
-        "breaks": {
-            "sodium": {
+        "depends": [
+            "quilt_networking_api",
+            "quilt_rendering_api",
+            {
+                "id": "modmenu",
+                "environment": "client"
+            }
+        ],
+        "breaks": [
+            {
+                "id": "sodium",
                 "versions": "*",
                 "reason": "Sodium does not implement the Quilt Rendering API."
             },
-            "some_random_library": [
-                "1.23.456", // A reason is not required
-                {
-                    "versions": "<1.0.0",
-                    "reason": "Stable API required"
-                },
-                {
-                    "versions": "1.5.3",
-                    "reason": "Contains a game-breaking bug"
-                }
-            ]
-        },
+            {
+                "id": "some_random_library",
+                "versions": [
+                    "1.23.456", // A reason is not required
+                    {
+                        "versions": "<1.0.0",
+                        "reason": "Stable API required"
+                    },
+                    {
+                        "versions": "1.5.3",
+                        "reason": "Contains a game-breaking bug"
+                    }
+                ]
+            }
+        ],
         "metadata": {
             "name": "Quilt Example Mod",
             "description": "An example mod for the Quilt ecosystem.",
@@ -336,7 +296,7 @@ An example quilt.mod.json:
                 "Haven King": "Developer"
             },
             "contact": {
-                homepage: "https://quiltmc.org/"
+                "homepage": "https://quiltmc.org/"
             },
             "license": "CC0-1.0",
             "icon": "assets/modid/icon.png"
@@ -350,6 +310,65 @@ An example quilt.mod.json:
 
 ## Placeholders
 Strings with defined formats such as [the version field](#the-version-field) can instead supply a string matching the regex `^\$\{[a-zA-Z_$][a-zA-Z\d_$]*\}$` in a development environment to be replaced on build. The quilt-gradle plugin defines usage of the value `${version}` as a placeholder for the version declared in gradle.properties.
+
+## Dependency Objects
+A dependency object defines what mods/plugins a given mod depends on or breaks. It can be represented as either an object containing at least [the `id` field](#the-id-field-1), a string mod identifier, or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
+
+### The `id` field
+| Type   | Required |
+|--------|----------|
+| String | True     |
+
+A mod identifier in the form of either `mavenGroup:modId` or `modId`.
+
+### The `version` field
+| Type   | Required | Default |
+|--------|----------|---------|
+| String | False    | `"*"`   |
+
+Should be a [version specifier](#version-specifier) defining what versions this dependency applies to.
+
+### The `optional` field
+| Type    | Required | Default |
+|---------|----------|---------|
+| Boolean | False    | `false` |
+
+Dependencies marked as `optional` will only be checked if the mod/plugin specified by [the `id` field](#the-id-field-1) is present.
+
+### The `unless` field
+| Type             | Required |
+|------------------|----------|
+| DependencyObject | False    |
+
+Describes situations where this dependency can be ignored. For example:
+```json
+{
+    "id": "sodium",
+    "unless": "indium"
+}
+```
+
+Game providers and loader plugins can also add their own optional fields to the dependency object for extra context when resolving dependencies. The Minecraft game provider, for instance, might define an "environment" field that can be used like so:
+
+```json
+{
+    "id": "modmenu",
+    "environment": "client"
+}
+```
+
+## Version Specifier
+A version range specifier can make use of any of the following patterns:
+* `*` — Matches any version. Will fetch the latest version available if needed
+* `1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
+* `=1.0.0` — Matches exactly version 1.0.0 and no other versions
+* `>=1.0.0` — Matches any version greater than or equal to 1.0.0
+* `>1.0.0` — Matches any version greater than version 1.0.0
+* `<=1.0.0` — Matches any version less than or equal to version 1.0.0
+* `<1.0.0` — Matches any version less than version 1.0.0
+* `1.0.x` — Matches any version with major version 1 and minor version 0.
+* `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
+* `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
