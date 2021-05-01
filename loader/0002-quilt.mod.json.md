@@ -321,12 +321,12 @@ A dependency object defines what mods/plugins a given mod depends on or breaks. 
 
 A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
-### The `version` field
-| Type   | Required | Default |
-|--------|----------|---------|
-| String | False    | `"*"`   |
+### The `versions` field
+| Type         | Required | Default |
+|--------------|----------|---------|
+| Array/String | False    | `"*"`   |
 
-Should be a [version specifier](#version-specifier) defining what versions this dependency applies to.
+Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
 
 ### The `optional` field
 | Type    | Required | Default |
