@@ -126,24 +126,33 @@ A collection of `key: value` pairs, where each key is in the form of either `mav
 
 #### Dependency Object
 A dependency object is made up of a version specifier and a reason for that dependency. It may be represented in any of the following ways:
+
+As a JSON object, with both available fields
 ```json
-// As a JSON object, with both available fields
 {
     "version": "*",
     "reason": "Implements the same behavior as this mod."
 }
 ```
 
+As a JSON object, omitting the optional "reason" field
 ```json
-// As a JSON object, omitting the optional "reason" field
 {
     "version": "*"
 }
 ```
 
-```json
-// As a single JSON string, containing only the version specifier
+As a single JSON string, containing only the version specifier
+```json 
 "*"
+```
+
+Game providers and loader plugins can also add their own optional fields to the dependency object for extra context when resolving dependencies. The Minecraft game provider, for instance, might define an "environment" field like so:
+```json
+{
+    "version": "*",
+    "environment": "client"
+}
 ```
 
 #### Version Specifier
