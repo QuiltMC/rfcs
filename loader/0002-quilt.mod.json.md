@@ -9,7 +9,7 @@ Below is an outline of all defined keys and values.
 
 * [schema_version](#the-schema_version-field) — The schemaVersion to be used for reading this file
 * [quilt_loader](#the-quilt_loader-field) — Information related to loading the mod
-    * [group_id](#the-group_id-field) — The Maven group id
+    * [group](#the-group-field) — The Maven group id
     * [id](#the-id-field) — The mod id
     * [provides](#the-provides-field) — Alternative mod ids provided by this mod
     * [version](#the-version-field) — The mods version
@@ -46,7 +46,7 @@ The quilt mod file schema version to be used for parsing this file. Currently, t
 
 Information necessary for the mod loading process.
 
-### The `group_id` field
+### The `group` field
 | Type   | Required |
 |--------|----------|
 | String | True     |
@@ -134,7 +134,7 @@ An array of [dependency object](#dependency-objects)s. Defines mods that this mo
 |--------|----------|
 | Array  | False    |
 
-A list of repository url strings where dependencies can be looked for in addition to Quilt's central maven repository.
+A list of Maven repository url strings where dependencies can be looked for in addition to Quilt's central repository.
 
 ### The `metadata` field 
 | Type   | Required |
@@ -249,8 +249,8 @@ An example quilt.mod.json:
 {
     "schema_version": 1,
     "quilt_loader": {
-        "group_id": "org.quiltmc",
-        "mod_id": "example_mod",
+        "group": "org.quiltmc",
+        "id": "example_mod",
         "version": "1.0.0",
         "entrypoints": {
             "main": [
