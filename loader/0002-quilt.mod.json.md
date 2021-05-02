@@ -80,13 +80,41 @@ Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org
 | Object | False    |
 
 A collection of `key: value` pairs, where each key is the type of the entrypoints specified and each values is either a single entrypoint or an array of entrypoints. An entrypoint is an object with the following keys:
-* adapter — Language adapter to use for this entrypoint
-* value — Points to an implementation of the entrypoint. For the default JVM language adapter, this can be in either of the following forms:
-    * `my.package.MyClass` — A class to be instantiated and used
-    * `my.package.MyClass::thing` — A static field containing an instance of the entrypoint or a method handle for entrypoints that are functional interfaces
+* adapter — Language adapter to use for this entrypoint. By default this is `default` and tells loader to parse using the JVM entrypoint notation.
+* value — Points to an implementation of the entrypoint. See below for the default JVM notation.
 
 If an entrypoint does not need to specify a language adapter other than the default language adapter, the entrypoint can be represented simply as the value string instead.
 
+#### JVM entrypoint notation
+
+When refering to a class, the [binary name] is used. An example of a binary name is `my.mod.MyClass$Inner`.
+
+One of the following `value` notations may be used in the JVM notation:
+
+* Implementation onto a class
+    * The value must contain a fully qualified binary name to the class.
+    * Implementing class must extend or implement the entrypoint interface.
+    * Class must have a no-argument public constructor.
+    * Example: `example.mod.MainModClass`
+* A field inside of a class.
+    * The value must contain a fully qualified binary name to the class followed by `::` and a field name.
+    * The field must be static.
+    * The type of the field must be assignable from the field's class.
+    * Example: `example.mod.MainModClass::THE_INSTANCE`
+    * If there is ambuguity with a method's name, an exception will be thrown.
+* A method inside of a class.
+    * The value must contain a fully qualified binary name to the class followed by `::` and a method name.
+    * The method must be capable to implement the entrypoint type as a method reference. Generally this means classes which are functional interfaces.
+    * Constructor requirement varies based on the method being static or instance level:
+        * A static method does not require a public no-argument constructor.
+        * An instance method requires a public no-argument constructor.
+    * Example: `example.mod.MainModClass::init`
+    * If there is ambuguity with a fields's name or other method, an exception will be thrown.
+
+#### Other notations
+
+Some language providers may extend the capabilities of the JVM language notation or provide additional notations.
+For notation rules for other languuage adapters, consult the capabilities of the language adapter.
 
 ### The `plugins` field
 | Type   | Required |
@@ -386,3 +414,6 @@ The structure for this specification is loosely based on the Rust project's [man
 # Unresolved Questions
 * How will the community (particularly the development community) react to these changes?
 * What changes will need to be made in Loader to facilitate this new structure?
+
+<!--URLs-->
+[binary name]: https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html#jls-13.1
