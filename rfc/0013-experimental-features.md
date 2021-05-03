@@ -38,13 +38,13 @@ A closed issue is an issue that either resolved or dismissed due to one of the f
 - TODO: Add more closed reasons.
 
 ### **Feature**
-A feature in the current context is an indentifier following guidelines:
-- Only contains lowercase alphanumeric character, and hyphens
+A feature in the current context is an identifier following guidelines:
+- Only contains lowercase alphanumeric character and hyphens
 - Is unique among other features
 - Explains in a short form the format of the feature
 - As a guideline, a feature should not be longer than 32 characters unless the feature name cannot be shorter without overlaps.
 
-A feature is the identifier used for experimental code, and is used to enable the features wanted.
+A feature is the identifier used for experimental code and is used to enable the features wanted.
 
 By convention, the feature name is the text after the identifier in the initial RFC's name.
 
@@ -106,7 +106,7 @@ public class UseClass {
   - The working group majority votes for the removal of a feature in a meeting, after providing reasons for the removal
 
 ## `.annotations.json` file
-The .annotations.json file is generated automaticly by an annotation processor, and indicates the functions that are marked as experimental, in addition to the attached features.
+The .annotations.json file is generated automatically by an annotation processor and indicates the functions that are marked as experimental, in addition to the attached features.
 It is composed of a json object like the following:
 ```json
 {
@@ -117,8 +117,8 @@ It is composed of a json object like the following:
     }
 }
 ```
-Where the key is the ASM-like structure, and the value the attached feature.
-The main objective of this file is to provide a precomputed solution, so gradle doesn't have to manually search for annotations in the compiled class files.
+Where the key is the ASM-like structure, and the value of the attached feature.
+The main objective of this file is to provide a pre-computed solution, so Gradle doesn't have to manually search for annotations in the compiled class files.
 
 ## Modules
 As defined in RFC 9, a module is the lowest level split of the standard level library, independent of each other.
@@ -157,7 +157,7 @@ APIs are smaller parts, that can be as low as a function or interface.
 The implementation for a library developer is by adding an annotation to the experimental classes & functions, like the following:
 ```java
 @ApiStatus.Experimental // Used for warnings directly in the IDE
-// Note: In the future where IDE extensions are developped, the above can be ignored.
+// Note: In the future where IDE extensions are developed, the above can be ignored.
 @QuiltExperimental("xxx") // where "xxx" is the feature attached to the code
 ```
 
@@ -176,11 +176,11 @@ quilt {
 This error message depends on the DSL language used to build the script.
 
 # Versionning changes
-*Note: Remove this part if there is already work done on the QSL versionning.*
+*Note: Remove this part if there is already work done on the QSL versioning.*
 
-While the actual versionning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
-- When experimental code changes, the version of the module must not change, only the build number/hash has to be incremented. (In no case an experimental changes not accompanied with deprecation or breaking changes in non experimental code)
-- If following the SemVer versionning convention, adding a new experimental feature can warrant the change of a PATCH or a MINOR value in the event of the feature changing significant parts of the code source that is used by non experimental features.
+While the actual versioning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
+- When experimental code changes, the version of the module must not change, only the build number/hash has to be incremented. (In no case an experimental changes not accompanied with deprecation or breaking changes in non-experimental code)
+- If following the SemVer versioning convention, adding a new experimental feature can warrant the change of a PATCH or a MINOR value in the event of the feature changing significant parts of the code source that is used by non-experimental features.
 
 # Drawbacks
 
@@ -208,4 +208,4 @@ This system is currently used by [rust](https://github.com/rust-lang) and is wor
 
 This change would be welcome, as it allows to use of new features and give feedback to it before it's too late, as it allows to bypass all deprecation policies.
 
-But as it also makes the process of making a new feature globally available, I do expect that there will need to be simplicications in the stabilization process.
+But as it also makes the process of making a new feature globally available, I do expect that there will need to be simplifications in the stabilization process.
