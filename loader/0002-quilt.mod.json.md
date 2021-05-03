@@ -299,21 +299,25 @@ An example quilt.mod.json:
         "breaks": [
             {
                 "id": "sodium",
-                "versions": "*",
-                "reason": "Sodium does not implement the Quilt Rendering API."
+                "reason": "Sodium does not implement the Quilt Rendering API.",
+                "unless": "indium"
             },
             {
                 "id": "some_random_library",
+                "versions": "1.23.456"
+            },
+            {
+                "id": "some_random_library",
+                "reason": "Stable API required",
+                "versions": "<1.0.0"
+            },
+            {
+                "id": "some_random_library",
+                "reason": "Contain game-breaking bugs",
                 "versions": [
-                    "1.23.456", // A reason is not required
-                    {
-                        "versions": "<1.0.0",
-                        "reason": "Stable API required"
-                    },
-                    {
-                        "versions": "1.5.3",
-                        "reason": "Contains a game-breaking bug"
-                    }
+                    "1.5.3",
+                    "1.2.7",
+                    "1.8.3"
                 ]
             }
         ],
