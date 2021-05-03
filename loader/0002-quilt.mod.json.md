@@ -87,7 +87,7 @@ If an entrypoint does not need to specify a language adapter other than the defa
 
 #### JVM entrypoint notation
 
-When refering to a class, the [binary name] is used. An example of a binary name is `my.mod.MyClass$Inner`.
+When referring to a class, the [binary name] is used. An example of a binary name is `my.mod.MyClass$Inner`.
 
 One of the following `value` notations may be used in the JVM notation:
 
@@ -101,7 +101,7 @@ One of the following `value` notations may be used in the JVM notation:
     * The field must be static.
     * The type of the field must be assignable from the field's class.
     * Example: `example.mod.MainModClass::THE_INSTANCE`
-    * If there is ambuguity with a method's name, an exception will be thrown.
+    * If there is ambiguity with a method's name, an exception will be thrown.
 * A method inside of a class.
     * The value must contain a fully qualified binary name to the class followed by `::` and a method name.
     * The method must be capable to implement the entrypoint type as a method reference. Generally this means classes which are functional interfaces.
@@ -109,12 +109,12 @@ One of the following `value` notations may be used in the JVM notation:
         * A static method does not require a public no-argument constructor.
         * An instance method requires a public no-argument constructor.
     * Example: `example.mod.MainModClass::init`
-    * If there is ambuguity with a fields's name or other method, an exception will be thrown.
+    * If there is ambiguity with a fields's name or other method, an exception will be thrown.
 
 #### Other notations
 
 Some language providers may extend the capabilities of the JVM language notation or provide additional notations.
-For notation rules for other languuage adapters, consult the capabilities of the language adapter.
+For notation rules for other language adapters, consult the capabilities of the language adapter.
 
 ### The `plugins` field
 | Type   | Required |
@@ -162,7 +162,7 @@ An array of [dependency object](#dependency-objects)s. Defines mods that this mo
 |--------|----------|
 | Array  | False    |
 
-A list of Maven repository url strings where dependencies can be looked for in addition to Quilt's central repository.
+A list of Maven repository URL strings where dependencies can be looked for in addition to Quilt's central repository.
 
 ### The `metadata` field 
 | Type   | Required |
@@ -249,7 +249,7 @@ A single or array of paths to mixin configuration files relative to the root of 
 |--------------|----------|
 | Array/String | False    |
 
-A single or array of paths to accesswidener files relative to the root of the mod JAR.
+A single or array of paths to access widener files relative to the root of the mod JAR.
 
 ## The `minecraft` field
 | Type   | Required |
