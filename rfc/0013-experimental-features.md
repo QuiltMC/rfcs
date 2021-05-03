@@ -179,8 +179,8 @@ This error message depends on the DSL language used to build the script.
 *Note: Remove this part if there is already work done on the QSL versioning.*
 
 While the actual versioning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
-- A change in experimental code has to engage **at least** minor bump of the related module.
-- Experimental code stabilization has to engage a **major** version bump.
+- A change in experimental code has to engage **at least** a patch bump of the related module, upped to a minor bump in the case of an API change.
+- Experimental code stabilization has to engage **at least** a minor version bump.
 
 # Drawbacks
 
