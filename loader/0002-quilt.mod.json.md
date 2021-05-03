@@ -330,7 +330,7 @@ An example quilt.mod.json:
             "icon": "assets/modid/icon.png"
         }
     },
-    "mixins": [
+    "mixin": [
         "modid.mixins.json"
     ]
 }
