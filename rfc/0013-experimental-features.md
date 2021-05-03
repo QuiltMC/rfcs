@@ -15,7 +15,7 @@ The experimental system doesn't work the same way for both modules and APIs.
 
 ## Definitions
 
-### **Toggle**
+### **Experimental Toggle**
 
 A toggle is a change in configuration that, once applied, implicitly or explicitly enables the use of an experimental feature or module. This can be a normalized solution (see the **normalized toggle**) or any other change, like the following, but not limited to:
 
@@ -23,7 +23,7 @@ A toggle is a change in configuration that, once applied, implicitly or explicit
 - Changing a compiler option (adding a CLI flag)
 - Adding an environment variable
 
-### **Normalized Toggle**
+### **Normalized Experimental Toggle**
 
 A normalized toggle is a uniform and agreed-upon way to *toggle* some experimental features or modules.
 
@@ -69,6 +69,7 @@ Blocking issues:
     - [ ] #{Issue ID} {Title of issue}
 }
 ```
+(*Note: everything between curly brackets has to be replaced with the actual contents.*)
 
 Once every TODO and blocking issue is closed, the feature can be added to the next related working group meeting, where the team will vote on the stabilization of the feature. If the stabilization is refused, the team has to provide reasoning behind the choice, in addition to TODOs required to send the stabilization request again.
 
@@ -77,7 +78,7 @@ If the stabilization is accepted, the PR enters a grace period of (7) days, and 
 
 Here is a schema of the whole process:
 
-![Stabilization Flow Dragram](../attachments/xxxx-stabilization-flow.jpg)
+![Stabilization Flow Dragram](../attachments/0013-stabilization-flow.jpg)
 
 ## Differences of experimental code
 
@@ -104,16 +105,20 @@ public class UseClass {
   - The writer of the RFC supersedes the experimental feature with another one, and after asking the working group for removal
   - The working group majority votes for the removal of a feature in a meeting, after providing reasons for the removal
 
-## `experimental.json` file
-The experimental.json file only contains a JSON array with the identifiers like the following:
+## `.annotations.json` file
+The .annotations.json file is generated automaticly by an annotation processor, and indicates the functions that are marked as experimental, in addition to the attached features.
+It is composed of a json object like the following:
 ```json
-[
-    "xxx",
-    "yyy"
-]
+{
+    "experimental": {
+        "com/redblueflame/library/LibraryTest.TestingField;I": "yyy",
+        "com/redblueflame/library/LibraryTest.test_enum;Lcom/redblueflame/library/InternalEnum;": "ccc",
+        "com/redblueflame/library/LibraryTest.testing;Lcom/redblueflame/library/InternalClass;": "bbb",
+    }
+}
 ```
-
-This file can be used on quilt-loader to switch out a library at runtime or do specific changes ahead of time.
+Where the key is the ASM-like structure, and the value the attached feature.
+The main objective of this file is to provide a precomputed solution, so gradle doesn't have to manually search for annotations in the compiled class files.
 
 ## Modules
 As defined in RFC 9, a module is the lowest level split of the standard level library, independent of each other.
@@ -152,17 +157,30 @@ APIs are smaller parts, that can be as low as a function or interface.
 The implementation for a library developer is by adding an annotation to the experimental classes & functions, like the following:
 ```java
 @ApiStatus.Experimental // Used for warnings directly in the IDE
+// Note: In the future where IDE extensions are developped, the above can be ignored.
 @QuiltExperimental("xxx") // where "xxx" is the feature attached to the code
 ```
 
 In the Gradle plugin, as an additional compilation step, if it detects an experimental function is being called and the feature is not enabled, send an error explaining how to enable the feature.
 An error could look like this:
 ```
-ERROR at org.quiltmc.testing.main
-The feature `testing-feature` is marked as experimental.
-To use it, add the following settings to your build.gradle:
-enableExperimentalFeatures 'testing-feature'
+C:\Users\User\project\src\main\java\org\quiltmc\test\Testing.java:9: error: The feature ccc is marked as experimental, but not enabled in the build.gradle file.
+
+
+To enable the experimental features, please add the following lines to your build.gradle file: 
+quilt {
+  //... 
+  experimentalModules "ccc", "aaa"
+}
 ```
+This error message depends on the DSL language used to build the script.
+
+# Versionning changes
+*Note: Remove this part if there is already work done on the QSL versionning.*
+
+While the actual versionning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
+- When experimental code changes, the version of the module must not change, only the build number/hash has to be incremented. (In no case an experimental changes not accompanied with deprecation or breaking changes in non experimental code)
+- If following the SemVer versionning convention, adding a new experimental feature can warrant the change of a PATCH or a MINOR value in the event of the feature changing significant parts of the code source that is used by non experimental features.
 
 # Drawbacks
 
