@@ -179,8 +179,8 @@ This error message depends on the DSL language used to build the script.
 *Note: Remove this part if there is already work done on the QSL versioning.*
 
 While the actual versioning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
-- When experimental code changes, the version of the module must not change, only the build number/hash has to be incremented. (In no case an experimental changes not accompanied with deprecation or breaking changes in non-experimental code)
-- If following the SemVer versioning convention, adding a new experimental feature can warrant the change of a PATCH or a MINOR value in the event of the feature changing significant parts of the code source that is used by non-experimental features.
+- A change in experimental code has to engage **at least** minor bump of the related module.
+- Experimental code stabilization has to engage a **major** version bump.
 
 # Drawbacks
 
