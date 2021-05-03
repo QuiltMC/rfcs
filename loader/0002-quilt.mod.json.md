@@ -286,7 +286,7 @@ An example quilt.mod.json:
                 "org.quiltmc.example_mod.impl.ExampleModNetworking"
             ],
             // Since we only have a single client endpoint, no array is needed.
-            "client": "org.quiltmc.example_mod.impl.client.ExampleModClient",
+            "client": "org.quiltmc.example_mod.impl.client.ExampleModClient"
         },
         "depends": [
             "quilt_networking_api",
