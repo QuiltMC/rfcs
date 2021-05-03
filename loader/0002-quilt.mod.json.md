@@ -360,6 +360,13 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
 Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
 
+### The `reason` field
+| Type         | Required |
+|--------------|----------|
+| String       | False    |
+
+A short, human-readable reason for the dependency object to exist.
+
 ### The `optional` field
 | Type    | Required | Default |
 |---------|----------|---------|
