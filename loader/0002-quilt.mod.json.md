@@ -11,7 +11,7 @@ Below is an outline of all defined keys and values.
 * [quilt_loader](#the-quilt_loader-field) — Information related to loading the mod
     * [group](#the-group-field) — The Maven group id
     * [id](#the-id-field) — The mod id
-    * [provides](#the-provides-field) — Alternative mod ids provided by this mod
+    * [provides](#the-provides-field) — Alternative mods provided by this mod
     * [version](#the-version-field) — The mods version
     * [entrypoints](#the-entrypoints-field) — Collection of entrypoints
     * [plugins](#the-plugins-field) — Collection of plugins
@@ -61,11 +61,11 @@ A unique identifier for the organization behind or developers of the mod. See Ma
 A unique identifier for the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
 
 ### The `provides` field
-| Type         | Required |
-|--------------|----------|
-| Array/String | False     |
+| Type             | Required |
+|------------------|----------|
+| DependencyObject | False    |
 
-Either a single identifier or an array of identifiers that this mod also contains. These could be old or alternative mod ids. They should follow [the convention established for mod ids](#the-mod_id-field).
+A [DependencyObject](#dependency-objects) describing other mods/APIs that this package provides.
 
 ### The `version` field
 | Type   | Required |
@@ -279,6 +279,13 @@ An example quilt.mod.json:
     "quilt_loader": {
         "group": "org.quiltmc",
         "id": "example_mod",
+        "provides": [
+            {
+                "id": "super_awesome_lib",
+                "versions": "^1.0.0"
+            },
+            "flamingo"
+        ],
         "version": "1.0.0",
         "entrypoints": {
             "main": [
