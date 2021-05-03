@@ -179,8 +179,8 @@ This error message depends on the DSL language used to build the script.
 *Note: Remove this part if there is already work done on the QSL versioning.*
 
 While the actual versioning rules have to be defined in a separate RFC, there can be already certain rules that will have to be respected on experimental code:
-- A change in experimental code has to engage **at least** a patch bump of the related module, upped to a minor bump in the case of an API change.
-- Experimental code stabilization has to engage **at least** a minor version bump.
+- A change in experimental code results in a version bump as normal with SemVer, with the exception that breaking changes cause a minor version bump instead of a major version bump.
+- Stabilization of experimental code results in a minor version bump (or, if coinciding with a deprecation cycle, a major version bump), as it is adding new API features for mods that did not opt-in to the experimental features.
 
 # Drawbacks
 
