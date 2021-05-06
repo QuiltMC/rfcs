@@ -53,10 +53,8 @@ To modders, most mods would not explicitly depend on libraries or their modules,
 Keep in mind that the modules listed here are the names of the current Fabric API modules, and the final internal structure of QSL **will not** be the same as Fabric API.
 - `core` - All modules here are implicitly depended on by mods by default, even if they do not use any code from them. Mods can choose to opt-out from this, but if they choose to use the fat QSL dependency they are responsible for ensuring these modules don't get transitively pulled in.
     - Lifecycle Events
-    	- Here because of the Networking API
-    	- Some parts might be split into `entities` and `world`
     - Networking API (maybe with relevant parts split into other modules)
-        - Registry Sync (merged in)
+        - Registry Sync
         - (future) Proper Handshake API
     - Crash Reports
     - Resource Loader
@@ -64,10 +62,8 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - API Lookup API
     - fluid api
     - item transfer api
-- `command` // This really is anything server-side only related to administration, but "command" is a nice word to describe the primary use-case.
+- `command
     - Command API
-    - Game Rule API
-    - (future) Permissions API
 - `rendering` // This entire library should be client-side only
 	- BlockRenderLayer Registration
 	- Indigo
@@ -101,11 +97,12 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
 - `entity`
     - Object Builder API (EntityType Builder, Trades, Villager Professions and Types)
     - Entity Events
+    - Interaction Events
+    - Object Builder API (Point of interest)
+        - Not strictly related to entities but it is needed here so it can be used for other entity-related apis 
 - `content_other`
     	- Particles
-    	- Object Builder API (Point of interest)
-    	- Interaction Events
-        	- Could probably use refactoring, but as it stands this absolutely deals with events happening in the world
+        - Game Rule API 
 - `worldgen`
     - Dimension API
     - Biome API
