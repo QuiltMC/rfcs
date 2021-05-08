@@ -51,7 +51,7 @@ Modules follow the following general rules:
 To modders, most mods would not explicitly depend on libraries or their modules, but Loom would automatically determine the modules to depend on by scanning at compile time, and those modules will be downloaded at runtime by Loader.
 ### Top-level Structure
 Keep in mind that the modules listed here are the names of the current Fabric API modules, and the final internal structure of QSL **will not** be the same as Fabric API.
-- `core` - All modules here are implicitly depended on by mods by default, even if they do not use any code from them. Mods can choose to opt-out from this, but if they choose to use the fat QSL dependency they are responsible for ensuring these modules don't get transitively pulled in.
+- `core` - All modules here are implicitly depended on by mods by default, even if they do not use any code from them. Mods can choose to opt-out.
     - Lifecycle Events
     - Networking API (maybe with relevant parts split into other modules)
         - Registry Sync
@@ -64,7 +64,7 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - item transfer api
 - `command
     - Command API
-- `rendering` // This entire library should be client-side only
+- `rendering`
 	- BlockRenderLayer Registration
 	- Indigo
 	    - need an easy way to exclude this
@@ -76,15 +76,15 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
 	- Rendering Fluids
 	- Textures
 	- Object Builder API (FabricModelPredicateProviderRegistry)
+	- Rendering Data Attachment // This isn't client-side only, yet, because implementing an interface on one side is a pain
 - `data` - Tools for working with, generating, or consuming data (e.g. datapacks, advancements, recipes, tags)
     - (future) Recipe API
     - (future) Datagen APIs
-    - Rendering Data Attachment
     - Tag Extensions
     - Loot Tables
     - Object Builder API (Criterion)
 - `block` 
-	- BlockEntity Networking (merged in)
+    - BlockEntity Networking
     - Object Builder API (FabricBlockSettings, FabricBlockEntityBuilder and FabricMaterialBuilder)
     - (future) Block Extensions (think IForgeBlock)
     - Content Registries (Flammable Block Registry)
@@ -111,7 +111,6 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - Screen API
         - Despite the name, all this module really does is add hooks for modifying prexisting screens
     - ScreenHandler API
-        - this could also go in `world`
     - (potentially in the future) Screen Extensions
     - Key Bindings API
 ## Drawbacks
