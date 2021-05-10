@@ -27,9 +27,9 @@ To produce the hashes, the Mojmap names are processed as follows:
 1. Overriding methods in subclasses are discarded if present.
 1. Package names are removed from classes whose simple names are unique. That is, `net/minecraft/a/Bar` gets shortened to `Bar` if there is no other class named `Bar`, but if there are classes `net/minecraft/a/Foo` and `net/minecraft/b/Foo` that exist, then neither of them will be shortened. This includes references to these classes in method descriptors.
 1. Method descriptors are replaced with an empty string for methods whose name is unique within the class that the method is declared.
-1. Field names are converted to `fd_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-1 hash of the string `f$declaring_class.$field_name`.
-1. Method names are converted to `md_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-1 hash of the string `m$declaring_class.$method_name$descriptor`.
-1. Class names are converted to `Cls_$x` where `$x` is the last 6 digits of the base-62 representation of the SHA-1 hash of the class name.
+1. Field names are converted to `fd_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-256 hash of the string `f$declaring_class.$field_name`.
+1. Method names are converted to `md_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-256 hash of the string `m$declaring_class.$method_name$descriptor`.
+1. Class names are converted to `Cls_$x` where `$x` is the last 6 digits of the base-62 representation of the SHA-256 hash of the class name.
 
 The above steps are designed to preserve some of the benefits of intermediary as much as possible without the need for matching. Testing has shown that around 50% of class renames in Mojmap are only repackages, which are unlikely to affect hashed Mojmap. The descriptor removal is designed to preserve method names where only the descriptor has changed, while ensuring hashed Mojmap names are all unique.
 
@@ -82,7 +82,7 @@ If we got an entirely new set of mappings every snapshot, and snapshots were to 
 
 ## Prior Art
 
-Forge has chosen to use Mojmap directly. Unlike Forge, we have our own thriving, and official, mapping set to cater to, Yarn, and we cannot allow Yarn contributors to be tainted.
+Forge, Sponge and soon Paper have chosen to use Mojmap directly. Unlike those projects, we have our own thriving, and official, mapping set to cater to, Yarn, and we cannot allow Yarn contributors to be tainted.
 
 ## Unresolved Questions
 
