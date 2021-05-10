@@ -30,6 +30,9 @@ Each specification only contains the actionable parts of the RFCs involved (usua
 
 - Creation of a specification for technical definitions is at the author's discretion, but may be required in cases where major parts of the document are expected to be revised, or if an amendment PR to the RFC repository is deemed as "too big" and needing its own RFC.
 
+## Other details
+How general policy is split into specifications is not meant to be 1 rfc -> 1 file; maintainers should go for clarity and ease of reference, with refactors where needed.
+
 # Drawbacks
 
 - This change, if accepted, increases the complexity of submitting an RFC to Quilt, by requiring an additional PR to be made after acceptance of most RFCs. Additionally, it is not clear when an RFC will be required for a revision, which might discourage people from contributing revisions to Quilt specifications.
@@ -42,11 +45,8 @@ Each specification only contains the actionable parts of the RFCs involved (usua
 
 # Rationale and Alternatives
 
-- Why is this the best possible design?
-- What other designs are possible and why should we choose this one instead?
-- What other designs have benefits over this one? Why should we choose an
-  alternative instead?
-- What is the impact of not doing this?
+- Having a specifications repository keeps all official documents about policy in one spot.
+- We could continue with the existing process, but having policy mixed between RFCs is not desirable as described in the Motivation section above.
 
 
 # Expected Response
