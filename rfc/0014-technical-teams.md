@@ -44,36 +44,15 @@ The following is a list of top-level technical teams.
 
 ## Drawbacks
 
-Why should we not do this?
+An overcomplicated leadership structure may lead to further stagnation in the development process, rather than have the intended effects of easing it. This approach is a two-way door, however, and can always be reversed if it proves unsuccessful.
 
 
 ## Rationale and Alternatives
 
-- Why is this the best possible design?
-- What other designs are possible and why should we choose this one instead?
-- What other designs have benefits over this one? Why should we choose an
-  alternative instead?
-- What is the impact of not doing this?
-
-
-## Prior Art
-
-If this has been done before by some other project, explain it here. This could
-be positive or negative. Discuss what worked well for them and what didn't.
-
-There may not always be prior art, and that's fine.
-
-
-## Unresolved Questions
-
-- What should be resolved before this RFC gets merged?
-- What should be resolved while implementing this RFC?
-- What unresolved questions do you consider out of scope for this RFC, that
-  could be addressed in the future?
+Many companies today follow the idea of separation of concerns. By putting people in charge of a relatively smaller number of tasks and projects, they will be able to better focus on such tasks to get things done. The alternative approach would be for a small number of people to "hold the keys" over all technical projects. Fabric currently does this, and it leads to a generally very long and arduous process for getting contributions accepted.
 
 
 ## Expected Response
 
-How do might the wider community respond to this change? Who will be affected
-by it and how? Who has advocated for this change? Who has advocated against it?
+It is expected that with more refined teams being dedicated to individual projects, community members outside of those teams will also be more willing to contribute to individual projects since there will be a direct point of contact for each individual initative.
 
