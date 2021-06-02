@@ -62,7 +62,7 @@ Keep in mind that the modules listed here are the names of the current Fabric AP
     - API Lookup API
     - fluid api
     - item transfer api
-- `command
+- `command`
     - Command API
 - `rendering`
 	- BlockRenderLayer Registration
