@@ -40,7 +40,7 @@ This is an overview of the top-level structure of QSL. Libraries are included, w
 ### Libraries
 Each library would be its own folder in the QSL monorepo, with a dedicated team responsible for triage, review, and accepting/denying pull requests. In contrast to Fabric or Forge's system of only one person signing off for the entire standard library, no authority higher than the people on the team would be required to sign off on the PR before it is merged. More clarification on team structure is expected to come in a future RFC.
 
-Libraries only exist for internal structure--there is no fat jar for, say, all `worldgen` modules, neither is there a fat jar for all of QSL. This also means that QSL and its libraries have no versioning.
+Ideally, there would be no common usage "fat" jars of libraries and modules because of Loader's automatic dependency downloading. We will probably have to provide fat jars until Loader is able to support dependency downloading, and discussion about stopping providing fat jars can happen there.
 ### Modules
 Modules follow the following general rules:
 - Maven group of `org.quiltmc.qsl.$library`
