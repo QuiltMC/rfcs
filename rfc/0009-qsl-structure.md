@@ -51,7 +51,7 @@ Modules follow the following general rules:
 To modders, most mods would not explicitly depend on libraries or their modules, but Loom would automatically determine the modules to depend on by scanning at compile time, and those modules will be downloaded at runtime by Loader. However, they will have the choice to manually depend on individual modules. There are no plans to provide fat jars for libraries or QSL as a whole at this time, besides as a temporary solution until Loader Plugins are implemented.
 ### Top-level Structure
 Keep in mind that the modules listed here are the names of the current Fabric API modules, and the final internal structure of QSL **will not** be the same as Fabric API.
-- `core` - All modules here are implicitly depended on by mods by default, even if they do not use any code from them. Mods can choose to opt-out.
+- `core` - All modules here are implicitly depended on by mods by default, even if they do not use any code from them. Mods can choose to opt-out. This library may be provided by the installer by default, in order to allow a handshake API to always be present.
     - Lifecycle Events
     - Networking API (maybe with relevant parts split into other modules)
         - Registry Sync
