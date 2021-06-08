@@ -51,7 +51,7 @@ Information necessary for the mod loading process.
 |--------|----------|
 | String | True     |
 
-A unique identifier for the organization behind or developers of the mod. The group string must match the `^[a-zA-Z0-9-_.]+$` regular expression, and must not begin with the reserved namespace `loader.plugin` It is recommended, but not required, to follow Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
+A unique identifier for the organization behind or developers of the mod. The group string must match the `^[a-zA-Z0-9-_.]+$` regular expression, and must not begin with the reserved namespace `loader.plugin.` It is recommended, but not required, to follow Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
 ### The `id` field
 | Type   | Required |
@@ -403,7 +403,7 @@ Game providers and loader plugins can also add their own optional fields to the 
 }
 ```
 ## Provides Objects
-Defines the identifier and optionally version range of another mod that this package provides.
+Defines the identifier and optionally version range of another mod that this package provides. It can be represented as either an object containing at least [the `id` field](#the-id-field-2), or a string mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
 ### The `id` field
 | Type   | Required |
