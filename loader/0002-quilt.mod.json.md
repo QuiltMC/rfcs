@@ -65,7 +65,7 @@ A unique identifier for the mod or library defined by this file, matching the `^
 |-------|----------|
 | Array | False    |
 
-An array of [ProvidesObject](#provides-objectss describing other mods/APIs that this package provides.
+An array of [ProvidesObject](#provides-objects)s describing other mods/APIs that this package provides.
 
 ### The `version` field
 | Type   | Required |
