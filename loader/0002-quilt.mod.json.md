@@ -51,7 +51,7 @@ Information necessary for the mod loading process.
 |--------|----------|
 | String | True     |
 
-A unique identifier for the organization behind or developers of the mod. See Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
+A unique identifier for the organization behind or developers of the mod. The group string must match the `^[a-zA-Z0-9-_.]+$` regular expression, and must not begin with the reserved namespace `loader.plugin` It is recommended, but not required, to follow Maven's [guide to naming conventions](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
 ### The `id` field
 | Type   | Required |
