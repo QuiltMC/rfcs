@@ -61,11 +61,11 @@ A unique identifier for the organization behind or developers of the mod. The gr
 A unique identifier for the mod or library defined by this file, matching the `^[a-z][a-z0-9-_]{1,63}$` regular expression. Best practice is that mod ID's are in snake_case.
 
 ### The `provides` field
-| Type             | Required |
-|------------------|----------|
-| DependencyObject | False    |
+| Type  | Required |
+|-------|----------|
+| Array | False    |
 
-A [DependencyObject](#dependency-objects) describing other mods/APIs that this package provides.
+An array of [ProvidesObject](#provides-objectss describing other mods/APIs that this package provides.
 
 ### The `version` field
 | Type   | Required |
@@ -402,6 +402,22 @@ Game providers and loader plugins can also add their own optional fields to the 
     "environment": "client"
 }
 ```
+## Provides Objects
+Defines the identifier and optionally version range of another mod that this package provides.
+
+### The `id` field
+| Type   | Required |
+|--------|----------|
+| String | True     |
+
+A mod identifier in the form of either `mavenGroup:modId` or `modId`.
+
+### The `versions` field
+| Type         | Required | Default |
+|--------------|----------|---------|
+| Array/String | False    | `"*"`   |
+
+Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
 
 ## Version Specifier
 A version range specifier can make use of any of the following patterns:
