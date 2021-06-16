@@ -25,7 +25,7 @@ Team members with outstanding changes requested reviews may dismiss their own re
 Admins may dismiss outstanding reviews at their discretion, but should only do so if the team member cannot be contacted within a reasonable time-frame. Conflicts should *not* be resolved by an admin, but use 
 
 ## Final Comment Period (FCP)
-- Begins immediately after the above criteria is met
+- Begins immediately after the above criteria are met
 - Lasts 2 days for small implementation changes, 5 days for major refactors, and 10 days for new API introductions or RFCs. Bugfixes have no FCP and are considered mergable immediately.
 - May be ended at any time by a team member if they have concerns.
 
