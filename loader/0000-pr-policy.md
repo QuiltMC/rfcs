@@ -18,7 +18,8 @@ It is **not a goal** of this PR to be fool-proof from bad actors within the Load
 A Pull Request is considered to have been approved when all of the following are true:
 - The Pull Request has received 2 approvals by members of the Loader team.
 - The Pull Request has no changes requested reviews by any members of the Loader team
-- Nobody in the Loader team has requested more time to look at the Pull Request
+- Nobody in the Loader team has has their review requested on Pull Request
+    - This includes someone requesting the review of themselves or another person
 
 Team members with outstanding changes requested reviews may dismiss their own reviews.
 
