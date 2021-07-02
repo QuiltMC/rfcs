@@ -1,3 +1,12 @@
+# Amendments
+
+The following documents are amendments of this one. Please note that any information provided in amendments overrides
+anything you may find in amendments, with later amendments overriding earlier ones.
+
+To aid readability, amendment documents will include the entire modified block, rather than just a changeset.
+
+* [RFC 29: Community Team (Amendment 1)](/rfc/0007-community-team.md)
+
 # Summary
 
 This document exists to describe the formation of a team that handles Quilt's community management tasks. It makes 
@@ -233,7 +242,7 @@ The election has **failed** when one of the following is true:
 * A week has passed and less than 75% of the community team and administrative board has voted
 * A week has passed, at least 75% of the community team and administrative board has voted, and those that have
   voted have reached a consensus in opposition of the candidate - or a consensus cannot be reached
-* The candidate recieves more negative votes than the total amount of positive votes and votes not yet submitted
+* The candidate receives more negative votes than the total amount of positive votes and votes not yet submitted
 
 If a situation occurs that this section is unable to cover, it will be amended. In those situations, the election will
 fail and need to be restarted after the relevant changes have been made to address the issue.
@@ -260,10 +269,8 @@ that concerns them about an applicant, and criticisms are not limited to the abo
 
 ## Process: Removing Team Members
 
-<!-- TODO: Update the link when RFC 6 is merged -->
-
 Removal of members from the community team follows the process outlined in 
-[RFC 6: Governmental Structure](https://github.com/QuiltMC/rfcs/blob/0006-governance/community/0006-governance.md#removal-of-staff).
+[RFC 6: Governmental Structure](/community/0006-governance.md#removal-of-staff).
 
 ---
 
