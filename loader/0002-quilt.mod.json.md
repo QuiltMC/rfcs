@@ -19,7 +19,7 @@ Below is an outline of all defined keys and values.
     * [language_adapters](#the-language_adapters-field) — Array of language adapters
     * [depends](#the-depends-field) — Collection of mod dependencies
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
-    * [load_type](#the-load-type-field) — How eagerly to load this mod
+    * [load_type](#the-load_type-field) — How eagerly to load this mod
     * [repositories](#the-repositories-field) — Array of maven repositories
     * [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
         * [name](#the-name-field) — Human-readable name of this mod
