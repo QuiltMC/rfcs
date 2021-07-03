@@ -17,7 +17,7 @@ A summary of the changes made within this amendment follows:
 * Trainee Community Moderators have been defined, and new Community Moderators must go through a training period before 
   they can graduate and become Community Moderators. Trainee Community Moderators do not vote on internal polls, and
   are not expected to handle difficult situations.
-* The process for handling internal votes has been separated out from the rest of the processes, and standardized. This
+* The process for handling internal votes has been separated out from the rest of the processes and standardized. This
   allows for a consistent voting process regardless of what's being voted on, while still allowing for extra closing,
   failing and passing conditions as required. Failing conditions also override passing conditions, instead of the other
   way around.
@@ -26,6 +26,8 @@ A summary of the changes made within this amendment follows:
 * Admins are no longer considered to be voting members unless they're part of the Community Team, or consensus for a
   vote cannot be reached. 
 * For Community Team elections, the interview now comes before the vote, rather than the other way around.
+* A new process to be followed when existing Community Team members wish to switch their role or take on new roles has
+  been written.
 
 # Explanation
 
@@ -282,6 +284,25 @@ processed on Discord. Quilt's Community Team members are elected using a democra
 **Remember:** If the candidate is applying for a moderation-related role, they must always go through a training
 period as a Trainee Community Moderator. This is required for all Community Moderator and Community Manager positions,
 but is not required for positions without enforcement duties, such as event organisers.
+
+## Process: Changing/Adding Roles
+
+Each Community Team member has a specific set of responsibilities and tasks to keep in mind. These are assigned based
+on the role they currently occupy, but there's no reason for any Community Team member to be unable to move between
+roles later on if they wish, or take on additional responsibility if they're able.
+
+Any Community Team member wishing to change their role or take on another role must go through the election process
+for that role again. A special ModMail thread must be created - which they must not be able to access from the internal
+interface - and the interview process should continue as normal from there.
+
+Voting should be handled as detailed in the election process above, but the Community Team member in question should not
+be counted in the voting tallies or percentage of voters. If the Community Team is applying for a moderation-related
+role - and they haven't gone through the Trainee Community Moderator process - they must always go through a training
+period as a Trainee Community Moderator.
+
+Community Team members switching roles or taking on additional roles must not be treated preferentially to any other
+types of candidates. It's important, therefore, that the rest of the community team holds its members accountable
+during this process.
 
 ### Points to Consider
 
