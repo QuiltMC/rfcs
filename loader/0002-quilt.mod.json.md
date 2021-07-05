@@ -163,13 +163,25 @@ An array of [dependency object](#dependency-objects)s. Defines mods that this mo
 |---------|----------|
 | String  | False    |
 
-A string, which can be one of the following values:
+Influences whether or not a mod candidate should be loaded or not. May be any of these values:
 
 * "always"
 * "if_possible"
-* "if_required"
+* "if_required" (default)
 
-// TODO: Copy out the rest!
+This doesn't affect mods directly placed in the mods directory.
+
+##### Always
+
+If any versions of this mod are present, then one of them will be loaded.
+
+##### If Possible
+
+If this mod can be loaded, then it will - otherwise it will silently not be loaded.
+
+##### If Required
+
+If this mod is in another mods "depends" field then it will be loaded, otherwise it will silently not be loaded.
 
 ### The `repositories` field
 | Type   | Required |
