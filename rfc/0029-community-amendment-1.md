@@ -217,7 +217,7 @@ three. They are not required to vote if they don't feel they need to, however.
 If any voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote **must be
 counted as an abstention.**
 
-THe Community Team should then tally the final vote counts, and interpret them as follows.
+The Community Team should then tally the final vote counts, and interpret them as follows.
 
 #### Failing conditions
 
