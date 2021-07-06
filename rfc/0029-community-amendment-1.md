@@ -211,8 +211,9 @@ Voting ends when any of the following conditions have been reached:
 ### Interpreting the Vote
 
 When a poll has closed, the votes should be inspected. If the final vote has a margin of three votes or fewer, 
-non-voting members of the administrative board must be invited to vote on the poll, with their votes counting for 
-three. They are not required to vote if they don't feel they need to, however.
+the administrative board must be invited to vote on the poll, with their votes counting for three. If they've already
+voted, they may change their vote or retract it, and their final vote will also count for three. The members of the
+administrative board are not required to vote if they don't feel that it's necessary.
 
 If any voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote **must be
 counted as an abstention.**
