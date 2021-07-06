@@ -22,7 +22,7 @@ A summary of the changes made within this amendment follows:
   failing and passing conditions as required. Failing conditions also override passing conditions, instead of the other
   way around.
 * The voting process now takes abstentions into account, both explicitly (where the voting member states they're 
-  abstaining) and implicitly (where the voting member simply doesn't vote).
+  abstaining) and implicitly (where the voting member simply doesn't vote by the end of the period).
 * Admins are no longer considered to be voting members unless they're part of the Community Team, or consensus for a
   vote cannot be reached. 
 * For Community Team elections, the interview now comes before the vote, rather than the other way around.
