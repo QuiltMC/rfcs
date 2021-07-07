@@ -1,12 +1,3 @@
-# Amendments
-
-The following documents are amendments of this one. Please note that any information provided in amendments overrides
-anything you may find in amendments, with later amendments overriding earlier ones.
-
-To aid readability, amendment documents will include the entire modified block, rather than just a changeset.
-
-* [RFC 29: Community Team (Amendment 1)](/rfc/0007-community-team.md)
-
 # Summary
 
 This document exists to describe the formation of a team that handles Quilt's community management tasks. It makes 
