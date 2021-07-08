@@ -115,7 +115,7 @@ void addOption(LoadOption option);
 /**
 * Gets the metadata for a given mod.
 *
-* Because the mods in QuiltLoader only reference fully loaded bods, this method can be used during the modloaded process
+* Because the mods in QuiltLoader only reference fully loaded mods, this method can be used during the mod loading process
 * to get the metadata for any candidates (tentative or not) that were present prior to this cycle.
 */
 ModMetadata getMetadata(String modId);
