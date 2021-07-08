@@ -145,7 +145,7 @@ interface CandidateResolver {
 /**
 * @param <T> the types of resolver this plugin can resolve
 */
-interface QuiltLoaderPlugin<T extends CandidateResolver> extends  {
+interface QuiltLoaderPlugin<T extends CandidateResolver>  {
 /**
 * Called once per cycle as the first action in the cycle.
 * 
