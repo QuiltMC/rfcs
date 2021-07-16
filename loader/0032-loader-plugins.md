@@ -44,10 +44,10 @@ first, and mod loader second. Much of the existing mod loading behavior will be
 moved to one or more first-party loader plugins that are installed by default,
 keeping only the bare minimum amount of code required for mod resolving in Loader
 proper. Loader plugins will be capable of effecting the mod loading process by
-adding/removing mods and even adding other plugins. Plugins will also have the
-ability to open/create UI elements which can be used for as simple a thing as
-prompting the user for confirmation, or as complex of one as writing a full-scale
-mod launcher as a loader plugin.
+adding mods and even adding other plugins. Plugins will also have the ability to
+open/create UI elements which can be used for as simple a thing as prompting the
+user for confirmation, or as complex of one as writing a full-scale mod launcher
+as a loader plugin.
 
 ## Application
 Loader plugins are initially added from the classpath, allowing default loader
