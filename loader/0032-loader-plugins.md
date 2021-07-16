@@ -39,8 +39,8 @@ finely grained separation of responsibility.
 
 # Explanation
 
-The addition of Quilt Loader plugins will make Quilt Loader a plugin loader
-first, and mod loader second. Much of the existing mod loading behavior will be
+The addition of Quilt Loader plugins will make Quilt Loader a plugin loader, not
+a traditional mod loader. Much of the existing mod loading behavior will be
 moved to one or more first-party loader plugins that are installed by default,
 keeping only the bare minimum amount of code required for mod resolving in Loader
 proper. Loader plugins will be capable of effecting the mod loading process by
