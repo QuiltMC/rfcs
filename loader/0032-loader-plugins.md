@@ -78,13 +78,14 @@ idea of how developers might use this feature down the road.
 
 ```java
 /**
-* Passed to loader plugins to define what actions they are able to take.
-*/
+ * Passed to loader plugins to define what actions they are able to take.
+ */
 public sealed interface QuiltPluginContext permits QuiltPluginContextImpl {
+
 /**
-* The plugin that this context is for. This method is useless, it just indicates that every other method here has an 
-* implicit paramater of "The Loader Plugin" for the UI / logging to use in some way
-*/
+ * The plugin that this context is for. This method is useless, it just indicates that every other method here has an 
+ * implicit paramater of "The Loader Plugin" for the UI / logging to use in some way
+ */
 QuiltLoaderPlugin plugin();
 
 void addCandidate(ModCandidate candidate);
@@ -92,32 +93,32 @@ void addCandidate(ModCandidate candidate);
 void addCandidate(PluginCandidate candidate);
 
 /**
-* Adds a tentative mod candidate which indicates that downloading / fetching a new mod will fix a rule somewhere.
-* This tentative mod won't be kept around to the next cycle - instead the resolver is called to actually download
-* the mod if {@link QuiltLoaderPlugin#canResolve} returns true after each plugin has been checked.
-*/
+ * Adds a tentative mod candidate which indicates that downloading / fetching a new mod will fix a rule somewhere.
+ * This tentative mod won't be kept around to the next cycle - instead the resolver is called to actually download
+ * the mod if {@link QuiltLoaderPlugin#canResolve} returns true after each plugin has been checked.
+ */
 void addTentativeCandidate(String group, String modId, Version version, CandidateResolver resolver);
 
 /**
-* Adds a rule to the current solver.
-*/
+ * Adds a rule to the current solver.
+ */
 void addRule(Rule rule);
 
 /**
-* Adds a LoadOption to the current solver. All existing rules will have Rule#onLoadOptionAdded called, and all plugins 
-* will have ILoaderPlugin#onLoadOptionAdded called.
-*
-* If this is an ITentativeLoadOption then it will be removed at the end of the cycle, and handled by whatever plugin 
-* added it.
-*/
+ * Adds a LoadOption to the current solver. All existing rules will have Rule#onLoadOptionAdded called, and all plugins 
+ * will have ILoaderPlugin#onLoadOptionAdded called.
+ *
+ * If this is an ITentativeLoadOption then it will be removed at the end of the cycle, and handled by whatever plugin 
+ * added it.
+ */
 void addOption(LoadOption option);
 
 /**
-* Gets the metadata for a given mod.
-*
-* Because the mods in QuiltLoader only reference fully loaded mods, this method can be used during the mod loading process
-* to get the metadata for any candidates (tentative or not) that were present prior to this cycle.
-*/
+ * Gets the metadata for a given mod.
+ *
+ * Because the mods in QuiltLoader only reference fully loaded mods, this method can be used during the mod loading process
+ * to get the metadata for any candidates (tentative or not) that were present prior to this cycle.
+ */
 ModMetadata getMetadata(String modId);
 }
 ```
@@ -129,10 +130,10 @@ ModMetadata getMetadata(String modId);
 ```java
 interface CandidateResolver {
 /**
-* Attempts to resolve a tentative candidate.
-*
-* @return an error message if resolution fails, null otherwise
-*/ 
+ * Attempts to resolve a tentative candidate.
+ *
+ * @return an error message if resolution fails, null otherwise
+ */ 
 @Nullable String resolve();
 }
 ```
@@ -143,58 +144,58 @@ interface CandidateResolver {
 
 ```java
 /**
-* @param <T> the types of resolver this plugin can resolve
-*/
+ * @param <T> the types of resolver this plugin can resolve
+ */
 interface QuiltLoaderPlugin<T extends CandidateResolver>  {
 /**
-* Called once per cycle as the first action in the cycle.
-* 
-* This is where mods can be added with {@link QuiltPluginContext#addCandidate} and
-* {@link QuiltPluginContext#addTentativeCandidate}.
-*/
+ * Called once per cycle as the first action in the cycle.
+ * 
+ * This is where mods can be added with {@link QuiltPluginContext#addCandidate} and
+ * {@link QuiltPluginContext#addTentativeCandidate}.
+ */
 default void run(QuiltPluginContext context) {}
 
 /**
-* Called once per cycle after the sat4j solving has finished, but before any resolvers are run.
-*
-* Should NOT invoke the resolvers.
-*
-* @return true if all of the resolvers can be called, false otherwise
-*/
+ * Called once per cycle after the sat4j solving has finished, but before any resolvers are run.
+ *
+ * Should NOT invoke the resolvers.
+ *
+ * @return true if all of the resolvers can be called, false otherwise
+ */
 default boolean canResolve(List<T> resolvers) {
     return false;
 }
 
 /**
-* Called if loader can't simplify this error down into any of the other error handling methods.
-* @return True if this plugin did something which will solve / change the error in future,
-*         and so loader won't ask any other plugins to solve this.
-*         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
-*         If this returns false then no rules will be removed, and instead loader will assume that
-*         the error has been handled in some other way. (and it will promptly crash if you haven't)
-*/
+ * Called if loader can't simplify this error down into any of the other error handling methods.
+ * @return True if this plugin did something which will solve / change the error in future,
+ *         and so loader won't ask any other plugins to solve this.
+ *         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
+ *         If this returns false then no rules will be removed, and instead loader will assume that
+ *         the error has been handled in some other way. (and it will promptly crash if you haven't)
+ */
 default @Nullable Rule handleOtherErrors(QuiltPluginContext context, List<Rule> errorChain) { return null; }
 
 /**
-* @param dep The dependency which is missing completely. If you can find a valid source for this then you should add 
-*            it with {@link QuiltContext#addTentativeCandidate()}
-* @return True if this plugin did something which will solve / change the error in future,
-*         and so loader won't ask any other plugins to solve this.
-*         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
-*         If this returns false then no rules will be removed, and instead loader will assume that
-*         the error has been handled in some other way. (and it will promptly crash if you haven't)
-*/
+ * @param dep The dependency which is missing completely. If you can find a valid source for this then you should add 
+ *            it with {@link QuiltContext#addTentativeCandidate()}
+ * @return True if this plugin did something which will solve / change the error in future,
+ *         and so loader won't ask any other plugins to solve this.
+ *         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
+ *         If this returns false then no rules will be removed, and instead loader will assume that
+ *         the error has been handled in some other way. (and it will promptly crash if you haven't)
+ */
 default boolean handleMissingDependencyError(QuiltPluginContext context, ModDependencyRule dep, List<Rule> fullErrorChain) {
     return handleOtherErrors(ctx, fullErrorChain);
 }
 
 /**
-* Called whenever a new LoadOption is added, for plugins to add Rules based on this. (For example the default plugin 
-* creates rules based on the dependencies and breaks sections of the quilt.mod.json if this option is a 
-* {@link MainModLoadOption}).
-* <p>
-* Most plugins are not expected to implement this.
-*/
+ * Called whenever a new LoadOption is added, for plugins to add Rules based on this. (For example the default plugin 
+ * creates rules based on the dependencies and breaks sections of the quilt.mod.json if this option is a 
+ * {@link MainModLoadOption}).
+ * <p>
+ * Most plugins are not expected to implement this.
+ */
 default void onLoadOptionAdded(QuiltPluginContext context, LoadOption option) {}
 }
 ```
@@ -205,9 +206,9 @@ default void onLoadOptionAdded(QuiltPluginContext context, LoadOption option) {}
     
 ```java
 /**
-* {@link LoadOption}s can implement this if they must be processed at the end of the cycle in order to either be
-* added as a normal LoadOption, or removed automatically.
-*/
+ * {@link LoadOption}s can implement this if they must be processed at the end of the cycle in order to either be
+ * added as a normal LoadOption, or removed automatically.
+ */
 public interface ITentativeLoadOption {
 
 }
@@ -219,8 +220,8 @@ public interface ITentativeLoadOption {
     
 ```java
 /**
-* A boolean option, which quilt loader will resolve down to "true" or "false" according to the {@link Rule}s added by plugins.
-*/
+ * A boolean option, which quilt loader will resolve down to "true" or "false" according to the {@link Rule}s added by plugins.
+ */
 public abstract class LoadOption {
 
 }
@@ -250,24 +251,24 @@ abstract List<ModLoadOption> invalid();
 
 ```java
 /**
-* A boolean expression, which controls the links between {@link LoadOption}s
-*/
+ * A boolean expression, which controls the links between {@link LoadOption}s
+ */
 public abstract class Rule {
 
 /**
-* Invoked for every Rule by quilt-loader whenever a load option is added, in order to update this rule.
-* For example {@link ModDependencyRule} uses this to add ModLoadOption to it's valid and invalid lists.
-*/
+ * Invoked for every Rule by quilt-loader whenever a load option is added, in order to update this rule.
+ * For example {@link ModDependencyRule} uses this to add ModLoadOption to it's valid and invalid lists.
+ */
 public abstract void onLoadOptionAdded(LoadOption option);
 
 /**
-* Invoked when tentative LoadOptions are removed at the end of a cycle.
-*/
+ * Invoked when tentative LoadOptions are removed at the end of a cycle.
+ */
 public abstract void onLoadOptionRemoved(LoadOption option);
 
 /**
-* Called at the start of each cycle to encode this rule in sat4j.
-*/
+ * Called at the start of each cycle to encode this rule in sat4j.
+ */
 public abstract void define(IRuleDefiner definer);
 }
 ```
