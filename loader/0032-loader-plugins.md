@@ -97,7 +97,7 @@ void addCandidate(PluginCandidate candidate);
  * This tentative mod won't be kept around to the next cycle - instead the resolver is called to actually download
  * the mod if {@link QuiltLoaderPlugin#canResolve} returns true after each plugin has been checked.
  */
-void addTentativeCandidate(String group, String modId, Version version, CandidateResolver resolver);
+void addTentativeCandidate(String group, String modId, Version version, Future<@Nullable String> resolver);
 
 /**
  * Adds a rule to the current solver.
@@ -125,28 +125,13 @@ ModMetadata getMetadata(String modId);
 </details>
 
 <details>
-    <summary>CandidateResolver</summary>
-    
-```java
-interface CandidateResolver {
-/**
- * Attempts to resolve a tentative candidate.
- *
- * @return an error message if resolution fails, null otherwise
- */ 
-@Nullable String resolve();
-}
-```
-</details>
-
-<details>
     <summary>QuiltLoaderPlugin</summary>
 
 ```java
 /**
  * @param <T> the types of resolver this plugin can resolve
  */
-interface QuiltLoaderPlugin<T extends CandidateResolver>  {
+interface QuiltLoaderPlugin<T extends Future<@Nullable String>>  {
 /**
  * Called once per cycle as the first action in the cycle.
  * 
