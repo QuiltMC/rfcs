@@ -165,11 +165,11 @@ An array of [dependency object](#dependency-objects)s. Defines mods that this mo
 
 Influences whether or not a mod candidate should be loaded or not. May be any of these values:
 
-* "always"
+* "always" (default for mods directly in the mods folder)
 * "if_possible"
 * "if_required" (default for jar-in-jar mods)
 
-This doesn't affect mods directly placed in the mods directory.
+This doesn't affect mods directly placed in the mods folder.
 
 ##### Always
 
