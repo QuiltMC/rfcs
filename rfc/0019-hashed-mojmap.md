@@ -23,9 +23,9 @@ Hashed Mojmap will produce 8-digit base-26 hashes of information taken from Mojm
 
 To produce the hashes, the Mojmap names are processed as follows:
 
-1. For classes, their simple name (e.g. `Class$Inner`) is used.
+1. For classes, their simple name is used (e.g. `Class$Inner`).
 If the simple name is not unique, the full name is used (e.g. `com/example/Class$Inner`).
-1. For fields, their name is combined with its descriptor and owning class with the format `f;<class_name>.<field_name>;<descriptor>`.
+1. For fields, their name is combined with its descriptor and owning class in the format `f;<class_name>.<field_name>;<descriptor>`.
 The class name is again stripped of its package where possible.
 For fields whose names are unique in their enclosing class, the descriptor is replaced with the empty string.
 1. For methods, the same formatting as for fields is used except for the prefix: `m;<class_name>.<field_name>;<descriptor>`.
