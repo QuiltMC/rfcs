@@ -15,23 +15,31 @@ This RFC proposes replacing intermediary with a hashed version of Mojmap. Everyw
 
 ## Explanation
 
-Hashed Mojmap will produce base-62 hashes of information taken from Mojmap to produce mixed-case alphanumeric names like the following:
+Hashed Mojmap will produce 8-digit base-26 hashes of information taken from Mojmap to produce names like the following:
 
-- Classes: `Cls_hE89sr` (6 digits)
-- Fields: `fd_p9TXc40` (7 digits)
-- Methods: `md_fjH9ac8` (7 digits)
+- Classes: `C_bgbfjdpu`
+- Fields: `f_jhuobxwz`
+- Methods: `m_tyyngmfw`
 
 To produce the hashes, the Mojmap names are processed as follows:
 
-1. Classes are converted from dotty format (`net.minecraft.a.Foo$Bar`) to slashy format (`net/minecraft/a/Foo$Bar`).
-1. Overriding methods in subclasses are discarded if present.
-1. Package names are removed from classes whose simple names are unique. That is, `net/minecraft/a/Bar` gets shortened to `Bar` if there is no other class named `Bar`, but if there are classes `net/minecraft/a/Foo` and `net/minecraft/b/Foo` that exist, then neither of them will be shortened. This includes references to these classes in method descriptors.
-1. Method descriptors are replaced with an empty string for methods whose name is unique within the class that the method is declared.
-1. Field names are converted to `fd_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-256 hash of the string `f$declaring_class.$field_name`.
-1. Method names are converted to `md_$x` where `$x` is the last 7 digits of the base-62 representation of the SHA-256 hash of the string `m$declaring_class.$method_name$descriptor`.
-1. Class names are converted to `Cls_$x` where `$x` is the last 6 digits of the base-62 representation of the SHA-256 hash of the class name.
+1. For classes, their simple name (e.g. `Class$Inner`) is used.
+If the simple name is not unique, the full name is used (e.g. `com/example/Class$Inner`).
+1. For fields, their name is combined with its descriptor and owning class with the format `f;<class_name>.<field_name>;<descriptor>`.
+The class name is again stripped of its package where possible.
+For fields whose names are unique in their enclosing class, the descriptor is replaced with the empty string.
+1. For methods, the same formatting as for fields is used except for the prefix: `m;<class_name>.<field_name>;<descriptor>`.
+Again, package and descriptor are omitted where possible.
+1. Some methods are required to be named identical by the jvm (for overriding).
+For these methods, we only consider the top-level methods and chose the one with the lexicographically last formatted name.
+1. The resulting strings are hashed using SHA-256.
+Only the lower 8 digits of its base-26 representation are used and then prefixed with `C_` for classes, `m_` for methods and `f_` for fields.
 
-The above steps are designed to preserve some of the benefits of intermediary as much as possible without the need for matching. Testing has shown that around 50% of class renames in Mojmap are only repackages, which are unlikely to affect hashed Mojmap. The descriptor removal is designed to preserve method names where only the descriptor has changed, while ensuring hashed Mojmap names are all unique.
+The above steps are designed to preserve some of the benefits of intermediary as much as possible without the need for matching.
+Testing has shown that around 50% of class renames in Mojmap are only repackages.
+Since only a handful of classes require the full name to be used, this is very unlikely to affect hashed Mojmap.
+Testing has also shown that omitting the descriptor greatly improves the stability of the mappings.
+While there are many more non-unique methods than classes, descriptor changes are by far even more common.
 
 ### Probability of collision
 
@@ -41,7 +49,8 @@ The probability of any two hashes colliding is p = 1 - 2ⁿ! / (2ᵏⁿ (2ⁿ - 
 
 To find out how many bits of the hash we need to get a certain probability, we can rearrange the formula: n = log₂(-k²/ln(1-p)) - 1.
 
-Using the estimate that there are 5000 classes in Minecraft, and that we want a probability of 0.001, we get n = 34.54 bits. Rounding up to 36, we find that we need 6 base-64 digits to achieve this probability, so 6 base-62 digits to achieve approximately this probability as well. Using an estimate of 40,000 fields/methods in Minecraft, and the same target probability, you can work out in a similar way that 7 digits is appropriate.
+Using the estimate that there are 5000 classes in Minecraft, and that we want a probability of 0.001, we get n = 34.54 bits.
+From this we find that we need 7.34 base-26 digits to achieve this probability.Using an estimate of 40,000 fields/methods in Minecraft, and the same target probability, you can work out in a similar way that 7.62 digits is appropriate.
 
 If we got an entirely new set of mappings every snapshot, and snapshots were to occur on average once per week, then we would expect to get a class/field/method name collision about once every 192 years. But we don't get an entirely new set of mappings every snapshot, in reality the mappings are mostly the same from snapshot to snapshot, so it will take orders of magnitude longer than 192 years until we actually expect to run into any collision.
 
@@ -60,10 +69,6 @@ If we got an entirely new set of mappings every snapshot, and snapshots were to 
   - Lambda methods are indeed included in Mojmap, and are in the javac format `lambda$enclosingMethod$index`.
   - This name will only change if the enclosing method name changes, or lambdas are inserted before that lambda. Other lambdas being inserted into this method is also likely to fool Matcher and therefore change the intermediary.
   - Not much effort is put into matching lambda methods that aren't auto-matched anyway. Lambda methods have been known to change intermediary with even the tiniest change in their content.
-- Mixed case names are harder to remember than all-lowercase names.
-  - Mixed case has been chosen to decrease the likelihood of a name collision, but it is still extremely unlikely that any two names will differ only by case.
-  - Any good mappings lookup should be case-insensitive.
-  - Eclipse is known to have case-sensitive auto-completion, but the right class/field/method will come up after typing only the first couple of characters, making it unnecessary to remember the whole thing for auto-completion.
 
 ## Rationale and Alternatives
 
