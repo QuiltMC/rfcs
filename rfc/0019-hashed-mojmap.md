@@ -57,7 +57,7 @@ If we got an entirely new set of mappings every snapshot, and snapshots were to 
 ### Compatibility with Fabric
 
 - Fabric mods will be remapped from intermediary to hashed Mojmap when they are loaded.
-- Quilt Loader's mapping resolver will recognize the `intermediary` channel when Fabric mods are loaded, and remap it to the current runtime mappings (`hashed_mojmap` in production). Quilt Loader will also recognize the `hashed_mojmap` channel.
+- Quilt Loader's mapping resolver will recognize the `intermediary` channel when Fabric mods are loaded, and remap it to the current runtime mappings (`hashed` in production). Quilt Loader will also recognize the `hashed` channel.
 - The buildscript in Quilt's fork of Yarn will be updated to generate hashed Mojmap to Yarn mappings when built. When we start accepting PRs to our fork, the repository itself will be changed from using intermediary to hashed Mojmap. If necessary, a tool will be written to merge upstream from that point on.
 
 ## Drawbacks
