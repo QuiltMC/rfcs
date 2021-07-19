@@ -96,6 +96,9 @@ void addCandidate(PluginCandidate candidate);
  * Adds a tentative mod candidate which indicates that downloading / fetching a new mod will fix a rule somewhere.
  * This tentative mod won't be kept around to the next cycle - instead the resolver is called to actually download
  * the mod if {@link QuiltLoaderPlugin#canResolve} returns true after each plugin has been checked.
+ *
+ * @param resolver a future that will resolve this candidate, with value of null if it succeeds and an error message
+                   if it fails
  */
 void addTentativeCandidate(String group, String modId, Version version, Future<@Nullable String> resolver);
 
