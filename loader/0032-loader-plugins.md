@@ -270,6 +270,13 @@ drawback may be the increased scope for the Quilt project as a whole, as we will
 longer be limited to mods specifically. This is less of a drawback and more of an
 organizational change that needs to be considered moving forward.
 
+Another drawback is the potential confusion of end users that may stem from a more
+complicated mod loading process. If a plugin fails to provide a required mod which
+therefore causes a crash, it's possible that users may receive error messages that
+further confuse them rather than cause clarity. Careful consideration will have to
+be put into the development of Quilt's official loader plugins to ensure that each
+of our loader plugins emits thorough and helpful error messages upon failure.
+
 
 # Rationale and Alternatives
 
