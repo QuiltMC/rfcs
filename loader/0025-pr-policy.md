@@ -23,29 +23,22 @@ A Pull Request is considered to have been approved when all of the following are
 
 Team members with outstanding changes requested reviews may dismiss their own reviews.
 
-Admins may dismiss outstanding reviews at their discretion, but should only do so if the team member cannot be contacted within a reasonable time-frame. Conflicts should *not* be resolved by an admin, but use 
+Admins and technical leads may dismiss outstanding reviews at their discretion, but should only do so if the team member cannot be contacted within a reasonable timeframe. Reviews should *not* be dismissed simply because the majority (or that specific admin/technical lead) disagrees with one person or feels their concerns are invalid. Instead, a formal vote to merge a PR should be used.
 
 ## Final Comment Period (FCP)
 - Begins immediately after the above criteria are met
 - Lasts 2 days for small implementation changes, 5 days for major refactors, and 10 days for new API introductions or RFCs. Bugfixes have no FCP and are considered mergable immediately.
-- May be ended at any time by a team member if they have concerns.
+- May be ended at any time by a team member if they have legitimate and substantiated concerns.
 
 
 ## Conflicts
-If the Loader team cannot agree on whether to merge a PR or deny it, there are steps they can take to avoid decision paralysis. This should be a rare process--teams are encouraged to resolve these disagreements through talking the details out, but sometimes that isn't an option.
+If the Loader team cannot agree on whether to merge a PR or deny it, there are steps they can take to avoid decision paralysis. This should be a rare process--teams are encouraged to resolve these disagreements through talking the details out, but sometimes the team may have fundamental disagreements over the details of a PR.
 
 In the event the disagreement is over API structure, the PR may, at the Loader team's option, be closed and an RFC be created that defines the feature.
 
-In the event the disagreement is over implementation details, or would otherwise not benefit from being forced through the long RFC process, the voting method defined below can be used.
-
+In the event the disagreement is over implementation details, or would otherwise not benefit from being forced through the long RFC process, the voting method defined in RFC 6 can be used. Once a vote is requested, the PR will immediately enter a Final Comment Period that cannot be ended. At the end of this period, the Loader team will vote on if the PR should be merged or closed.  
 ### Voting
-A vote is complete when one of the following is true:
-- Ten days has passed and the number of votes for one disposition is greater than the number of votes for the other disposition.
-- An absolute majority has been formed for one disposition.
-    - This means that even if all of the team members who have not yet voted suddenly voted for the currently losing side, the end result would not change. For example, if 7 out of a team of 10 have voted yes, the remaining 3 team members could not change the outcome of the vote.
-
-In the event of a tie, the vote is opened to the Admin Board and their votes count as 3. If the vote is still tied, the vote fails (the policy is not implemented, the PR is not closed, etc.)
-
+Voting follows the process set out in RFC 6.
 # Drawbacks
 - Implementing a defined policy adds a layer of bureaucracy to getting PRs merged, which may be confusing.
 - There may be situations that this policy does not define, which could cause conflict or confusion within the Loader team.
