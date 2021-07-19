@@ -3,7 +3,7 @@
 
 This RFC proposes a new approach to mappings within the Quilt project, specifically regarding Yarn's cleanroom approach, licensing and related enforcement in Quilt community spaces.
 
-With Mojang's mappings (Mojmap) quickly becoming the de-facto mappings standard throughought the modding ecosystem, and MCP mappings effectively dead and gone, it no longer makes sense to maintain the purity of Yarn. This is especially true given the original motivations behind Yarn's cleanroom approach, the questionably impure approach taken by some of the upstream maintainers, and the lack of formal accountability for its contributors.
+With Mojang's mappings (Mojmap) quickly becoming the de-facto mappings standard throughout the modding ecosystem, and MCP mappings effectively dead and gone, it no longer makes sense to maintain the purity of Yarn. This is especially true given the original motivations behind Yarn's cleanroom approach, the questionably impure approach taken by some of the upstream maintainers, and the lack of formal accountability for its contributors.
 
 This RFC proposes that non-Yarn mappings should be allowed to be referenced in all Quilt community and development spaces, with the goal of creating a more inclusive support ecosystem and raising the quality of Quilt's fork of Yarn.
 
