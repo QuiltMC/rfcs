@@ -68,7 +68,7 @@ Should this RFC be approved:
 * All restrictions on referencing mappings projects (other than Quilt Mappings) within Quilt's community and development spaces will be lifted
 * A file named `ATTRIBUTION.md` will be created in the Quilt Mappings repository, which will properly attribute both the MCP project and Mojang for any names that may be inspired by or attributed to those projects, with the possibility of adding more as required
 * The Quilt Mappings project will provide additional attribution to other mappings projects and providers (including MCP and Mojang) as required, which may also include changes to Quilt's toolchain
-* The Quilt Mappings repository will have its current restrictions regarding mentions of other mappings projects lifted, and replaced with a requirement that that contributors may only reference other mappings projects that are public domain, licensed under the CC0, or attributed in the `ATTRIBUTION.md` file
+* The Quilt Mappings repository will have its current restrictions regarding mentions of other mappings projects lifted, and replaced with a requirement that contributors may only reference other mappings projects that are public domain, licensed under the CC0, or attributed in the `ATTRIBUTION.md` file
 * The other Quilt Mappings contribution requirements, such as quality of names or conventions and standards will not be changed by this RFC
 * This will not affect Quilt's other plans going forward, and everything else will continue as normal - including the planned move from intermediary to Hashed Mojmap.
 
