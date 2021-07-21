@@ -42,7 +42,7 @@ While discussing how Quilt's approach to mappings should work, the Quilt Mapping
 * Some Yarn names are clearly inspired by or lifted from MCP, and couldn't have been named how they are without it
 * Some Yarn contributors have been known to be working with other mappings projects, either in their own mods or directly, while remaining active Yarn contributors - even with video evidence, in some cases
 
-For these reasons, the Quilt Mappings Team has concluded that it's impossible to say with absolute certainty that all Yarn names are unique, and not inspired by (or copied from) other mappings projects. This means that the CC0 license applied to the Yarn project is quite likely to be invalid.
+For these reasons, the Quilt Mappings Team has concluded that it's impossible to say with absolute certainty that all Yarn names are unique, and not inspired by (or copied from) other mappings projects.
 
 It's also clear that Mojang feels that their mappings should be used in this way - or at least have no wish to prevent it - given that they haven't intervened in other projects that use it in a similar way.
 
