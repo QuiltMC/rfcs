@@ -19,6 +19,7 @@ Below is an outline of all defined keys and values.
     * [language_adapters](#the-language_adapters-field) — Array of language adapters
     * [depends](#the-depends-field) — Collection of mod dependencies
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
+    * [load_type](#the-load_type-field) — How eagerly to load this mod
     * [repositories](#the-repositories-field) — Array of maven repositories
     * [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
         * [name](#the-name-field) — Human-readable name of this mod
@@ -156,6 +157,32 @@ An array of [dependency object](#dependency-objects)s. Defines mods that this mo
 | Array  | False    |
 
 An array of [dependency object](#dependency-objects)s. Defines mods that this mod either breaks or is broken by.
+
+### The `load_type` field
+| Type    | Required |
+|---------|----------|
+| String  | False    |
+
+Influences whether or not a mod candidate should be loaded or not. May be any of these values:
+
+* "always" (default for mods directly in the mods folder)
+* "if_possible"
+* "if_required" (default for jar-in-jar mods)
+
+This doesn't affect mods directly placed in the mods folder.
+
+##### Always
+
+If any versions of this mod are present, then one of them will be loaded.
+Due to how mod loading actually works if any of the different versions of this mod are present, and one of them has "load_type" set to "always", then all of them are treated as it being set to "always".
+
+##### If Possible
+
+If this mod can be loaded, then it will - otherwise it will silently not be loaded.
+
+##### If Required
+
+If this mod is in another mods "depends" field then it will be loaded, otherwise it will silently not be loaded.
 
 ### The `repositories` field
 | Type   | Required |
