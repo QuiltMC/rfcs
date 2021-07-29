@@ -117,6 +117,14 @@ void addRule(Rule rule);
 void addOption(LoadOption option);
 
 /**
+ * Blames a single rule, causing loader to temporarily remove a single rule to move on to the next problem.
+ * If another plugin is able to fix the error (by returning true from handleOtherErrors or related methods) then this call will have no affect.
+ * 
+ * @param errorDisplayer Only one will be chosen in order to describe the error in the main error gui, using whatever UI abstraction system we end up using.
+ * @throws IllegalStateException if this isn't called during a call to {@link QuiltLoaderPlugin#handleOtherErrors(args)},
+ */
+void blameRule(Rule rule, Runnable errorDisplayer);
+/**
  * Gets the metadata for a given mod.
  *
  * Because the mods in QuiltLoader only reference fully loaded mods, this method can be used during the mod loading process
@@ -158,18 +166,18 @@ default boolean canResolve(List<T> resolvers) {
  * Called if loader can't simplify this error down into any of the other error handling methods.
  * @return True if this plugin did something which will solve / change the error in future,
  *         and so loader won't ask any other plugins to solve this.
- *         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
+ *         You are expected to call `QuiltPluginContext.blameRule(Rule... rules)` if you can't actually fix the issue, but can identify a rule to be removed. If no plugin can identify a rule to be removed then loader will remove a random rule in order to move on to the next error
  *         If this returns false then no rules will be removed, and instead loader will assume that
  *         the error has been handled in some other way. (and it will promptly crash if you haven't)
  */
-default @Nullable Rule handleOtherErrors(QuiltPluginContext context, List<Rule> errorChain) { return null; }
+default boolean handleOtherErrors(QuiltPluginContext context, List<Rule> errorChain) { return false; }
 
 /**
  * @param dep The dependency which is missing completely. If you can find a valid source for this then you should add 
  *            it with {@link QuiltContext#addTentativeCandidate()}
  * @return True if this plugin did something which will solve / change the error in future,
  *         and so loader won't ask any other plugins to solve this.
- *         Loader will temporarily remove this rule so it won't be sent to #handleOtherErrors again in this cycle.
+ *         You are expected to call `QuiltPluginContext.blameRule(Rule... rules)` if you can't actually fix the issue, but can identify a rule to be removed. If no plugin can identify a rule to be removed then loader will remove a random rule in order to move on to the next error
  *         If this returns false then no rules will be removed, and instead loader will assume that
  *         the error has been handled in some other way. (and it will promptly crash if you haven't)
  */
