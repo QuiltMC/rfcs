@@ -123,13 +123,22 @@ public sealed interface QuiltPluginContext permits QuiltPluginContextImpl {
    * @throws IllegalStateException if this isn't called during a call to {@link QuiltLoaderPlugin#handleOtherErrors(args)},
    */
   void blameRule(Rule rule, Runnable errorDisplayer);
+
   /**
-   * Gets the metadata for a given mod.
-   *
-   * Because the mods in QuiltLoader only reference fully loaded mods, this method can be used during the mod loading process
-   * to get the metadata for any candidates (tentative or not) that were present prior to this cycle.
+   * Gets all currently present load options for mods with the given ID.
+   * If none are present, returns an empty set.
    */
-  ModMetadata getMetadata(String modId);
+  Set<ModLoadOption> getModLoadOptions(String modId);
+
+  /**
+   * Gets all currently present load options.
+   */
+  Map<String, Set<ModLoadOption>> getModLoadOptions();}
+
+  /**
+   * Gets all currently present rules.
+   */
+  Set<Rule> getRules();
 }
 ```
 </details>
