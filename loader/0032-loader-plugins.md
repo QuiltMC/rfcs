@@ -133,7 +133,7 @@ public sealed interface QuiltPluginContext permits QuiltPluginContextImpl {
   /**
    * Gets all currently present load options.
    */
-  Map<String, Set<ModLoadOption>> getModLoadOptions();}
+  Map<String, Set<ModLoadOption>> getModLoadOptions();
 
   /**
    * Gets all currently present rules.
