@@ -39,7 +39,6 @@ While discussing how Quilt's approach to mappings should work, the Quilt Mapping
 
 * Almost everyone that ended up taking up Fabric and Yarn were switching from other projects, generally Spigot or Forge
 * Regardless of who contributed a name, the CC0's warranty and infringement disclaimers mean that Quilt would be fully responsible in the event of DMCA on our mappings.
-* Some Yarn names are clearly inspired by or lifted from MCP, and couldn't have been named how they are without it
 * Some Yarn contributors have been known to be working with other mappings projects, either in their own mods or directly, while remaining active Yarn contributors - even with video evidence, in some cases
 
 For these reasons, the Quilt Mappings Team has concluded that it's impossible to say with absolute certainty that all Yarn names are unique, and not inspired by (or copied from) other mappings projects.
