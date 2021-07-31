@@ -31,7 +31,7 @@ However, Rift made use of parts of the Forge toolchain without permission. Forge
 
 Due to the strict licensing of some parts of the Forge toolchain at the time, Fabric needed to avoid making use of Forge projects such as MCP, and thus avoid making the same mistakes that Rift did. In order to achieve this, Yarn was licensed under the [Creative Commons Zero License](https://creativecommons.org/share-your-work/public-domain/cc0/) (CC0), a public domain dedication.
 
-Making use of the CC0 in this way meant that all names in Yarn needed to be original contributions - it would have been unacceptable for a name to make it in from another mappings project, unless that project was also licensed under the CC0. For this reason, Yarn needed to take a cleanroom approach, rejecting contributions that added names from other mappings projects, and banning discussions of names from non-CC0 projects in related community spaces.
+Additionally, in order to protect against claims of stealing from other projects, all names in Yarn needed to be original contributions. For this reason, Yarn needed to take a cleanroom approach, rejecting contributions that added names from other mappings projects, and banning discussions of names from non-CC0 projects in related community spaces.
 
 ### Issues With the Cleanroom
 
