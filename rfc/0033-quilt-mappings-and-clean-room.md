@@ -37,7 +37,7 @@ Making use of the CC0 in this way meant that all names in Yarn needed to be orig
 
 While discussing how Quilt's approach to mappings should work, the Quilt Mappings Team has made the following observations:
 
-* Almost everyone that ended up taking up Fabric and Yarn were switching from other projects, generally Spigot or Forge
+* Almost everyone that ended up contributing to Fabric and Yarn were either switching from other projects or had minor exposure to them, generally Spigot or Forge, so they had been exposed in great amounts to strictly licensed mappings.
 * Regardless of who contributed a name, the CC0's warranty and infringement disclaimers mean that Quilt would be fully responsible in the event of DMCA on our mappings.
 * Some Yarn contributors have been known to be working with other mappings projects, either in their own mods or directly, while remaining active Yarn contributors - even with video evidence, in some cases. Since Quilt does not have the time or resources to prove each name given by these contributors is unique and original, the option that would be most honest to our users is to declare that some names have uncertain origins, and may carry legal risk.
 
