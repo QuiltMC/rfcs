@@ -29,6 +29,9 @@ For refactors and back ports, I believe a main development branch will make thin
 
 The releases branch would publish to the releases maven, while snapshots would be published to the snapshot maven. This would help people scanning the maven find the latest version easier.
 
+See ![this image for an example](.././figures/quilt-mappings-branch-structure.png)
+as an example of how the branching structure would work
+
 ### Versioning
 
 With the development branch and release branches, it might be possible to have consistent versioning across Minecraft versions, so the gradle dependency name could be `org.quiltmc:quilt-mappings:${mappings-version}-${minecraft-version}`
