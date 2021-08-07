@@ -439,12 +439,12 @@ Defines the identifier and optionally version range of another mod that this pac
 
 A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
-### The `versions` field
-| Type         | Required | Default |
-|--------------|----------|---------|
-| Array/String | False    | `"*"`   |
+### The `version` field
+| Type   | Required |
+|--------|----------|
+| String | False    |
 
-Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
+Should be a valid version to provide. if omitted then this defaults to the version of the mod.
 
 ## Version Specifier
 A version range specifier can make use of any of the following patterns:
