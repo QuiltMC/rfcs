@@ -55,7 +55,13 @@ As mentioned earlier, a lot has changed in the time since Yarn was concieved:
 * Most other modloader projects are using Mojmap, or something layered on top of it
 * MCP has been retroactively relicensed to the zlib license, and is no longer being maintained as an isolated mappings project
 * It's become clear that Microsoft has many other ways to kill off modloader projects, even though it doesn't have any discernable motivation to do so - and regardless of whether they'd be in the right to do so, it's unlikely that anyone would be able or willing to fund a court case in defense
+### Expected Positive Outcomes
 
+The current rules needed to maintain the cleanroom have to be rather stringent in order to appear effective. We expect that dropping them could benefit the Quilt project in a few ways:
+
+* Improved cooperation between modding projects - as other modloaders use different mappings, contributors who work on more than just Quilt-related projects would be considered "tainted" under the current rules. Dropping the cleanroom could increase the number of contributors both coming from other projects to help on Quilt, and coming from Quilt to collaborate on more ambitious cross-loader initiatives.
+* Improved help in community spaces - allowing other mappings will allow developers coming from other mod loaders to have a more welcoming experience as they would not have to learn a new mapping set just to receive help.
+* Improved mappings - some code constructs can be currently difficult to name without knowing the developers' intent. This challenge has been heightened with the release of the fields behind Minecraft's inlined constants. Being able to cross-reference names with Mojang Mappings could improve the quality and coverage of Quilt's own mappings when it comes to said constructs.
 ### Conclusion
 
 In conclusion, the current approach to Yarn doesn't really make sense given the modern modding ecosystem. While this RFC has no direct bearing on upstream Yarn, the Quilt Project feels that this RFC is the best way to move forward with Quilt Mappings.
