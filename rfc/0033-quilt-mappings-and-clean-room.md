@@ -40,9 +40,18 @@ While discussing how Quilt's approach to mappings should work, the Quilt Mapping
 * Almost everyone that ended up contributing to Fabric and Yarn were either switching from other projects or had minor exposure to them, generally Spigot or Forge, so they had been exposed in great amounts to strictly licensed mappings.
 * Regardless of who contributed a name, the CC0's warranty and infringement disclaimers mean that Quilt would be fully responsible in the event of DMCA on our mappings.
 * Some Yarn contributors have been known to be working with other mappings projects, either in their own mods or directly, while remaining active Yarn contributors - even with video evidence, in some cases. Since Quilt does not have the time or resources to prove each name given by these contributors is unique and original, the option that would be most honest to our users is to declare that some names have uncertain origins, and may carry legal risk.
-* Some Yarn names are lifted directly from Mojmap through the use of string constants. Quilt does not have a license from Mojang to use these constants, so they would fall under the Minecraft EULA, which is stricter than the cc0 and infringes on Mojang's copyright.
+* Some Yarn names are lifted directly from Mojmap through the use of string constants. Quilt does not have a license from Mojang to use these constants, so they would fall under the Minecraft EULA, which is stricter than the CC0 and infringes on Mojang's copyright.
 
 For these reasons, the Quilt Mappings Team has concluded that it's impossible to say with absolute certainty that all Yarn names are unique, and not inspired by (or copied from) other mappings projects. This breaks down the idea of the cleanroom that Yarn has tried to build, and is the main reason that the Quilt Mappings Team has decided to remove the cleanroom requirement.
+
+This does not break the CC0 license as mappings owned by other parties, Mojang or MCP for instance, are allowed to be part of the set. CC0 has a disclaimer that content might be originally licensed under a more restrictive license, such as ZLib or Mojang's license, and says to use at your own risk.
+
+The CC0 FAQ also supports this claim, and it has a whole section explaining similar situations:
+> **How can I be sure that I have all the rights I need to use the work?**
+> 
+> CC0 contains a disclaimer of warranties just like our licenses, so there is no assurance whatsoever that the affirmer (the person who applied CC0 to the work) has all the necessary rights to grant permission to use the CC0’d work. The person applying CC0 to their work is not guaranteeing anything about it, including whether she owns the copyright or has cleared any uses of third-party content that her work may be based on or incorporate. If you are in doubt, then we strongly recommend you not use the work until you have taken all the steps and precautions you feel you need to before doing so, which may include contacting the person who applied CC0 to the work and consulting legal counsel.
+
+CC0 only waves Quilt's rights to content, not someone else's like Mojang's. This was also an issue that Yarn faced, see https://fabricmc.net/2020/06/23/dmca.html, but should not be an issue for specific modders as Mojang or MCP have not made a practice of suing modders over the use of their names in code.
 
 It's also clear that Mojang feels that their mappings should be used in this way - or at least have no wish to prevent it - given that they haven't intervened in other projects that use it in a similar way.
 
@@ -55,6 +64,7 @@ As mentioned earlier, a lot has changed in the time since Yarn was concieved:
 * Most other modloader projects are using Mojmap, or something layered on top of it
 * MCP has been retroactively relicensed to the zlib license, and is no longer being maintained as an isolated mappings project
 * It's become clear that Microsoft has many other ways to kill off modloader projects, even though it doesn't have any discernable motivation to do so - and regardless of whether they'd be in the right to do so, it's unlikely that anyone would be able or willing to fund a court case in defense
+
 ### Expected Positive Outcomes
 
 The current rules needed to maintain the cleanroom have to be rather stringent in order to appear effective. We expect that dropping them could benefit the Quilt project in a few ways:
