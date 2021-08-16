@@ -59,7 +59,7 @@ It's become abundantly clear that Yarn's cleanroom isn't very clean, and that it
 
 ### Changes to the Ecosystem
 
-As mentioned earlier, a lot has changed in the time since Yarn was concieved:
+As mentioned earlier, a lot has changed in the time since Yarn was conceived:
 
 * Most other modloader projects are using Mojmap, or something layered on top of it
 * MCP has been retroactively relicensed to the zlib license, and is no longer being maintained as an isolated mappings project
