@@ -13,7 +13,7 @@ Any discussions related to migrating existing Quilt projects to other mappings s
 
 ## Motivation
 
-In order to understand the motivation for this RFC, it's important to look at how we got here. A lot has changed since Yarn was concieved in 2016, and the approach it takes isn't really relevant in today's modding landscape.
+In order to understand the motivation for this RFC, it's important to look at how we got here. A lot has changed since Yarn was conceived in 2016, and the approach it takes isn't really relevant in today's modding landscape.
 
 ### Background
 
