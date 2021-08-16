@@ -88,7 +88,7 @@ Should this RFC be approved:
 * The other Quilt Mappings contribution requirements, such as quality of names or conventions and standards will not be changed by this RFC
 * This will not affect Quilt's other plans going forward, and everything else will continue as normal - including the planned move from intermediary to Hashed Mojmap.
 
-These changes are likely to happen in many steps, but it's expected that they'll will be made in quick succession.
+These changes are likely to happen in many steps, but it's expected that they will be made in quick succession.
 
 ## Drawbacks
 
