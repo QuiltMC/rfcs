@@ -351,7 +351,7 @@ processed on Discord. Quilt's Community Team members are elected using a democra
     * If the vote (and thus application) has passed, the Community Manager overseeing the application must provide the
       applicant with any documentation they need, ensure they're ready to join the Community Team now, and provide them
       with any roles and access that their new position requires. The Community Manager should also help the new
-      community manager to settle into their position, support and train them as necessary, introduce them to the
+      team member to settle into their position, support and train them as necessary, introduce them to the
       development teams, announce their appointment to the community, and provide information on the structure of the
       internal communications channels.
 
