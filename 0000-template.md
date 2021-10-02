@@ -62,10 +62,3 @@ There may not always be prior art, and that's fine.
 - What should be resolved while implementing this RFC?
 - What unresolved questions do you consider out of scope for this RFC, that
   could be addressed in the future?
-
-
-## Expected Response
-
-How do might the wider community respond to this change? Who will be affected
-by it and how? Who has advocated for this change? Who has advocated against it?
-
