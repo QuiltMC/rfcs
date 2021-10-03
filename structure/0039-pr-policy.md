@@ -27,7 +27,7 @@ A Pull Request is considered to have been approved when all of the following are
     - This includes someone requesting the review of themselves or another person
 
 ## Final Comment Period (FCP)
-- Begins immediately after the Acceptance Critera are met.
+- Begins immediately after the Acceptance Criteria are met.
 - Lasts a certain amount of days, depending on the category the PR was assigned to.
 - May be ended at any time by a team member if they have legitimate and substantiated concerns.
 
