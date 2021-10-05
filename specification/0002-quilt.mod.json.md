@@ -444,7 +444,7 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 |--------|----------|
 | String | False    |
 
-Should be a valid version to provide. if omitted then this defaults to the version of the mod.
+Should be a valid mod version. If omitted, then this defaults to the version of the providing mod.
 
 ## Version Specifier
 A version range specifier can make use of any of the following patterns:
