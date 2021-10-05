@@ -309,7 +309,7 @@ An example quilt.mod.json:
         "provides": [
             {
                 "id": "super_awesome_lib",
-                "versions": "^1.0.0"
+                "version": "1.0.0"
             },
             "flamingo"
         ],
