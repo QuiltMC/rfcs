@@ -39,10 +39,10 @@ Admins and technical leads may dismiss outstanding reviews at their discretion, 
 
 ## Template for CONTRIBUTING.MD
 ### Pull Request Process
-To get a pull request merged into PROJECT, it must get a certain number of approvals from TEAM members, and then enter a Final Comment Period to ensure everyone has had a chance to look at the PR. Once these criteria have been met, the PR will be merged. 
+To get a pull request merged into PROJECt, it must get a certain number of approvals from the maintainers, and then it will enter a Final Comment Period. If the pull request passes the final comment period without opposition, the PR will be merged. Otherwise, the PR will return to being in review. 
 
+The exact number of reviews needed, and the length of the Final Comment Period, varies depending on the scope and complexity of the pull request. The numbers for each category are listed below.
 
-The exact number of reviews needed and length of Final Comment Period varies depending on the scope and complexity of your PR; the amount of approvals needed and the length of the Final Comment Period for each category are listed below.
 #### CATEGORY ONE
 **Required Approvals**: X
 - At least Y of these must come directly from the TEAM team and not its superiors.
@@ -53,7 +53,7 @@ The exact number of reviews needed and length of Final Comment Period varies dep
 
 This is only a summary of the process. The exact rules are defined in [RFC 39](https://github.com/QuiltMC/rfcs/blob/master/structure/0039-pr-policy.md)
 ## Conflicts
-If the team cannot agree on whether to merge a PR or deny it, there are steps they can take to avoid decision paralysis. This should be a rare process--teams are encouraged to resolve these disagreements through talking the details out, but sometimes the team may have fundamental disagreements over the details of a PR.
+If the team cannot agree on whether to merge a PR or deny it, there are steps they can take to avoid decision paralysis. This should be a rare process--teams are encouraged to resolve these disagreements through talking the details out, but sometimes members of the team may have fundamental disagreements over the details of a PR.
 
 In the event the disagreement is over API structure, the PR may, at the team's option, be closed and an RFC be created that defines the feature.
 
