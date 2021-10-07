@@ -15,15 +15,16 @@ It is **not a goal** of this PR to be fool-proof from bad actors within the Quil
 
 # Explanation
 ## Vocab
-- **Required Approvals**: The total number of reviews needed by the team assigned to a PR, or that team's superiors.
+- **Required Approvals**: The total number of approvals needed by the team assigned to a PR, or that team's superiors.
+    - An approval is defined as an approving review using the GitHub review feature
 - **Minimum Team Approvals**: The amount of approvals that must come directly from the assigned team. When multiple teams are assigned to a PR, this number applies to each team.
     - This prevents PRs from getting merged by Technical Leads/etc without any oversight by the responsible team
 
 ## Acceptance Criteria
 A Pull Request is considered to have been approved when all of the following are true:
-- The Pull Request has received the needed amount of Required Approvals and Minimum Team Reviews.
+- The Pull Request has received the needed amount of Required Approvals and Minimum Team Reviews
 - The Pull Request has no changes requested reviews by any members of the team
-- Nobody in the team has had their review requested on the Pull Request
+- Nobody in the team has had their review requested on the Pull Request using the system on Github
     - This includes someone requesting the review of themselves or another person
 
 ## Final Comment Period (FCP)
