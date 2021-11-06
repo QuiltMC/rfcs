@@ -39,7 +39,7 @@ Admins and technical leads may dismiss outstanding reviews at their discretion, 
 
 ## Template for CONTRIBUTING.MD
 ### Pull Request Process
-To get a pull request merged into PROJECt, it must get a certain number of approvals from the maintainers, and then it will enter a Final Comment Period. If the pull request passes the final comment period without opposition, the PR will be merged. Otherwise, the PR will return to being in review. 
+To get a pull request merged into PROJECT, it must get a certain number of approvals from the maintainers, and then it will enter a Final Comment Period. If the pull request passes the final comment period without opposition, the PR will be merged. Otherwise, the PR will return to being in review. 
 
 The exact number of reviews needed, and the length of the Final Comment Period, varies depending on the scope and complexity of the pull request. The numbers for each category are listed below.
 
