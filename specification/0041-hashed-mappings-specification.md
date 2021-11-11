@@ -76,7 +76,7 @@ The mapping of a name is omitted if one of the following is true:
 ## Example
 The following example is intended to illustrate the process described above, but is not to be viewed as specification.
 
-Note: In this example `ClassB` extends `ClassA` and implements `IntercfaceA`.
+Note: In this example `ClassB` extends `ClassA` and implements `InterfaceA`.
 | Java Name                             | Raw Name                      | Hashed Name   |
 | ------------------------------------- | ----------------------------- | ------------- |
 | `org.example.ClassA`                  | `ClassA`                      | `C_fshauzuk`  |
@@ -120,7 +120,7 @@ Note: In this example `ClassB` extends `ClassA` and implements `IntercfaceA`.
   - Basically no leaking of mojmap.
     - Makes it easier to argue about mojmap license.
     - Would allow using it in "taint free" contexts if it ever comes to it (e.g. yarn)
-- Detection of unobfuscate names is now done by checking whether mappings are identity mappings.
+- Detection of unobfuscated names is now done by checking whether mappings are identity mappings.
   - Detection via annotations was attempted, but required too many special cases (constructors, enum values array, etc.)
   - Single chracter names in the original mapping have a chance of coinciding with the obfuscated names.
     - We decided to treat all single character identity mappings as obfuscated
