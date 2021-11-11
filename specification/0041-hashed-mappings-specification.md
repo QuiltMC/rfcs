@@ -12,7 +12,7 @@ It provides some benefits over intermediary, most notably the reduced maintenanc
 
 One of the design goals of hashed was, that it is not built incrementally,
 but can always be creating from an existing official mapping set without knowledge of earlier hashed versions.
-This also means that it shoulod be possible for anyone to generate hashed mappings,
+This also means that it should be possible for anyone to generate hashed mappings,
 even if they don't plan to use the mappings-hasher designed by quit.
 In order to allow this, a specification for the hashed mapping is needed.
 
@@ -27,7 +27,7 @@ Given an original mappings set and the corresponding classes, an new mapping set
 - The new mappings must ensure that the resulting remapped jar can be verified and executed.
 - The new mapping set should be as resilient to changes in the original mapping set and corresponding classes as possible.
 
-In oder to achieve this, the following operations are performed on the original mapping set:
+In order to achieve this, the following operations are performed on the original mapping set:
 - Convert all class/method/field names into their corresponding "raw" name.
 - Ensure methods that are required to have the same name do so.
 - Hash all raw names using the same algorithm.
@@ -66,7 +66,7 @@ The following prefixes are used:
 
 ### Default Package
 All hashed class names are prefixed with a default package.
-The default package for hashed mojamp is `net/minecraft/unmapped/`.
+The default package for hashed mojmap is `net/minecraft/unmapped/`.
 
 ### Omitted mapping information
 The mapping of a name is omitted if one of the following is true:
@@ -122,7 +122,7 @@ Note: In this example `ClassB` extends `ClassA` and implements `InterfaceA`.
     - Would allow using it in "taint free" contexts if it ever comes to it (e.g. yarn)
 - Detection of unobfuscated names is now done by checking whether mappings are identity mappings.
   - Detection via annotations was attempted, but required too many special cases (constructors, enum values array, etc.)
-  - Single chracter names in the original mapping have a chance of coinciding with the obfuscated names.
+  - Single character names in the original mapping have a chance of coinciding with the obfuscated names.
     - We decided to treat all single character identity mappings as obfuscated
 
 ## Prior Art
