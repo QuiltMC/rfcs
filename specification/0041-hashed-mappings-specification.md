@@ -13,7 +13,7 @@ It provides some benefits over intermediary, most notably the reduced maintenanc
 One of the design goals of hashed was, that it is not built incrementally,
 but can always be creating from an existing official mapping set without knowledge of earlier hashed versions.
 This also means that it should be possible for anyone to generate hashed mappings,
-even if they don't plan to use the mappings-hasher designed by quit.
+even if they don't plan to use the mappings-hasher designed by Quilt.
 In order to allow this, a specification for the hashed mapping is needed.
 
 In order to specify our intended behaviour, this document describes the process to generate a hashed mapping.
@@ -21,7 +21,7 @@ Anything not specified in this RFC is considered a bug in the generation of hash
 
 ## Explanation
 
-Given an original mappings set and the corresponding classes, an new mapping set is created with the following properties:
+Given an original mappings set and the corresponding classes, a new mapping set is created with the following properties:
 - All new mappings are a hash of the corresponding original mapping.
 - All new mappings are unique in the new mapping set where possible.
 - The new mappings must ensure that the resulting remapped jar can be verified and executed.
