@@ -7,55 +7,96 @@ hashed mapping as originally proposed in the hashed mojmap [RFC 19](https://gith
 
 ## Motivation
 
-Since the original hashed mojmap RFC some things changed in the QuiltMC ecosystem.
-Most notably, [RFC 33](https://github.com/QuiltMC/rfcs/blob/master/rfc/0033-quilt-mappings-and-clean-room.md)
-drops the requirement to not "taint" contributors to quilt mappings.
-As a result of this, we are allowed to leak more information from mojamp in its hashed version.
+Hashed Mojmap is intended to replace intermediary as our runtime mappings.
+It provides some benefits over intermediary, most notably the reduced maintenance cost.
 
-The new version of hashed mappings operates solely on the original mapping set
-and therefore no longer requires inspecting minecraft libraries.
-This greatly reduces the complexity of the mappings hasher, reducing the chance
-of breakage and improving maintainability greatly.
+One of the design goals of hashed was, that it is not built incrementally,
+but can always be creating from an existing official mapping set without knowledge of earlier hashed versions.
+This also means that it shoulod be possible for anyone to generate hashed mappings,
+even if they don't plan to use the mappings-hasher designed by quit.
+In order to allow this, a specification for the hashed mapping is needed.
 
 In order to specify our intended behaviour, this document describes the process to generate a hashed mapping.
 Anything not specified in this RFC is considered a bug in the generation of hashed mappings.
 
 ## Explanation
 
-Given a mappings file, all class names, method names and field names will be hashed.
+Given an original mappings set and the corresponding classes, an new mapping set is created with the following properties:
+- All new mappings are a hash of the corresponding original mapping.
+- All new mappings are unique in the new mapping set where possible.
+- The new mappings must ensure that the resulting remapped jar can be verified and executed.
+- The new mapping set should be as resilient to changes in the original mapping set and corresponding classes as possible.
 
-First, the names are simplified where possible:
+In oder to achieve this, the following operations are performed on the original mapping set:
+- Convert all class/method/field names into their corresponding "raw" name.
+- Ensure methods that are required to have the same name do so.
+- Hash all raw names using the same algorithm.
+- Mark all class/method/field names with a corresponding prefix.
+- Prefix hashed class mappings with a default package.
+- Strip any mapping information that is unnecessary.
 
-- For top-level classes (i.e. not inner classes), the package is stripped from their name where possible.
-  This is possible if and only if the stripped class name is unique withing the mapping set.
-- For inner classes, the package is stripped from their name if and only if
-  its enclosing top-level class has its package stripped as well.
-- For methods and fields, the descriptor is always omitted.
+### Raw Names
+For classes, the raw name is their binary name with the package omitted where possible.
+For methods and fields, the raw name is the raw name of the owner class, followed by their name and descriptor, unless the descriptor can be omitted.
 
-The resulting names are then hashed and converted to base-26.
-The hashing algorithm used is SHA-256.
-The resulting digest is converted into base-26 (using the letters a-z), and the lowest 8 digits
-make up the hashed name, least significant digit first.
+The exact format is:
+- Class: `<class_name>`
+- Method: `<raw_class_name>.<method_name><descriptor>`
+- Field: `<raw_class_name>.<field_name>;<descriptor>`
 
-This hashed name is then prefixed with two characters to distinguish between classes, methods and fields:
-- For classes, the prefix is `C_`.
-- For methods, the prefix is `m_`.
-- For fields, the prefix is `f_`.
+### Method Name Sets
+All methods in a name set are required to have the same raw name.
+Method A and method B are in the same name set if and only if one of the following is true:
+- A overrides B.
+- B overrides A.
+- There exists a method C that is in the same name set as A and in the same name set as B.
 
-An attempt is made to avoid hashing non-obfuscated names:
-If the original mapping is an identity mapping with a name longer than one character,
-the hashed mapping will be the same identity mapping.
+The raw name each set uses is the lexicographically lowest raw name of all methods in the name set that don't override another method.
 
-Lastly, top-level class names are prefixed with a package name to avoid name collisions and improve source browsing.
-For hashed mojmap we chose `net/minecraft/unmapped`.
+### Hash function
+The raw names are hashed using the SHA-256 hash algorithm.
+The resulting hash is converted into base-26 (a-z).
+The lowest 8 base-26 digits are then used as the hash.
+
+### Prefix
+The following prefixes are used:
+- Class: `C_`
+- Method: `m_`
+- Field: `f_`
+
+### Default Package
+All hashed class names are prefixed with a default package.
+The default package for hashed mojamp is `net/minecraft/unmapped/`.
+
+### Omitted mapping information
+The mapping of a name is omitted if one of the following is true:
+- The corresponding mapping in the original mapping set is an identity mapping AND the original mapping is longer than one letter.
+- The method corresponding to the method mapping overrides another method in the mapping set.
+
+## Example
+The following example is intended to illustrate the process described above, but is not to be viewed as specification.
+
+Note: In this example `ClassB` extends `ClassA` and implements `IntercfaceA`.
+| Java Name                          | Raw Name                      | SHA-256               | Hashed Name   |
+| ---------------------------------- | ----------------------------- | --------------------- | ------------- |
+| `org.example.ClassA`               | `ClassA`                      | [...]aef10bed6d5a7d60 | `C_fshauzuk`  |
+| `org.example.ClassA.InnerClass`    | `ClassA$InnerClass`           | [...]99eddc0ec8d4476f | `C_zldtvwcl`  |
+| `org.example.ClassA.fieldA`        | `ClassA.fieldA;`              | [...]d30c5c8202e185b1 | `f_yeoltekl`  |
+| `org.example.ClassA.methodA()`     | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
+| `org.example.ClassB`               | `ClassB`                      | [...]4e988b89b63914a6 | `C_irypywpy`  |
+| `org.example.ClassB.InnerClass`    | `ClassB$InnerClass`           | [...]248c7a73faa4bb12 | `C_znuawieq`  |
+| `org.example.ClassB.methodA()`     | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
+| `org.example.ClassB.methodB()`     | `InterfaceA.methodB()V`       | [...]517afac4dc953f2e | `m_gcptdoja`  |
+| `org.example.InterfaceA`           | `InterfaceA`                  | [...]2be6c440a013ec8b | `C_wtvyrzif`  |
+| `org.example.InterfaceA.methodA()` | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
+| `org.example.InterfaceA.methodB()` | `InterfaceA.methodB()V`       | [...]517afac4dc953f2e | `m_gcptdoja`  |
+| `org.example.packageA.ClassC`      | `org/example/packageA/ClassC` | [...]7851241a10271bb0 | `C_hehlvtlo`  |
+| `org.example.packageB.ClassC`      | `org/example/packageB/ClassC` | [...]94eb85f0bae2f805 | `C_rvxxwsev`  |
 
 ## Drawbacks
 
-- This version of hashed is potentially still less stable than intermediary, although this has not be quantified.
+- This version of hashed is potentially still less stable than intermediary, although this has not been quantified.
   - An "ideal" intermediary would be perfectly stable.
-- Identical names in the original mapping are identical in hashed, leaking information about the original mapping.
-  - Thanks to dropping the clean room, this is much less of an issue now.
-  - Actual information leakage is still reasonably small.
 - Hashed base-26 names might be less readable than other name formats.
   - This is unfortunately hard to quantify. Base-10 hashing would be an alternative, although with longer hashes.
 - A specification of the hashed mappings might make the format inflexible.
@@ -71,21 +112,31 @@ For hashed mojmap we chose `net/minecraft/unmapped`.
 - When working with layered mappings (e. g. quilt mappings on top of hashed) it is preferable
   to be able to clearly distinguish between mapped and unmapped code.
   - Encountering Mojmap names when working with QM could be highly confusing.
+- Unique hashed names provide several benefits:
+  - Easier deobfuscation of stacktraces and other errors (especially when using bots for manual translation).
+  - Allow source remapping from hashed to any other mapping without needing context (no classpath or even full class files needed).
+  - Un-hides fields.
+  - Basically no leaking of mojmap.
+    - Makes it easier to argue about mojmap license.
+    - Would allow using it in "taint free" contexts if it ever comes to it (e.g. yarn)
+- Detection of unobfuscate names is now done by checking whether mappings are identity mappings.
+  - Detection via annotations was attempted, but required too many special cases (constructors, enum values array, etc.)
+  - Single chracter names in the original mapping have a chance of coinciding with the obfuscated names.
+    - We decided to treat all single character identity mappings as obfuscated
 
 ## Prior Art
 
 The first attempt at hashed mappings was outlined in [RFC 19](https://github.com/QuiltMC/rfcs/blob/master/rfc/0019-hashed-mojmap.md).
-This was then implemented in the [mappings-hasher](https://github.com/QuiltMC/mappings-hasher)
-prior to commit [385c9b8](https://github.com/QuiltMC/mappings-hasher/commit/385c9b8795ffcba2c5d21cdbd0f6a319bc7be10e).
+This was then implemented in the [mappings-hasher](https://github.com/QuiltMC/mappings-hasher).
 
-However, the implementation proved to be somewhat complex and it was hard to argue about correctness of the implementation.
-The JVMs complex method logic we needed to respect in order to ensure binary compatibility proved to be very hard to implement.
+Later, an attempt was made to create a [simplified hasher](https://github.com/QuiltMC/mappings-hasher/tree/archive/simplified_hasher),
+by only hashing the mappings without information of the jar.
+However, this idea was scrapped due to the drawbacks of non-unique mapping names.
 
 ## Unresolved Questions
 
 - Some of our current tooling might not be fully capable of dealing with these new mappings.
   However, this is to be fixed in the corresponding tooling, rather than the hashed mappings.
 
-- While this simple format seems to work fine, no extensive testing has been done with the new platform.
-  Unforeseen issues may still arise, which should ideally fixed before hashed is considered stable.
-  It is unclear at this point when this transition should be made.
+- While this simple format seems to work fine, no extensive testing has been done with the rest of the toolchain.
+  Hashed Mojmap will remain on the snapshot maven until we are confident that the tooling works and this RFC is merged.
