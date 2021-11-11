@@ -41,8 +41,8 @@ For methods and fields, the raw name is the raw name of the owner class, followe
 
 The exact format is:
 - Class: `<class_name>`
-- Method: `<raw_class_name>.<method_name><descriptor>`
-- Field: `<raw_class_name>.<field_name>;<descriptor>`
+- Method: `m;<raw_class_name>.<method_name>;<descriptor>`
+- Field: `f;<raw_class_name>.<field_name>;<descriptor>`
 
 ### Method Name Sets
 All methods in a name set are required to have the same raw name.
@@ -77,21 +77,22 @@ The mapping of a name is omitted if one of the following is true:
 The following example is intended to illustrate the process described above, but is not to be viewed as specification.
 
 Note: In this example `ClassB` extends `ClassA` and implements `IntercfaceA`.
-| Java Name                          | Raw Name                      | SHA-256               | Hashed Name   |
-| ---------------------------------- | ----------------------------- | --------------------- | ------------- |
-| `org.example.ClassA`               | `ClassA`                      | [...]aef10bed6d5a7d60 | `C_fshauzuk`  |
-| `org.example.ClassA.InnerClass`    | `ClassA$InnerClass`           | [...]99eddc0ec8d4476f | `C_zldtvwcl`  |
-| `org.example.ClassA.fieldA`        | `ClassA.fieldA;`              | [...]d30c5c8202e185b1 | `f_yeoltekl`  |
-| `org.example.ClassA.methodA()`     | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
-| `org.example.ClassB`               | `ClassB`                      | [...]4e988b89b63914a6 | `C_irypywpy`  |
-| `org.example.ClassB.InnerClass`    | `ClassB$InnerClass`           | [...]248c7a73faa4bb12 | `C_znuawieq`  |
-| `org.example.ClassB.methodA()`     | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
-| `org.example.ClassB.methodB()`     | `InterfaceA.methodB()V`       | [...]517afac4dc953f2e | `m_gcptdoja`  |
-| `org.example.InterfaceA`           | `InterfaceA`                  | [...]2be6c440a013ec8b | `C_wtvyrzif`  |
-| `org.example.InterfaceA.methodA()` | `ClassA.methodA()V`           | [...]136948e85280fdba | `m_bwpbesjo`  |
-| `org.example.InterfaceA.methodB()` | `InterfaceA.methodB()V`       | [...]517afac4dc953f2e | `m_gcptdoja`  |
-| `org.example.packageA.ClassC`      | `org/example/packageA/ClassC` | [...]7851241a10271bb0 | `C_hehlvtlo`  |
-| `org.example.packageB.ClassC`      | `org/example/packageB/ClassC` | [...]94eb85f0bae2f805 | `C_rvxxwsev`  |
+| Java Name                             | Raw Name                      | Hashed Name   |
+| ------------------------------------- | ----------------------------- | ------------- |
+| `org.example.ClassA`                  | `ClassA`                      | `C_fshauzuk`  |
+| `org.example.ClassA.InnerClass`       | `ClassA$InnerClass`           | `C_zldtvwcl`  |
+| `org.example.ClassA.fieldA`           | `f;ClassA.fieldA;`            | `f_xskwwtwz`  |
+| `org.example.ClassA.methodA()`        | `m;ClassA.methodA;`           | `m_onqxeppm`  |
+| `org.example.ClassB`                  | `ClassB`                      | `C_irypywpy`  |
+| `org.example.ClassB.InnerClass`       | `ClassB$InnerClass`           | `C_znuawieq`  |
+| `org.example.ClassB.methodA()`        | `m;ClassA.methodA;`           | `m_onqxeppm`  |
+| `org.example.ClassB.methodB()`        | `m;InterfaceA.methodB;()V`    | `m_reinsnrb`  |
+| `org.example.InterfaceA`              | `InterfaceA`                  | `C_wtvyrzif`  |
+| `org.example.InterfaceA.methodA()`    | `m;ClassA.methodA;`           | `m_onqxeppm`  |
+| `org.example.InterfaceA.methodB()`    | `m;InterfaceA.methodB;()V`    | `m_reinsnrb`  |
+| `org.example.InterfaceA.methodB(int)` | `m;InterfaceA.methodB;(I)V`   | `m_mkznfdir`  |
+| `org.example.packageA.ClassC`         | `org/example/packageA/ClassC` | `C_hehlvtlo`  |
+| `org.example.packageB.ClassC`         | `org/example/packageB/ClassC` | `C_rvxxwsev`  |
 
 ## Drawbacks
 
