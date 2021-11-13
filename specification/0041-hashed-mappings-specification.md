@@ -29,7 +29,7 @@ Given an original mappings set and the corresponding classes, a new mapping set 
 
 In order to achieve this, the following operations are performed on the original mapping set:
 - Convert all class/method/field names into their corresponding "raw" name.
-- Ensure methods that are required to have the same name do so.
+- Ensure methods that are required to have the same name in the jvm have the same "raw" name. (See "Method Name Sets".)
 - Hash all raw names using the same algorithm.
 - Mark all class/method/field names with a corresponding prefix.
 - Prefix hashed class mappings with a default package.
@@ -37,7 +37,10 @@ In order to achieve this, the following operations are performed on the original
 
 ### Raw Names
 For classes, the raw name is their binary name with the package omitted where possible.
+The package of a class can be omitted if and only if the simple class name (i.e. the class name without the package) is unique in the original mapping set.
+
 For methods and fields, the raw name is the raw name of the owner class, followed by their name and descriptor, unless the descriptor can be omitted.
+The descriptor of a method/field can be omitted if and only if the method/field name is unique in its owner class.
 
 The exact format is:
 - Class: `<class_name>`
