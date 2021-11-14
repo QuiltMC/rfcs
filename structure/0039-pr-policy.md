@@ -1,6 +1,7 @@
 # Quilt PR Policy
 # Summary and Scope
-This RFC defines a system for merging Pull Requests (PR)s into Quilt projects. It applies to any repositories which opt-in to this system by adding a section (given below) to their CONTRIBUTING file.
+This RFC defines a system for merging Pull Requests (PR)s into Quilt projects. It applies to any repositories which opt-in to this system by adding a section (given below) to their CONTRIBUTING file. This document is meant to be a guideline, not a strict definition; projects may make amendments to this process (e.g. allowing it to be bypassed for typo fixes) in their respective CONTRIBUTING files.
+
 This RFC does not seek to require projects to use this process, but we encourage all projects expecting many pull requests to do so.
 
 # Motivation
