@@ -53,8 +53,9 @@ The exact number of reviews needed, and the length of the Final Comment Period, 
 **Final Comment Period**: X days
 
 << Continue for each category >>
-```
+
 This is only a summary of the process. The exact rules are defined in [RFC 39](https://github.com/QuiltMC/rfcs/blob/master/structure/0039-pr-policy.md)
+```
 ## Conflicts
 If the team cannot agree on whether to merge a PR or deny it, there are steps they can take to avoid decision paralysis. This should be a rare process--teams are encouraged to resolve these disagreements through talking the details out, but sometimes members of the team may have fundamental disagreements over the details of a PR.
 
