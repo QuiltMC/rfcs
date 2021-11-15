@@ -40,7 +40,7 @@ Team members may dismiss their own reviews.
 Admins and technical leads may dismiss outstanding and requested reviews at their discretion, but should only do so if the team member cannot be contacted within a reasonable time-frame and must leave a comment on the PR with their justification. Reviews should *not* be dismissed simply because the majority (or that specific admin/technical lead) disagrees with one person or feels their concerns are invalid. Instead, a formal vote to merge a PR should be used.
 
 ## Template for CONTRIBUTING.MD
-```md
+```markdown
 ### Pull Request Process
 To get a pull request merged into << PROJECT >>, it must get a certain number of approvals from the maintainers, and then it will enter a Final Comment Period. If the pull request passes the final comment period without opposition, the PR will be merged. Otherwise, the PR will return to being in review. 
 
