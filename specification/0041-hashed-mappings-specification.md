@@ -28,31 +28,31 @@ Given an original mappings set and the corresponding classes, a new mapping set 
 - The new mapping set should be as resilient to changes in the original mapping set and corresponding classes as possible.
 
 In order to achieve this, the following operations are performed on the original mapping set:
-- Convert all class/method/field names into their corresponding "raw" name.
-- Ensure methods that are required to have the same name in the jvm have the same "raw" name. (See "Method Name Sets".)
+- Convert all class/method/field names into their corresponding "raw name".
+- Ensure methods in the same "override hierarchy" have the same raw name. (See "Method Name Sets".)
 - Hash all raw names using the same algorithm.
-- Mark all class/method/field names with a corresponding prefix.
+- Mark all hashed class/method/field names with a corresponding prefix.
 - Prefix hashed class mappings with a default package.
 - Strip any mapping information that is unnecessary.
 
 ### Raw Names
 For classes, the raw name is their binary name with the package omitted where possible.
-The package of a class can be omitted if and only if the simple class name (i.e. the class name without the package) is unique in the original mapping set.
+The package of a class can be omitted if and only if the original simple class name (i.e. the original class name without the package) is unique in the original mapping set.
 
-For methods and fields, the raw name is the raw name of the owner class, followed by their name and descriptor, unless the descriptor can be omitted.
-The descriptor of a method/field can be omitted if and only if the method/field name is unique in its owner class.
+For methods and fields, the raw name is the raw name of the owner class, followed by their original name and descriptor, unless the descriptor can be omitted.
+The descriptor of a method/field can be omitted if and only if the original method/field name is unique in its owner class.
 
 The exact format is:
 - Class: `<class_name>`
-- Method: `m;<raw_class_name>.<method_name>;<descriptor>`
-- Field: `f;<raw_class_name>.<field_name>;<descriptor>`
+- Method: `m;<raw_class_name>.<original_method_name>;<original_descriptor>`
+- Field: `f;<raw_class_name>.<original_field_name>;<original_descriptor>`
 
 ### Method Name Sets
 All methods in a name set are required to have the same raw name.
 Method A and method B are in the same name set if and only if one of the following is true:
 - A overrides B.
 - B overrides A.
-- There exists a method C that is in the same name set as A and in the same name set as B.
+- There exists a method C that is both in the same name set as A and in the same name set as B.
 
 The raw name each set uses is the lexicographically lowest raw name of all methods in the name set that don't override another method.
 
@@ -72,7 +72,7 @@ All hashed class names are prefixed with a default package.
 The default package for hashed mojmap is `net/minecraft/unmapped/`.
 
 ### Omitted mapping information
-The mapping of a name is omitted if one of the following is true:
+The mapping of a hashed name is omitted if one of the following is true:
 - The corresponding mapping in the original mapping set is an identity mapping AND the original mapping is longer than one letter.
 - The method corresponding to the method mapping overrides another method in the mapping set.
 
