@@ -11,7 +11,7 @@ Hashed Mojmap is intended to replace intermediary as our runtime mappings.
 It provides some benefits over intermediary, most notably the reduced maintenance cost.
 
 One of the design goals of hashed was, that it is not built incrementally,
-but can always be creating from an existing official mapping set without knowledge of earlier hashed versions.
+but can always be created from an existing official mapping set without knowledge of earlier hashed versions.
 This also means that it should be possible for anyone to generate hashed mappings,
 even if they don't plan to use the mappings-hasher designed by Quilt.
 In order to allow this, a specification for the hashed mapping is needed.
@@ -54,12 +54,14 @@ Method A and method B are in the same name set if and only if one of the followi
 - B overrides A.
 - There exists a method C that is both in the same name set as A and in the same name set as B.
 
+> "A overrides B" means that the owner of B is a superclass or superinterface of the owner of A and that A "can override" B according to `JVMS 4.5.4`.
+
 The raw name each set uses is the lexicographically lowest raw name of all methods in the name set that don't override another method.
 
 ### Hash function
 The raw names are hashed using the SHA-256 hash algorithm.
 The resulting hash is converted into base-26 (a-z).
-The lowest 8 base-26 digits are then used as the hash.
+The least significant 8 base-26 digits are then used as the hash, most significant digit first.
 
 ### Prefix
 The following prefixes are used:
