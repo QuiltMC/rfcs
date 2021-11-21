@@ -182,7 +182,7 @@ specified.
 Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do note vote on internal
 polls by default. Instead, they should only vote in order to break ties or contribute to inconclusive polls - votes
 provided by members of the admin board are tripled, meaning that **one vote becomes three** - this is detailed in
-[RFC 6: Governmental Structure](/community/0006-governance.md), as the admin board is the only parent of the community
+[RFC 6: Governmental Structure](/structure/0006-governance.md), as the admin board is the only parent of the community
 team.
 
 ### Trainee Community Moderators
@@ -401,7 +401,7 @@ during this process.
 ## Process: Removing Team Members
 
 Removal of members from the community team follows the process outlined in 
-[RFC 6: Governmental Structure](/community/0006-governance.md#removal-of-staff).
+[RFC 6: Governmental Structure](/structure/0006-governance.md#removal-of-staff).
 
 ---
 

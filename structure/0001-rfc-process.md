@@ -19,7 +19,7 @@ While this document describes when RFC's are required on an organizational level
 ## Creating an RFC
 A proper RFC is a high quality, well thought out document describing in detail all the possible benefits, drawbacks, and other consequences of the suggested change. A low effort or low quality RFC is likely to be rejected quickly.
 
-Before beginning the process, it can be helpful to discuss your ideas with other community members on our [discord server](https://discord.quiltmc.org/) to get a feel for the community's opinion on the issue.
+Before beginning the process, it can be helpful to discuss your ideas with other community members on our [Discord server](https://discord.quiltmc.org/) to get a feel for the community's opinion on the issue.
 
 Once you have a good idea of what you want to suggest, and how the community feels about it, you can begin writing your RFC.
 
