@@ -22,9 +22,9 @@ It is **not a goal** of this PR to be fool-proof from bad actors within the Quil
     - This prevents PRs from getting merged by Technical Leads/etc without any oversight by the responsible team
 ## Acceptance Criteria
 A Pull Request is considered to have been approved when all of the following are true:
-- The Pull Request has received the needed amount of Required Approvals and Minimum Team Reviews
+- The Pull Request has the needed amount of Required Approvals and Minimum Team Reviews
 - The Pull Request has no changes requested reviews by any members of the team
-- Nobody in the team has had their review requested on the Pull Request using the system on Github
+- Nobody in the team has an outstanding review requested on the Pull Request using the system on Github
     - This includes someone requesting the review of themselves or another person
 - All other criteria defined in the team's CONTRIBUTING file have been met.
 
