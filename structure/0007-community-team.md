@@ -228,8 +228,8 @@ voted, they may change their vote or retract it, and their final vote will also 
 administrative board are not required to vote if they don't feel that it's necessary.
 
 If any active voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote **must be
-counted as an abstention.** If a member is inactive (has not interacted with communnity management spaces for more than two weeks),
-they will not be counted as a positive vote, negative vote, or abstention, and will not be counted in the tally for voting.
+counted as an abstention.** If a member is inactive (has not interacted with community management spaces for more than two weeks),
+they will not be counted as a positive vote, negative vote or abstention, and will not be counted in the tally for voting.
 
 The Community Team should then tally the final vote counts, and interpret them as follows.
 
