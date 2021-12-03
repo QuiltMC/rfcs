@@ -148,7 +148,7 @@ Responsibilities include:
 * Keeping up to date on social issues (especially those that affect minority groups), and applying that knowledge to
   keep community members safe
 
-Community Moderators must be appointed after a training period of no less than one week, graduating from their position
+Community Moderators must be appointed after a training period of no less than two weeks, graduating from their position
 of Trainee Community Moderator after a review of their performance by the rest of the Community Team.
 
 ### Trainee Community Moderators
@@ -166,7 +166,7 @@ responsibilities assigned to Community Moderators and Community Managers.
 
 Trainee Community Moderators should be excluded from the voting process until they graduate.
 
-Trainee Community Moderators must spend at least one week in this position before they can be promoted to Community
+Trainee Community Moderators must spend at least two weeks in this position before they can be promoted to Community
 Moderator, pending a review of their performance and discussion by the rest of the Community Team. Trainee Community
 Moderators must be appointed democratically, following the process outlined later on in this document.
 
@@ -177,21 +177,6 @@ the very last, final say on everything, the Community Team implements a democrat
 This is detailed in this section - all other processes that involve votes should follow this process, unless otherwise
 specified.
 
-### Admin Board Members
-
-Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do note vote on internal
-polls by default. Instead, they should only vote in order to break ties or contribute to inconclusive polls - votes
-provided by members of the admin board are tripled, meaning that **one vote becomes three** - this is detailed in
-[RFC 6: Governmental Structure](/community/0006-governance.md), as the admin board is the only parent of the community
-team.
-
-### Trainee Community Moderators
-
-Trainee Community Moderators are not voting members of the Community Team, and should not be considered for internal
-votes. This is to ensure that all voters have had some time to get familiar with the community and how it's run - but
-non-voting members of the Community Team are always welcome to express their opinions and provide insight if they wish
-to.
-
 ### Voting Process
 
 1. The Community Team needs to discuss the subject matter of the vote beforehand, and discern whether a vote should
@@ -201,14 +186,16 @@ to.
    via a bot designed to facilitate polling. This poll should provide as much detail as possible, either directly in
    the poll message or by providing links and references - but it must be clear and not misleading, and the core idea
    must be present in the message instead of in the references.
-
-   Polls must also include a closing date of no less than one day and longer than one week, regardless of the proposal
-   put forward.
 1. Members of the Community Team may vote on the poll using the provided reactions. All polls should include a positive
    and negative option, as well as the option to abstain. Voting members that abstain are excluded from percentages and
    tallies.
 1. Voting members are not required to explicitly explain their votes - major problems with the proposal should be
    worked out before the vote even begins, to avoid putting particular community members on the spot.
+
+Polls must include a closing date of no less than one day and longer than one week, regardless of the proposal put
+forward. At the time of posting, polls must also list the names of all eligible, eligible but inactive, and ineligible
+voters, determined as described below. This list cannot change while the poll is still open, except in the case of an
+inactive Community Team member (defined below) returning from inactivity.
 
 ### Closing Votes
 
@@ -227,9 +214,15 @@ the administrative board must be invited to vote on the poll, with their votes c
 voted, they may change their vote or retract it, and their final vote will also count for three. The members of the
 administrative board are not required to vote if they don't feel that it's necessary.
 
-If any active voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote **must be
-counted as an abstention.** If a member is inactive (has not interacted with community management spaces for more than two weeks),
-they will not be counted as a positive vote, negative vote or abstention, and will not be counted in the tally for voting.
+If any active voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote
+**must be counted as an abstention.** If a member is inactive (as defined below), they will not be counted as a
+positive vote, negative vote, or abstention, and will not be counted in the tally for voting.
+
+When taking into consideration plural systems, one system is treated as one voting bloc, regardless of individual
+members, Discord accounts, or other factors. This is to ensure that a large system is not able to overpower the votes
+of other Community Team members. If multiple votes are tallied on one poll originating from one system, all of the
+system's votes will be removed and they will be asked to vote again. In the case that all of these multiple votes are
+for the same option, all but one of the reactions may be removed instead.
 
 The Community Team should then tally the final vote counts, and interpret them as follows.
 
@@ -255,6 +248,28 @@ The vote has passed when one of the following is true, but only if no failing co
 
 As detailed above, there should be no situations where a vote ends in a tie. If a situation arises that the voting
 process is unable to cover, the vote will fail and will need to be re-tried when the process has been amended.
+
+### Determining voting eligibility
+
+#### Community Team
+
+All Community Team members are eligible to vote in polls, assuming they have been a member of the Community Team for
+at least two weeks and are not a Trainee Community Moderator. Trainees and Community Team members who have not held
+their role for at least two weeks are not voting members and should not be considered for internal votes. This is to
+ensure that all voters have had some time to get familiar with the community and how it's run, but non-voting members
+of the Community Team are always welcome to express their opinions and provide insight if they wish to.
+
+Additionally, any Community Team member who has not interacted in any Quilt community space for more than two weeks,
+internal or public, is considered inactive. Inactive members are not counted as a positive vote, negative vote, or
+abstention. These members are still eligible to vote in polls, but by voting, they are no longer considered inactive.
+
+#### Admin Board Members
+
+Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do note vote on internal
+polls by default. Instead, they should only vote in order to break ties or contribute to inconclusive polls - votes
+provided by members of the admin board are tripled, meaning that **one vote becomes three** - this is detailed in
+[RFC 6: Governmental Structure](/community/0006-governance.md), as the admin board is the only parent of the community
+team.
 
 ## Process: Changing Community Policies
 
@@ -329,6 +344,9 @@ processed on Discord. Quilt's Community Team members are elected using a democra
       discussion. This may be a result of observations made by the Community Team, suggestions from community members,
       or otherwise - but the Community Team should always discuss before putting forward a candidate, and they should
       ensure that the candidate is actually interested in the position they're being put forward for.
+    * Plural systems may apply collectively or individually, depending on system or individual preference. Due to
+      Discord's limitations and as a result of system or individual preference, multiple accounts may end up being
+      given Community Team roles from a single application.
 1. Candidates must be interviewed by a Community Manager before the election process can continue. All voting members
    of the Community Team should be given access to the interview space, and other voting members of the Community Team
    are welcome to give their opinions on the content of the interview, or present their own questions after the
