@@ -222,7 +222,7 @@ When taking into consideration plural systems, one system is treated as one voti
 members, Discord accounts, or other factors. This is to ensure that a large system is not able to overpower the votes
 of other Community Team members. If multiple votes are tallied on one poll originating from one system, all of the
 system's votes will be removed and they will be asked to vote again. In the case that all of these multiple votes are
-for the same option, all but one of the reactions may be removed instead.
+for the same option, all but one of the votes may be removed instead.
 
 The Community Team should then tally the final vote counts, and interpret them as follows.
 
@@ -261,7 +261,8 @@ members of the Community Team are always welcome to express their opinions and p
 
 Additionally, any Community Team member who has not interacted in any Quilt community space for more than two weeks,
 internal or public, is considered inactive. Inactive members are not counted as a positive vote, negative vote, or
-abstention. These members are still eligible to vote in polls, but by voting, they are no longer considered inactive.
+abstention, and will not be included in the tally for voting. These members are still eligible to vote in polls, but by
+voting, they are no longer considered inactive.
 
 #### Admin Board Members
 
