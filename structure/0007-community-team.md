@@ -254,10 +254,10 @@ process is unable to cover, the vote will fail and will need to be re-tried when
 #### Community Team
 
 All Community Team members are eligible to vote in polls, assuming they have been a member of the Community Team for
-at least two weeks and are not a Trainee Community Moderator. Trainees and Community Team members who have not held
-their role for at least two weeks are not voting members and should not be considered for internal votes. This is to
-ensure that all voters have had some time to get familiar with the community and how it's run, but non-voting members
-of the Community Team are always welcome to express their opinions and provide insight if they wish to.
+at least two weeks and are not a Trainee Community Moderator. Trainees, as well as Community Team members who have not
+held their role for at least two weeks, are not voting members and should not be considered for internal votes. This is
+to ensure that all voters have had some time to get familiar with the community and how it's run, but non-voting
+members of the Community Team are always welcome to express their opinions and provide insight if they wish to.
 
 Additionally, any Community Team member who has not interacted in any Quilt community space for more than two weeks,
 internal or public, is considered inactive. Inactive members are not counted as a positive vote, negative vote, or
@@ -344,9 +344,10 @@ processed on Discord. Quilt's Community Team members are elected using a democra
       discussion. This may be a result of observations made by the Community Team, suggestions from community members,
       or otherwise - but the Community Team should always discuss before putting forward a candidate, and they should
       ensure that the candidate is actually interested in the position they're being put forward for.
-    * Plural systems may apply collectively or individually, depending on system or individual preference. Due to
-      Discord's limitations and as a result of system or individual preference, multiple accounts may end up being
-      given Community Team roles from a single application.
+    * Plural systems may apply collectively for the entire system. Due to Discord's limitations and as a result of
+      system or individual preference, multiple accounts may end up being given Community Team roles from a single
+      application. If a Discord account is shared between multiple system members, duties do not necessarily need to be
+      carried out by all members.
 1. Candidates must be interviewed by a Community Manager before the election process can continue. All voting members
    of the Community Team should be given access to the interview space, and other voting members of the Community Team
    are welcome to give their opinions on the content of the interview, or present their own questions after the
