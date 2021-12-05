@@ -309,7 +309,7 @@ An example quilt.mod.json:
         "provides": [
             {
                 "id": "super_awesome_lib",
-                "versions": "^1.0.0"
+                "version": "1.0.0"
             },
             "flamingo"
         ],
@@ -378,7 +378,7 @@ An example quilt.mod.json:
 Strings with defined formats such as [the version field](#the-version-field) can instead supply a string matching the regex `^\$\{[a-zA-Z_$][a-zA-Z\d_$]*\}$` in a development environment to be replaced on build. The quilt-gradle plugin defines usage of the value `${version}` as a placeholder for the version declared in gradle.properties.
 
 ## Dependency Objects
-A dependency object defines what mods/plugins a given mod depends on or breaks. It can be represented as either an object containing at least [the `id` field](#the-id-field-1), a string mod identifier in the form of either `mavenGroup:modId` or `modId`, or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects.
+A dependency object defines what mods/plugins a given mod depends on or breaks. It can be represented as either an object containing at least [the `id` field](#the-id-field-1), a string mod identifier in the form of either `mavenGroup:modId` or `modId`, or an array of dependency objects. If an array of dependency objects is provided, the dependency matches if it matches ANY of the dependency objects for the "depends" and "unless" fields, and ALL for the "breaks" field.
 
 ### The `id` field
 | Type   | Required |
@@ -439,12 +439,12 @@ Defines the identifier and optionally version range of another mod that this pac
 
 A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
-### The `versions` field
-| Type         | Required | Default |
-|--------------|----------|---------|
-| Array/String | False    | `"*"`   |
+### The `version` field
+| Type   | Required |
+|--------|----------|
+| String | False    |
 
-Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
+Should be a valid mod version. If omitted, then this defaults to the version of the providing mod.
 
 ## Version Specifier
 A version range specifier can make use of any of the following patterns:
