@@ -421,8 +421,11 @@ during this process.
 
 ## Process: Removing Team Members
 
-Removal of members from the community team follows the process outlined in 
-[RFC 6: Governmental Structure](/community/0006-governance.md#removal-of-staff).
+Eligible voters are decided in allignment with
+[RFC 6: Governmental Structure](/structure/0006-governance.md#removal-of-staff) (anyone above or below), but a
+counterargument is not required or expected before voting or removal of staff permissions. Instead the call to action,
+discussion, and voting can occur in a private channel/dm visible to eligible voters, and if it succeeds the removed
+staff can submit a counterargument asking the decision be overturned after the fact.
 
 ---
 
