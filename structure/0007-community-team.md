@@ -425,7 +425,10 @@ Eligible voters are decided in allignment with
 [RFC 6: Governmental Structure](/structure/0006-governance.md#removal-of-staff) (anyone above or below), but a
 counterargument is not required or expected before voting or removal of staff permissions. Instead the call to action,
 discussion, and voting can occur in a private channel/dm visible to eligible voters, and if it succeeds the removed
-staff can submit a counterargument asking the decision be overturned after the fact.
+staff can submit a counterargument asking the decision be overturned after the fact. If there are concerns about
+damage to the community, project, or team, a Community Manager or the Key Holder may temporarily revoke staff
+permissions during or before a vote. In the latter case either a vote needs to be initiated or permissions restored
+within a week at the most.
 
 ---
 
