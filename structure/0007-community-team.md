@@ -421,7 +421,7 @@ during this process.
 
 ## Process: Removing Team Members
 
-Eligible voters are decided in allignment with
+Eligible voters are decided in alignment with
 [RFC 6: Governmental Structure](/structure/0006-governance.md#removal-of-staff) (anyone above or below), but a
 counterargument is not required or expected before voting or removal of staff permissions. Instead the call to action,
 discussion, and voting can occur in a private channel/dm visible to eligible voters, and if it succeeds the removed
