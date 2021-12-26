@@ -43,6 +43,8 @@ It's currently practically unuseable:
 
 therefore, first and foremost, we need to document how the framework works, how to use it, how you can add it to your projects, how to configure the build system to not end up shipping it to the end-user and make this documentation available to the user.
 
+Initially, documentation will be kept along with the source code of the project, as Quilt wiki does not yet exist and the Author is banned from Fabric. We will hopefully be able to reach out to current users of the API to contribute to this documentation.
+
 Boilerplate classes to cover common usages should make writing tests easy, the more high-level, the better. for instance: "test if this item gets duped [All]" should test whether a variety of common edgecases cause the item to be duplicated, be it pistons, inventories, disconnect, etc.
 
 Junit integration is both pleasant to use and saves us having to code and maintain IDE integration and general/engine concepts.
@@ -106,3 +108,4 @@ right now, almost no developers use unit tests or in-game unit tests, and they w
 - Is it nescessary for a seperate team to be constructed, or is it possible to start working with another team immediatly.
 - Who will own it after it is stable and released?
 - A general Fake players class has different design needs than an automated testing player and will not be developed, these can later be merged if needed.
+- What standards should the documentation be held to?
