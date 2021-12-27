@@ -23,7 +23,7 @@ It will also seek to be in a public Beta by mid January 2022, which means it wil
 ## Explanation
 
 Minecraft ships with it's testing framework
-so fabric API, forge API and QSL habe exposed it to mod developers and we can use it.  
+so fabric API, forge API and QSL have exposed it to mod developers and we can use it.  
 
 mojang dev explaining system: https://www.youtube.com/watch?v=vXaWOJTCYNg  
 
