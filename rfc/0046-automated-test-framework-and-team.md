@@ -45,15 +45,15 @@ therefore, first and foremost, we need to document how the framework works, how 
 
 Initially, documentation will be kept along with the source code of the project, as Quilt wiki does not yet exist and the Author is banned from Fabric. We will hopefully be able to reach out to current users of the API to contribute to this documentation.
 
-Boilerplate classes to cover common usages should make writing tests easy, the more high-level, the better. for instance: "test if this item gets duped [All]" should test whether a variety of common edgecases cause the item to be duplicated, be it pistons, inventories, disconnect, etc.
+Boilerplate classes to cover common usages should make writing tests easy, the more high-level, the better. for instance: "test if this item gets duped [All]" should test whether a variety of common edge-cases cause the item to be duplicated, be it pistons, inventories, disconnect, etc.
 
-Junit integration is both pleasant to use and saves us having to code and maintain IDE integration and general/engine concepts.
+JUnit integration is both pleasant to use and saves us having to code and maintain IDE integration and general/engine concepts.
 
 This module (automated tests) should be able to be used in development environments and not affect what is dependent on for the mod itself.
 
-This team might have to work with Standard Library and Build tools teams to pass certain changes, for instance, the reported hardcoding within them to be able to launch a test server instance, and replace them with a mutually agreeable solution.
+This team might have to work with Standard Library and Build tools teams to pass certain changes, for instance, the reported hard-coding within them to be able to launch a test server instance, and replace them with a mutually agreeable solution.
 
-As far as the author can tell, this project has no strong dependency on anything besides ofcourse the API that exposes the built-in test framework.
+As far as the author can tell, this project has no strong dependency on anything besides of course the API that exposes the built-in test framework.
 
 A should be formed exclusively for the development of this framework and will be dissolved upon it's integration with another quilt development team.
 Team structure is determined by those participating in the team and recorded internally, but it is required to have a(1) technical lead as tie breaker and representative. The technical lead determines how this is determined.
@@ -72,7 +72,7 @@ The best possible design extends the test framework while being able to be forwa
 
 It should be easy to get started, easy to use, flexible to allow most tests.
 
-Alternative IDE integration could be accomplished by making interfaces of the classes that touch the Junit api, but i would see no need to do this for the initial release.
+Alternative IDE integration could be accomplished by making interfaces of the classes that touch the JUnit API, but i would see no need to do this for the initial release.
 
 You could consider writing it entirely from scratch, no hooking into the in-game test framework already developed and maintained by Mojang.  
 This would allow tests to work on versions where this internal framework is absent.
@@ -88,10 +88,10 @@ right now, almost no developers use unit tests or in-game unit tests, and they w
 
 ## Prior Art
 
-| titles                             | Just Enough Debug Tools                           | Elmendorf                               | Librarian Lib                                                         | Minecraft Testing Library                     | MinecraftJUnit                                       | native/api                    |
+| titles                             | Just Enough Debug Tools                           | Elmendorf                               | Librarian Lib                                                         | Minecraft Testing Library                     | MinecraftJUnit                                       | native/API                    |
 |------------------------------------|---------------------------------------------------|-----------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------|-------------------------------|
 | platform                           | fabric                                            | fabric                                  | fabric                                                                | forge                                         | forge                                                | all                           |
-| project links                      | https://github.com/FoxShadew/JustEnoughDebugTools | https://github.com/Ladysnake/Elmendorf/ | https://github.com/TeamWizardry/LibrarianLib/tree/1.17-quilt/testcore | https://github.com/alcatrazEscapee/mcjunitlib | https://github.com/BuiltBrokenModding/MinecraftJUnit | minecraft itself              |
+| project links                      | https://github.com/FoxShadew/JustEnoughDebugTools | https://github.com/Ladysnake/Elmendorf/ | https://github.com/TeamWizardry/LibrarianLib/tree/1.17-quilt/testcore | https://github.com/alcatrazEscapee/mcjunitlib | https://github.com/BuiltBrokenModding/MinecraftJUnit | Minecraft itself              |
 | license                            | apache 2.0                                        | MIT license                             | LGPL-3.0                                                              | MIT license                                   | MIT license                                          | ARR EULA:free to mod??        |
 | documentation                      | partial                                           | partial                                 | incomplete                                                            | yes                                           | none                                                 | (basically) none              |
 | pre-made tests                     | yes(3)                                            | yes(2)                                  | yes(?)                                                                | none?                                         | yes(2+)                                              | none(but footage of examples) |
@@ -105,7 +105,7 @@ right now, almost no developers use unit tests or in-game unit tests, and they w
 
 - what happens if the dimensions of a structure were larger than 48^3?
 - Is the scope of this RFC too broad?
-- Is it nescessary for a seperate team to be constructed, or is it possible to start working with another team immediatly.
+- Is it necessary for a separate team to be constructed, or is it possible to start working with another team immediately.
 - Who will own it after it is stable and released?
 - A general Fake players class has different design needs than an automated testing player and will not be developed, these can later be merged if needed.
 - What standards should the documentation be held to?
