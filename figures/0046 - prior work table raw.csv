@@ -1,0 +1,10 @@
+titles;Just Enough Debug Tools;Elmendorf;Librarian Lib;Minecraft Testing Library;MinecraftJUnit;native/api
+platform;fabric;fabric;fabric;forge;forge;all
+project links;https://github.com/FoxShadew/JustEnoughDebugTools;https://github.com/Ladysnake/Elmendorf/;https://github.com/TeamWizardry/LibrarianLib/tree/1.17-quilt/testcore;https://github.com/alcatrazEscapee/mcjunitlib;https://github.com/BuiltBrokenModding/MinecraftJUnit;minecraft itself
+license;apache 2.0; MIT license; LGPL-3.0;MIT license; MIT license; ARR EULA:free to mod
+documentation; partial; partial; incomplete; yes; none; (basically) none
+pre-made tests; yes(3); yes(2); yes(2); none; yes(2+); none(but footage of examples)
+helper functions; none; yes(3+); yes(20+); yes(7+); yes(5+) ;yes(20+)
+has notion of packets/fake clients;no;yes;no;no;yes;no
+integration with environment;no; no; yes; yes; yes;no
+tests resources;no;no; yes(translation); unknown; unknown;no
