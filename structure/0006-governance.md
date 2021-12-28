@@ -7,20 +7,20 @@ It has been written with the idea of decentralizing power in mind, to help contr
 
 # Explanation
 
-## Team
+## Teams
 
 A team is a group of team members dedicated to solving a specific issue,
-maintaining a specific subproject, or overseeing a specific area.
+maintaining a specific sub project or overseeing a specific area.
 
 All teams exist as teams on GitHub and can be viewed at https://github.com/orgs/QuiltMC/teams.
 
-### Team Member
+### Team Members
 
 A team member is a member of the organization assigned to a specific team on GitHub.
 A member of the organization may be assigned to multiple teams.
 A team must have at least one member.
 
-### Team Lead
+### Team Leads
 
 A team lead is a team member with the Team Maintainer role for the relevant team on GitHub.
 A member of the organization may be a team lead for multiple teams.
@@ -67,19 +67,19 @@ The RFC proposing the new team should contain the following major sections:
 - **Prior Art**:
   - Are there other organizations or projects with comparable tasks?
 
-### Sub Team
+### Sub Teams
 
 Some teams may wish for more granular organization of their structure.
 In those cases, these teams may create sub teams.
 
 Sub teams behave like regular teams, except they are not required to have a team lead.
 If the team doesn't have its own team lead, the parent's team leads act as its team lead.
-In general, a sub team inherits its parents structure according to their parents team RFC.
+In general, a sub team inherits its parent's structure according to their parent's team RFC.
 
 ## The Administrative Board
 
 The administrative board is a group of organization members responsible for tasks that are not assigned to another team.
-It is made up of at least three members so as to prevent deadlocks in the decision-making process.
+It is made up of at least three members to prevent deadlocks in the decision-making process.
 Members of the administrative board may be members of other teams.
 
 At any point in time, a member of the organization may nominate themselves for a position on the administrative board.
@@ -95,12 +95,12 @@ In the case of a tie, the remaining board members must break that tie.
 
 ## Processes
 
-In order to streamline working with teams, some standard processes need to be defined.
-The following processes apply to all teams, unless that team's RFC specifies a different process.
+To streamline working with teams, some standard processes need to be defined.
+The following processes apply to all teams unless that team's RFC specifies a different process.
 
 ### Voting
 
-Unless specified otherwise, the followin process is used for voting:
+Unless specified otherwise, the following process is used for voting:
 
 A vote in a team may be called at any time by a team lead for that team or for one of its parent teams.
 A member of the administrative board may also initiate a vote in any team. 
@@ -121,4 +121,9 @@ The following members are eligible:
 - All administrative board members
 
 # Drawbacks
-In the present day with most accounts and digital spaces being controlled primarily by one person, the idea of an "administrative board" has some downsides. A member of the board who is asked to step down may simply refuse to relinquish any resources they control. For this reason, personal character needs to be a high priority when electing members to the board so that such a situation can be avoided.
+
+In the present day with most accounts and digital spaces being controlled primarily by one person,
+the idea of an "administrative board" has some downsides.
+A member of the board who is asked to step down may simply refuse to relinquish any resources they control.
+For this reason, personal character needs to be a high priority when electing members to the board,
+so that such a situation can be avoided.
