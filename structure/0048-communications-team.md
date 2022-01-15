@@ -26,8 +26,7 @@ and within the Quilt Project. This is difficult to define without providing
 specific examples, which include:
 
 - writing and publishing blog posts
-- managing the official QuiltMC social medias, with the exception of Discord,
-  and not including moderation
+- managing the official QuiltMC social medias, with the exception of Discord
 - managing relations with other platforms and communities outside of a
   moderation context
 - writing and publishing general status updates on the progress and
