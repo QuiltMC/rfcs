@@ -82,16 +82,23 @@ The administrative board is a group of organization members responsible for task
 It is made up of at least three members to prevent deadlocks in the decision-making process.
 Members of the administrative board may be members of other teams.
 
-At any point in time, a member of the organization may nominate themselves for a position on the administrative board.
-This will then initiate the voting process, with all other organization members being eligible to vote.
-If the nominated member passes a two-thirds vote, they are added to the administrative board.
+If it is decided that more administrative board members are required, either due to a current member stepping down, or due to it being decided that the admin board needs to be expanded, an election must take place.
 
-If there are less than three members on the administrative board, a special vote is initiated.
-Each remaining board member may nominate an organization member.
-Organization members may also nominate themselves.
-All other organization members may then vote on the nominees.
-The nominee with the most votes will be added to the administrative board.
-In the case of a tie, the remaining board members must break that tie.
+### Admin board Voting Process
+
+ Due to the fact that multiple candidates may be nominated for the admin position when a vote is held, the fact that there may be multiple spots to fill on the board, and the fact that the decision affects the entire organization, the standard voting procedure cannot be used. Instead, the following procedure will be employed:
+
+Before the vote begins, a group of people, henceforth referred to as the Election Oversight Board or EOB, must be selected to oversee the voting process. They will be responsible for receiving candidate nominations, concerns about nominated candidates from other organization members, and hosting the election. In normal circumstances, the EOB consists of the existing members of the admin board, but, if this is not possible for any reason, the EOB will instead consist of members with the Community Manager role in the Community Team. The initial EOB may add any members that they feel would be a valuable addition to the board, with a simple majority vote.
+
+The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org/wiki/Single_transferable_vote) (STV), or [Instant Runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) (IRV) in instances where there is only one space on the admin board to be filled, to ensure a minimum amount of "wasted votes". When using Single Transferrable vote, the [Droop Quota](https://en.wikipedia.org/wiki/Droop_quota) must be used to calculate the amount of votes required for a candidate to win a position on the admin board.
+
+At the start of the voting process, each remaining board member may nominate an organization member, and organization members may also nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
+
+After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role in Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
+
+If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
+
+After the voting period concludes, the EOB may take up to one week to count the votes. In the event of a tie, votes by existing admin board members will count as three votes. The EOB may privately inform the winning candidate, before publishing the results to the organization members and subsequently the community at large.
 
 ## Processes
 
