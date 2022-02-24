@@ -293,7 +293,7 @@ Contains flags and options related to Minecraft specifically.
 Defines the environment(s) that this mod should be loaded on. Valid values are:
 * `"*"` — All environments (default)
 * `"client"` — The physical client
-* `"server"` — The dedicated server
+* `"dedicated_server"` — The dedicated server
 
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt mod file. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
