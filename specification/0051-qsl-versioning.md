@@ -7,7 +7,7 @@ This document intends to specify the versioning scheme of the Quilt Standard Lib
 ## Motivation
 
 As <abbr title="Quilt Standard Libraries">QSL</abbr> gets closer to a Beta release,
-it is important for it to figre out a versioning scheme.
+it is important for it to figure out a versioning scheme.
 
 The versioning scheme will allow to ensure consistent version names, which reduce confusion among modders,
 and would make version comparison more robust.
@@ -36,7 +36,7 @@ Meaning that the root library version should also have its `major` number increm
 The `minor` number should always start at `0`, and will increment every time a module/library is updated with backwards-compatible changes. It is reset when the `major` number changes.
 
 The `patch` number should always start at `0`, and will increment every time a module/library is updated to fix bugs in a backwards-compatible manner.
-This should not cover the case of a port as [the metadata][#metdata-content] already gives enough information.
+This should not cover the case of a port as [the metadata](#metdata-content) already gives enough information.
 
 ### Version qualifier
 
