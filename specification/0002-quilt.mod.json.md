@@ -193,9 +193,9 @@ If this mod is in another mods "depends" field then it will be loaded, otherwise
 A list of Maven repository URL strings where dependencies can be looked for in addition to Quilt's central repository.
 
 ### The `intermediate_mappings` field
-| Type   | Required |
-|--------|----------|
-| String | False    |
+| Type   | Required | Default    |
+|--------|----------|------------|
+| String | False    | `"hashed"` |
 
 The intermediate mappings used for this mod. This field only officially supports `hashed` and `intermediary` currently.
 
