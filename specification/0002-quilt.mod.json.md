@@ -197,7 +197,7 @@ A list of Maven repository URL strings where dependencies can be looked for in a
 |--------|----------|------------------------|
 | String | False    | `"org.quiltmc:hashed"` |
 
-The intermediate mappings used for this mod. The intermediate mappings string must be a valid maven coordinate and match the `^[a-zA-Z0-9-_.]+:[a-zA-Z0-9-_.]+$` regular expresson. This field currently only officially supports `org.quiltmc:hashed` and `net.fabricmc:intermediary`.
+The intermediate mappings used for this mod. The intermediate mappings string must be a valid maven coordinate and match the `^[a-zA-Z0-9-_.]+:[a-zA-Z0-9-_.]+$` regular expression. This field currently only officially supports `org.quiltmc:hashed` and `net.fabricmc:intermediary`.
 
 ### The `metadata` field 
 | Type   | Required |
