@@ -21,6 +21,7 @@ Below is an outline of all defined keys and values.
     * [breaks](#the-breaks-field) — Collection of mods that this mod is incompatible with
     * [load_type](#the-load_type-field) — How eagerly to load this mod
     * [repositories](#the-repositories-field) — Array of maven repositories
+    * [intermediate_mappings](#the-intermediate_mappings-field) — The intermediate mappings used
     * [metadata](#the-metadata-field) — Extra information about this mod and/or its authors
         * [name](#the-name-field) — Human-readable name of this mod
         * [description](#the-description-field) — Human-readable description of this mod
@@ -190,6 +191,13 @@ If this mod is in another mods "depends" field then it will be loaded, otherwise
 | Array  | False    |
 
 A list of Maven repository URL strings where dependencies can be looked for in addition to Quilt's central repository.
+
+### The `intermediate_mappings` field
+| Type   | Required | Default                |
+|--------|----------|------------------------|
+| String | False    | `"org.quiltmc:hashed"` |
+
+The intermediate mappings used for this mod. The intermediate mappings string must be a valid maven coordinate and match the `^[a-zA-Z0-9-_.]+:[a-zA-Z0-9-_.]+$` regular expression. This field currently only officially supports `org.quiltmc:hashed` and `net.fabricmc:intermediary`.
 
 ### The `metadata` field 
 | Type   | Required |
