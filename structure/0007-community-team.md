@@ -186,8 +186,8 @@ specified.
    via a bot designed to facilitate polling. This poll should provide as much detail as possible, either directly in
    the poll message or by providing links and references - but it must be clear and not misleading, and the core idea
    must be present in the message instead of in the references.
-1. Members of the Community Team may vote on the poll using the provided reactions. All polls should include a positive
-   and negative option, as well as the option to abstain. Voting members that abstain are excluded from percentages and
+1. Members of the Community Team may vote on the poll using the provided reactions. All polls should include a positive, a neutral
+   and negative option. Voting members that abstain are excluded from percentages and
    tallies.
 1. Voting members are not required to explicitly explain their votes - major problems with the proposal should be
    worked out before the vote even begins, to avoid putting particular community members on the spot.
@@ -202,17 +202,10 @@ inactive Community Team member (defined below) returning from inactivity.
 Voting ends when any of the following conditions have been reached:
 
 * The poll's closing date has been reached
-* The poll has failed or passed early due to at least 75% of the voting members of the Community Team voting in that
-  direction, excluding abstaining members from that count
 * The special closing conditions specified as part of the specific process that this vote is part of have been met, if
   any
 
 ### Interpreting the Vote
-
-When a poll has closed, the votes should be inspected. If the final vote has a margin of three votes or fewer,
-the administrative board must be invited to vote on the poll, with their votes counting for three. If they've already
-voted, they may change their vote or retract it, and their final vote will also count for three. The members of the
-administrative board are not required to vote if they don't feel that it's necessary.
 
 If any active voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote
 **must be counted as an abstention.** If a member is inactive (as defined below), they will not be counted as a
@@ -226,28 +219,20 @@ for the same option, all but one of the votes may be removed instead.
 
 The Community Team should then tally the final vote counts, and interpret them as follows.
 
-#### Failing conditions
-
-The vote has failed when one of the following is true:
-
-* The total number of _abstentions_ **is greater than or equal to** 25% of the count of voting members of the community
-  team, rounding up to the nearest whole number
-* The total number of _negative_ votes **is greater than or equal to** the number of _positive_ votes
-* The special failing conditions specified as part of the specific process that this vote is part of have been met, if
-  any
-
 #### Passing conditions
 
-The vote has passed when one of the following is true, but only if no failing condition has been met:
+The vote has passed if all the following conditions are met:
 
-* The total number of _positive_ votes **is greater than** the number of _negative_ votes
+* The total number of _positive_ votes over the number of _positive and negative_ votes **is greater than 0.75** (75%)
+* The total number of _neutral_ votes over the number of votes casted **is lesser than 0.5** (50%)
+* The total number of votes casted over the number of eligible voters **is lesser than 0.66** (66%)
 * The special passing conditions specified as part of the specific process that this vote is part of have been met, if
   any
 
 #### Other situations
 
-As detailed above, there should be no situations where a vote ends in a tie. If a situation arises that the voting
-process is unable to cover, the vote will fail and will need to be re-tried when the process has been amended.
+Due to the mathematical nature of the conditions defined previously, a vote cannot end in a tie. Special conditions must 
+account for ties.
 
 ### Determining voting eligibility
 
@@ -267,10 +252,7 @@ voting, they are no longer considered inactive.
 #### Admin Board Members
 
 Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do note vote on internal
-polls by default. Instead, they should only vote in order to break ties or contribute to inconclusive polls - votes
-provided by members of the admin board are tripled, meaning that **one vote becomes three** - this is detailed in
-[RFC 6: Governmental Structure](/community/0006-governance.md), as the admin board is the only parent of the community
-team.
+polls by default.
 
 ## Process: Changing Community Policies
 
@@ -354,14 +336,10 @@ processed on Discord. Quilt's Community Team members are elected using a democra
    are welcome to give their opinions on the content of the interview, or present their own questions after the
    Community Manager giving the interview opens the floor to them.
 1. After an interview has taken place, a vote should be proposed, following the voting process outlined earlier in this
-   document. This poll should last for exactly one week, with the following special conditions:
+   document. This poll should last for exactly one week.
 
-    * The vote has **failed** when:
-        * The margin between positive and negative votes is less than or equal to 20% of the number of voting community
-          members, excluding abstentions and rounding up to the nearest whole number.
-
-   The poll should include the user's history in the community and their reputation in the wider modding community, if
-   known. It should also include the specific position they're applying for.
+   The poll must include a link to the relevant interview. It should also include the specific position 
+   they're applying for.
 1. Once the vote has closed, the candidate should be contacted by a community manager and given the result, which will
    decide whether their application was successful.
 
