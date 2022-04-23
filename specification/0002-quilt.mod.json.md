@@ -455,7 +455,7 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 Should be a valid mod version. If omitted, then this defaults to the version of the providing mod.
 
 ## Version Specifier
-A version range specifier can make use of any of the following patterns:
+A version range specifier can make use of any of the following constraint patterns, separated by spaces:
 * `*` — Matches any version. Will fetch the latest version available if needed
 * `1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
@@ -466,6 +466,18 @@ A version range specifier can make use of any of the following patterns:
 * `1.0.x` — Matches any version with major version 1 and minor version 0.
 * `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
 * `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
+
+A version specifier may have a single constraint pattern, or multiple constaint patterns within the single string. If multiple constraints are used then they must all match a given version for the whole version specifier to match it.
+
+It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier), but not an error for any individual constraint to be made redundant by any others.
+
+For example:
+
+* `=1.0.0` would match the version "1.0.0" and no others.
+* `>=1.0.0` would match any version that is after `1.0.0`. (It does not match `1.0.0-alpha.1` due to how semver works however)
+* `>=1.0.0 <=1.2.0` would match the versions `1.0.0`, `1.1.0`, `1.1.8`, `1.2.0`, but not `1.0.0-alpha` or `1.2.1`
+* `<1.0.0 >=1.2.0` would be disallowed, since no version matches both.
+* `>1.0.0 >=1.0.2 <1.1.0` would be allowed, but would act in the same way as `>=1.0.2 <1.1.0`.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
