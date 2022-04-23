@@ -402,6 +402,8 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
 Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
 
+It is an error to specify multiple version specifiers such that all versions will match at least one, except if one of the version specifiers is `*`. Unlike for version specifiers it is permitted for any version specifier to be made redundant by any others.
+
 ### The `reason` field
 | Type         | Required |
 |--------------|----------|
@@ -469,7 +471,7 @@ A version range specifier can make use of any of the following constraint patter
 
 A version specifier may have a single constraint pattern, or multiple constaint patterns within the single string. If multiple constraints are used then they must all match a given version for the whole version specifier to match it.
 
-It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier), but not an error for any individual constraint to be made redundant by any others.
+It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier), and also an error if one constraint makes another redundant. In addition it is considered an error if the resulting version specifier matches every version, and isn't the single character `*`.
 
 For example:
 
