@@ -27,13 +27,13 @@ QM, ensuring their quality and making sure they stick to the conventions.
 This team only has triage access to the QM repository.
 
 The Quilt Mappings team would be in charge of maintaining QM, and also shares
-the responsabilities of the triage team. The main difference between the triage
-team and this one is their access level to the repository, meaning only QM
+the responsibilities of the triage team. The main difference between the triage
+team and the QM team is their access level to the repository, meaning only QM
 members can merge PRs or push commits directly.
 
 The Mappings Tooling team would be in charge of maintaining all of the mappings
 toolchain (ie. [Mappings Hasher][Hasher], [Enigma], [Tiny Remapper][TR], etc.),
-and subsequently of reviewing PRs to these repositories.
+and subsequently for reviewing PRs to these repositories.
 
 
 ## Drawbacks
