@@ -479,7 +479,7 @@ For example:
 * `>=1.0.0` would match any version that is after `1.0.0`. (It does not match `1.0.0-alpha.1` due to how semver works however)
 * `>=1.0.0 <=1.2.0` would match the versions `1.0.0`, `1.1.0`, `1.1.8`, `1.2.0`, but not `1.0.0-alpha` or `1.2.1`
 * `<1.0.0 >=1.2.0` would be disallowed, since no version matches both.
-* `>1.0.0 >=1.0.2 <1.1.0` would be allowed, but would act in the same way as `>=1.0.2 <1.1.0`.
+* `>1.0.0 >=1.0.2 <1.1.0` would be disallowed, since `>=1.0.2` makes `>1.0.0` unnecessary.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
