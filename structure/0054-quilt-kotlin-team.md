@@ -23,6 +23,17 @@ designating new modules, developing, and maintaining QKL. It falls under RFC
 TBD
 
 
+## Rationale and Alternatives
+
+### Subdivision of QSL
+
+QKL shouldn't be a subdivision of QSL, as QSL is based on Java, it'd be
+difficult for maintainers who don't know Kotlin to be able to maintain QKL.
+Having QKL as a subdivision of QSL would mean that changes in the respective
+QSL modules would have to be copied to the QKL module before merging. This is a
+bad idea, because it forces everyone to know Kotlin to be able to contribute.
+
+
 ## Prior Art
 
 Fabric Language Kotlin is a library for using Kotlin on the Fabirc platform.
@@ -32,6 +43,5 @@ provide wrappers for QSL and the Minecraft codebase
 
 ## Unresolved Questions
 
-- Should this be a subdivision of QSL?
 - Would we provide wrappers for other libraries seperate from QSL?
 - What modules should be in QKL?
