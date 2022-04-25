@@ -34,6 +34,11 @@ QSL modules would have to be copied to the QKL module before merging. This is a
 bad idea, because it forces everyone to know Kotlin to be able to contribute.
 
 
+### But Kotlin has Java interop?
+
+Kotlin's interoperability with Java is just that, interoperability. There are some concepts that work well in Java, but not Kotlin, and vice versa. Extension functions and DSLs don't exist in Java, and with this we'd provide quintessential ones for modding in Kotlin.
+
+
 ## Prior Art
 
 Fabric Language Kotlin is a library for using Kotlin on the Fabirc platform.
