@@ -15,7 +15,7 @@ wrappers for QSL and the Minecraft codebase for easier use in Kotlin.
 
 The Quilt Kotlin Team will be responsible for reviewing pull requests,
 designating new modules, developing, and maintaining QKL. It falls under RFC
-0018 (Technical Teams), and will follow the same standards definedin the RFC
+0018 (Technical Teams), and will follow the same standards defined in the RFC
 
 
 ## Drawbacks
@@ -32,6 +32,14 @@ difficult for maintainers who don't know Kotlin to be able to maintain QKL.
 Having QKL as a subdivision of QSL would mean that changes in the respective
 QSL modules would have to be copied to the QKL module before merging. This is a
 bad idea, because it forces everyone to know Kotlin to be able to contribute.
+
+
+### Kotlin CHASM frontend
+
+Once CHASM is added to loader, QKT can start work on a CHASM frontend for
+Kotlin, which is one of the main reasons for this RFC; A CHASM frontend is more
+than would normally be in a language adapter, which means QKL will need more
+special treatment.
 
 
 ### But Kotlin has Java interop?
