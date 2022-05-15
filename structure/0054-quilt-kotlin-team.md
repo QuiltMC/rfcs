@@ -20,7 +20,10 @@ designating new modules, developing, and maintaining QKL. It falls under RFC
 
 ## Drawbacks
 
-TBD
+### Versioning
+
+Versioning could be a hurdle, as QSL, Quilted FAPI, and Loader all use
+different versions, and having a fourth could be confusing for the end user.
 
 
 ## Rationale and Alternatives
