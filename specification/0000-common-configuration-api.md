@@ -17,27 +17,43 @@ to be generated rather than relying on mods to manually construct screens using 
 
 ## Explanation
 
-Explain this change in detail. This section will be different depending on what
-sort of change it is.
-
-For technical changes, such as changes to APIs, first give an overview of how
-this proposed change would work. Explain how it would be used, with code
-examples. Then, give a more in depth explanation of how it would be implemented
-and how it would interact with other parts of the project and other Quilt
-projects.
-
 ### Definitions
 - **Setting**: A single value and its associated metadata.
-- **Section**: A logical grouping of Settings. A Setting may be a member of multiple Sections.
+- **Category**: A logical grouping of Settings. A Setting may be a member of multiple Categories.
 - **Validation Group**: A logical grouping of Settings used for validation. A Setting may be a member of only one Validation Group.
 - **Formatter**: A function that maps a value to Minecraft `Text` suitable for display.
 - **Setting Validator**: A function that is invoked to accept or reject the value of a single Setting.
-- **Group Validator**: A function that is invoked to accept or reject the set of values in a single Section.
+- **Group Validator**: A function that is invoked to accept or reject the set of values in a single Validation Group.
 - **Environment Policy**: A value that defines how a Setting interacts with the client and/or server.
 
-A new QSL module, `quilt_config`, contains the implementation of this API.
+A new QSL module, `quilt_config`, contains the implementation of this API. The API is built on top of the Loader config API, specialized
+with metadata for Minecraft mods.
 
 ### API Detail
+
+A Setting has the following metadata.
+- Data type (integer, string, enum, etc.)
+- Label
+- Tooltip
+- Widget type (cycle, check box, select, text box, etc.)
+- Sections
+- Validation Group
+- Setting Validators (range, length, regex, etc.)
+- Environment Policy
+
+```java
+public enum EnvironmentPolicy {
+  CLIENT_ONLY,
+  SERVER_ONLY,
+  CLIENT_SYNCED,
+  SERVER_SYNCED
+}
+```
+
+- `CLIENT_ONLY` Settings are specific to a player and are always editable.
+- `CLIENT_SYNCED` Settings are specific to a player and may be overridden by the server.
+- `SERVER_ONLY` Settings are specific to a level and are not sent to the client from a dedicated server.
+- `SERVER_SYNCED` Settings are specific to a level and are sent to the client from a dedicated server.
 
 // todo
 
