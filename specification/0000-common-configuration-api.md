@@ -2,17 +2,15 @@
 
 ## Summary
 
-Specify and implement an API for constructing mod configuration objects ("Settings") which can be used to generate config screens.
-Define a common API for all mods that have configuration that can be modified in-game.
+Specify and implement an API for assigning metadata to configuration objects ("Settings") which can be used to generate config screens.
+Define a common metadata API for all mods that have configuration that can be modified in-game.
 
 
 ## Motivation
 
-Why should we do this? What are the benefits?
-
-Mod configuration is a common problem that mods must solve. Defining an API within QSL that Quilt mods should use unifies the GUI representation
-of configuration among mods and allows mods to avoid reinventing the wheel. Exposing a common API to query config metadata allows config screens
-to be generated rather than relying on mods to manually construct screens using general-purpose GUI libraries.
+Mod configuration is a common problem that mods must solve. Defining an API within QSL that Quilt mods should use to define configuration metadata
+unifies the GUI representation of configuration among mods and allows mods to avoid reinventing the wheel. Exposing a common API to query config metadata
+allows config screens to be generated rather than relying on mods to manually construct screens using general-purpose GUI libraries.
 
 
 ## Explanation
@@ -26,20 +24,64 @@ to be generated rather than relying on mods to manually construct screens using 
 - **Group Validator**: A function that is invoked to accept or reject the set of values in a single Validation Group.
 - **Environment Policy**: A value that defines how a Setting interacts with the client and/or server.
 
-A new QSL module, `quilt_config`, contains the implementation of this API. The API is built on top of the Loader config API, specialized
+A new QSL module, `quilt_config_metadata`, contains the implementation of this API. The API is built on top of the Loader config API, specialized
 with metadata for Minecraft mods.
 
-### API Detail
+### Settings API Detail
 
 A Setting has the following metadata.
-- Data type (integer, string, enum, etc.)
+- Widget Type (cycle, check box, select, text box, etc.)
 - Label
 - Tooltip
-- Widget type (cycle, check box, select, text box, etc.)
 - Sections
 - Validation Group
-- Setting Validators (range, length, regex, etc.)
 - Environment Policy
+
+#### Widget Type
+
+```java
+public enum WidgetType {
+  TOGGLE,
+  CYCLE,
+  SELECT,
+  FREE_TEXT,
+  SLIDER,
+  NUMERIC,
+  UNORDERED_COLLECTION
+  ORDERED_COLLECTION;
+}
+
+MetadataType<WidgetType, ?> WIDGET_TYPE;
+```
+
+A Setting's Widget Type describes the type of widget that best represents the Setting.
+- `TOGGLE` widgets are binary, typically displayed as check boxes or buttons.
+- `CYCLE` widgets are small ordered lists of options, typically displayed as cycle buttons or radio buttons.
+- `SELECT` widgets are large unordered lists of options, typically displayed as a drop-down or searchable menu.
+- `FREE_TEXT` widgets are strings of text, typically displayed as a text box.
+- `SLIDER` widgets are imprecise numeric values, typically displayed as a slider.
+- `NUMERIC` widgets are precise numeric values, typically displayed as a text box.
+- `UNORDERED_COLLECTION` widgets are made up of a collection of values with no defined ordering, all with the same Widget Type.
+- `ORDERED_COLLECTION` widgets are made up of a sequence of values with a defined ordering, all with the same Widget Type.
+
+The most appropriate Widget Type for a given Setting depends on the Setting's underlying data type and on any constraints a Setting's
+value must obey.
+
+If a Setting's Widget Type is `UNORDERED_COLLECTION` or `ORDERED_COLLECTION`, additional data is stored `WIDGET_ELEMENT_TYPE`.
+
+```java
+MetadataType<WidgetType, ?> WIDGET_ELEMENT_TYPE;
+```
+
+#### Label
+
+```java
+MetadataType<Text, ?> LABEL;
+```
+
+A Setting's Label is the simple display name of a Setting.
+
+#### Environment Policy
 
 ```java
 public enum EnvironmentPolicy {
@@ -48,6 +90,8 @@ public enum EnvironmentPolicy {
   CLIENT_SYNCED,
   SERVER_SYNCED
 }
+
+MetadataType<EnvironmentPolicy, ?> ENVIRONMENT_POLICY;
 ```
 
 - `CLIENT_ONLY` Settings are specific to a player and are always editable.
