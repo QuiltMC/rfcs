@@ -30,10 +30,10 @@ with metadata for Minecraft mods.
 ### Settings API Detail
 
 A Setting has the following metadata.
-- Widget Type (cycle, check box, select, text box, etc.)
+- Widget Type
 - Label
 - Tooltip
-- Sections
+- Categories
 - Validation Group
 - Environment Policy
 
@@ -80,6 +80,19 @@ MetadataType<Text, ?> LABEL;
 ```
 
 A Setting's Label is the simple display name of a Setting.
+
+#### Tooltip
+
+```java
+@FunctionalInterface
+public interface TooltipSupplier<T> {
+  Text getTooltip(T value);
+}
+
+MetadataType<TooltipSupplier<?>, ?> TOOLTIP;
+```
+
+A Setting's tooltip is a brief description of the current state of the Setting, dependent on the Setting's value.
 
 #### Environment Policy
 
