@@ -31,10 +31,11 @@ with metadata for Minecraft mods.
 
 A Setting has the following metadata.
 - Widget Type
+- Value Calculator
 - Label
 - Tooltip
 - Categories
-- Validation Group
+- Group Validator
 - Environment Policy
 
 #### Widget Type
@@ -73,6 +74,15 @@ If a Setting's Widget Type is `UNORDERED_COLLECTION` or `ORDERED_COLLECTION`, ad
 MetadataType<WidgetType, ?> WIDGET_ELEMENT_TYPE;
 ```
 
+#### Value Calculator
+
+A Value Calculator handles user input on a given widget type in order to produce a value for a Setting.
+
+// all -> turn raw input into a value (maybe Setting Validators should do this?)
+// cycle -> get next/previous value
+// slider -> get next/previous value + calculate value from percentage (and visa-versa)
+// collections -> add/insert/remove/move an element
+
 #### Label
 
 ```java
@@ -94,6 +104,36 @@ MetadataType<TooltipSupplier<?>, ?> TOOLTIP;
 
 A Setting's tooltip is a brief description of the current state of the Setting, dependent on the Setting's value.
 
+#### Categories
+
+```java
+MetadataType<Collection<Identifier>, ?> CATEGORIES;
+```
+
+A Category is a logical grouping of Settings; for example, video, audio, accessibility, or gameplay. A Setting may be a member of any number
+of Categories. Categories are intended to be used to partition Settings into broad groupings for display purposes.
+
+#### Setting Validator
+
+Settings will use the existing `Constaint<T>` interface to define Setting Validators.
+
+#### Group Validator
+
+```java
+@FunctionalInterface
+public interface GroupValidator {
+  void validate(ValidationDiagnostics diagnositics);
+  boolean equals(Object o);
+}
+
+MetadataType<GroupValidator, ?> GROUP_VALIDATOR;
+```
+
+A Group Validator is used to validate properties that pretain to the relationship among multiple Settings. For example, two Settings that
+represent the minimum and maximum value of a range may have a Group Validator that ensures the maximum is always greater than or equal to
+the minimum. It is intended that Group Validators that perform the same validation compare equal so that consumers of this API do not
+run validation logic multiple times.
+
 #### Environment Policy
 
 ```java
@@ -110,21 +150,13 @@ MetadataType<EnvironmentPolicy, ?> ENVIRONMENT_POLICY;
 - `CLIENT_ONLY` Settings are specific to a player and are always editable.
 - `CLIENT_SYNCED` Settings are specific to a player and may be overridden by the server.
 - `SERVER_ONLY` Settings are specific to a level and are not sent to the client from a dedicated server.
-- `SERVER_SYNCED` Settings are specific to a level and are sent to the client from a dedicated server.
-
-// todo
-
-## Out of Scope
-
-Key binding configuration is not done in this API. However, the existence of this API should not preclude a separate API for key bindings.
-
+- `SERVER_SYNCED` Settings are specific to a level and are sent to the client from a dedicated server
 
 ## Drawbacks
 
 Why should we not do this?
 
-Mod developers may want to more tightly control their runtime config representation for querying or display purposes.
-
+This API depends on (and is therefore limited by) Quilt Loader's configuration API.
 
 ## Rationale and Alternatives
 
@@ -140,18 +172,17 @@ while avoiding including too many "batteries" that not all mods may use.
 
 ## Prior Art
 
-If this has been done before by some other project, explain it here. This could
-be positive or negative. Discuss what worked well for them and what didn't.
-
-There may not always be prior art, and that's fine.
-
-- ModConfig, a global config screen that extracts configuration metadata from mods that use Cloth UI.
-- Fiber, a library that defines a rich config tree.
+- [ModConfig](https://github.com/kvverti/mod-config), a global config screen that extracts configuration metadata from mods that use Cloth UI.
+- [Fiber](https://github.com/FabLabsMC/fiber), a library that defines a rich config tree.
 
 
 ## Unresolved Questions
 
 - What should be resolved before this RFC gets merged?
-- What should be resolved while implementing this RFC?
-- What unresolved questions do you consider out of scope for this RFC, that
-  could be addressed in the future?
+
+### Implementation
+- Which common formatter/validator/widget type instances should this API provide? E.g. enum, registry entry, `Identifier`, etc.
+- How strict should the API be on the well-formedness of metadata?
+
+### Out of Scope
+- Key binding configuration is considered out of scope for this API because Minecraft handle key bindings differently from other game options.
