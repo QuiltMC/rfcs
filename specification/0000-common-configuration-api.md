@@ -20,7 +20,7 @@ allows config screens to be generated rather than relying on mods to manually co
 - **Setting**: A single value and its associated metadata.
 - **Category**: A logical grouping of Settings. A Setting may be a member of multiple Categories.
 - **Validation Group**: A logical grouping of Settings used for validation. A Setting may be a member of only one Validation Group.
-- **Value Parser**: A function that converts user input to the underlying data type of the Setting.
+- **Value Converter**: An object that handles conversion between the value and UI state.
 - **Formatter**: A function that maps a value to Minecraft `Text` suitable for display.
 - **Setting Validator**: A function that is invoked to accept or reject the value of a single Setting.
 - **Group Validator**: A function that is invoked to accept or reject the set of values in a single Validation Group.
@@ -34,6 +34,7 @@ with metadata for Minecraft mods.
 A Setting has the following metadata.
 - Widget Type
 - Value Calculator
+- Formatter
 - Label
 - Tooltip
 - Categories
@@ -76,48 +77,45 @@ If a Setting's Widget Type is `UNORDERED_COLLECTION` or `ORDERED_COLLECTION`, ad
 MetadataType<WidgetType, ?> WIDGET_ELEMENT_TYPE;
 ```
 
-#### Value Parser
+#### Value Converter
+
+```java
+public interface ToggleValueConverter<T> {
+  Optional<T> widgetStateToValue(boolean widgetState, ValidationDiagnostics diagnostics);
+  boolean valueToWidgetState(T value);
+}
+
+MetadataType<ToggleValueConverter<?>, ?> TOGGLE_VALUE_CONVERTER;
+
+public interface CycleValueConverter<T> {
+  Optional<T> widgetStateToValue(int widgetState, ValidationDiagnostics diagnostics);
+  int valueToWidgetState(T value);
+  int valueCount();
+  int hiddenValueCount();
+}
+
+MetadataType<CycleValueConverter<?>, ?> CYCLE_VALUE_CONVERTER;
+
+// etc...
+```
+
+A Value Converter handles conversion between the stored value in a Setting and the canonical widget state. It also defines properties necessary for the widget to
+properly handle user input. For example, toggle widgets' state is a boolean value (checked or unchecked), while the stored values in the Setting may be any two
+values of any type.
+
+### Formatter
 
 ```java
 @FunctionalInterface
-public interface ToggleValueParser<T> {
-  Optional<T> parse(boolean input, ValidationDiagnostics diagnostics);
+public interface Formatter<T> {
+  Text format(T value);
 }
 
-@FunctionalInterface
-public interface CycleValueParser<T> {
-  Optional<T> parse(CycleDirection direction, boolean includeHiddenOptions, ValidationDiagnostics diagnostics);
-  enum CycleDirection { FORWARD, BACKWARD }
-}
-
-@FunctionalInterface
-public interface SelectValueParser<T> {
-  List<T> parse(String search, ValidationDiagnostics diagnostics);
-}
-
-@FunctionalInterface
-public interface FreeTextValueParser<T> {
-  Optional<T> parse(String input, ValidationDiagnostics diagnostics);
-}
-
-@FunctionalInterface
-public interface SliderValueParser<T> {
-  Optional<T> parse(double fraction, ValidationDiagnostics diagnostics);
-}
-
-@FunctionalInterface
-public interface NumericValueParser<T> {
-  Optional<T> parse(Number input, ValidationDiagnostics diagnostics);
-}
+MetadataType<Formatter, ?> FORMATTER;
 ```
 
-A Value Calculator handles user input on a given widget type in order to produce a value for a Setting. Depending on the UI widget, user input
-may include text, key presses, and button presses.
-
-// all -> turn raw input into a value (maybe Setting Validators should do this?)
-// cycle -> get next/previous value
-// slider -> get next/previous value + calculate value from percentage (and visa-versa)
-// collections -> add/insert/remove/move an element
+A Formatter is a function that converts a Setting's stored value into Text for displaying to players. This text is not meant to be mapped back to
+the value that produced it.
 
 #### Label
 
@@ -193,9 +191,11 @@ MetadataType<EnvironmentPolicy, ?> ENVIRONMENT_POLICY;
 
 ## Drawbacks
 
-Why should we not do this?
-
 This API depends on (and is therefore limited by) Quilt Loader's configuration API.
+
+This API also uses Minecraft types. Therefore, mod configuration that uses this API cannot be constructed or queried before game initialization (for example,
+in mixin plugins or CHASM transformers). However, this type of configuration can't be changed during gameplay, so displaying it to users has limited
+benefits.
 
 ## Rationale and Alternatives
 
@@ -217,7 +217,8 @@ while avoiding including too many "batteries" that not all mods may use.
 
 ## Unresolved Questions
 
-- What should be resolved before this RFC gets merged?
+- How precisely should Value Converters define widget state?
+- Should Setting Validators be separate from Loader's `Constraint` type?
 
 ### Implementation
 - Which other common formatter/validator/widget type instances should this API provide? E.g. enum, registry entry, `Identifier`, etc.
