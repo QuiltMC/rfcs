@@ -199,15 +199,16 @@ benefits.
 
 ## Rationale and Alternatives
 
-- Why is this the best possible design?
-- What other designs are possible and why should we choose this one instead?
-- What other designs have benefits over this one? Why should we choose an
-  alternative instead?
-- What is the impact of not doing this?
-
 This RFC describes a common API between mods that define configuration and mods that consume configuration.
 This approach gives the most control to mods that wish to consume multiple mods' configuration, e.g. to construct a config screen,
 while avoiding including too many "batteries" that not all mods may use.
+
+### Alternatives
+
+Define an API for constructing config UI elements that is completely separate from the underlying config. This would give mods more freedom to choose
+specific UI representations.
+
+Do nothing. In the absence of a config API, mods will likely tend toward using fully featured GUI libraries for displaying configuration.
 
 ## Prior Art
 
