@@ -1,4 +1,4 @@
-# A Common Configuration API for QSL
+# Configuration Metadata API
 
 ## Summary
 
