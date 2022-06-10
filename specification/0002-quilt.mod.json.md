@@ -463,12 +463,12 @@ A version range specifier can make use of any of the following patterns:
 * `>=1.0.0` — Matches any version greater than or equal to 1.0.0
 * `>1.0.0` — Matches any version greater than version 1.0.0
 * `<=1.0.0` — Matches any version less than or equal to version 1.0.0
-* `<1.0.0` — Matches any version less than version 1.0.0
+* `<1.0.0` — Matches any version less than version 1.0.0, excluding pre-releases of 1.0.0 (for semantic versions)
 
-Additionally, version range specifiers of semantic versions can make use of these patterns:
+Version range specifiers of semantic versions also can make use of these patterns:
 * `1.0.x` — Matches any version with major version 1 and minor version 0.
-* `~1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 1.1.0
-* `^1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 2.0.0
+* `~1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 1.1.0, excluding pre-releases of 1.1.0
+* `^1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 2.0.0, excluding pre-releases of 2.0.0
 
 Version range specifiers without any prefix or `x` notation are equivalent to:
 * `^` if the version is a semantic version
