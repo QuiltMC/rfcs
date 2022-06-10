@@ -74,7 +74,9 @@ An array of [ProvidesObject](#provides-objects)s describing other mods/APIs that
 |--------|----------|
 | String | True     |
 
-Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/). In a development environment, the value `${version}` can be used as a placeholder by quilt-gradle to be replaced on building the resulting JAR.
+Must conform to the [Semantic Versioning 2.0.0 specification](https://semver.org/), but may have an arbitrary number of components (`1.2`, `4.3.5`, `3.1.2.3.5`). Missing components default to zero, so `1.2` is the same as `1.2.0`, `1.2.0.0`, etc.
+
+In a development environment, the value `${version}` can be used as a placeholder to be replaced on building the resulting JAR.
 
 ### The `entrypoints` field
 | Type   | Required |
@@ -456,16 +458,21 @@ Should be a valid mod version. If omitted, then this defaults to the version of 
 
 ## Version Specifier
 A version range specifier can make use of any of the following patterns:
-* `*` — Matches any version. Will fetch the latest version available if needed
-* `1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
+* `*` — Matches any version.
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
 * `>=1.0.0` — Matches any version greater than or equal to 1.0.0
 * `>1.0.0` — Matches any version greater than version 1.0.0
 * `<=1.0.0` — Matches any version less than or equal to version 1.0.0
 * `<1.0.0` — Matches any version less than version 1.0.0
+
+Additionally, version range specifiers of semantic versions can make use of these patterns:
 * `1.0.x` — Matches any version with major version 1 and minor version 0.
-* `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
-* `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
+* `~1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 1.1.0
+* `^1.0.0` — Matches any version greater than or equal to version 1.0.0 and less than 2.0.0
+
+Version range specifiers without any prefix or `x` notation are equivalent to:
+* `^` if the version is a semantic version
+* `=` if the version is non-semantic.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
