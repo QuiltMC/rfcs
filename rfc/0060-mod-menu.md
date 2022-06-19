@@ -10,9 +10,6 @@ This document outlines the process for creating an official Mod Menu for usage w
 
 ## Explanation
 
-### Integration
-A toggle in the Quilt Installer will allow for this mod to be installed at the same time as loader
-
 ### Why are we doing this?
 Native Quilt Support, which lets us add additional features from things like quilt.mod.json or Quilt Config without issue.
 Standardization, allowing an official solution compared to Fabric's unofficial Mod Menu
