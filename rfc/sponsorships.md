@@ -19,16 +19,16 @@ This RFC provides a set of procedures for applying for, accepting, and terminati
 - Financial Sponsorship: Sponsorships that provide direct financial contributions to the project.
 - Non-Financial Sponsorship: Sponsorships that do not provide direct financial contributions to the project. They may provide something else, like tooling or server space.
 
-### Base Sponsor Requirements
+### Sponsor Guidelines
 
-In order to provide a sponsorship to the project, **endorsed** sponsors must meet the following requirements. Non-endorsed sponsors do not need to meet these requirements, as the project is not endorsing them, but if they don't, we may want to consider alternatives depending on the severity. Exceptions can be made if there is a wide agreement amongst the team and community.
+In order to provide a sponsorship to the project, sponsors should meet the following requirements. These are not hard requirements, as we understand that there is generally more nuance in the circumstances surrounding a given practice than can be expressed in a few bullet-points, and being too strict in our requirements could prevent us from accepting sponsorships we are otherwise comfortable with.
 
-Endorsed Sponsors **must**:
-- Provide a high-quality product or service at a fair price
+Endorsed Sponsors **should**:
+- Provide a high-quality product or service at a fair and competitive price.
 - Market their product or service in a way that is transparent and honest.
   
-Endorsed Sponsors **must not**:
-- Use, promote or otherwise endorse financially-driven blockchain technology in any way.
+Endorsed Sponsors **should not**:
+- Use, promote or otherwise endorse blockchain technology that is clearly being used in a harmful or anti-consumer way.
 - Have a recent, reliably-sourced history of discriminating against minorities or endorsing those who do that has not been clearly and successfully addressed.
 - Have a recent, verified history of serious anti-consumer practices that have not been clearly and successfully addressed.
 - Have a recent history of employee mistreatment, that has not been clearly and successfully addressed
@@ -66,9 +66,9 @@ Quilt is not designed to be a financially-driven project, and it is common knowl
 
 - We could not involve the community in the decision-making process. This would make it faster and possibly avoid drama in the short-term, however, not involving our community in such important decisions may undermine their trust in us and contradict Quilt's goal to be a caring, community-driven project.
 - We could have the sponsorship discussions on Discord, where there is higher traffic, especially if the forum channels are implemented. However, the forum is more open than Discord, and more reliable and permanent in the long term, since we control it. In addition, forums are more suited to long-form discussions, like those about sponsorships would likely be.
-- We could forgo the base requirements, as it could be argued that people can tell the difference between a sponsorship and a full endorsement. However, the fact that sponsorships have value at all is evidence that this is not universally true. If we endorse a bad sponsor, we could be responsible for people discovering and supporting it, and additionally endorsing unethical companies could give our critics more ammunition against us.
-- We could expand the base requirements to cover all blockchain technology, but this would disqualify people experimenting with blockchain technology that has no financial links, such as Starchild's [Dracoin](https://github.com/Akarys42/dracoin).
-- We could require non-endorsed sponsorships to meet the Base Requirements, but since we're not endorsing them and using a paid service for free, we're really just costing them money, and people won't discover and support them through our endorsement, since we're not endorsing them.
+- We could forgo the base guidelines and validation process, as it could be argued that people can tell the difference between a sponsorship and a full endorsement. However, the fact that sponsorships have value at all is evidence that this is not universally true. If we endorse a bad sponsor, we could be responsible for people discovering and supporting it, and endorsing unethical companies could give our critics more ammunition against us.
+- We could require non-endorsed sponsorships to undergo the validation process, but since we're not endorsing them and using a paid service for free, we're really just costing them money, and people won't discover and support them through our endorsement, since we're not endorsing them.
+- We could turn the base guidelines into hard requirements for Endorsed Sponsors, but they do not take into account the fact that some sponsors are more valuable to us than others (An AWS sponsorship would be more valuable than a Minecraft server host, for example), and that there is often more nuance in the policies and practices of a business then can be expressed in a few bullet points. Furthermore, since all sponsors are validated by the community, that should be sufficient to stop any sponsors we feel uncomfortable working with from being accepted/applied for.
 
 ## Prior Art
 
