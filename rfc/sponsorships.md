@@ -44,7 +44,7 @@ Endorsed Sponsors **should not**:
 
 If we plan to either apply for or accept an endorsed sponsorship that meets the Base Requirements, they must go through a process of validation, to maintain our reputation and trust with our community. 
 
-The Outreach Team will create a post on the Sponsorship section of the forum, explaining our intention to endorse a given sponsor, and the terms of the sponsorship agreement. We can then discuss with members of the community the terms of the agreement, and whether they think it would be appropriate for us to apply for or accept the sponsorship. Based on their feedback, we can then decide whether to proceed with applying for or accepting the sponsorship, though if the sponsorship was offered to us by a sponsor, we should always discuss negative points with them before denying a sponsorship.
+The Outreach Team will create a post on the Sponsorship section of the forum, explaining our intention to endorse a given sponsor, and the broad terms of the sponsorship agreement. We can then discuss with members of the community the terms of the agreement, and whether they think it would be appropriate for us to apply for or accept the sponsorship. Based on their feedback, we can then decide whether to proceed with applying for or accepting the sponsorship, though if the sponsorship was offered to us by a sponsor, we should always discuss negative points with them before denying a sponsorship.
 
 ### Process for Applying for or Accepting a sponsorship
 
