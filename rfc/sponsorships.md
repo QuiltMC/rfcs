@@ -10,7 +10,7 @@ As an open-source project, there are many opportunities for us to be provided wi
 
 ## Explanation
 
-This RFC provides a set of procedures for applying for, accepting, and terminating sponsorships, as well as requirements that sponsors must meet to be eligable for a sponsorship, and measures to take to ensure we remain transparent with and trusted by the community.
+This RFC provides a set of procedures for applying for, accepting, and terminating sponsorships, as well as requirements that sponsors must meet to be eligible for a sponsorship, and measures to take to ensure we remain transparent with and trusted by the community.
 
 ### Glossary of Terms
 
