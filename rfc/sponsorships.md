@@ -10,7 +10,7 @@ As an open-source project, there are many opportunities for us to be provided wi
 
 ## Explanation
 
-This RFC provides a set of procedures for applying for, accepting, and terminating sponsorships, as well as requirements that sponsors must meet to be eligible for a sponsorship, and measures to take to ensure we remain transparent with and trusted by the community.
+This RFC provides a set of procedures for applying for, accepting, and terminating sponsorships, as well as guidelines for determining if a sponsor is suitable, and measures to take to ensure we remain transparent with and trusted by the community.
 
 ### Glossary of Terms
 
@@ -21,14 +21,14 @@ This RFC provides a set of procedures for applying for, accepting, and terminati
 
 ### Sponsor Guidelines
 
-In order to provide a sponsorship to the project, sponsors should meet the following requirements. These are not hard requirements, as we understand that there is generally more nuance in the circumstances surrounding a given practice than can be expressed in a few bullet-points, and being too strict in our requirements could prevent us from accepting sponsorships we are otherwise comfortable with.
+In order to provide a sponsorship to the project, sponsors should meet the following requirements. These are not hard requirements, as we understand that there is generally more nuance in the circumstances surrounding a given practice than can be expressed in a few bullet-points, and being too strict in our requirements could prevent us from accepting sponsorships we are otherwise comfortable with. It is more important (though still not required) that Endorsed Sponsors meet these guidelines, as people may discover and support them through us, and we don't want to be the cause of an unsound product or company receiving support that it does not deserve.
 
-Endorsed Sponsors **should**:
+Sponsors **should**:
 - Provide a high-quality product or service at a fair and competitive price.
 - Market their product or service in a way that is transparent and honest.
   
-Endorsed Sponsors **should not**:
-- Use, promote or otherwise endorse blockchain technology that is clearly being used in a harmful or anti-consumer way.
+Sponsors **should not**:
+- Use, promote or otherwise endorse technology that is clearly being used in a harmful or anti-consumer way.
 - Have a recent, reliably-sourced history of discriminating against minorities or endorsing those who do that has not been clearly and successfully addressed.
 - Have a recent, verified history of serious anti-consumer practices that have not been clearly and successfully addressed.
 - Have a recent history of employee mistreatment, that has not been clearly and successfully addressed
