@@ -182,14 +182,13 @@ specified.
 1. The Community Team needs to discuss the subject matter of the vote beforehand, and discern whether a vote should
    take place to begin with - if it's decided that a vote will surely fail, then no vote is required and the motion
    can be dismissed immediately.
-1. A poll is created in an internal channel that's designated for that purpose, either by posting a simple message or
+2. A poll is created in an internal channel that's designated for that purpose, either by posting a simple message or
    via a bot designed to facilitate polling. This poll should provide as much detail as possible, either directly in
    the poll message or by providing links and references - but it must be clear and not misleading, and the core idea
    must be present in the message instead of in the references.
-1. Members of the Community Team may vote on the poll using the provided reactions. All polls should include a positive, a neutral
-   and negative option. Voting members that abstain are excluded from percentages and
-   tallies.
-1. Voting members are not required to explicitly explain their votes - major problems with the proposal should be
+3. Members of the Community Team may vote on the poll using the provided reactions. All polls should include a positive 
+   and negative option, and an option to explicitly abstain. 
+4. Voting members are not required to explicitly explain their votes - major problems with the proposal should be
    worked out before the vote even begins, to avoid putting particular community members on the spot.
 
 Polls must include a closing date of no less than one day and longer than one week, regardless of the proposal put
@@ -202,8 +201,8 @@ inactive Community Team member (defined below) returning from inactivity.
 Voting ends when any of the following conditions have been reached:
 
 * The poll's closing date has been reached
-* The special closing conditions specified as part of the specific process that this vote is part of have been met, if
-  any
+* All eligible voters have casted a vote 
+* The special closing conditions specified as part of the specific process that this vote is part of have been met, if any
 
 ### Interpreting the Vote
 
@@ -223,11 +222,12 @@ The Community Team should then tally the final vote counts, and interpret them a
 
 The vote has passed if all the following conditions are met:
 
-* The total number of _positive_ votes over the number of _positive and negative_ votes **is greater than 0.75** (75%)
-* The total number of _neutral_ votes over the number of votes casted **is lesser than 0.5** (50%)
-* The total number of votes casted over the number of eligible voters **is lesser than 0.66** (66%)
+* **At least half** (50%) of the eligible voters voted _positively_.
+* The ratio of _positive_ over _positive and negative_ votes **is greater than 0.2**.
 * The special passing conditions specified as part of the specific process that this vote is part of have been met, if
   any
+
+To simplify interpretation, [this spreadsheet lists out the cases](https://docs.google.com/spreadsheets/d/1lwOZOwbe3hH9ULlswb8C6yJ2GLQ4408IsiF6b1JcMuQ/edit?usp=sharing) for the first two conditions.
 
 #### Other situations
 
