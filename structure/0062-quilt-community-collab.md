@@ -114,7 +114,7 @@ More importantly, three polls have been held inside the server, with the followi
 
 # Prior art
 
-Quilt Community Collab is an indirect replacement of the Modding Interpol, with a wider range of activities, such as events and related projects
+Quilt Community Collab is an indirect replacement of the Modding Interpol, with a wider range of activities, such as events and related projects.
 
 # Unresolved questions
 
