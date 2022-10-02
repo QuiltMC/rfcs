@@ -15,7 +15,7 @@ The Quilt Community Collab is a private space for Minecraft-centered communities
 ## What Community Collab isn’t
 
 - It isn’t an official affiliation with the Quilt project itself or any other community part of the program
-- It isn’t a place to blindly synchronise bans between communities
+- It isn’t a place to blindly synchronise punishments between communities
     - Each community must decide on appropriate moderation action based on facts shown to them and their own rules and policies. Infringing this rule may get your community removed from the Community Collab program.
 
 ## Roles inside the server
@@ -42,7 +42,7 @@ Collaborators are moderators of one or more communities in the program. They hav
 
 ### Event Planners
 
-Event Planners are members of the staff team of one or more communities in the program, who focuses on event organisation. They have access to the event part of the server.
+Event Planners are members of the staff team of one or more communities in the program, who focus on event organisation. They have access to the events part of the server.
 
 ### Project Roles
 
@@ -54,13 +54,13 @@ Invitees are temporary users, with no access to the rest of the server. They onl
 
 ## Voting process
 
-If required, a vote among the Community Collab group can be called by a Manager. A poll and an associated thread are created in an internal channel designated for that purpose, including as many details as possible.
+If required, a vote can be called by a Manager where the involved Collab communities are each constituents. A poll and an associated thread are created in an internal channel designated for that purpose, including as many details as possible.
 
-Each community gets a single vote representing its member. They are free to write their own process for determining their vote, but it must follow those rules:
+Each community gets a single vote. They are free to write their own process for determining their vote, but it must follow those rules:
 
 - This process must be democratic and give a voice to any community member who is able to join the Community Collab server under the Collaborator role.
 - Each eligible voter must have single, equal voting power.
-- The process can remove the voting power under some inactivity threshold.
+- The process can remove the voting power under some reasonable inactivity threshold.
 
 Once a community has decided their vote, one member can report their vote in the thread, mentioning the community name, and the option being voted for, with corresponding proof (such as a screenshot of an internal poll).
 
