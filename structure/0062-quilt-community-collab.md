@@ -72,11 +72,11 @@ Once the poll is closed, the vote can be interpreted, depending on the specific 
 
 ## Veto rights
 
-While the vote is active, any Collaborator can use their veto right by sending a message inside the thread, detailing their reasoning.
+While the vote is active, any Collaborator or Manager can use their veto right by sending a message inside the thread, detailing their reasoning.
 
-If another Collaborator believes the reasoning isn’t satisfying, they can start the overruling process. If so, another poll is set up, if more than half of the individual votes are positive after three days, the veto is discarded.
+If another Collaborator or Manager believes the reasoning isn’t satisfying, they can start the overruling process. If so, another poll is set up, if more than half of the individual votes are positive after three days, the veto is discarded.
 
-If no Collaborator overrules the veto after three days, the vote is considered as failed right away. The Managers are free to only communicate the result to the Invitees at a later date to keep the veto secret.
+If no Collaborator or Manager overrules the veto after three days, the vote is considered as failed right away. The Managers are free to only communicate the result to the Invitees at a later date to keep the veto secret.
 
 ## Process: adding a community
 
