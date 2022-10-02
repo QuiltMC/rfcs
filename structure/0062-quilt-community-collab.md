@@ -123,3 +123,4 @@ The following questions will have to be solved at a later date:
 - This currently doesn’t define how to remove communities
 - We aren’t defining any role for administrators of the communities part of the program
 - We only allow for full communities to join, we should look at whenever we also want to invite individuals
+- We are locking Managers to be part of the Quilt Community Team, but we should look at whether we want to allow for other communities to have Managers
