@@ -66,7 +66,7 @@ Once a community has decided their vote, one member can report their vote in the
 
 Each community also has the option of skipping its vote if none of its members has an opinion on the poll. Such instances should be reported the same way.
 
-Polls must include a closing date of at least ten days. If required, the closing date can be pushed away by a maximum of a month, upon the informal agreement with the majority of the other communities. During that period, any Collaborator can use their veto right (see below).
+Polls must include a closing date of at least ten days. If required, the closing date can be pushed away by a maximum of a month, upon the informal agreement with the majority of the other communities. During that period, any Collaborator can use their veto right (see below), if allowed by the process.
 
 Once the poll is closed, the vote can be interpreted, depending on the specific process this vote is part of, if any.
 
@@ -94,6 +94,16 @@ Any community, ideally having their main user space on Discord, centred around M
 - If the vote has passed: the Invitees are elevated to the rank of Collaborators. Internal discussions can be purged first if needs be. The community is added to any listing that may exist.
 - If the vote is rejected: enough time is given to the Invitees to acknowledge the result and leave the server. Managers are free to kick Invitees if necessary.
 
+# Process: removing a community
+
+The Managers can decide to start the process of removing a community from the program, due to external events or shared concern between communities. The process is defined as follows:
+1. The Managers can temporarily remove the community from the program by replacing roles of the affected members with the Invitee role, if they believe it is necessary to protect the other communities. The Managers are free to communicate the reason to the community, but it is not required.
+2. The Managers shall write a message clearly explaining the concerns, with an attached thread. In any case, the affected communities cannot have access to this thread. A channel can be set up to allow discussions and clarifications.
+3. Once the Collaborators informally agree that everyone has had enough time to read the message and ask questions, the vote can be created, with the option to approve or deny, according to the process defined in this document. No veto can be used in this vote.
+4. After the poll is closed, the vote is considered passed if more than 50% of the votes cast are positive. The discussion channel must be archived and kept read-only.
+- If the vote has passed: the community is removed from the program and from any listing that may exist.
+- If the vote is rejected: the community is reintegrated to the program, and roles are given back if necessary. Internal discussions can be purged first if needs be.
+
 # Rationale and alternatives
 
 The Quilt Community Collab program existed prior to this document. This document tries to summarize how the server has been working so far while formalising some aspects that were still left up in the air.
@@ -120,7 +130,6 @@ Quilt Community Collab is an indirect replacement of the Modding Interpol, a now
 
 The following questions will have to be solved at a later date:
 
-- This currently doesn’t define how to remove communities
 - We aren’t defining any role for administrators of the communities part of the program
 - We only allow for full communities to join, we should look at whenever we also want to invite individuals
 - We are locking Managers to be part of the Quilt Community Team, but we should look at whether we want to allow for other communities to have Managers
