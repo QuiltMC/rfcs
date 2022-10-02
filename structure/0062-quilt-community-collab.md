@@ -82,14 +82,14 @@ If no Collaborator or Manager overrules the veto after three days, the vote is c
 
 Any community, ideally having their main user space on Discord, centred around Minecraft, can apply to join the Community Collab program. The process is defined as follows:
 
-1. A member of the community who wishes to join, ideally someone holding administrative and moderation powers, should get in touch with a Manager to start the process. The following questions should be asked to the community and collected, along with an invite to the server:
+1. A member of the community holding administrative or moderation powers needs to get in touch with a Manager to start the process. The following questions should be asked to the community and collected, along with an invite to the server:
     - What is the main focus of the server?
     - Why is your community looking to join the Community Collab program?
     - What is your current ruleset?
     - Who is currently part of your staff team, and who would have access to Community Collab?
 2. Once those answers are collected, the Manager can inform all the Collaborators about the community, and start a discussion to gauge the interest of the community.
-3. The members of the community are invited to the Community Collab server under the Invitee role and a channel is set up to allow discussion between Collaborators and Invitee.
-4. Once the Collaborators informally agree that enough information has been gathered, the vote can be created with the option to approve or deny, according to the process defined in this document. The Invitees should be informed the vote has begun.
+3. The members of the community holding either administrative or moderation powers are invited to the Community Collab server under the Invitee role and a channel is set up to allow discussion between Collaborators and Invitee.
+4. Once the Collaborators informally agree that enough information has been gathered, the vote can be created in a private channel which cannot be seen by the Invitees, with the option to approve or deny, according to the process defined in this document. The Invitees should be informed the vote has begun.
 5. After the poll is closed, the vote is considered passed if more than 75% of the votes cast are positive. The discussion channel must be archived and kept read-only.
 - If the vote has passed: the Invitees are elevated to the rank of Collaborators. Internal discussions can be purged first if needs be. The community is added to any listing that may exist.
 - If the vote is rejected: enough time is given to the Invitees to acknowledge the result and leave the server. Managers are free to kick Invitees if necessary.
