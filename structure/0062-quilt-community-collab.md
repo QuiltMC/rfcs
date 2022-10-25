@@ -1,135 +1,201 @@
 # Summary
 
-This document describes the Quilt Community Collab program, the roles of each member and the associated processes.
+This document intends to describe the Quilt Community Collab Program, as well as its entry requirements, processes, and the roles that may be assigned to its members.
 
 # Motivation
 
-The Minecraft community is a complex space, where it can be required for moderators to share intel between communities. The main goal of the Quilt Community Collab program is to facilitate exchange between a selected group of communities and improve user safety.
+The Minecraft community is complex and diverse and, in order to keep everyone safe, it's often useful for communities to share information with each other. The main goal of the Quilt Community Collab Program is to facilitate this exchange of information between a selected group of communities, which have been vetted for trustworthiness and educated on the best way to approach this type of data.
 
-The server also serves as a coordination server for events and other projects happening in the Minecraft sphere.
+The Minecraft community at large has long been host to a surprisingly high amount of hatred and discrimination, and the Quilt Community Collab Program is one of our ways of giving back to the community that got us where we are --- with the aim of hopefully improving it for everyone.
 
-# Explanations
+# Explanation
 
-The Quilt Community Collab is a private space for Minecraft-centered communities to exchange information and coordinate. The main focus of the exchanges is set on moderation, but it can also be used for events and anything else that may be fitting.
+The Quilt Community Collab Program (henceforth, "the Program") largely exists as a private Discord server, wherein representatives from participating Minecraft-related communities exchange information and coordinate on issues of moderation, alongside Quilt's Community Team and individual contributors that don't represent specific communities.
 
-## What Community Collab isn’t
+It also exists to serve as a coordination point for events and other cross-community projects within the Minecraft sphere.
 
-- It isn’t an official affiliation with the Quilt project itself or any other community part of the program
-- It isn’t a place to blindly synchronise punishments between communities
-    - Each community must decide on appropriate moderation action based on facts shown to them and their own rules and policies. Infringing this rule may get your community removed from the Community Collab program.
+## What the Program is not
 
-## Roles inside the server
+* An official, direct affiliation with the Quilt project, or any other community that participates in the Program
+* A space for building or coordinating the character assassinations of community members or prominent personalities
+* A space meant for blindly synchronizing punishments between communities
+  * Instead, each community must decide on appropriate moderation actions for their own spaces, which may be informed by the data they're given access to, but not blindly copied between communities --- Breaking this rule is likely to result in a community being removed from the Program
+
+## Program Roles
+
+As the Program exists largely on Discord, the roles of its members are directly represented by Discord server roles.
 
 ### Keyholder
 
-The keyholder for this space is the same as for the Quilt Community Team. This role is described in the [RFC 0007 # Keyholders](https://github.com/QuiltMC/rfcs/blob/master/structure/0007-community-team.md#keyholders).
+The Keyholder for this space is the same as for the other Quilt spaces. This role is described in the Keyholders section of [RFC 7: Community Team](https://github.com/QuiltMC/rfcs/blob/master/structure/0007-community-team.md#keyholders), and works in the same way.
 
 ### Managers
 
-Managers are responsible for keeping the collab program up and running.
+Managers are responsible for keeping the Program up-and-running. They take care of the following tasks, among other things:
 
-- Maintain and organise the associated Discord server
-- Actioning changes to the collab-related spaces
-- Organise polls and votes as required by formal processes
-- Help resolve conflicts between communities
-- Stay in touch with any community part of the program
+* Maintaining, organizing, and actioning changes to the Program's Discord server, and any other Program-related spaces
+* Organizing polls and votes, as required by formal procedures
+* Aiding in conflict resolution between communities and Program members
+* Staying in touch (and maintaining relations) with the communities that are part of the Program
+* Procuring and maintaining any services that the Program needs to function properly
 
-Community Collab Managers are the same as Community Managers of the Quilt Community Team.
+This role is very similar to the Community Manager role within Quilt's own Community Team.
 
 ### Collaborators
 
-Collaborators are moderators of one or more communities in the program. They have access to the server to the moderation part of the server, such as general moderator chats and case threads. Access is also given to the event category.
+The Collaborator role is given to moderators from the communities that are part of the Program, and who have joined a Program-related space in order to represent their communities.
+
+Collaborators are given access to all moderation-related areas within Program spaces, such as general moderation chat channels and case-tracking threads. Additionally, all Collaborators are granted access to spaces dedicated to organizing events between participating communities.
 
 ### Event Planners
 
-Event Planners are members of the staff team of one or more communities in the program, who focus on event organisation. They have access to the events part of the server.
+The Event Planner role is given to members of participating communities' community teams that focus on event creation, execution and management. They do not have access to moderation-related areas within Program spaces, and are instead given their own dedicated spaces.
 
 ### Project Roles
 
-Other roles may be given surrounding the different projects happening inside the program. Those roles are informal and will depend on each project.
+Informal roles may be created and granted to Program members that are contributing to (or participating in) Program-related projects. The definition of these roles will depend on the project in question, and they'll be created or granted on an as-needed basis.
 
 ### Invitees
 
-Invitees are temporary users, with no access to the rest of the server. They only have access to temporary channels required by the process they are visiting for.
+Invitees are temporary users with no access to Program-related spaces, other than temporary areas that are created for whatever purpose they're visiting the respective space.
 
 ## Voting process
 
-If required, a vote can be called by a Manager where the involved Collab communities are each constituents. A poll and an associated thread are created in an internal channel designated for that purpose, including as many details as possible.
+Votes may be called by Program Managers, where each of the communities participating in the Program represent the poll's voters. As the Program exists largely on Discord, a poll and an associated thread are created on the Program's Discord server, in a channel designated for this purpose.
 
-Each community gets a single vote. They are free to write their own process for determining their vote, but it must follow those rules:
+The poll should be as detailed as possible in order to help everyone to make an informed decision. Discussions related to the poll should happen in the attached thread, to try to keep everything together.
 
-- This process must be democratic and give a voice to any community member who is able to join the Community Collab server under the Collaborator role.
-- Each eligible voter must have single, equal voting power.
-- The process can remove the voting power under some reasonable inactivity threshold.
+Each community is assigned one single vote. Individual communities are responsible for coming up with their own process for determining their vote, but it must follow these rules:
 
-Once a community has decided their vote, one member can report their vote in the thread, mentioning the community name, and the option being voted for, with corresponding proof (such as a screenshot of an internal poll).
+* The process must be democratic and give a voice to any community member that is otherwise eligible to join the Program's Discord server under the Collaborator role, even if they're not currently present on the server
+* Each eligible member of the community must have equal voting power
+* Eligible members may only be excluded via a reasonable inactivity threshold
+* The process must be formally documented somewhere, but this documentation may be kept internal to the given community
+* Participating communities must allow the Program's Manager team to audit their process, which may be motivated by reports from the given community's members, or from other Program members, including the Managers themselves
 
-Each community also has the option of skipping its vote if none of its members has an opinion on the poll. Such instances should be reported the same way.
+Once a community has decided how it's going to vote, it must designate a single eligible community member to represent that vote. This representative must report their community's vote in the attached thread, specifically mentioning the community's name and the option being voted for, and providing proof of the results --- such as a screenshot of an internal poll.
 
-Polls must include a closing date of at least ten days. If required, the closing date can be pushed away by a maximum of a month, upon the informal agreement with the majority of the other communities. During that period, any Collaborator can use their veto right (see below), if allowed by the process.
+Participating communities also have the option of abstaining from the vote. This must either be reported in the thread as described above or, in the case of a community that wishes to abstain from all votes, directly to a Program Manager in advance. Regardless of the method, documented consensus among eligible community members must be provided.
 
-Once the poll is closed, the vote can be interpreted, depending on the specific process this vote is part of, if any.
+All polls must include a closing date that is set at least ten days into the future. If needed, this date may be pushed back by up to a month, as long as an informal agreement between the majority of the Program's participating, non-abstaining communities has been reached, and documented within the thread attached to the poll.
 
-## Veto rights
+At any point before the poll has closed, any Collaborator can use their right to veto, if allowed by the process. This right is described below.
 
-While the vote is active, any Collaborator or Manager can use their veto right by sending a message inside the thread, detailing their reasoning.
+Once the poll has been closed, the vote should be interpreted as described by the process the poll is a part of.
 
-If another Collaborator or Manager believes the reasoning isn’t satisfying, they can start the overruling process. If so, another poll is set up, if more than half of the individual votes are positive after three days, the veto is discarded.
+### The right to veto
 
-If no Collaborator or Manager overrules the veto after three days, the vote is considered as failed right away. The Managers are free to only communicate the result to the Invitees at a later date to keep the veto secret.
+While a poll is open and accepting votes, any Collaborator or Manager can use their right to veto by sending a message to the attached thread, detailing why they'd like to veto the vote.
 
-## Process: adding a community
+If another Collaborator or Manager isn't satisfied with the reasoning behind the veto, they can attempt to overrule the veto. To start this process, a new poll is created to allow voters to decide whether to overrule the veto. This poll lasts for three days and, if more than half of the individual votes are positive, the veto is overruled. If not, the original vote should be treated as if it has failed.
 
-Any community, ideally having their main user space on Discord, centred around Minecraft, can apply to join the Community Collab program. The process is defined as follows:
+The veto process may be started on behalf of another Manager or Collaborator. Additionally, the list of voters on that veto may be kept secret. This is intended to avoid exposing those that supported the veto (or that didn't) to negative reactions or bullying by other Program members.
 
-1. A member of the community holding administrative or moderation powers needs to get in touch with a Manager to start the process. The following questions should be asked to the community and collected, along with an invite to the server:
-    - What is the main focus of the server?
-    - Why is your community looking to join the Community Collab program?
-    - What is your current ruleset?
-    - Who is currently part of your staff team, and who would have access to Community Collab?
-2. Once those answers are collected, the Manager can inform all the Collaborators about the community, and start a discussion to gauge the interest of the community.
-3. The members of the community holding either administrative or moderation powers are invited to the Community Collab server under the Invitee role and a channel is set up to allow discussion between Collaborators and Invitee.
-4. Once the Collaborators informally agree that enough information has been gathered, the vote can be created in a private channel which cannot be seen by the Invitees, with the option to approve or deny, according to the process defined in this document. The Invitees should be informed the vote has begun.
-5. After the poll is closed, the vote is considered passed if more than 75% of the votes cast are positive. The discussion channel must be archived and kept read-only.
-- If the vote has passed: the Invitees are elevated to the rank of Collaborators. Internal discussions can be purged first if needs be. The community is added to any listing that may exist.
-- If the vote is rejected: enough time is given to the Invitees to acknowledge the result and leave the server. Managers are free to kick Invitees if necessary.
+## Process: Adding a community
 
-# Process: removing a community
+Any Minecraft-related community may apply to join the Program --- but, given that the Program itself largely exists on Discord, it's easier for us to work with Discord-oriented communities.
 
-The Managers can decide to start the process of removing a community from the program, due to external events or shared concern between communities. The process is defined as follows:
-1. The Managers can temporarily remove the community from the program by replacing roles of the affected members with the Invitee role, if they believe it is necessary to protect the other communities. The Managers are free to communicate the reason to the community, but it is not required.
-2. The Managers shall write a message clearly explaining the concerns, with an attached thread. In any case, the affected communities cannot have access to this thread. A channel can be set up to allow discussions and clarifications.
-3. Once the Collaborators informally agree that everyone has had enough time to read the message and ask questions, the vote can be created, with the option to approve or deny, according to the process defined in this document. No veto can be used in this vote.
-4. After the poll is closed, the vote is considered passed if more than 50% of the votes cast are positive. The discussion channel must be archived and kept read-only.
-- If the vote has passed: the community is removed from the program and from any listing that may exist.
-- If the vote is rejected: the community is reintegrated to the program, and roles are given back if necessary. Internal discussions can be purged first if needs be.
+### Evaluation criteria
+
+Communities that apply to the Program are evaluated based on a number of criteria, which are examined and discussed by the existing Program members during the application. These criteria include, but are not limited to:
+
+* The main focus of the community
+* Why the community wishes to join the Program
+* How competently the community has been set up
+* The community's rules and approaches to moderation
+* Who is part of the community's staff team
+* Whether the community has any known, relevant history
+
+### Application process
+
+The application process is defined as follows:
+
+1. An administrator or moderator from the community that wishes to apply (henceforth, "the new community") must get in touch with a Manager from the Program to start the process. The following information is collected by the manager:
+    * The name and main focus of the community
+    * Why the community wishes to join the Program
+    * What the community rules are (or where to find them)
+    * A full list of staff members and their roles
+    * A method of accessing the community directly (for example, a Discord server invitation)
+2. Once the above information has been provided, a Manager informs voting-eligible Program members on the Discord server, and opens a discussion thread to figure out how the Program members feel about the new community, and to discuss anything relevant to the application
+3. A Discord channel is set up to allow the administrators and moderators from the new community (who are to be invited and given the Invitee role) to talk with existing Program members regarding their application
+4. Once the voting-eligible Program members have informally agreed that enough information has been gathered, the vote may be created (with options to approve or deny the vote) --- it must be done in a channel the Invitees don't have access to, and follow the voting process outlined earlier in this document
+5. Once the vote has concluded, the discussion channel must be archived and kept read-only, so it can be reviewed later on if needed
+
+### Interpreting the vote
+
+**The vote has passed** when more than 75% of the votes cast at the time of closing are positive. Internal discussions can be removed as needed before the new community is given access to the rest of the server. The new community should also be added to any relevant listings.
+
+Otherwise, **the vote has failed.** Enough time should be given to the Invitees to acknowledge the result and leave the server, but Managers are free to kick them if they don't leave in a timely fashion.
+
+---
+
+## Process: Removing a community
+
+While we hope that it won't ever be necessary, it's important that we have the ability to remove communities from the program when it becomes necessary.
+
+### Starting the process
+
+This process is largely Manager-driven. The Manager team may decide to start this process due to concerns shared with them or events witnessed directly --- included, but not limited to:
+
+* Substantiated concerns regarding a community's staff teams perpetuating harmful behaviour --- such as paedophilia, physical violence or transphobia
+* Sudden changes in community leadership with no appropriate reasoning, or a problematic agenda
+* Changes in community rules or purpose, such that the community no longer fits into the program
+
+This is not an exhaustive list, but the related discussions that happen as part of this process are free to debate the reasoning for the call for removal if needed. However, the removal process is unlikely to be an appropriate resolution for issues that may be easily addressed through communication with the community in question.
+
+### Removal process
+
+The removal process is defined as follows:
+
+1. If required, the Manager team may replace the roles currently granted to the representatives from the community in question with the Invitee role --- This must be communicated to those representatives, but the Managers are not required to communicate the reason if they believe it's not the best course of action
+2. The Manager team must post a message visible to the rest of the Program's members, clearly explaining the concerns and the reasoning behind starting the removal process, and with an attached discussion thread --- this message and thread must not be visible to the representatives of the community in question
+3. Once the voting-eligible Program members have informally agreed that everyone's had enough time to read the message and ask questions, the vote may be created (with options to approve or deny the vote) --- it must follow the voting process outlined earlier in this document, but **it is not eligible to be vetoed by Program members**
+4. Once the vote has concluded, the discussion channel must be archived and kept read-only, so it can be reviewed later on if needed
+
+### Interpreting the vote
+
+**The vote has passed** when more than 50% of the votes cast at the time of closing are positive. The community is removed from the Program and any listings therein.
+
+Otherwise, **the vote has failed.** Internal discussions can be removed as needed. The community is reintegrated, and any roles that were removed are returned.
 
 # Rationale and alternatives
 
-The Quilt Community Collab program existed prior to this document. This document tries to summarize how the server has been working so far while formalising some aspects that were still left up in the air.
+The Quilt Community Collab Program existed before this document was written. Therefore, this document tries to formalize its processes, and summarize how it works. This includes providing concrete standards for processes that were informal until now.
 
-More importantly, three polls have been held inside the server, with the following results:
+Several relevant votes were held on the Program's Discord server leading up to the production of this document. They are as follows:
 
-- When voting for changes on who is or isn't part of the CC network, how should we count votes?
-    - 10 answered: One vote per community: each community will have to write down a formal process on which they decide to vote for or against changes. This process must be democratic and fair.
-    - 4 answered: One vote per collaborator: each user or plural system present in the server gets one vote
-- When voting on who is or isn't part of the CC network, what proportions of approvals versus neutral votes are required to pass? (multiple answers accepted)
-    - 11 answered: >75% approval to pass (there must be at least 3 times more approval than neutral)
-    - 4 answered: >50% approval to pass (there must be more approval than neutral)
-    - 1 answered: 100% approval to pass (there are no neutral votes, only vetos)
-- When voting for changes on who is or isn't part of the CC network, should we have veto rights, and if so how should they work?
-    - 17 answered: Any voter can veto, which can then be overruled by the majority if the concerns aren't believed to be deserved
-    - Nobody answered: There are no veto rights.
-    - Nobody answered: Any voter can veto, which will immediately cancel the vote
+1. When voting on whether to add or remove a community, how should the votes be counted?
+    - **10 answered:** One vote per community; each community will be required to formalize an internal voting process to figure out what their vote should be, and it must be democratic and fair
+    - **4 answered:** One vote per collaborator; each user or plural system present on the Discord server gets one vote
+
+2. What ratio of votes should be required to pass a membership vote?
+    - **11 answered:** > 75% approval to pass
+    - **4 answered:** > 50% approval to pass
+    - **1 answered:** 100% approval to pass
+
+3. For membership votes, should we have veto rights? If so, how should that work?
+   - **17 answered:** Any voter can veto, which can be overruled by the majority if the concerns aren't considered worthwhile enough to fail the vote
+   - **0 answered:** Any voter can veto, which will immediately fail the vote
+   - **0 answered:** There should be no veto rights
+
+ **TODO: THIS ISN'T DONE YET, RETURN ON THE 27TH OCT 2022**
+4. Should we allow for external collaborators that don't represent any specific community?
+    - **20 voted:** Yes
+    - **4 voted:** I don't care
+    - **0 voted:** Not
 
 # Prior art
 
-Quilt Community Collab is an indirect replacement of the Modding Interpol, a now extinct private server used to share threat info between communities, with a wider range of activities, such as events and related projects.
+The Quilt Community Collab Program is a spiritual successor to an older program named Discord INTERPOL, a now-defunct private Discord server. This program intended to provide a way for notable Discord communities in the Fabric sphere to share information on incoming community threats and inform its members on issues of moderation. 
+
+Discord INTERPOL had many similarities with the Quilt Community Collab Program, including many of its foci and members. However, it lacked the support it needed from larger communities and didn't have the backing of a mod-loader project, which made it difficult to grow to a size that would see it become more widely useful.
+
+Additionally, the Quilt Community Collab Program has a much broader focus --- attempting to educate its staff on running their communities, and providing spaces to talk about general community management, defensive moderation tooling, wider social issues, and event planning.
 
 # Unresolved questions
 
-The following questions will have to be solved at a later date:
+For the sake of getting this process document completed within a reasonable amount of time, the following concerns will need to be addressed at a later date:
 
-- We aren’t defining any role for administrators of the communities part of the program
-- We only allow for full communities to join, we should look at whenever we also want to invite individuals
-- We are locking Managers to be part of the Quilt Community Team, but we should look at whether we want to allow for other communities to have Managers
+* We currently haven't discussed the possibility of opening Program membership to non-moderational community staff
+* We haven't discussed how new Managers should be added, which is an issue due to the fact that all Program Managers are also Quilt Community Managers; a more representative level of power-sharing should be worked on
+* While we have voted to allow for external collaborators, we have not yet formalized the role or process
