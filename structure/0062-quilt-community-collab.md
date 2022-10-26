@@ -46,7 +46,7 @@ Managers are responsible for keeping the Program up-and-running. They take care 
 
 * Maintaining, organizing, and actioning changes to the Program's Discord server, and any other Program-related spaces
 * Organizing polls and votes, as required by formal procedures
-* Aiding in conflict resolution between communities and Program members
+* Aiding in conflict resolution between communities and Program members, and acting as moderators of Program spaces when necessary
 * Staying in touch (and maintaining relations) with the communities that are part of the Program
 * Procuring and maintaining any services that the Program needs to function properly
 
@@ -70,7 +70,9 @@ The Event Planner role is given to members of participating communities' communi
 
 ### Project Roles
 
-Informal roles may be created and granted to Program members that are contributing to (or participating in) Program-related projects. The definition of these roles will depend on the project in question, and they'll be created or granted on an as-needed basis.
+Project-specific roles may be created and granted to Program members that are contributing to (or participating in) Program-related projects. The definition of these roles will depend on the project in question, and they'll be created or granted on an as-needed basis.
+
+These roles aren't detailed in this RFC, as they don't impact how the Program functions.
 
 ### Invitees
 
@@ -106,9 +108,13 @@ Once the poll has been closed, the vote should be interpreted as described by th
 
 While a poll is open and accepting votes, any Collaborator or Manager can use their right to veto by sending a message to the associated thread, detailing why they'd like to veto the vote.
 
-If another Collaborator or Manager isn't satisfied with the reasoning behind the veto, they can attempt to overrule the veto. To start this process, a new poll is created to allow voters to decide whether to overrule the veto. This poll lasts for three days and, if more than half of the individual votes are positive, the veto is overruled. If not, the original vote should be treated as if it has failed.
+If another Collaborator or Manager isn't satisfied with the reasoning behind the veto, they can attempt to overrule it. To start this process, a new poll is created to allow voters to decide whether to overrule the veto. This poll lasts for three days and, if more than half of the individual votes are positive, the veto is overruled. If this vote fails, the original vote should be treated as if it has failed.
 
-The veto process may be started on behalf of another Manager or Collaborator. Additionally, the list of voters on that veto may be kept secret. This is intended to avoid exposing those that supported the veto (or that didn't) to negative reactions or bullying by other Program members.
+As the veto process is operated at an individual level, Program members vote as individuals. Communities are not required to seek consensus and vote as a whole.
+
+If nobody attempts to overrule the veto before the original vote ends, the original vote should be treated as if it has failed. If someone attempts to overrule the veto, then the original vote will not be closed until the vote to overrule has ended, even if the vote to overrule finishes after the end date for the original vote.
+
+The veto process may be started on behalf of another Manager or Collaborator. Additionally, the list of voters on that veto may be kept secret. This is intended to avoid exposing those that started or supported the veto (or that didn't) to negative reactions or bullying by other Program members.
 
 **Note:** Individual Collaborators currently do not hold the right to veto.
 
@@ -137,6 +143,8 @@ The application process is defined as follows:
     * What the community rules are (or where to find them)
     * A full list of staff members and their roles
     * A method of accessing the community directly (for example, a Discord server invitation)
+    * A statement that shows that this RFC (and all other relevant public documentation) has been read and understood
+    * Whether the community intends to be part of the voting process and, if so, documentation on how that community will follow the voting process (or a commitment to figuring that out before the community may vote on anything)
 2. Once the above information has been provided, a Manager informs voting-eligible Program members on the Discord server, and opens a discussion thread to figure out how the Program members feel about the new community, and to discuss anything relevant to the application
 3. A Discord channel is set up to allow the administrators and moderators from the new community (who are to be invited and given the Invitee role) to talk with existing Program members regarding their application
 4. Once the voting-eligible Program members have informally agreed that enough information has been gathered, the vote may be created (with options to approve or deny the vote) --- it must be done in a channel the Invitees don't have access to, and follow the voting process outlined earlier in this document
