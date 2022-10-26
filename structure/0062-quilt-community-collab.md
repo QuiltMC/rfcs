@@ -8,9 +8,20 @@ The Minecraft community is complex and diverse and, in order to keep everyone sa
 
 The Minecraft community at large has long been host to a surprisingly high amount of hatred and discrimination, and the Quilt Community Collab Program is one of our ways of giving back to the community that got us where we are --- with the aim of hopefully improving it for everyone.
 
+# Definitions
+
+This document refers to a number of abstract concepts below. For the purposes of this document, they should be understood as follows.
+
+## Community staff roles
+
+* A **community moderator** is someone that's part of a community's staff team, and whose work is focused on moderating its community spaces, rather than maintaining those spaces at a structural or technical level, or managing other staff team roles
+* A **community administrator** is someone that's part of a community's staff team, and whose work focuses on maintaining its community spaces at a structural or technical level, or managing other staff team roles, rather than moderating those spaces
+    
+While an administrator may also be a moderator, many administrators do not engage in moderation -- for the purposes of this document, it's important to make a distinction here; mentions of community administrators below will refer to administrators who do not moderate, and mentions of community moderators will include administrators that also handle moderation
+
 # Explanation
 
-The Quilt Community Collab Program (henceforth, "the Program") largely exists as a private Discord server, wherein representatives from participating Minecraft-related communities exchange information and coordinate on issues of moderation, alongside Quilt's Community Team and individual contributors that don't represent specific communities.
+The Quilt Community Collab Program (henceforth, "the Program") largely exists as a private Discord server, wherein representatives from participating Minecraft-related communities exchange information and coordinate on issues of moderation, alongside individual contributors that don't represent specific communities.
 
 It also exists to serve as a coordination point for events and other cross-community projects within the Minecraft sphere.
 
@@ -47,6 +58,12 @@ The Collaborator role is given to moderators from the communities that are part 
 
 Collaborators are given access to all moderation-related areas within Program spaces, such as general moderation chat channels and case-tracking threads. Additionally, all Collaborators are granted access to spaces dedicated to organizing events between participating communities.
 
+### Individual Collaborators
+
+The Individual Collaborator role is given to moderators that have joined the Program, but do not represent any specific community, which may be for any number of reasons. We believe that Individual Collaborators should be able to make use of the Program, and can contribute to it just how regular Collaborators can.
+
+Individuals are given the same level of access that regular Collaborators are given. However, Individual Collaborators are not given voting or veto rights --- this is something that still needs to be discussed, but for the sake of simplicity and ease of implementation, this discussion has been deferred until later.
+
 ### Event Planners
 
 The Event Planner role is given to members of participating communities' community teams that focus on event creation, execution and management. They do not have access to moderation-related areas within Program spaces, and are instead given their own dedicated spaces.
@@ -63,7 +80,7 @@ Invitees are temporary users with no access to Program-related spaces, other tha
 
 Votes may be called by Program Managers, where each of the communities participating in the Program represent the poll's voters. As the Program exists largely on Discord, a poll and an associated thread are created on the Program's Discord server, in a channel designated for this purpose.
 
-The poll should be as detailed as possible in order to help everyone to make an informed decision. Discussions related to the poll should happen in the attached thread, to try to keep everything together.
+The poll should be as detailed as possible in order to help everyone to make an informed decision. Discussions related to the poll should happen in the associated thread, to try to keep everything together.
 
 Each community is assigned one single vote. Individual communities are responsible for coming up with their own process for determining their vote, but it must follow these rules:
 
@@ -73,23 +90,27 @@ Each community is assigned one single vote. Individual communities are responsib
 * The process must be formally documented somewhere, but this documentation may be kept internal to the given community
 * Participating communities must allow the Program's Manager team to audit their process, which may be motivated by reports from the given community's members, or from other Program members, including the Managers themselves
 
-Once a community has decided how it's going to vote, it must designate a single eligible community member to represent that vote. This representative must report their community's vote in the attached thread, specifically mentioning the community's name and the option being voted for, and providing proof of the results --- such as a screenshot of an internal poll.
+Once a community has decided how it's going to vote, it must designate a single eligible community member to represent that vote. This representative must report their community's vote in the associated thread, specifically mentioning the community's name and the option being voted for, and providing proof of the results --- such as a screenshot of an internal poll.
 
 Participating communities also have the option of abstaining from the vote. This must either be reported in the thread as described above or, in the case of a community that wishes to abstain from all votes, directly to a Program Manager in advance. Regardless of the method, documented consensus among eligible community members must be provided.
 
-All polls must include a closing date that is set at least ten days into the future. If needed, this date may be pushed back by up to a month, as long as an informal agreement between the majority of the Program's participating, non-abstaining communities has been reached, and documented within the thread attached to the poll.
+All polls must include a closing date that is set at least ten days into the future. If needed, this date may be pushed back by up to a month, as long as an informal agreement between the majority of the Program's participating, non-abstaining communities has been reached, and documented within the thread associated with the poll.
 
 At any point before the poll has closed, any Collaborator can use their right to veto, if allowed by the process. This right is described below.
 
 Once the poll has been closed, the vote should be interpreted as described by the process the poll is a part of.
 
+**Note:** Individual Collaborators currently do not hold the right to vote.
+
 ### The right to veto
 
-While a poll is open and accepting votes, any Collaborator or Manager can use their right to veto by sending a message to the attached thread, detailing why they'd like to veto the vote.
+While a poll is open and accepting votes, any Collaborator or Manager can use their right to veto by sending a message to the associated thread, detailing why they'd like to veto the vote.
 
 If another Collaborator or Manager isn't satisfied with the reasoning behind the veto, they can attempt to overrule the veto. To start this process, a new poll is created to allow voters to decide whether to overrule the veto. This poll lasts for three days and, if more than half of the individual votes are positive, the veto is overruled. If not, the original vote should be treated as if it has failed.
 
 The veto process may be started on behalf of another Manager or Collaborator. Additionally, the list of voters on that veto may be kept secret. This is intended to avoid exposing those that supported the veto (or that didn't) to negative reactions or bullying by other Program members.
+
+**Note:** Individual Collaborators currently do not hold the right to veto.
 
 ## Process: Adding a community
 
@@ -127,7 +148,22 @@ The application process is defined as follows:
 
 Otherwise, **the vote has failed.** Enough time should be given to the Invitees to acknowledge the result and leave the server, but Managers are free to kick them if they don't leave in a timely fashion.
 
----
+## Process: Adding an Individual Collaborator
+
+Anyone who has experience with moderation and who may be able to contribute productively to the Program may apply to join it. As the Program itself largely exists on Discord, all Individual Collaborators must be present on the Program's Discord server.
+
+This process matches the process for adding a community. However, some guidelines on how to evaluate an Individual Collaborator applicant have been provided below.
+
+### Evaluation criteria
+
+Individuals that apply to the program are evaluated based on a number of criteria, which are examined and discussed by the existing Program members during the application. These criteria include, but are not limited to:
+
+* Why the applicant wishes to join the program
+* The applicant's personal views on social issues
+* The applicant's known approaches to moderation, and the communities they've worked with
+* How the applicant has behaved in the communities that the Program members have access to
+* How well-known the applicant is among Program members
+* Whether the applicant has any known, relevant history
 
 ## Process: Removing a community
 
@@ -135,9 +171,9 @@ While we hope that it won't ever be necessary, it's important that we have the a
 
 ### Starting the process
 
-This process is largely Manager-driven. The Manager team may decide to start this process due to concerns shared with them or events witnessed directly --- included, but not limited to:
+This process is largely Manager-driven. The Manager team may decide to start this process due to concerns shared with them (by anyone) or events witnessed by them directly --- included, but not limited to:
 
-* Substantiated concerns regarding a community's staff teams perpetuating harmful behaviour --- such as paedophilia, physical violence or transphobia
+* Substantiated concerns regarding a community's staff teams perpetuating harmful behaviour --- such as paedophilia, physical violence, or ableism, racism, transphobia or other bigotry
 * Sudden changes in community leadership with no appropriate reasoning, or a problematic agenda
 * Changes in community rules or purpose, such that the community no longer fits into the program
 
@@ -148,7 +184,7 @@ This is not an exhaustive list, but the related discussions that happen as part 
 The removal process is defined as follows:
 
 1. If required, the Manager team may replace the roles currently granted to the representatives from the community in question with the Invitee role --- This must be communicated to those representatives, but the Managers are not required to communicate the reason if they believe it's not the best course of action
-2. The Manager team must post a message visible to the rest of the Program's members, clearly explaining the concerns and the reasoning behind starting the removal process, and with an attached discussion thread --- this message and thread must not be visible to the representatives of the community in question
+2. The Manager team must post a message visible to the rest of the Program's members, clearly explaining the concerns and the reasoning behind starting the removal process, and with an associated discussion thread --- this message and thread must not be visible to the representatives of the community in question
 3. Once the voting-eligible Program members have informally agreed that everyone's had enough time to read the message and ask questions, the vote may be created (with options to approve or deny the vote) --- it must follow the voting process outlined earlier in this document, but **it is not eligible to be vetoed by Program members**
 4. Once the vote has concluded, the discussion channel must be archived and kept read-only, so it can be reviewed later on if needed
 
@@ -157,6 +193,12 @@ The removal process is defined as follows:
 **The vote has passed** when more than 50% of the votes cast at the time of closing are positive. The community is removed from the Program and any listings therein.
 
 Otherwise, **the vote has failed.** Internal discussions can be removed as needed. The community is reintegrated, and any roles that were removed are returned.
+
+## Process: Removing an Individual Collaborator
+
+While we hope that it won't ever be necessary, it's important that we have the ability to remove Individual Collaborators from the program when it becomes necessary.
+
+This process matches the process for removing a community.
 
 # Rationale and alternatives
 
@@ -178,8 +220,7 @@ Several relevant votes were held on the Program's Discord server leading up to t
    - **0 answered:** Any voter can veto, which will immediately fail the vote
    - **0 answered:** There should be no veto rights
 
- **TODO: THIS ISN'T DONE YET, RETURN ON THE 27TH OCT 2022**
-4. Should we allow for external collaborators that don't represent any specific community?
+4. Should we allow for external collaborators (now Individual Collaborators) that don't represent any specific community?
     - **20 voted:** Yes
     - **4 voted:** I don't care
     - **0 voted:** Not
@@ -196,6 +237,5 @@ Additionally, the Quilt Community Collab Program has a much broader focus --- at
 
 For the sake of getting this process document completed within a reasonable amount of time, the following concerns will need to be addressed at a later date:
 
-* We currently haven't discussed the possibility of opening Program membership to non-moderational community staff
+* We currently haven't discussed the possibility of opening Program membership to community administrators
 * We haven't discussed how new Managers should be added, which is an issue due to the fact that all Program Managers are also Quilt Community Managers; a more representative level of power-sharing should be worked on
-* While we have voted to allow for external collaborators, we have not yet formalized the role or process
