@@ -54,7 +54,7 @@ This role is very similar to the Community Manager role within Quilt's own Commu
 
 ### Collaborators
 
-The Collaborator role is given to moderators from the communities that are part of the Program, and who have joined a Program-related space in order to represent their communities.
+The Collaborator role is given to moderators from the communities that are part of the Program, and who have joined a Program-related space in order to represent their communities. Administrators from these communities are welcome to join as Collaborators as well, if they wish.
 
 Collaborators are given access to all moderation-related areas within Program spaces, such as general moderation chat channels and case-tracking threads. Additionally, all Collaborators are granted access to spaces dedicated to organizing events between participating communities.
 
@@ -229,7 +229,7 @@ Several relevant votes were held on the Program's Discord server leading up to t
    - **0 answered:** There should be no veto rights
 
 4. Should we allow for external collaborators (now Individual Collaborators) that don't represent any specific community?
-    - **20 voted:** Yes
+    - **21 voted:** Yes
     - **4 voted:** I don't care
     - **0 voted:** Not
 
@@ -245,5 +245,4 @@ Additionally, the Quilt Community Collab Program has a much broader focus --- at
 
 For the sake of getting this process document completed within a reasonable amount of time, the following concerns will need to be addressed at a later date:
 
-* We currently haven't discussed the possibility of opening Program membership to community administrators
 * We haven't discussed how new Managers should be added, which is an issue due to the fact that all Program Managers are also Quilt Community Managers; a more representative level of power-sharing should be worked on
