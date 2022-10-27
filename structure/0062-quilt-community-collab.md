@@ -19,6 +19,10 @@ This document refers to a number of abstract concepts below. For the purposes of
     
 While an administrator may also be a moderator, many administrators do not engage in moderation -- for the purposes of this document, it's important to make a distinction here; mentions of community administrators below will refer to administrators who do not moderate, and mentions of community moderators will include administrators that also handle moderation
 
+## Other definitions
+
+* A **Program member** is anyone that's taking part in the Quilt Community Collab program --- specifically anyone with the Individual Collaborator, Collaborator or Manager role.
+
 # Explanation
 
 The Quilt Community Collab Program (henceforth, "the Program") largely exists as a private Discord server, wherein representatives from participating Minecraft-related communities exchange information and coordinate on issues of moderation, alongside individual contributors that don't represent specific communities.
@@ -62,7 +66,7 @@ Collaborators are given access to all moderation-related areas within Program sp
 
 The Individual Collaborator role is given to moderators that have joined the Program, but do not represent any specific community, which may be for any number of reasons. We believe that Individual Collaborators should be able to make use of the Program, and can contribute to it just how regular Collaborators can.
 
-Individuals are given the same level of access that regular Collaborators are given. However, Individual Collaborators are not given voting or veto rights --- this is something that still needs to be discussed, but for the sake of simplicity and ease of implementation, this discussion has been deferred until later.
+Individuals are given the same level of access that regular Collaborators are given. However, Individual Collaborators are not given voting rights --- this is something that still needs to be discussed, but for the sake of simplicity and ease of implementation, this discussion has been deferred until later.
 
 ### Event Planners
 
@@ -106,7 +110,7 @@ Once the poll has been closed, the vote should be interpreted as described by th
 
 ### The right to veto
 
-While a poll is open and accepting votes, any Collaborator or Manager can use their right to veto by sending a message to the associated thread, detailing why they'd like to veto the vote.
+While a poll is open and accepting votes, any Individual Collaborator, Collaborator or Manager can use their right to veto by sending a message to the associated thread, detailing why they'd like to veto the vote.
 
 If another Collaborator or Manager isn't satisfied with the reasoning behind the veto, they can attempt to overrule it. To start this process, a new poll is created to allow voters to decide whether to overrule the veto. This poll lasts for three days and, if more than half of the individual votes are positive, the veto is overruled. If this vote fails, the original vote should be treated as if it has failed.
 
@@ -115,8 +119,6 @@ As the veto process is operated at an individual level, Program members vote as 
 If nobody attempts to overrule the veto before the original vote ends, the original vote should be treated as if it has failed. If someone attempts to overrule the veto, then the original vote will not be closed until the vote to overrule has ended, even if the vote to overrule finishes after the end date for the original vote.
 
 The veto process may be started on behalf of another Manager or Collaborator. Additionally, the list of voters on that veto may be kept secret. This is intended to avoid exposing those that started or supported the veto (or that didn't) to negative reactions or bullying by other Program members.
-
-**Note:** Individual Collaborators currently do not hold the right to veto.
 
 ## Process: Adding a community
 
@@ -145,7 +147,7 @@ The application process is defined as follows:
     * A method of accessing the community directly (for example, a Discord server invitation)
     * A statement that shows that this RFC (and all other relevant public documentation) has been read and understood
     * Whether the community intends to be part of the voting process and, if so, documentation on how that community will follow the voting process (or a commitment to figuring that out before the community may vote on anything)
-2. Once the above information has been provided, a Manager informs voting-eligible Program members on the Discord server, and opens a discussion thread to figure out how the Program members feel about the new community, and to discuss anything relevant to the application
+2. Once the above information has been provided, a Manager informs all Program members on the Discord server, and opens a discussion thread to figure out how the Program members feel about the new community, and to discuss anything relevant to the application
 3. A Discord channel is set up to allow the administrators and moderators from the new community (who are to be invited and given the Invitee role) to talk with existing Program members regarding their application
 4. Once the voting-eligible Program members have informally agreed that enough information has been gathered, the vote may be created (with options to approve or deny the vote) --- it must be done in a channel the Invitees don't have access to, and follow the voting process outlined earlier in this document
 5. Once the vote has concluded, the discussion channel must be archived and kept read-only, so it can be reviewed later on if needed
