@@ -4,7 +4,7 @@ This document intends to describe the Quilt Community Collab Program, as well as
 
 # Motivation
 
-The Minecraft community is complex and diverse and, in order to keep everyone safe, it's often useful for communities to share information with each other. The main goal of the Quilt Community Collab Program is to facilitate this exchange of information between a selected group of communities, which have been vetted for trustworthiness and educated on the best way to approach this type of data.
+The Minecraft community is complex and diverse and, in order to keep everyone safe, it's often useful for communities to share information with each other. The main goal of the Quilt Community Collab Program is to facilitate this information-sharing between a selected group of communities, which have been vetted for trustworthiness and educated on the best way to approach this type of data.
 
 The Minecraft community at large has long been host to a surprisingly high amount of hatred and discrimination, and the Quilt Community Collab Program is one of our ways of giving back to the community that got us where we are --- with the aim of hopefully improving it for everyone.
 
@@ -66,7 +66,7 @@ Collaborators are given access to all moderation-related areas within Program sp
 
 The Individual Collaborator role is given to moderators that have joined the Program, but do not represent any specific community, which may be for any number of reasons. We believe that Individual Collaborators should be able to make use of the Program, and can contribute to it just how regular Collaborators can.
 
-Individuals are given the same level of access that regular Collaborators are given. However, Individual Collaborators are not given voting rights --- this is something that still needs to be discussed, but for the sake of simplicity and ease of implementation, this discussion has been deferred until later.
+Individual Collaborator are given the same level of access that regular Collaborators are given. Individual Collaborators are granted veto rights but, as the voting process happens at a community level, they are not currently given voting rights.
 
 ### Event Planners
 
@@ -177,7 +177,7 @@ Individuals that apply to the program are evaluated based on a number of criteri
 
 ## Process: Removing a community
 
-While we hope that it won't ever be necessary, it's important that we have the ability to remove communities from the program when it becomes necessary.
+While we hope that it won't ever be necessary, it's important that we have the ability to remove communities from the program if it should ever become necessary.
 
 ### Starting the process
 
@@ -206,7 +206,7 @@ Otherwise, **the vote has failed.** Internal discussions can be removed as neede
 
 ## Process: Removing an Individual Collaborator
 
-While we hope that it won't ever be necessary, it's important that we have the ability to remove Individual Collaborators from the program when it becomes necessary.
+While we hope that it won't ever be necessary, it's important that we have the ability to remove Individual Collaborators from the program if it should ever become necessary.
 
 This process matches the process for removing a community.
 
@@ -233,7 +233,7 @@ Several relevant votes were held on the Program's Discord server leading up to t
 4. Should we allow for external collaborators (now Individual Collaborators) that don't represent any specific community?
     - **21 voted:** Yes
     - **4 voted:** I don't care
-    - **0 voted:** Not
+    - **0 voted:** No
 
 # Prior art
 
