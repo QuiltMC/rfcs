@@ -251,7 +251,7 @@ voting, they are no longer considered inactive.
 
 #### Admin Board Members
 
-Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do note vote on internal
+Unless they're also a voting member of the Community Team, members of the Quilt Admin Board do not vote on internal
 polls by default.
 
 ## Process: Changing Community Policies
