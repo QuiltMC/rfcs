@@ -191,7 +191,7 @@ specified.
 4. Voting members are not required to explicitly explain their votes - major problems with the proposal should be
    worked out before the vote even begins, to avoid putting particular community members on the spot.
 
-Polls must include a closing date of no less than one day and longer than one week, regardless of the proposal put
+Polls must include a closing date of no less than one day and no longer than one week, regardless of the proposal put
 forward. At the time of posting, polls must also list the names of all eligible, eligible but inactive, and ineligible
 voters, determined as described below. This list cannot change while the poll is still open, except in the case of an
 inactive Community Team member (defined below) returning from inactivity.
