@@ -40,7 +40,7 @@ Mods in the bundle should not substantially change Vanilla behavior and capabili
 The full bundle would only include stable versions of each library (if one exists); users must use the Lite distribution if they want to select alphas or betas.
 ## Technical Details
 Meta would provide a JSON like the following:
-```json
+```jsonc
 {
   "id": "quilt-1.19.2-build.32",
   "inheritsFrom": "1.19.2",
@@ -49,6 +49,7 @@ Meta would provide a JSON like the following:
   "type": "release",
   "mainClass": "org.quiltmc.loader.impl.launch.knot.KnotClient",
   "libraries": [
+    {
       "name": "org.quiltmc:quilt-config:1.0.0-beta.4",
       "url": "https://maven.quiltmc.org/repository/release/"
     },
@@ -88,7 +89,7 @@ Additional capabilities, like a "beta" distribution that includes beta versions 
 ## Alternative: "Latest versions" endpoint
 This approach would have us simply provide an unversioned JSON endpoint on meta that provides the latest recommended version of each library for a specific Minecraft version, for example:
 
-```json!
+```jsonc
 {
     "quilt_loader": "0.12.0",
     "qsl": "0.11.3+1.13",
