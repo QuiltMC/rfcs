@@ -16,7 +16,7 @@ The QSL Core team can add new members to itself by unanimous consent of all acti
 
 ### Quilted Fabric API
 #### Responsibilities
-The Quilted Fabric API team is responsible for the matinence of the QFAPI project. They operate under the advice and consent of the Core team, but have full admin access to the QFAPI repository and its end-user distribution points.
+The Quilted Fabric API team is responsible for the maintenance of the QFAPI project. They operate under the advice and consent of the Core team, but have full admin access to the QFAPI repository and its end-user distribution points.
 #### Joining the team
 New members can join the QFAPI team by unanimous consent of all active members of both the Quilted Fabric API and QSL Core teams.
 
