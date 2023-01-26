@@ -398,7 +398,25 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 ### The `versions` field
 | Type         | Required | Default |
 |--------------|----------|---------|
-| Array/String | False    | `"*"`   |
+| Array/Object/String | False    | `"*"`   |
+
+#### String
+
+Should be a single [version specifier](#version-specifier) defining the versions this dependency applies to.
+
+#### Array (Deprecated)
+
+Should be an array of [version specifiers](#version-specifier) defining the versions this dependency applies to. The dependency matches if it matches ANY of the listed versions.
+
+This usage is discouraged, and quilt-loader will emit a formatting warning when discovering mods that use this.
+
+#### Object
+
+This must contain a single field, which must either be `any` or `all`.
+
+The field value may either be an array or an object.
+
+An array 
 
 Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
 
