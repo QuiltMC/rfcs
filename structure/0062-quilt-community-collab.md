@@ -64,9 +64,9 @@ Collaborators are given access to all moderation-related areas within Program sp
 
 ### Individual Collaborators
 
-The Individual Collaborator role is given to moderators that have joined the Program, but do not represent any specific community, which may be for any number of reasons. We believe that Individual Collaborators should be able to make use of the Program, and can contribute to it just how regular Collaborators can.
+The Individual Collaborator role is given to moderators (and others) that have joined the Program, but do not represent any specific community, which may be for any number of reasons. We believe that Individual Collaborators should be able to make use of the Program, and can contribute to it just how regular Collaborators can.
 
-Individual Collaborator are given the same level of access that regular Collaborators are given. Individual Collaborators are granted veto rights but, as the voting process happens at a community level, they are not currently given voting rights.
+Individual Collaborators are given the same level of access that regular Collaborators are given. Individual Collaborators are granted veto rights but, as the voting process happens at a community level, they are not currently given voting rights.
 
 ### Event Planners
 
@@ -160,7 +160,7 @@ Otherwise, **the vote has failed.** Enough time should be given to the Invitees 
 
 ## Process: Adding an Individual Collaborator
 
-Anyone who has experience with moderation and who may be able to contribute productively to the Program may apply to join it. As the Program itself largely exists on Discord, all Individual Collaborators must be present on the Program's Discord server.
+Anyone who has experience with moderation or who may be able to contribute productively to the Program may apply to join it. As the Program itself largely exists on Discord, all Individual Collaborators must be present on the Program's Discord server.
 
 This process matches the process for adding a community. However, some guidelines on how to evaluate an Individual Collaborator applicant have been provided below.
 
@@ -241,7 +241,7 @@ The Quilt Community Collab Program is a spiritual successor to an older program 
 
 Discord INTERPOL had many similarities with the Quilt Community Collab Program, including many of its foci and members. However, it lacked the support it needed from larger communities and didn't have the backing of a mod-loader project, which made it difficult to grow to a size that would see it become more widely useful.
 
-Additionally, the Quilt Community Collab Program has a much broader focus --- attempting to educate its staff on running their communities, and providing spaces to talk about general community management, defensive moderation tooling, wider social issues, and event planning.
+Additionally, the Quilt Community Collab Program has a much broader focus --- attempting to educate its members on running their communities, and providing spaces to talk about general community management, defensive moderation tooling, wider social issues, and event planning.
 
 # Unresolved questions
 
