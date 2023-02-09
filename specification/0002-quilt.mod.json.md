@@ -400,6 +400,12 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 |--------------|----------|---------|
 | Array/Object/String | False    | `"*"`   |
 
+A version, or complex set of versions that can be tested against for matches.
+
+It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier).
+
+It is an error if the resulting version specifier matches every version, and isn't the single string `"*"`.
+
 #### String
 
 Should be a single [version specifier](#version-specifier) defining the versions this dependency applies to.
@@ -408,19 +414,14 @@ Should be a single [version specifier](#version-specifier) defining the versions
 
 Should be an array of [version specifiers](#version-specifier) defining the versions this dependency applies to. The dependency matches if it matches ANY of the listed versions.
 
-This usage is discouraged, and quilt-loader will emit a formatting warning when discovering mods that use this.
+This usage is discouraged as many mod developers wrongly assumed this was "ALL" rather than "ANY", leading to unfortunate situations where mods depend on [ ">=1.18.1", "<1.19.3" ], which actually matches every version of minecraft, rather than just the versions between 1.18.1 and 1.19.2.
+Quilt-loader will emit a formatting warning when discovering mods that use this.
 
 #### Object
 
 This must contain a single field, which must either be `any` or `all`.
 
-The field value may either be an array or an object.
-
-An array 
-
-Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
-
-It is an error to specify multiple version specifiers such that all versions will match at least one, except if one of the version specifiers is `*`. Unlike for version specifiers it is permitted for any version specifier to be made redundant by any others.
+The field value must be an array, with more constraints. Each element of the array must either be a string [version specifier](#version-specifier), or an object which is interpreted in the same way as the [versions field](#the-versions-field) itself.
 
 ### The `reason` field
 | Type         | Required |
@@ -475,7 +476,7 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 Should be a valid mod version. If omitted, then this defaults to the version of the providing mod.
 
 ## Version Specifier
-A version range specifier can make use of any of the following constraint patterns, separated by spaces:
+A version range specifier can make use of any of the following constraint patterns:
 * `*` — Matches any version. Will fetch the latest version available if needed
 * `1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
 * `=1.0.0` — Matches exactly version 1.0.0 and no other versions
@@ -486,18 +487,6 @@ A version range specifier can make use of any of the following constraint patter
 * `1.0.x` — Matches any version with major version 1 and minor version 0.
 * `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
 * `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
-
-A version specifier may have a single constraint pattern, or multiple constaint patterns within the single string. If multiple constraints are used then they must all match a given version for the whole version specifier to match it.
-
-It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier), and also an error if one constraint makes another redundant. In addition it is considered an error if the resulting version specifier matches every version, and isn't the single character `*`.
-
-For example:
-
-* `=1.0.0` would match the version "1.0.0" and no others.
-* `>=1.0.0` would match any version that is after `1.0.0`. (It does not match `1.0.0-alpha.1` due to how semver works however)
-* `>=1.0.0 <=1.2.0` would match the versions `1.0.0`, `1.1.0`, `1.1.8`, `1.2.0`, but not `1.0.0-alpha` or `1.2.1`
-* `<1.0.0 >=1.2.0` would be disallowed, since no version matches both.
-* `>1.0.0 >=1.0.2 <1.1.0` would be disallowed, since `>=1.0.2` makes `>1.0.0` unnecessary.
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
