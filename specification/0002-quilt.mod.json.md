@@ -488,6 +488,8 @@ A version range specifier can make use of any of the following patterns:
 * `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
 * `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
 
+See [this cheatsheet](https://devhints.io/semver) for more information. 
+
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
 
