@@ -400,7 +400,7 @@ A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 |--------------|----------|---------|
 | Array/Object/String | False    | `"*"`   |
 
-A version, or complex set of versions that can be tested against for matches.
+A version specifier, or complex set of version specifiers that control what versions match this dependency object.
 
 It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier).
 
