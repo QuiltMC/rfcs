@@ -404,7 +404,7 @@ A version specifier, or complex set of version specifiers that control what vers
 
 It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier).
 
-It is an error if the resulting version specifier matches every version, and isn't the single string `"*"`.
+It is an error if the resulting version specifier matches every version, and isn't the single string `"*"`, or uses the deprecated array style of definition.
 
 #### String
 
@@ -416,6 +416,8 @@ Should be an array of [version specifiers](#version-specifier) defining the vers
 
 This usage is discouraged as many mod developers wrongly assumed this was "ALL" rather than "ANY", leading to unfortunate situations where mods depend on [ ">=1.18.1", "<1.19.3" ], which actually matches every version of minecraft, rather than just the versions between 1.18.1 and 1.19.2.
 Quilt-loader will emit a formatting warning when discovering mods that use this.
+Quilt-loader will not emit errors if this is used.
+Future schema versions will likely remove this array functionality.
 
 #### Object
 
