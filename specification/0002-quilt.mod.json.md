@@ -396,8 +396,8 @@ A dependency object defines what mods/plugins a given mod depends on or breaks. 
 A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
 ### The `versions` field
-| Type         | Required | Default |
-|--------------|----------|---------|
+| Type                | Required | Default |
+|---------------------|----------|---------|
 | Array/Object/String | False    | `"*"`   |
 
 A version specifier, or complex set of version specifiers that control what versions match this dependency object.
@@ -414,9 +414,9 @@ Should be a single [version specifier](#version-specifier) defining the versions
 
 Should be an array of [version specifiers](#version-specifier) defining the versions this dependency applies to. The dependency matches if it matches ANY of the listed versions.
 
-This usage is discouraged as many mod developers wrongly assumed this was "ALL" rather than "ANY", leading to unfortunate situations where mods depend on [ ">=1.18.1", "<1.19.3" ], which actually matches every version of minecraft, rather than just the versions between 1.18.1 and 1.19.2.
-Quilt-loader will emit a formatting warning when discovering mods that use this.
-Quilt-loader will not emit errors if this is used.
+This usage is discouraged as many mod developers wrongly assumed this was "ALL" rather than "ANY", leading to unfortunate situations where mods depend on [ ">=1.18.1", "<1.19.3" ], which actually matches _every_ version of Minecraft, rather than just the versions between 1.18.1 and 1.19.2.
+Quilt Loader will emit a formatting warning when discovering mods that use this.
+Quilt Loader will not emit errors if this is used.
 Future schema versions will likely remove this array functionality.
 
 #### Object
