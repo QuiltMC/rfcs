@@ -19,9 +19,10 @@ For example, a mod with an ID "potion_craft-expanded" would result in:
 - `QuiltLoader.getModContainer("potion_craft-expanded")` would return the mod
 - `QuiltLoader.getModContainer("potion-craft-expanded")` would return the same mod
 - The same mod is also returned for strings `potion_craft_expanded` and `potion-craft_expanded`
+- The returned `ModContainer` will return `potion_craft-expanded` from `ModContainer.metadata().id()`.
 - `QuiltLoader.isModLoaded` would return true for all 4 strings
 - `QuiltLoader.getEntrypoints` would return the same entrypoint list for each id.
-- `QuiltLoader.getAllMods().stream().filter(mod -> mod.metadata().id().equals("potion_craft-expanded")).toList()` would result in a single mod in the list.
+- `QuiltLoader.getAllMods()` will only contain a single entry
 - `ModMetadata.provides()` would NOT contain provided entries for every possible combination, instead it would be empty (if no provided entries exist in the quilt.mod.json)
 
 
