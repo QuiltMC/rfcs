@@ -4,7 +4,7 @@ This RFC establishes and defines the structure, roles, and responsibilities of t
 
 <!-- For simplicity, a lot of the boilerplate not relevant to a team definition was left out of this RFC-->
 ## Explanation
-The QSL Team is made up of three subteams, QSL Core, QSL Triage, and Quilted Fabric API. One cannot only be a member of the "QSL Team", they must also be a member of at least one subteam.
+The QSL Team is made up of three subteams, QSL Core, the QSL team, and Quilted Fabric API. One cannot only be a member of the "QSL Team", they must also be a member of at least one subteam.
 
 New subteams can be created by the QSL Core team by amending this RFC.
 
@@ -20,11 +20,11 @@ The Quilted Fabric API team is responsible for the maintenance of the QFAPI proj
 #### Joining the team
 New members can join the QFAPI team by unanimous consent of all active members of both the Quilted Fabric API and QSL Core teams.
 
-### QSL Triage
+### QSL Team
 #### Responsibilities
-The QSL Triage team provides triage, reviews, and testing for QSL. Members of this team are not given permission to push directly to the main QSL branches, but are given enough permission to carry out their repsonsibilities.
+The QSL team provides triage, reviews, and testing for QSL. Members of this team are not given permission to push directly to the main QSL branches, but are given enough permission to carry out their repsonsibilities.
 #### Joining the team
-New members can join the QSL Triage team by unanimous consent of all active members of the QSL Core team. The Core team should check with the QSL Triage team before accepting new members.
+New members can join the QSL team by unanimous consent of all active members of the QSL Core team. The Core team should check with the QSL team before accepting new members.
 
 ## Rationale
 (note: this section might not include rationale for later updates; see the original version of this RFC for context)
