@@ -2,7 +2,7 @@
 
 [Technical Leads](#technical-leads) have been removed in favor of [Team Leads](0006-governance.md#team-leads).
 
-[Team Responsibilites](#team-responsibilities) have been generalized for all teams in [Team Responsibilities](0006-governance.md#team-responsibilities).
+[Team Responsibilities](#team-responsibilities) have been generalized for all teams in [Team Responsibilities](0006-governance.md#team-responsibilities).
 
 [Technical Teams](#technical-teams) is outdated, but *all* teams can be found at https://quiltmc.org/about/teams/.
 
