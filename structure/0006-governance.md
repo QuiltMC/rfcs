@@ -33,12 +33,12 @@ In general, a team is responsible for performing the tasks outlined in the RFC t
 
 Most teams will also maintain one or more repositories on GitHub.
 The team is responsible for reviewing pull requests and ensuring that they meet the Quilt projects goals in quality and purpose.
-Once a team has decided that a pull request is suitable for merging, a team lead will be responsible for the actual merging.
+Once a team has decided that a pull request is suitable for merging, a team lead will be responsible for the actual merging. Team leads can also decide to allow some or all team members to perform merges.
 
 ### Creating a Team
 
 A new team can be created by passing an RFC proposing that team.
-The initial team leads must be specified in the RFC and must approve of the RFC before it is merged.
+The initial team leads must be specified in the pull request adding the RFC and must approve the RFC before it is merged.
 Once the [RFC process](0001-rfc-process.md) has concluded and the RFC was merged,
 a new team with the specified leads will be created on GitHub by the Administrative Board.
 
@@ -92,7 +92,7 @@ Before the vote begins, a group of people, henceforth referred to as the Electio
 
 The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org/wiki/Single_transferable_vote) (STV), or [Instant Runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) (IRV) in instances where there is only one space on the admin board to be filled, to ensure a minimum amount of "wasted votes". When using Single Transferrable vote, the [Droop Quota](https://en.wikipedia.org/wiki/Droop_quota) must be used to calculate the amount of votes required for a candidate to win a position on the admin board.
 
-At the start of the voting process, each remaining board member may nominate an organization member, and organization members may also nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
+At the start of the voting process, each organization members may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
 
 After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role in Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
 
@@ -110,9 +110,9 @@ The following processes apply to all teams unless that team's RFC specifies a di
 Unless specified otherwise, the following process is used for voting:
 
 A vote in a team may be called at any time by a team lead for that team or for one of its parent teams.
-A member of the administrative board may also initiate a vote in any team. 
+A vote can also be initiated as required by another process, such as adding or removing a team member. 
 
-When a vote is called within a team, all members of that team, its parent teams, and the administrative board are eligible to vote.
+When a vote is called within a team, all members of that team and its parent teams are eligible to vote.
 All polls should include a positive and negative option, as well as the option to abstain.
 Voting members that abstain are excluded from percentages and tallies.
 
@@ -125,7 +125,6 @@ The following members are eligible:
 - All members of the relevant team
 - All members of all the sub teams of the relevant team
 - All members of all the parent teams of the relevant team
-- All administrative board members
 
 # Drawbacks
 
