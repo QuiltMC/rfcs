@@ -10,7 +10,7 @@ It has been written with the idea of decentralizing power in mind, to help contr
 ## Teams
 
 A team is a group of team members dedicated to solving a specific issue,
-maintaining a specific sub project or overseeing a specific area.
+maintaining a specific sub project, or overseeing a specific area.
 
 All teams exist as teams on GitHub and can be viewed on our website at https://quiltmc.org/about/teams/.
 
@@ -22,7 +22,8 @@ A team must have at least one member.
 
 ### Team Leads
 
-A team lead is a team member with the Team Maintainer role for the relevant team on GitHub.
+A team lead is a team member with the [Team Maintainer](https://docs.github.com/en/organizations/organizing-members-into-teams/assigning-the-team-maintainer-role-to-a-team-member#about-team-maintainers) 
+role for the relevant team on GitHub.
 A member of the organization may be a team lead for multiple teams.
 Each team must have at least one team lead.
 
@@ -32,14 +33,14 @@ Team responsibilities will vary and be detailed on a team-by-team basis.
 In general, a team is responsible for performing the tasks outlined in the RFC that proposed its creation.
 
 Most teams will also maintain one or more repositories on GitHub.
-The team is responsible for reviewing pull requests and ensuring that they meet the Quilt projects goals in quality and purpose.
+The team is responsible for reviewing pull requests and ensuring that they meet The Quilt Project's goals in quality and purpose.
 Once a team has decided that a pull request is suitable for merging, a team lead will be responsible for the actual merging. Team leads can also decide to allow some or all team members to perform merges.
 
 ### Creating a Team
 
 A new team can be created by passing an RFC proposing that team.
 The initial team leads must be specified in the pull request adding the RFC and must approve the RFC before it is merged.
-Once the [RFC process](0001-rfc-process.md) has concluded and the RFC was merged,
+Once the [RFC process](0001-rfc-process.md) is concluded and the RFC us merged,
 a new team with the specified leads will be created on GitHub by the Administrative Board.
 
 The RFC proposing the new team should contain the following major sections:
@@ -73,7 +74,7 @@ Some teams may wish for more granular organization of their structure.
 In those cases, these teams may create sub teams.
 
 Sub teams behave like regular teams, except they are not required to have a team lead.
-If the team doesn't have its own team lead, the parent's team leads act as its team lead.
+If the sub team doesn't have its own team lead, the parent team lead's acts as its team lead.
 In general, a sub team inherits its parent's structure according to their parent's team RFC.
 
 ## The Administrative Board
