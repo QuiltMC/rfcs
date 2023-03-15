@@ -12,7 +12,7 @@ It has been written with the idea of decentralizing power in mind, to help contr
 A team is a group of team members dedicated to solving a specific issue,
 maintaining a specific sub project or overseeing a specific area.
 
-All teams exist as teams on GitHub and can be viewed at https://github.com/orgs/QuiltMC/teams.
+All teams exist as teams on GitHub and can be viewed on our website at https://quiltmc.org/about/teams/.
 
 ### Team Members
 

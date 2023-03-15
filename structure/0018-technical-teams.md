@@ -4,7 +4,7 @@
 
 [Team Responsibilites](#team-responsibilities) have been generalized for all teams in [Team Responsibilities](0006-governance.md#team-responsibilities).
 
-[Technical Teams](#technical-teams) is outdated, but *all* teams can be found at https://github.com/orgs/QuiltMC/teams.
+[Technical Teams](#technical-teams) is outdated, but *all* teams can be found at https://quiltmc.org/about/teams/.
 
 <br/>
 <details>
