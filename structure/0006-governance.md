@@ -119,7 +119,22 @@ All polls should include a positive and negative option, as well as the option t
 Voting members that abstain are excluded from percentages and tallies.
 Voting members not casting a vote within the allotted time frame are counted as abstained.
 
-After one week, the plurality of votes wins.
+After one week, the plurality of votes wins. The vote may also be called already if all eligible members 
+casted their vote.
+
+### Introduction of Staff
+
+Any community member is eligible to be added to a team by a majority vote of all eligible organization members.
+The vote is started on request from an eligible organization member. A community member wishing to join a team may
+kindly ask an eligible organization member to request a vote. A positive response from the organization member isn't
+mandatory.
+The following members are eligible:
+- All members of the relevant team
+- All members of all the sub teams of the relevant team
+- All members of all the parent teams of the relevant team
+
+During the vote, especially if the community member isn't already part of any team, the rest of the organization is
+consulted for opinions.
 
 ### Removal of Staff
 
