@@ -77,6 +77,13 @@ Sub teams behave like regular teams, except they are not required to have a team
 If the sub team doesn't have its own team lead, the parent team lead's acts as its team lead.
 In general, a sub team inherits its parent's structure according to their parent's team RFC.
 
+### Triage Teams
+
+A special type of teams called Triage Teams can exist. They are here to provide support to the organisation, through tasks
+such as triaging and tagging GitHub issues, quality insurance, writing regression tests, etc..
+
+Members of Triage Teams aren't considered organisation members.
+
 ## The Administrative Board
 
 The administrative board is a group of organization members responsible for tasks that are not assigned to another team.
