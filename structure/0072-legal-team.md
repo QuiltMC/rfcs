@@ -1,4 +1,4 @@
-# RFC 4269: Legal Team
+# RFC 0072: Legal Team
 
 This document has been written according to the process outlined in [RFC 0006](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md#teams).
 
