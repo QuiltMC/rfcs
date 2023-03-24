@@ -151,4 +151,5 @@ In the present day with most accounts and digital spaces being controlled primar
 the idea of an "administrative board" has some downsides.
 A member of the board who is asked to step down may simply refuse to relinquish any resources they control.
 For this reason, personal character needs to be a high priority when electing members to the board,
-so that such a situation can be avoided.
+so that such a situation can be avoided. This can also be avoided by keeping the roles of the administrative board
+purely as steering and oversight and delegate ownerships to other relevant teams, such as Infrastructure.
