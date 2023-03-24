@@ -18,7 +18,8 @@ All teams exist as teams on GitHub and can be viewed on our website at https://q
 
 A team member is a member of the organization assigned to a specific team on GitHub.
 A member of the organization may be assigned to multiple teams.
-A team must have at least one member.
+A team must have at least one member. An individual part of at least one team (except a triage team) is considered an
+organization member.
 
 ### Team Leads
 
@@ -71,7 +72,7 @@ The RFC proposing the new team should contain the following major sections:
 ### Sub Teams
 
 Some teams may wish for more granular organization of their structure.
-In those cases, these teams may create sub teams.
+In those cases, these teams may define sub teams in their corresponding RFC.
 
 Sub teams behave like regular teams, except they are not required to have a team lead.
 If the sub team doesn't have its own team lead, the parent team lead's acts as its team lead.
@@ -90,9 +91,9 @@ The administrative board is a group of organization members responsible for task
 It is made up of at least three members to prevent deadlocks in the decision-making process.
 Members of the administrative board may be members of other teams.
 
-If it is decided that more administrative board members are required, either due to a current member stepping down, or due to it being decided that the admin board needs to be expanded, an election must take place.
+If it is decided that more administrative board members are required, either due to a current member stepping down, or due to it being decided through informal concensus that the admin board needs to be expanded, an election must take place.
 
-### Admin board Voting Process
+### Admin board Election Process
 
  Due to the fact that multiple candidates may be nominated for the admin position when a vote is held, the fact that there may be multiple spots to fill on the board, and the fact that the decision affects the entire organization, the standard voting procedure cannot be used. Instead, the following procedure will be employed:
 
@@ -102,11 +103,11 @@ The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org
 
 At the start of the voting process, each organization member may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
 
-After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role in Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
+After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
 
 If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
 
-After the voting period concludes, the EOB may take up to three days to count the votes. In the event of a tie, another vote will be held by the current members of the Administrative Board including only the tied candidates. The EOB may privately inform the candidates before publishing the results to the organization members and subsequently the community at large.
+After the voting period concludes, the EOB may take up to three days to count the votes. In the event of a tie, another vote will be held by the current members of the Administrative Board including only the tied candidates through their chosen process. The EOB may privately inform the candidates before publishing the results to the organization members and subsequently the community at large.
 
 ## Processes
 
@@ -132,8 +133,8 @@ casted their vote.
 
 Any community member is eligible to be added to a team by a majority vote of all eligible organization members.
 The vote is started by request from an eligible organization member. A community member wishing to join a team may
-kindly ask an eligible organization member to request a vote. A positive response from the organization member isn't
-mandatory.
+kindly ask an eligible organization member to request a vote. The organization member isn't obligated to perform the 
+request.
 The following members are eligible:
 - All members of the relevant team
 - All members of all the sub teams of the relevant team
@@ -150,7 +151,7 @@ The following members are eligible:
 - All members of all the sub teams of the relevant team
 - All members of all the parent teams of the relevant team
 
-In case the demotion is against an administrative board member, all the existing teams are considered as relevant.
+In case the removal is against an administrative board member, all the existing teams are considered as relevant.
 
 # Drawbacks
 
