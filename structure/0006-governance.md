@@ -99,7 +99,7 @@ After one week of preparation and nomination submission, nominations must close,
 
 If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
 
-After the voting period concludes, the EOB may take up to one week to count the votes. In the event of a tie, votes by existing admin board members will count as three votes. The EOB may privately inform the winning candidate, before publishing the results to the organization members and subsequently the community at large.
+After the voting period concludes, the EOB may take up to three days to count the votes. In the event of a tie, another vote will be held by the current members of the Administrative Board including only the tied candidates. The EOB may privately inform the candidates before publishing the results to the organization members and subsequently the community at large.
 
 ## Processes
 
