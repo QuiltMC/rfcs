@@ -76,8 +76,8 @@ This team will most likely contain non-professional members. While their knowled
 mind they aren’t lawyers.
 While legal liability may be a concern, the non-profit and its insurance will be here to provide some protection if an issue arises.
 
-Due to legal needs, some if not all of the team members may have their real names appear publicly. Explicit approval from a team member will be 
-required before publishing.
+Due to legal needs, some if not all of the team members may have their real names appear publicly, such as when signing bylaws. 
+Explicit approval from a team member will be required before publishing a real name publicly and approval cannot be made mandatory.
 
 The ability to request changes may create some friction between developers and legal team members.
 
