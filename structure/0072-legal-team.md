@@ -1,6 +1,6 @@
 # RFC 4269: Legal Team
 
-This document has been made according to the process outlined in [RFC 0006](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md#teams).
+This document has been written according to the process outlined in [RFC 0006](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md#teams).
 
 # Summary
 
@@ -9,9 +9,9 @@ or have any form of training, although this would be preferred.
 
 # Motivation
 
-Historically, legal matters have been handled by various different people without any proper structure. The de-factor team who would handle particular 
-matters (eg. the Admin Board for registering Quilt as a non-profit) can feel unqualified to handle those issues and/or not have the bandwidth for it. 
-Moreover, someone handling legal matters leaving that de-facto team should not lead to them not handling those matters anymore, especially 
+Historically, legal matters have been handled by various different people without any proper structure. The de-facto team who would handle particular 
+matters (eg. the Admin Board for registering Quilt as a non-profit) may feel unqualified to handle those issues and/or may not have the bandwidth for it. 
+Moreover, someone handling legal matters leaving that de-facto team should not prevent them from handling those matters, especially 
 considering the current scarcity of trained or knowledgeable members.
 
 Some laws may also require us to have a designated legal team, such as to designate a Data Protection Officer 
@@ -24,8 +24,8 @@ Some laws may also require us to have a designated legal team, such as to design
 The team is responsible for the following:
 
 - Ensuring Quilt stays up to date with data regulation laws (eg. EU GDPR, COPPA)
-    - Keep the privacy policies, and terms of services up to date
-    - Designate a DPO
+    - Keeping the privacy policies and terms of services up to date
+    - Designating a DPO
     - Responding to data privacy requests
     - Assisting the Infrastructure team in staying compliant
 - Reviewing contracts signed by the organisation
@@ -33,12 +33,12 @@ The team is responsible for the following:
 - Advising other teams on any legal issues that may arise
 - Answering questions and concerns from community members to the best of their ability
 - Writing guidelines on what changes to Quilt projects require legal verification and providing a process for this verification to happen
-- Write internal or public processes on how to handle requests
+- Writing internal or public processes on how to handle requests
 - Any other legal matter not explicitly listed in this document
 
 ## Legal Team Server
 
-To perform their activity, the team has a private server not viewable by any other team, for discussing problems needing the uttermost privacy. 
+The Legal Team has a private server not viewable by any other team. This server may only be used for discussing problems which need the uttermost privacy. 
 
 While this deviates from the usual observable approach that makes sure every team can be monitored by at least one other independent team, 
 privacy is legally required to handle some matters, such as data privacy requests.
@@ -46,7 +46,7 @@ privacy is legally required to handle some matters, such as data privacy request
 ## Requesting Changes
 
 In order to stay compliant with regulations and laws, the Legal Team has the power to block any Pull Request or community space change that
-could negatively affects compliance. This overrides any decision made by a Team Lead.
+could negatively affect compliance. This overrides any decision made by a Team Lead.
 
 If a conflict arises between the Legal Team and a Team Lead, the Admin Board can be summoned for arbitration. In arbitration, the 
 Admin Board's decision is final and overrides the Legal Team.
@@ -61,7 +61,7 @@ To be able to communicate with users, Legal Team members are provided with an em
 ## Transparency Reports
 
 Because of the lack of oversight, the Legal Team will be required to publish public reports twice as year, containing as many information on
-their activity as allowed by the applicable laws, and taking into account user privacy.
+their activity as allowed by the applicable laws, and taking into account user privacy, similar to [Discord's transparency reports](https://discord.com/tags/transparency-reports).
 
 # Drawbacks
 
@@ -76,7 +76,7 @@ The ability to request changes may create some friction between developers and l
 # Rationale and Alternative
 
 Alternatively, other teams can sporadically handle legal matters. This has some issues, such as forcing people who aren’t motivated to handle those 
-matters, not centralizing the information and lacking the means required to stay compliant. The existence of this team is also legally required
+matters to do so, not centralizing the information and lacking the means required to stay compliant. The existence of this team is also legally required
 in some cases, as outlined above. 
 
 # Prior art
