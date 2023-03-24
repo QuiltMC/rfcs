@@ -95,7 +95,7 @@ The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org
 
 At the start of the voting process, each organization member may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
 
-After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role on Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
+After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role in Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
 
 If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
 
@@ -142,6 +142,8 @@ The following members are eligible:
 - All members of the relevant team
 - All members of all the sub teams of the relevant team
 - All members of all the parent teams of the relevant team
+
+In case the demotion is against an administrative board member, all the existing teams are considered as relevant.
 
 # Drawbacks
 
