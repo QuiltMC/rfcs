@@ -83,7 +83,9 @@ In general, a sub team inherits its parent's structure according to their parent
 A special type of teams called Triage Teams can exist. They are here to provide support to the organization, through tasks
 such as triaging and tagging GitHub issues, quality assurance, writing regression tests, etc..
 
-Members of Triage Teams aren't considered organisation members.
+Members of Triage Teams aren't considered organisation members. Triage Teams do not require leads, and may not be or contain sub teams.
+
+Individuals can be added to a Triage Team through informal consensus within the relevant teams, without the need for a proper vote to take place.
 
 ## The Administrative Board
 
