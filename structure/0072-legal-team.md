@@ -7,6 +7,9 @@ This document has been written according to the process outlined in [RFC 0006](
 The Legal Team is a standalone team in charge of handling legal matters to the best of its ability. This team will not require its members to be lawyers 
 or have any form of training, although this would be preferred. 
 
+It is made clear that this team will not be providing legal guidance but only advices to the best of their ability and team members cannot be held
+liable for their work in good faith as a Legal Team member.
+
 # Motivation
 
 Historically, legal matters have been handled by various different people without any proper structure. The de-facto team who would handle particular 
@@ -71,6 +74,7 @@ their activity as allowed by the applicable laws, and taking into account user p
 
 This team will most likely contain non-professional members. While their knowledge may still be extensive of some legal issues, we have to keep in 
 mind they aren’t lawyers.
+While legal liability may be a concern, the non-profit and its insurance will be here to provide some protection if an issue arises.
 
 Due to legal needs, some if not all of the team members may have their real names appear publicly. Explicit approval from a team member will be 
 required before publishing.
