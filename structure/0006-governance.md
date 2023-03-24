@@ -41,7 +41,7 @@ Once a team has decided that a pull request is suitable for merging, a team lead
 
 A new team can be created by passing an RFC proposing that team.
 The initial team leads must be specified in the pull request adding the RFC and must approve the RFC before it is merged.
-Once the [RFC process](0001-rfc-process.md) is concluded and the RFC us merged,
+Once the [RFC process](0001-rfc-process.md) is concluded and the RFC is merged,
 a new team with the specified leads will be created on GitHub by the Administrative Board.
 
 The RFC proposing the new team should contain the following major sections:
@@ -53,9 +53,8 @@ The RFC proposing the new team should contain the following major sections:
 
 - **Explanation**:
   - What will this team *do*?
-  - Who will be the team leads?
   - What new projects will be created that this team will be responsible for?
-  - How will each of these projects benefit the QuiltMC organization/community?
+  - How will each of these projects benefit the Quilt organization/community?
   - What processes will this team follow for each of the different kinds of changes their projects may undergo?
 
 - **Drawbacks**:
@@ -64,7 +63,7 @@ The RFC proposing the new team should contain the following major sections:
 
 - **Rationale and Alternatives**:
   - Is there already a team responsible for the described tasks?
-  - If this RFC doesn't pass, who would be responsible for the described tasks?
+  - If this RFC doesn't pass, which team would be responsible for the described tasks?
 
 - **Prior Art**:
   - Are there other organizations or projects with comparable tasks?
@@ -94,9 +93,9 @@ Before the vote begins, a group of people, henceforth referred to as the Electio
 
 The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org/wiki/Single_transferable_vote) (STV), or [Instant Runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) (IRV) in instances where there is only one space on the admin board to be filled, to ensure a minimum amount of "wasted votes". When using Single Transferrable vote, the [Droop Quota](https://en.wikipedia.org/wiki/Droop_quota) must be used to calculate the amount of votes required for a candidate to win a position on the admin board.
 
-At the start of the voting process, each organization members may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
+At the start of the voting process, each organization member may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
 
-After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization adn pauses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role in Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
+After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members (which at this time is anyone with the "Community Team" or "Quilt Developer" role on Discord) are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
 
 If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
 
@@ -119,13 +118,13 @@ All polls should include a positive and negative option, as well as the option t
 Voting members that abstain are excluded from percentages and tallies.
 Voting members not casting a vote within the allotted time frame are counted as abstained.
 
-After one week, the plurality of votes wins. The vote may also be called already if all eligible members 
+After one week, the majority wins. The vote may also be called early if all eligible members 
 casted their vote.
 
 ### Introduction of Staff
 
 Any community member is eligible to be added to a team by a majority vote of all eligible organization members.
-The vote is started on request from an eligible organization member. A community member wishing to join a team may
+The vote is started by request from an eligible organization member. A community member wishing to join a team may
 kindly ask an eligible organization member to request a vote. A positive response from the organization member isn't
 mandatory.
 The following members are eligible:
