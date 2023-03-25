@@ -39,17 +39,6 @@ The team is responsible for the following:
 - Writing internal or public processes on how to handle requests
 - Any other legal matter not explicitly listed in this document
 
-## Legal Team Server
-
-The Legal Team has a private server not viewable by any other team. This server must only be used for discussing problems 
-which need the uttermost privacy, as required by law. This includes, for example, talking about an ongoing data request or DMCA takedown
-without any name being redacted.
-
-While this deviates from the usual observable approach that makes sure every team can be monitored by at least one other independent team, 
-privacy is legally required to handle some matters, such as data privacy requests.
-
-The server shall be owned by one of the Legal Team leads, who is in charge of managing the server. 
-
 ## Requesting Changes
 
 In order to stay compliant with regulations and laws, the Legal Team has the power to block any Pull Request or community space change that
