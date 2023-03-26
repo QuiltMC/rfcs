@@ -155,6 +155,15 @@ The following members are eligible:
 
 In case the removal is against an administrative board member, all the existing teams are considered as relevant.
 
+### Dismissing a Team
+
+If a team is found to be uncapable of managing itself anymore, any team member or administrative board member can,
+with enough justification, start a vote to remove all team members from the specified team. All organization members
+are eligible to vote.
+
+If the majority votes in favor, all current team members are removed and the administrative board will designate one 
+or many new team leads who will be in charge of building the new team.
+
 # Drawbacks
 
 In the present day with most accounts and digital spaces being controlled primarily by one person,
@@ -163,3 +172,6 @@ A member of the board who is asked to step down may simply refuse to relinquish 
 For this reason, personal character needs to be a high priority when electing members to the board,
 so that such a situation can be avoided. This can also be avoided by keeping the roles of the administrative board
 purely as steering and oversight and delegate ownerships to other relevant teams, such as Infrastructure.
+
+Teams manage their own members, which can lead to a team being corrupted. If that happens, the entire team would
+have to be dismissed.
