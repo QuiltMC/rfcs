@@ -404,7 +404,7 @@ A version specifier, or complex set of version specifiers that control what vers
 
 It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier).
 
-It is an error if the resulting version specifier matches every version, and isn't the single string `"*"`, or uses the deprecated array style of definition.
+It is an error when the resulting version specifier matches every version, and isn't the single string `"*"`, or uses the deprecated array style of definition.
 
 #### String
 
