@@ -18,7 +18,7 @@ All teams exist as teams on GitHub and can be viewed on our website at https://q
 
 A team member is a member of the organization assigned to a specific team on GitHub.
 A member of the organization may be assigned to multiple teams.
-A team must have at least one member. An individual part of at least one team (except a triage team) is considered an
+A team must have at least one member. An individual part of at least one team (except a supporting team) is considered an
 organization member.
 
 ### Team Leads
@@ -78,14 +78,14 @@ Sub teams behave like regular teams, except they are not required to have a team
 If the sub team doesn't have its own team lead, the parent team lead's acts as its team lead.
 In general, a sub team inherits its parent's structure according to their parent's team RFC.
 
-### Triage Teams
+### Supporting Teams
 
-A special type of teams called Triage Teams can exist. They are here to provide support to the organization, through tasks
+A special type of teams called Supporting Teams can exist. They are here to provide support to the organization, through tasks
 such as triaging and tagging GitHub issues, quality assurance, writing regression tests, etc..
 
-Members of Triage Teams aren't considered organisation members. Triage Teams do not require leads, and may not be or contain sub teams.
+Members of Supporting Teams aren't considered organisation members. Supporting Teams do not require leads, and may not be or contain sub teams.
 
-Individuals can be added to a Triage Team through informal consensus within the relevant teams, without the need for a proper vote to take place.
+Individuals can be added to a Supporting Team through informal consensus within the relevant teams, without the need for a proper vote to take place.
 
 ## The Administrative Board
 
