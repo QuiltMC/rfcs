@@ -40,7 +40,7 @@ Once a team has decided that a pull request is suitable for merging, a team lead
 
 ### Creating a Team
 
-A new team can be created by passing an RFC proposing that team.
+A new team can be created by passing an RFC defining that team.
 The initial team leads must be specified in the pull request adding the RFC and must approve the RFC before it is merged.
 Once the [RFC process](0001-rfc-process.md) is concluded and the RFC is merged,
 a new team with the specified leads will be created on GitHub by the Administrative Board.
@@ -85,7 +85,8 @@ such as triaging and tagging GitHub issues, quality assurance, writing regressio
 
 Members of Supporting Teams aren't considered organisation members. Supporting Teams do not require leads, and may not be or contain sub teams.
 
-Individuals can be added to a Supporting Team through informal consensus within the relevant teams, without the need for a proper vote to take place.
+Individuals can be added to a Supporting Team through informal consensus within the relevant teams, without the need for a proper vote to take place,
+as members of Supporting Teams don't have the sensitive access usually granted to regular team members.
 
 ## The Administrative Board
 
@@ -95,9 +96,9 @@ Members of the administrative board may be members of other teams.
 
 If it is decided that more administrative board members are required, either due to a current member stepping down, or due to it being decided through informal concensus that the admin board needs to be expanded, an election must take place.
 
-### Admin board Election Process
+### Admin Board Election Process
 
- Due to the fact that multiple candidates may be nominated for the admin position when a vote is held, the fact that there may be multiple spots to fill on the board, and the fact that the decision affects the entire organization, the standard voting procedure cannot be used. Instead, the following procedure will be employed:
+Due to the fact that multiple candidates may be nominated for the admin position when a vote is held, the fact that there may be multiple spots to fill on the board, and the fact that the decision affects the entire organization, the standard voting procedure cannot be used. Instead, the following procedure will be employed:
 
 Before the vote begins, a group of people, henceforth referred to as the Election Oversight Board or EOB, must be selected to oversee the voting process. They will be responsible for receiving candidate nominations, concerns about nominated candidates from other organization members, and hosting the election. In normal circumstances, the EOB consists of the existing members of the admin board, but, if this is not possible for any reason, the EOB will instead consist of members with the Community Manager role in the Community Team. The initial EOB may add any members that they feel would be a valuable addition to the board, with a simple majority vote.
 
@@ -135,8 +136,7 @@ casted their vote.
 
 Any community member is eligible to be added to a team by a majority vote of all eligible organization members.
 The vote is started by request from an eligible organization member. A community member wishing to join a team may
-kindly ask an eligible organization member to request a vote. The organization member isn't obligated to perform the 
-request.
+kindly ask an eligible organization member to request a vote.
 The following members are eligible:
 - All members of the relevant team
 - All members of all the sub teams of the relevant team
@@ -152,17 +152,16 @@ The following members are eligible:
 - All members of the relevant team
 - All members of all the sub teams of the relevant team
 - All members of all the parent teams of the relevant team
-
-In case the removal is against an administrative board member, all the existing teams are considered as relevant.
+- When the team in question is the Admin Board: All members of all teams
 
 ### Dismissing a Team
 
-If a team is found to be uncapable of managing itself anymore, any team member or administrative board member can,
-with enough justification, start a vote to remove all team members from the specified team. All organization members
-are eligible to vote.
+When a team is no longer able to manage itself, any member of the organization may, 
+with proper justification, start a vote to remove all members of the team in question. 
+All organization members are eligiable to vote in this scenario.
 
-If the majority votes in favor, all current team members are removed and the administrative board will designate one 
-or many new team leads who will be in charge of building the new team.
+If the majority votes in favor, all current team members are removed and the Administrative Board will designate one 
+or more new team leads who will be in charge of building the new team.
 
 # Drawbacks
 
@@ -171,7 +170,7 @@ the idea of an "administrative board" has some downsides.
 A member of the board who is asked to step down may simply refuse to relinquish any resources they control.
 For this reason, personal character needs to be a high priority when electing members to the board,
 so that such a situation can be avoided. This can also be avoided by keeping the roles of the administrative board
-purely as steering and oversight and delegate ownerships to other relevant teams, such as Infrastructure.
+purely as steering and oversight and by delegating ownership to other relevant teams, such as the Infrastructure Team.
 
-Teams manage their own members, which can lead to a team being corrupted. If that happens, the entire team would
-have to be dismissed.
+It's important to consider the possibility that self-managed teams may become corrupted over time. 
+To handle this scenario, we would need to use the dismissing process to dissolve the entire team.
