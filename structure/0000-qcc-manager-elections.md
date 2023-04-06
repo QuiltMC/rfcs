@@ -4,11 +4,11 @@
 
 This RFC describes the Managers for the Quilt Community Collab Program, in more detail than the original RFC, including processes to elect new Managers from Program members.
 
-For details about the Quilt Community Collab Program (henceforth the "Program"), including various terms used in this document, see [RFC 0062: Quilt Community Collab](https://github.com/QuiltMC/rfcs/blob/main/structure/0062-quilt-community-collab.md).
+For details about the Quilt Community Collab Program (henceforth the "Program"), including various terms used in this document, see [RFC 0062: Quilt Community Collab](/structure/0062-quilt-community-collab.md).
 
 ## Motivation
 
-As of writing of this RFC, the current set of Managers for the Program is the same as the set of Community Managers for Quilt, under their Community Team as defined in [RFC 0007: Community Team](https://github.com/QuiltMC/rfcs/blob/main/structure/0007-community-team.md). When a new Community Manager is confirmed to their role, they are automatically confirmed to the role of Manager in the Program.
+As of writing of this RFC, the current set of Managers for the Program is the same as the set of Community Managers for Quilt, under their Community Team as defined in [RFC 0007: Community Team](/structure/0007-community-team.md). When a new Community Manager is confirmed to their role, they are automatically confirmed to the role of Manager in the Program.
 
 The Program is structured for equality between all its participating communities, which is exemplified through the community-oriented voting process. However, all other participating communities other than Quilt have no representation as Managers.
 
@@ -100,7 +100,7 @@ The idea for building (informal) consensus before holding a vote to elect a Mana
 
 In the English Wikipedia, decision making is not driven by unanimity or by the results of a vote, but through addressing and incorporting legitimate concerns raised through discussions. A second to a proposed motion is an indication that at least one other person desires to see the motion come before the body for further discussion and vote.
 
-A [recall election](https://en.wikipedia.org/wiki/Recall_election) is a procedure where voters can remove an elected official through a referendum before the end of their term of office. While the use of the term is novel in this RFC as compared to other RFCs, the concept behind it can be seen in many other RFCs such as RFC 0062, [RFC 0007: Community Team](https://github.com/QuiltMC/rfcs/blob/main/structure/0007-community-team.md), or [RFC 0006: Governmental Structure](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md).
+A [recall election](https://en.wikipedia.org/wiki/Recall_election) is a procedure where voters can remove an elected official through a referendum before the end of their term of office. While the use of the term is novel in this RFC as compared to other RFCs, the concept behind it can be seen in many other RFCs such as RFC 0062, [RFC 0007: Community Team](/structure/0007-community-team.md), or [RFC 0006: Governmental Structure](/structure/0006-governance.md).
 
 ## Unresolved Questions
 
