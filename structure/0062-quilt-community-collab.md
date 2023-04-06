@@ -247,4 +247,4 @@ Additionally, the Quilt Community Collab Program has a much broader focus --- at
 
 For the sake of getting this process document completed within a reasonable amount of time, the following concerns will need to be addressed at a later date:
 
-* We haven't discussed how new Managers should be added, which is an issue due to the fact that all Program Managers are also Quilt Community Managers; a more representative level of power-sharing should be worked on
+* ~~We haven't discussed how new Managers should be added, which is an issue due to the fact that all Program Managers are also Quilt Community Managers; a more representative level of power-sharing should be worked on.~~ This question has been resolved by [RFC 0000: Quilt Community Collab Manager Elections](/structure/0000-qcc-manager-elections.md).
