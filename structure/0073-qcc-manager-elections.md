@@ -1,4 +1,4 @@
-# RFC 0000: Quilt Community Collab Manager Elections
+# RFC 0073: Quilt Community Collab Manager Elections
 
 ## Summary
 
