@@ -2,7 +2,7 @@
 
 This document has been written according to the process outlined in [RFC 0006](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md#teams).
 
-# Summary
+## Summary
 
 The Legal Team is a standalone team in charge of handling legal matters to the best of its ability. This team will not require its members to be lawyers
 or have any form of training, although this would be preferred.
@@ -10,7 +10,7 @@ or have any form of training, although this would be preferred.
 It is made clear that this team will not be providing legal guidance but only advices to the best of their ability and team members cannot be held
 liable for their work in good faith as a Legal Team member.
 
-# Motivation
+## Motivation
 
 Historically, legal matters have been handled by various different people without any proper structure. The de-facto team who would handle particular
 matters (eg. the Admin Board for registering Quilt as a non-profit) may feel unqualified to handle those issues and/or may not have the bandwidth for it.
@@ -20,7 +20,7 @@ considering the current scarcity of trained or knowledgeable members.
 Some laws may also require us to have a designated legal team, such as to designate a Data Protection Officer
 ([Art. 37 EU GDPR](https://gdpr-info.eu/art-37-gdpr/)).
 
-# Explanation
+## Explanation
 
 ## Responsibilities
 
@@ -39,7 +39,7 @@ The team is responsible for the following:
 - Writing internal or public processes on how to handle requests
 - Any other legal matter not explicitly listed in this document
 
-## Requesting Changes
+### Requesting Changes
 
 In order to stay compliant with regulations and laws, the Legal Team has the power to block any Pull Request or community space change that
 could negatively affect compliance. This overrides any decision made by a Team Lead.
@@ -50,16 +50,16 @@ Admin Board's decision is final and overrides the Legal Team.
 The Legal Team also has the power to open high-priority issues on organisation repositories and request changes to be
 made as fast as reasonably possible.
 
-## Communication
+### Communication
 
 To be able to communicate with users, Legal Team members are provided with an email address, connected to one or many distribution lists.
 
-## Transparency Reports
+### Transparency Reports
 
 Because of the lack of oversight, the Legal Team will be required to publish public reports twice as year, containing as many information on
 their activity as allowed by the applicable laws, and taking into account user privacy, similar to [Discord's transparency reports](https://discord.com/tags/transparency-reports).
 
-# Drawbacks
+## Drawbacks
 
 This team will most likely contain non-professional members. While their knowledge may still be extensive of some legal issues, we have to keep in
 mind they aren’t lawyers.
@@ -70,13 +70,13 @@ Explicit approval from a team member will be required before publishing a real n
 
 The ability to request changes may create some friction between developers and legal team members.
 
-# Rationale and Alternative
+## Rationale and Alternative
 
 Alternatively, other teams can sporadically handle legal matters. This has some issues, such as forcing people who aren’t motivated to handle those
 matters to do so, not centralizing the information and lacking the means required to stay compliant. The existence of this team is also legally required
 in some cases, as outlined above.
 
-# Prior art
+## Prior art
 
 This team is close in spirit to the idea of a legal department in a workplace, although without requiring legal training. It is worth noting that
 the workplace definition of a legal department includes a large majority of employees who aren't lawyers, but some other qualifying background
