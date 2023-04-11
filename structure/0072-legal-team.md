@@ -28,7 +28,7 @@ The team is responsible for the following:
 
 - Ensuring Quilt stays up to date with data regulation laws (eg. EU GDPR, COPPA)
     - Keeping the privacy policies and terms of services up to date
-    - Designating a DPO
+    - Designating a Data Protection Officier (DPO)
     - Responding to data privacy requests
     - Assisting the Infrastructure team in staying compliant
 - Reviewing contracts signed by the organisation
