@@ -104,6 +104,8 @@ All polls must include a closing date that is set at least ten days into the fut
 
 At any point before the poll has closed, any Collaborator can use their right to veto, if allowed by the process. This right is described below.
 
+If the process doesn't allow vetos, the poll can be called early as soon as enough votes have been casted for the poll result to not be able to change. 
+
 Once the poll has been closed, the vote should be interpreted as described by the process the poll is a part of.
 
 **Note:** Individual Collaborators currently do not hold the right to vote.
