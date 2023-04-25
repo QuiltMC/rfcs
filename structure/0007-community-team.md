@@ -208,7 +208,7 @@ Voting ends when any of the following conditions have been reached:
 
 If any active voting members of the Community Team don't vote on the poll (unintentionally or otherwise), their vote
 **must be counted as an abstention.** If a member is inactive (as defined below), they will not be counted as a
-positive vote, negative vote, or abstention, and will not be counted in the tally for voting.
+positive vote, negative vote, or abstention, and will not be counted in any tally for voting.
 
 When taking into consideration plural systems, one system is treated as one voting bloc, regardless of individual
 members, Discord accounts, or other factors. This is to ensure that a large system is not able to overpower the votes
@@ -216,18 +216,16 @@ of other Community Team members. If multiple votes are tallied on one poll origi
 system's votes will be removed and they will be asked to vote again. In the case that all of these multiple votes are
 for the same option, all but one of the votes may be removed instead.
 
-The Community Team should then tally the final vote counts, and interpret them as follows.
+The Community Team must then tally the final vote counts, and interpret them as follows.
 
 #### Passing conditions
 
 The vote has passed if all the following conditions are met:
 
-* **At least half** (50%) of the eligible voters voted _positively_.
-* The ratio of _positive_ over _positive and negative_ votes **is greater than 0.2**.
+* **At least 50%** of the eligible voters (including those that abstained) voted _positively_
+* **70% of all votes cast** (not including abstentions) were _positive_
 * The special passing conditions specified as part of the specific process that this vote is part of have been met, if
   any
-
-To simplify interpretation, [this spreadsheet lists out the cases](https://docs.google.com/spreadsheets/d/1lwOZOwbe3hH9ULlswb8C6yJ2GLQ4408IsiF6b1JcMuQ/edit?usp=sharing) for the first two conditions.
 
 #### Other situations
 
