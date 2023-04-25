@@ -2,53 +2,177 @@
 This document is intended to detail the governing structure of the Quilt project.
 
 # Motivation
-This document has been written with the explicit purpose of defining guidelines and expectations for project staff. It has been written with the idea of decentralizing power in mind, to help contribute to the goal of a truly open project.
+This document has been written with the explicit purpose of defining guidelines and expectations for project staff.
+It has been written with the idea of decentralizing power in mind, to help contribute to the goal of a truly open project.
 
 # Explanation
 
-## Governmental Structure
-![Governmental Structure](../figures/quilt-goverance-diagram.png)
-\* For illustration purposes only, technical teams may vary
+## Teams
 
-### Teams
-A team is a group of staff members dedicated to solving a specific issue, maintaining a specific subproject, or overseeing a specific area. A team may be made up of any number of staff members, and a staff member may be on any number of teams. Teams may be community-focused, such as community moderators, or technically focused, such as the team of developers responsible for Quilt Loader. Team member responsibilities will vary and be detailed on a team-by-team basis.
+A team is a group of team members dedicated to solving a specific issue,
+maintaining a specific sub project, or overseeing a specific area.
 
-Each team will be initially constructed by the parent team responsible for that team. Further appointments will be voted upon by team members.
+All teams exist as teams on GitHub and can be viewed on our website at https://quiltmc.org/about/teams/.
 
-#### Voting
-When a vote is called within a team, each member of that team may choose to vote for any of the available options or abstain. The option with the plurality of votes wins. Members of supervising teams may choose to participate in votes. In the event of a tie, members of the parent team may choose to vote if they haven't already, with each of their votes being worth three votes.
+### Team Members
+
+A team member is a member of the organization assigned to a specific team on GitHub.
+A member of the organization may be assigned to multiple teams.
+A team must have at least one member. An individual part of at least one team (except a supporting team) is considered an
+organization member.
+
+### Team Leads
+
+A team lead is a team member with the [Team Maintainer](https://docs.github.com/en/organizations/organizing-members-into-teams/assigning-the-team-maintainer-role-to-a-team-member#about-team-maintainers) 
+role for the relevant team on GitHub.
+A member of the organization may be a team lead for multiple teams.
+Each team must have at least one team lead.
+A team lead may be nominated via general consensus of the team, or by an election, the process being detailed below.
+
+### Team Responsibilities
+
+Team responsibilities will vary and be detailed on a team-by-team basis.
+In general, a team is responsible for performing the tasks outlined in the RFC that proposed its creation.
+
+Most teams will also maintain one or more repositories on GitHub.
+The team is responsible for reviewing pull requests and ensuring that they meet The Quilt Project's goals in quality and purpose.
+Once a team has decided that a pull request is suitable for merging, a team lead will be responsible for the actual merging. Team leads can also decide to allow some or all team members to perform merges.
+
+### Creating a Team
+
+A new team can be created by passing an RFC defining that team.
+The initial team leads must be specified in the pull request adding the RFC and must approve the RFC before it is merged.
+Once the [RFC process](0001-rfc-process.md) is concluded and the RFC is merged,
+a new team with the specified leads will be created on GitHub by the Administrative Board.
+
+The RFC proposing the new team should contain the following major sections:
+
+- **Motivation**:
+  - Why is this team needed?
+  - What problems will this team solve?
+  - What tasks will this team be responsible for?
+
+- **Explanation**:
+  - What will this team *do*?
+  - What new projects will be created that this team will be responsible for?
+  - How will each of these projects benefit the Quilt organization/community?
+  - What processes will this team follow for each of the different kinds of changes their projects may undergo?
+
+- **Drawbacks**:
+  - Is there overlap of responsibilities?
+  - Is there excessive granularity?
+
+- **Rationale and Alternatives**:
+  - Is there already a team responsible for the described tasks?
+  - If this RFC doesn't pass, which team would be responsible for the described tasks?
+
+- **Prior Art**:
+  - Are there other organizations or projects with comparable tasks?
+
+### Sub Teams
+
+Some teams may wish for more granular organization of their structure.
+In those cases, these teams may define sub teams in their corresponding RFC.
+
+Sub teams behave like regular teams, except they are not required to have a team lead.
+If the sub team doesn't have its own team lead, the parent team lead's acts as its team lead.
+In general, a sub team inherits its parent's structure according to their parent's team RFC.
+
+### Supporting Teams
+
+A special type of teams called Supporting Teams can exist. They are here to provide support to the organization, through tasks
+such as triaging and tagging GitHub issues, quality assurance, writing regression tests, etc..
+
+Members of Supporting Teams aren't considered organisation members. Supporting Teams do not require leads, and may not be or contain sub teams.
+
+Individuals can be added to a Supporting Team through informal consensus within the relevant teams, without the need for a proper vote to take place,
+as members of Supporting Teams don't have the sensitive access usually granted to regular team members.
+
+## The Administrative Board
+
+The administrative board is a group of organization members responsible for tasks that are not assigned to another team.
+It is made up of at least three members to prevent deadlocks in the decision-making process.
+Members of the administrative board may be members of other teams.
+
+If it is decided that more administrative board members are required, either due to a current member stepping down, or due to it being decided through informal concensus that the admin board needs to be expanded, an election must take place.
+
+### Admin Board Election Process
+
+Due to the fact that multiple candidates may be nominated for the admin position when a vote is held, the fact that there may be multiple spots to fill on the board, and the fact that the decision affects the entire organization, the standard voting procedure cannot be used. Instead, the following procedure will be employed:
+
+Before the vote begins, a group of people, henceforth referred to as the Election Oversight Board or EOB, must be selected to oversee the voting process. They will be responsible for receiving candidate nominations, concerns about nominated candidates from other organization members, and hosting the election. In normal circumstances, the EOB consists of the existing members of the admin board, but, if this is not possible for any reason, the EOB will instead consist of members with the Community Manager role in the Community Team. The initial EOB may add any members that they feel would be a valuable addition to the board, with a simple majority vote.
+
+The vote is conducted using [Single Transferrable Vote](https://en.wikipedia.org/wiki/Single_transferable_vote) (STV), or [Instant Runoff voting](https://en.wikipedia.org/wiki/Instant-runoff_voting) (IRV) in instances where there is only one space on the admin board to be filled, to ensure a minimum amount of "wasted votes". When using Single Transferrable vote, the [Droop Quota](https://en.wikipedia.org/wiki/Droop_quota) must be used to calculate the amount of votes required for a candidate to win a position on the admin board.
+
+If the number of candidates is inferior or equal to the number of seats to fill, a majority vote is held on each candidate to validate whether they are fit for the role or not. 
+
+At the start of the voting process, each organization member may nominate themselves. Nominations must be submitted to the EOB within one week of the start of the process, after which time the vote is opened.
+
+After one week of preparation and nomination submission, nominations must close, the list of candidates must be published, and the vote must begin, lasting one week. The list of voters cannot change beyond that point, unless a voter is removed from the organization and poses serious threat to the vote integrity. The system used to conduct the vote must allow voters to change their votes, and enable voters to rank the candidates in order of preference, while also having the option to not rank any given candidate. All organization members are able to vote. During the vote, voters can contact the EOB about any concerns they have over the vote (for example, concerns about a candidate being elected, or concerns about the vote being influenced by an external force), to be dealt with as outlined in the paragraph below.
+
+If the EOB receives any concerns over a candidate, either internally or submitted by voter, they must decide if the concerns are worth investigating. If they are not, no further action is taken. If they are, the team must investigate, and, if significant results are found, must publish the results to the voters, so that they can factor them into their decision. The EOB cannot prevent any candidate from running, this is to ensure that they don't have direct control over who can be elected. If, however, the vote is due to end before the EOB can complete their investigation, they may delay the end of the vote by up to 30 additional days.
+
+After the voting period concludes, the EOB may take up to three days to count the votes. In the event of a tie, another vote will be held by the current members of the Administrative Board including only the tied candidates through their chosen process. The EOB may privately inform the candidates before publishing the results to the organization members and subsequently the community at large.
+
+## Processes
+
+To streamline working with teams, some standard processes need to be defined.
+The following processes apply to all teams unless that team's RFC specifies a different process.
+
+### Voting
+
+Unless specified otherwise, the following process is used for voting:
+
+A vote in a team may be called at any time by a team lead for that team or for one of its parent teams.
+A vote can also be initiated as required by another process, such as adding or removing a team member. 
+
+When a vote is called within a team, all members of that team and its parent teams are eligible to vote.
+All polls should include a positive and negative option, as well as the option to abstain.
+Voting members that abstain are excluded from percentages and tallies.
+Voting members not casting a vote within the allotted time frame are counted as abstained.
+
+After one week, the majority wins. The vote may also be called early if all eligible members 
+casted their vote.
+
+### Introduction of Staff
+
+Any community member is eligible to be added to a team by a majority vote of all eligible organization members.
+The vote is started by request from an eligible organization member. A community member wishing to join a team may
+kindly ask an eligible organization member to request a vote.
+The following members are eligible:
+- All members of the relevant team
+- All members of all the sub teams of the relevant team
+- All members of all the parent teams of the relevant team
+
+During the vote, especially if the community member isn't already part of any team, the rest of the organization is
+consulted for opinions.
 
 ### Removal of Staff
-Any team member (up to and including administrative board members) may be removed by a majority vote of all staff members above and below.
- * For members of the administrative board, this would be all staff members
- * For technical leads, this would be all technical staff members, as well as all members of the administrative board
- * For the QSL Module A lead, this would be all team members of QSL Module A, all technical leads, and all members of the administrative board
- * For a community moderator, this would be all community moderators and all members of the administrative board
 
-The vote must be initiated with a detailed call to action, describing why the staff member feels that the person should be removed from power. The accused will have one week to submit a detailed counterargument, at which point the vote will be called.
+Any team member or administrative board member may be removed by a majority vote of all eligible organization members.
+The following members are eligible:
+- All members of the relevant team
+- All members of all the sub teams of the relevant team
+- All members of all the parent teams of the relevant team
+- When the team in question is the Admin Board: All members of all teams
 
-### The Administrative Board
-The administrative board is the group of staff that holds ultimate power over the direction of the project. It is made up of three or more members so as to prevent deadlocks in the decision-making process. Members of the administrative board may be members of other teams within the project as well. Admins do not generally make use of their position unless a critical decision needs to be made whose team is unable to come to a consensus. In this case, the board will debate internally until they come to a decision. The administrative board acts primarily as a tiebreaker.
+### Dismissing a Team
 
-If there are less than three members on the administrative board, each remaining board member may nominate a community member (potentially a non-staff member) for the position. Existing staff members may nominate themselves. The remaining staff members may then vote on the nominees, with administrative board member votes being worth three votes only in the event of a tie.
+When a team is no longer able to manage itself, any member of the organization may, 
+with proper justification, start a vote to remove all members of the team in question. 
+All organization members are eligiable to vote in this scenario.
 
-### Proposing a Team
-When proposing a new team, an RFC specifying several things needs to be written. Such a proposal should generally follow this structure:
-
-#### Motivation
-Why is this team needed? What current problems will this team solve? What existing projects or systems will this team be responsible for?
-
-#### Explanation
-What will this team *do*? What new projects will be created that this team will be responsible for and how will each of these projects benefit the QuiltMC organization/community? What processes will this team follow for each of the different kinds of changes their projects may undergo?
-
-#### Drawbacks
-Can usually be omitted. Is only necessary if there are clear drawbacks to such a teams existence. Drawbacks may include overlap of responsibilities, excessive granularity, etc.
-
-#### Rationale and Alternatives
-Can be omitted. Who is currently responsible for existing projects this team will takeover? What teams might become responsible for new projects proposed in this document if the team itself is deemed unnecessary?
-
-#### Prior Art
-Can usually be omitted. Is only necessary if there are prior organizations/projects with very similar goals.
+If the majority votes in favor, all current team members are removed and the Administrative Board will designate one 
+or more new team leads who will be in charge of building the new team.
 
 # Drawbacks
-In the present day with most accounts and digital spaces being controlled primarily by one person, the idea of an "administrative board" has some downsides. A member of the board who is asked to step down may simply refuse to relinquish any resources they control. For this reason, personal character needs to be a high priority when electing members to the board so that such a situation can be avoided.
+
+In the present day with most accounts and digital spaces being controlled primarily by one person,
+the idea of an "administrative board" has some downsides.
+A member of the board who is asked to step down may simply refuse to relinquish any resources they control.
+For this reason, personal character needs to be a high priority when electing members to the board,
+so that such a situation can be avoided. This can also be avoided by keeping the roles of the administrative board
+purely as steering and oversight and by delegating ownership to other relevant teams, such as the Infrastructure Team.
+
+It's important to consider the possibility that self-managed teams may become corrupted over time. 
+To handle this scenario, we would need to use the dismissing process to dissolve the entire team.

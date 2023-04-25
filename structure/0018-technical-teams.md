@@ -1,3 +1,16 @@
+# This Document is Deprecated
+
+[Technical Leads](#technical-leads) have been removed in favor of [Team Leads](0006-governance.md#team-leads).
+
+[Team Responsibilities](#team-responsibilities) have been generalized for all teams in [Team Responsibilities](0006-governance.md#team-responsibilities).
+
+[Technical Teams](#technical-teams) is outdated, but *all* teams can be found at https://quiltmc.org/about/teams/.
+
+<br/>
+<details>
+<summary>Original RFC Content</summary>
+<br/>
+
 # Technical Team Structure
 
 ## Summary
@@ -57,3 +70,4 @@ Many companies today follow the idea of separation of concerns. By putting peopl
 
 It is expected that with more refined teams being dedicated to individual projects, community members outside of those teams will also be more willing to contribute to individual projects since there will be a direct point of contact for each individual initative.
 
+</details>
