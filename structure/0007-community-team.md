@@ -334,7 +334,7 @@ processed on Discord. Quilt's Community Team members are elected using a democra
    are welcome to give their opinions on the content of the interview, or present their own questions after the
    Community Manager giving the interview opens the floor to them.
 1. After an interview has taken place, a vote should be proposed, following the voting process outlined earlier in this
-   document. This poll should last for exactly one week.
+   document. This poll should last for exactly three days.
 
    The poll must include a link to the relevant interview. It should also include the specific position 
    they're applying for.
