@@ -199,6 +199,36 @@ A list of Maven repository URL strings where dependencies can be looked for in a
 
 The intermediate mappings used for this mod. The intermediate mappings string must be a valid maven coordinate and match the `^[a-zA-Z0-9-_.]+:[a-zA-Z0-9-_.]+$` regular expression. This field currently only officially supports `org.quiltmc:hashed` and `net.fabricmc:intermediary`.
 
+### The `changes` field
+| Type   | Required |
+|--------|----------|
+| Array (of Object)  | False    |
+
+A list of things the mod changes. An example of this is below.
+
+```json
+{
+	"changes": [
+		{
+			"type": "item",
+			"id": "minecraft:apple",
+			"level": "fatal"
+		}
+	]
+}
+```
+
+The list of acceptable values for `"type"` is:
+	- `item`
+
+The list of acceptable values for `"level"` is:
+	- `compatible`
+		- Fully compatible with other mods changing this
+	- `warning`
+		- May or may not work with other mods changing this. As a guide, it should work with anything marked `compatible`
+	- `fatal`
+		- Will **not** work with any other mods changing this. Will crash with any other mod marked `warning` or `fatal`
+
 ### The `metadata` field 
 | Type   | Required |
 |--------|----------|
