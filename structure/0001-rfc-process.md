@@ -10,7 +10,7 @@ This will allow us to put a time limit on unproductive discussion where necessar
 This document gives an outline of how the RFC process works and explains how contributors should submit their RFCs to the project. 
 
 ## When you must submit an RFC
-The RFC process requires that any large top-level organizational changes should be preceded by a "Request For Comments" document just like this one, explaining the proposed change, the motivation behind it, potential drawbacks, and other considerations. These documents are then discussed and revised by the community for some period of time until a maintainer decides that enough discussion has happened and begins a final comment period, after which a final decision is made.
+The RFC process requires that any large top-level organizational changes should be preceded by a "Request For Comments" document just like this one, explaining the proposed change, the motivation behind it, potential drawbacks, and other considerations. These documents are then discussed and revised by the community for some period of time until a leader of the responsible team decides that enough discussion has happened and begins a final comment period, after which a final decision is made.
 
 Most smaller changes to Quilt projects (such as bugfixes) can be submitted via the normal GitHub pull request system, however some are substantial enough that we would prefer that members of the community are given some time to discuss the potential change and give their feedback.
 
@@ -46,9 +46,9 @@ When you are ready to submit an RFC, the process will work as follows:
 - The team responsible for the RFC will discuss the RFC as much as possible in
   the pull request's comments. Discussion that occurs in other spaces should be
   summarized in the PR comments.
-- When the team responsible for the RFC decides that there has been enough discussion, a member of the team will issue a "motion for final comments". If the motion passes, it begins a 10 day period where the community has the last chance to give feedback on an RFC.
+- When the team responsible for the RFC decides that there has been enough discussion, a leader of the team will issue a "motion for final comments". If the motion passes, it begins a short period where the community has the last chance to give feedback on an RFC. This period must last at least 3 days and cannot last more than 7 days.
   + This step is taken when enough discussion has happened to make a final decision on the issue. It is designed to prevent RFCs from becoming stales.
-  + A consensus among all community members *is not necessary* for an RFC to
+  + A consensus among all community members *is not necessary nor expected* for an RFC to
     enter the final comment period. However, there should not be a strong
     consensus *against* the disposition given for the final comment period, and
     some argument supporting the decision should be clearly presented somewhere
@@ -56,12 +56,8 @@ When you are ready to submit an RFC, the process will work as follows:
   + If discussion has gone on for a long time, the team member who motions for
     final comments should post a summary comment outlining all of the
     discussion that has occurred.
-  + Before actually entering the final comment period, all members of the team
-    must sign their approval.
-  + When a team member motions for final comments, they also give a
-    "disposition" which can be either accept, reject, or postpone. This
-    determines what will happen to the RFC at the end of the final comment
-    period, although the disposition may change during that period.
+  + A FCP can be started to force the discussion to come to a conclusion.
+  + If the change is considered as "minor" by the team leads, the PR may skip the FCP process.
 - At the end of the final comment period, the RFC will be either accepted or
   rejected depending on its disposition at the close of the final comment
   period.
@@ -75,6 +71,8 @@ When you are ready to submit an RFC, the process will work as follows:
     + An RFC may also be "postponed". This means the RFC is effectively
       rejected at the moment because it does not fit into the project's
       near-term goals, but may be accepted at a later date.
+
+If there is no *de facto* team responsible for the RFC, the Administrative Board is considered as responsible.
 
 # Drawbacks
 - This RFC process will require constant moderation in order to ensure the
