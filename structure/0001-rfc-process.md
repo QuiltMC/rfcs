@@ -70,7 +70,7 @@ When you are ready to submit an RFC, the process will work as follows:
       will not be implemented.
     + An RFC may also be "postponed". This means the RFC is effectively
       rejected at the moment because it does not fit into the project's
-      near-term goals, but may be accepted at a later date.
+      short-term goals, but may be accepted at a later date.
 
 If there is no *de facto* team responsible for the RFC, the Administrative Board is considered as responsible.
 
