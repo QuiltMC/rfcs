@@ -1,5 +1,3 @@
-# Active User Beacon
-
 ## Summary
 
 This RFC describes a privacy-friendly mechanism through which the launcher can signal themselves as an active user, in order to provide a MAU (Monthly Active User) metrics. 
