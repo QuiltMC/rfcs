@@ -40,4 +40,4 @@ It is also worth noting all of these provide download statistics and not MAU cou
 
 ## Privacy Statement
 
-Nor in this RFC or in any further RFC is Quilt going to implement data collection without explicit user consent and without any functionality loss if said consent isn't given.
+Nor in this RFC or in any further RFC is Quilt going to implement data collection without explicit user consent and without any functionality loss if said consent isn't given, unless said functionality technically requires the data to be collected.
