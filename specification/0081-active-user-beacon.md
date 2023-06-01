@@ -1,6 +1,6 @@
 ## Summary
 
-This RFC describes a privacy-friendly mechanism through which the launcher can signal themselves as an active user, in order to provide MAU (Monthly Active User) metrics. 
+This RFC describes a privacy-friendly mechanism through which the loader can signal themselves as an active user, in order to provide MAU (Monthly Active User) metrics. 
 
 ## Motivation
 
