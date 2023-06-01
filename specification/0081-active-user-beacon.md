@@ -10,7 +10,7 @@ The choice to not include any metadata in the signal was made to keep the mechan
 ## Explanations
 
 On launch, the loader will start the following process asynchronously:
-1. Check if the `loader.disable_beacon` property or the `LOADER_DISABLE_BEACON` environment variable is set to `true`. If so, the process is aborted (the launch process is unaffected).
+1. Check if the `loader.disable_beacon` property or the `QUILT_LOADER_DISABLE_BEACON` environment variable is set to `true`. If so, the process is aborted (the launch process is unaffected).
 2. Check for the last signalled month in a standard persistent location, if it is equal to the current month the process is aborted.
 3. Send a `POST` request to `https://beacon.quiltmc.org/signal` without any specific body or headers.
 4. Save the current month into the same standard persistent location as step 2.
