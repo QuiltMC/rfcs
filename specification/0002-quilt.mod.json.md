@@ -396,11 +396,35 @@ A dependency object defines what mods/plugins a given mod depends on or breaks. 
 A mod identifier in the form of either `mavenGroup:modId` or `modId`.
 
 ### The `versions` field
-| Type         | Required | Default |
-|--------------|----------|---------|
-| Array/String | False    | `"*"`   |
+| Type                | Required | Default |
+|---------------------|----------|---------|
+| Array/Object/String | False    | `"*"`   |
 
-Should be a [version specifier](#version-specifier) or array of version specifiers defining what versions this dependency applies to. If an array of versions is provided, the dependency matches if it matches ANY of the listed versions.
+A version specifier, or complex set of version specifiers that control what versions match this dependency object.
+
+It is an error to specify multiple constraints that conflict with each other (where no version would match the whole specifier).
+
+It is an error when the resulting version specifier matches every version, and isn't the single string `"*"`, or uses the deprecated array style of definition.
+
+#### String
+
+Should be a single [version specifier](#version-specifier) defining the versions this dependency applies to.
+
+#### Array (Deprecated)
+
+Should be an array of [version specifiers](#version-specifier) defining the versions this dependency applies to. The dependency matches if it matches ANY of the listed versions.
+
+This usage is discouraged as many mod developers wrongly assumed this was "ALL" rather than "ANY", leading to unfortunate situations where mods depend on [ ">=1.18.1", "<1.19.3" ], which actually matches _every_ version of Minecraft, rather than just the versions between 1.18.1 and 1.19.2.
+
+* Quilt Loader will emit a formatting warning when discovering mods that use this.
+* Quilt Loader will not emit errors if this is used.
+* Future schema versions will likely remove this array functionality.
+
+#### Object
+
+This must contain a single field, which must either be `any` or `all`.
+
+The field value must be an array, with more constraints. Each element of the array must either be a string [version specifier](#version-specifier), or an object which is interpreted in the same way as the [versions field](#the-versions-field) itself.
 
 ### The `reason` field
 | Type         | Required |
@@ -466,8 +490,6 @@ A version range specifier can make use of any of the following patterns:
 * `1.0.x` — Matches any version with major version 1 and minor version 0.
 * `~1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 1.1.0
 * `^1.0.0` — Matches the most recent version greater than or equal to version 1.0.0 and less than 2.0.0
-
-See [this cheatsheet](https://devhints.io/semver) for more information. 
 
 # Drawbacks
 The primary drawback to this proposed format is the break from convention established by the Fabric project. It may make it more difficult for modders to adjust to the new toolchain if they are having to make drastic changes to their mod files.
