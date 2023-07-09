@@ -18,7 +18,7 @@ For the convenience of developers, the Quilt mod metadata can also be represente
 
 Loaders, build systems, launchers, and other tools that require a Quilt's mod metadata must unconditionally handle the `quilt.mod.json` file.
 
-Loaders and build systems may support handling `quilt.mod.json5`, and if supported, it must always be considered as a priority over `quilt.mod.json` and it must only handle it within a development context. This means that a mod loader, while it may parse `quilt.mod.json5` files inside a development environment, it must reject that handling if such file is found on a production environment, and build systems must always convert `quilt.mod.json5` files into `quilt.mod.json` ones during the process of building a Quilt mod.
+Loaders and build systems may support handling `quilt.mod.json5`, and if supported, it must reject its coexistence with a `quilt.mod.json` file in order to prevent unintended behavior and it must only handle `quilt.mod.json5` files within a development context. This means that while a mod loader may parse `quilt.mod.json5` files inside a development environment, it must reject that handling if such file is found on a production environment, and build systems must always convert `quilt.mod.json5` files into `quilt.mod.json` ones during the process of building a Quilt mod.
 
 
 ## Drawbacks
