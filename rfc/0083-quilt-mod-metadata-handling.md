@@ -23,7 +23,7 @@ Loaders and build systems may support handling `quilt.mod.json5`, and if support
 
 ## Drawbacks
 
-The JSON5 format is a much less ubiqutous format than JSON, which reflects into how the toolchain and the ecosystem may handle them. Considering Minecraft's usage of JSON for both game data and launcher metadata and its absence of JSON5 usage, it is reasonable to expect that the handling of `quilt.mod.json` files won't require as much effort than the handling of `quilt.mod.json5`, and while the toolchain already handles the lack of support for the JSON5 format through the [Quilt Parsers]() library, it is unreasonable to expect tooling such as launchers and mod scanners to go for an extra dependency that may not even exist within the utilized framework.
+The JSON5 format is a much less ubiqutous format than JSON, which reflects into how the toolchain and the ecosystem may handle them. Considering Minecraft's usage of JSON for both game data and launcher metadata and its absence of JSON5 usage, it is reasonable to expect that the handling of `quilt.mod.json` files won't require as much effort than the handling of `quilt.mod.json5`, and while the toolchain already handles the lack of support for the JSON5 format through the [Quilt Parsers](https://github.com/QuiltMC/quilt-parsers) library, it is unreasonable to expect tooling such as launchers and mod scanners to go for an extra dependency that may not even exist within the utilized framework.
 
 
 ## Rationale and Alternatives
