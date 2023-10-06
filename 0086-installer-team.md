@@ -1,4 +1,4 @@
-# RFC 0000: Installer Team
+# RFC 0086: Installer Team
 
 This document has been written according to the process outlined in [RFC 0006](https://github.com/QuiltMC/rfcs/blob/main/structure/0006-governance.md#creating-a-team), and with reference to [RFC 0072](https://github.com/QuiltMC/rfcs/blob/main/structure/0072-legal-team.md).
 
