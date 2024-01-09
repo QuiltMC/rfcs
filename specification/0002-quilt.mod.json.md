@@ -273,11 +273,41 @@ One or more paths to a square .PNG file. If an object is provided, the keys must
 ```
 
 ## The `mixin` field
-| Type         | Required |
-|--------------|----------|
-| Array/String | False    |
+| Type                | Required |
+|---------------------|----------|
+| Array/String/Object | False    |
 
-A single or array of paths to mixin configuration files relative to the root of the mod JAR.
+A single or array of mixin configuration entries. 
+
+An entry can either be an object or a string. 
+The mixin configuration entry object has one required field `config` and an optional field `environment`. 
+The `config` field is a path to the mixin config file relative to the root of the mod JAR.
+The `environment` field is the [environment](#the-environment-field) in which the config should be loaded. If no environment or `'*'` is set, the mixin config is loaded on both environments.
+
+Providing a string is the same as providing a mixin configuration entry with a config field and no environment field.
+
+Examples:
+```json
+"mixin": {
+   "config": "modid.mixins.json",
+   "environment": "client"
+}
+```
+
+```json
+"mixin": "modid.mixins.json"
+```
+
+```json
+"mixin": [
+   {
+      "config": "modid_client.mixins.json",
+      "environment": "client"
+   },
+   "modid.mixins.json"
+]
+```
+Providing 
 
 ## The `access_widener` field
 | Type         | Required |
