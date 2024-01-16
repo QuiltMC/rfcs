@@ -307,7 +307,6 @@ Examples:
    "modid.mixins.json"
 ]
 ```
-Providing 
 
 ## The `access_widener` field
 | Type         | Required |
