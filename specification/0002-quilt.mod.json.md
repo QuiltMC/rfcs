@@ -28,7 +28,7 @@ Below is an outline of all defined keys and values.
         * [contact](#the-contact-field) — Collection of contact information
         * [license](#the-license-field) — One or more licenses this project is under
         * [icon](#the-icon-field) — The icon or icons associated with this project
-* [experimental_quilt_loader_plugin](#the-plugin-field) — Plugin definition
+* [experimental_quilt_loader_plugin](#the-experimental_quilt_loader_plugin-field) — Plugin definition
 * [mixin](#the-mixin-field) — Path(s) to mixin config file(s)
 * [access_widener](#the-access_widener-field) — Path(s) to accesswidener file(s)
 * [minecraft](#the-minecraft-field) - Minecraft related options
