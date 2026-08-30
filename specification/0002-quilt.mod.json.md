@@ -324,7 +324,7 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 |--------|----------|
 | Object | False    |
 
-A loader plugins. A plugin is an object with the following keys:
+A loader plugin. A plugin is an object with the following keys:
 * class — Points to an implementation of the `LoaderPlugin` interface. Can be in either of the following forms:
     * `my.package.MyClass` — A class to be instantiated and used
     * `my.package.MyClass::thing` — A static field containing an instance of a `LoaderPlugin`
