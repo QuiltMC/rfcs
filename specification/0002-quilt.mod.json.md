@@ -328,7 +328,7 @@ A loader plugin. A plugin is an object with the following keys:
 * class — Points to an implementation of the `LoaderPlugin` interface. Can be in either of the following forms:
     * `my.package.MyClass` — A class to be instantiated and used
     * `my.package.MyClass::thing` — A static field containing an instance of a `LoaderPlugin`
-* packages — List of packages that should be marked as ownered by the plugin
+* packages — List of packages that should be accessible from the plugin
 
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt mod file. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
