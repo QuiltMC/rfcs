@@ -14,7 +14,6 @@ Below is an outline of all defined keys and values.
     * [provides](#the-provides-field) — Alternative mods provided by this mod
     * [version](#the-version-field) — The mods version
     * [entrypoints](#the-entrypoints-field) — Collection of entrypoints
-    * [plugins](#the-plugins-field) — Collection of plugins
     * [jars](#the-jars-field) — Array of nested JARs to be loaded
     * [language_adapters](#the-language_adapters-field) — Array of language adapters
     * [depends](#the-depends-field) — Collection of mod dependencies
@@ -29,6 +28,7 @@ Below is an outline of all defined keys and values.
         * [contact](#the-contact-field) — Collection of contact information
         * [license](#the-license-field) — One or more licenses this project is under
         * [icon](#the-icon-field) — The icon or icons associated with this project
+* [experimental_quilt_loader_plugin](#the-plugin-field) — Plugin definition
 * [mixin](#the-mixin-field) — Path(s) to mixin config file(s)
 * [access_widener](#the-access_widener-field) — Path(s) to accesswidener file(s)
 * [minecraft](#the-minecraft-field) - Minecraft related options
@@ -117,19 +117,6 @@ One of the following `value` notations may be used in the JVM notation:
 
 Some language providers may extend the capabilities of the JVM language notation or provide additional notations.
 For notation rules for other language adapters, consult the capabilities of the language adapter.
-
-### The `plugins` field
-| Type   | Required |
-|--------|----------|
-| Array  | False    |
-
-An array of loader plugins. A plugin is an object with the following keys:
-* adapter — Language adapter to use for this plugin
-* value — Points to an implementation of the `LoaderPlugin` interface. Can be in either of the following forms:
-    * `my.package.MyClass` — A class to be instantiated and used
-    * `my.package.MyClass::thing` — A static field containing an instance of a `LoaderPlugin`
-
-If a plugin does not need to specify a language adapter other than the default language adapter, the plugin can be represented simply as the value string instead.
 
 ### The `jars` field
 | Type   | Required |
@@ -331,6 +318,17 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 * `"*"` — All environments (default)
 * `"client"` — The physical client
 * `"dedicated_server"` — The dedicated server
+
+### The `experimental_quilt_loader_plugin` field
+| Type   | Required |
+|--------|----------|
+| Object | False    |
+
+An array of loader plugins. A plugin is an object with the following keys:
+* class — Points to an implementation of the `LoaderPlugin` interface. Can be in either of the following forms:
+    * `my.package.MyClass` — A class to be instantiated and used
+    * `my.package.MyClass::thing` — A static field containing an instance of a `LoaderPlugin`
+* packages — List of packages that should be marked as ownered by the plugin
 
 ## Custom Elements
 In addition to the defined elements above, mods and libraries will be able to add their own elements to the quilt mod file. Mods will be expected to define up to one top-level element corresponding to their mod id. The element can be of any type, so that mods can define either a single value, array of values, or a sub-object.
