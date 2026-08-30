@@ -325,7 +325,7 @@ Defines the environment(s) that this mod should be loaded on. Valid values are:
 | Object | False    |
 
 A loader plugin. A plugin is an object with the following keys:
-* class — Points to an implementation of the `org.quiltmc.loader.api.plugin.QuiltLoaderPlugin` interface. Must be in the following form:
+* class — Points to an implementation of the [`org.quiltmc.loader.api.plugin.QuiltLoaderPlugin`](https://github.com/QuiltMC/quilt-loader/blob/develop/src/main/java/org/quiltmc/loader/api/plugin/QuiltLoaderPlugin.java) interface. Must be in the following form:
     * `my.package.MyClass` — A class to be instantiated and used
 * packages — List of packages that should be accessible from the plugin
 
